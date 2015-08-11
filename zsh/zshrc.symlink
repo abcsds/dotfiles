@@ -149,10 +149,10 @@ export DYLD_LIBRARY_PATH=/usr/local/openMP/llvm/build/Debug+Asserts/lib:/usr/loc
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export LD_LIBRARY_PATH=/usr/local/lib
-export PYTHONPATH="${PYTHONPATH}:/home/abcsds/github/caffe/python"
-export PYTHONPATH="${PYTHONPATH}:/home/abcsds/caffe/python"
-export PYTHONPATH="${PYTHONPATH}:/home/abcsds/github/caffe/distribute/python"
-export PYTHONPATH="${PYTHONPATH}:/home/abcsds/.pycaffe"
+export PYTHONPATH="${PYTHONPATH}:~/github/caffe/python"
+export PYTHONPATH="${PYTHONPATH}:~/caffe/python"
+export PYTHONPATH="${PYTHONPATH}:~/github/caffe/distribute/python"
+export PYTHONPATH="${PYTHONPATH}:~/.pycaffe"
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
