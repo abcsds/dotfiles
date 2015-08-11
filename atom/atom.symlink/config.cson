@@ -1,0 +1,34 @@
+"*":
+  editor:
+    showIndentGuide: true
+    invisibles: {}
+    fontSize: 17
+    softWrapAtPreferredLineLength: true
+    showInvisibles: true
+  core:
+    ignoredNames: [
+      ".bundle"
+      ".git"
+      "log"
+      "repositories"
+      "tmp"
+      "vendor"
+    ]
+    themes: [
+      "unity-ui"
+      "glacier-syntax"
+    ]
+    hideGitIgnoredFiles: false
+    disabledPackages: [
+      "background-tips"
+      "exception-reporting"
+      "metrics"
+    ]
+  "spell-check":
+    grammars: [
+      "text.plain"
+      "source.gfm"
+      "text.git-commit"
+    ]
+  welcome:
+    showOnStartup: false

@@ -1,0 +1,13 @@
+#gnuplot's Qt terminal is supported by default with the Octave GUI.
+#Use other gnuplot graphics terminals by setting the environment variable
+#GNUTERM in ~/.octaverc, and building gnuplot with the matching options.
+
+#  setenv('GNUTERM','qt')    # Default graphics terminal with Octave GUI
+#  setenv('GNUTERM','x11')   # Requires XQuartz; install gnuplot --with-x
+#  setenv('GNUTERM','wxt')   # wxWidgets/pango; install gnuplot --wx
+#  setenv('GNUTERM','aqua')  # Requires AquaTerm; install gnuplot --with-aquaterm
+
+#  You may also set this variable from within Octave.
+
+
+ setenv GNUTERM x11

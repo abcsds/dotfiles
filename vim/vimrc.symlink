@@ -1,0 +1,116 @@
+" SYNTAX
+" colorscheme molokai
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+endif
+
+" SPACES
+set tabstop=4       	" number of visual spaces per TAB
+set softtabstop=4     " number of spaces in tab when editing
+set expandtab         " tabs are spaces
+
+" UI
+set number              " show line numbers
+set showcmd             " show command in bottom bar
+set cursorline          " highlight current line
+filetype indent on      " load filetype-specific indent files
+set wildmenu            " visual autocomplete for command menu
+set lazyredraw          " redraw only when we need to.
+set showmatch           " highlight matching [{()}]
+set showcmd             " display incomplete commands
+set incsearch           " do incremental searching
+set laststatus=2        " Always display the status line
+set mouse=a             " Enable mouse in all modes
+
+" Allow backspace in insert mode
+set backspace=indent,eol,start
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
+" VERY IMPORTANT
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" SEARCH
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+set history=50
+" turn off search highlight
+" nnoremap <leader><space> :nohlsearch<CR
+
+" FOLDING
+set foldenable          " enable folding
+set foldlevelstart=10   " open most folds by default
+
+" Run commands that require an interactive shell
+nnoremap <Leader>r :RunInInteractiveShell<space>
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+        set undodir=~/.vim/undo
+endif
+
+" INVISIBLES
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
+
+" Highlight dynamically as pattern is typed
+set incsearch
+
+" Always show status line
+set laststatus=2
+
+
+" Show the cursor position
+ set ruler
+
+" Show the current mode
+set showmode
+
+" Show the filename in the window titlebar
+set title
+
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
+
+" Wrap gitcommit file types at the appropriate length
+filetype indent plugin on
+
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
+" TAB COMPLETION
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
+
+
+" HTML
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+" SPLIT PANES
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" GIT
+" Always use vertical diffs
+set diffopt+=vertical
