@@ -136,6 +136,8 @@ export PATH="$PATH:$(brew --prefix homebrew/php/php55)/bin"
 # Android SDK
 export PATH="$PATH:~/android-sdk/tools/"
 export PATH="$PATH:~/Library/Android/sdk/"
+# Linuxbrew
+export PATH="$PATH:~/.linuxbrew/bin"
 
 # OpenMP
 export PATH=/usr/local/openMP/llvm/build/Debug+Asserts/bin:$PATH

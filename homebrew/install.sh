@@ -18,6 +18,11 @@ then
   elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
   then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+    if ! type "apt-get" > /dev/null; then
+      sudo apt-get install build-essential
+    elif ! type "yum" > /dev/null; then
+      sudo yum groupinstall 'Development Tools'
+    fi
   fi
 else
   brew update
