@@ -12,14 +12,15 @@ filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 set rtp+=~/.vim/vundles/ "Submodules
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle (required)
-Bundle "gmarik/vundle"
+Plugin "gmarik/vundle"
 
-" YADR's vundles are split up by category into smaller files
+" Vundles are split up by category into smaller files
 " This reduces churn and makes it easier to fork. See
 " ~/.vim/vundles/ to edit them:
+
 " runtime ruby.vundle
 runtime languages.vundle
 runtime git.vundle
@@ -28,6 +29,8 @@ runtime textobjects.vundle
 runtime search.vundle
 runtime project.vundle
 runtime vim-improvements.vundle
+
+call vundle#end()            " required
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on
