@@ -138,6 +138,7 @@ install_dotfiles () {
 }
 
 install_fonts () {
+  # TODO: don't download if it exists
   # Download to symlinked folder
   wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.sh
   wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.ttf
@@ -147,7 +148,6 @@ install_fonts () {
   wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/pomicons-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/pomicons-regular.ttf
 
   # Download configuration file
-  # TODO
   wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf -O $DOTFILES_ROOT/config/config.symlink/fontconfig/conf.d/10-symbols.conf
 
 }

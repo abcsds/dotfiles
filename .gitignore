@@ -8,5 +8,6 @@ atom/atom.symlink/themes
 atom/atom.symlink/nohup.out
 config/config.symlink/Atom
 config/config.symlink/google-chrome
+vim/vim.symlink/bundle
 
 git/gitconfig.symlink
