@@ -1,4 +1,10 @@
-# my .files
+# my franken.files
+
+FROM:
+https://github.com/thoughtbot/dotfiles
+https://github.com/mathiasbynens/dotfiles
+https://github.com/skwp/dotfiles
+https://github.com/holman/dotfiles
 
 ## dotfiles
 

@@ -151,10 +151,19 @@ install_fonts () {
   wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf -O $DOTFILES_ROOT/config.symlink/fontconfig/conf.d/10-symbols.conf
 
 }
+install_vundle () {
+  # From https://github.com/VundleVim/Vundle.vim
+  # Download to symlinked folder
+  git clone https://github.com/VundleVim/Vundle.vim.git $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim
+
+}
+
+
 
 setup_gitconfig
 install_dotfiles
 install_fonts
+install_vundle
 
 # Install antigen
 git clone https://github.com/zsh-users/antigen.git ~/.antigen
@@ -176,6 +185,9 @@ fi
 
 # Update font cache
 fc-cache -fv ~/.fonts
+
+# Finish vim plugin install
+vim +PluginInstall +qall
 
 echo ''
 echo '  All installed!'
