@@ -120,6 +120,7 @@ brew install tree
 
 brew install elinks
 brew install geoip
+brew install gibo
 brew install git-flow
 brew install graphicsmagick
 brew install htop-osx
