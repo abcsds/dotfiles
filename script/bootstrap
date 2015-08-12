@@ -148,7 +148,7 @@ install_fonts () {
 
   # Download configuration file
   # TODO
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf -O $DOTFILES_ROOT/config.symlink/fontconfig/conf.d/10-symbols.conf
+  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf -O $DOTFILES_ROOT/config/config.symlink/fontconfig/conf.d/10-symbols.conf
 
 }
 install_vundle () {
