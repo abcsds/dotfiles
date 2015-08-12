@@ -154,7 +154,7 @@ install_fonts () {
 install_vundle () {
   # From https://github.com/VundleVim/Vundle.vim
   # Download to symlinked folder
-  if [ -f $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim ]; then
+  if [ -d $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim ]; then
     echo "Vundler installed"
   else
     echo "Installing Vundler"
