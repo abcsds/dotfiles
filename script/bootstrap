@@ -153,12 +153,22 @@ install_fonts () {
 }
 install_vundle () {
   # From https://github.com/VundleVim/Vundle.vim
-  # Download to symlinked folde
+  # Download to symlinked folder
   if [ -f $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim ]; then
     echo "Vundler installed"
   else
     echo "Installing Vundler"
     git clone https://github.com/VundleVim/Vundle.vim.git $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim
+  fi
+}
+install_antigen () {
+  # From http://antigen.sharats.me/
+  if [ -d ~/.antigen ]; then
+    echo "Antigen installed"
+  else
+    echo "Installing Antigen"
+    # Install antigen
+    git clone https://github.com/zsh-users/antigen.git ~/.antigen
   fi
 }
 
@@ -167,9 +177,8 @@ install_vundle () {
 setup_gitconfig
 install_dotfiles
 install_vundle
+install_antigen
 
-# Install antigen
-git clone https://github.com/zsh-users/antigen.git ~/.antigen
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
