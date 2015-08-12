@@ -14,3 +14,5 @@ $DZSH/osx/set-defaults.sh
 
 # Install homebrew packages
 $DZSH/homebrew/install.sh 2>&1
+# Install homebrew-cask packages
+$DZSH/homebrew-cask/install.sh 2>&1

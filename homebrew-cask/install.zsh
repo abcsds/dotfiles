@@ -19,8 +19,9 @@ then
   # brew cask install macvim
   # brew cask install microsoft-office
   brew cask install nethackcocoa
-  # brew cask install slack
   brew cask install vlc
+  brew cask install seil
+  # brew cask install slack
   brew cask install steam
   # brew cask install sublime-text
   brew cask install telegram
@@ -31,3 +32,5 @@ then
   brew cask install unetbootin
 
 fi
+
+exit 0
