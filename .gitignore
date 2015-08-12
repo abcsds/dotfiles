@@ -10,6 +10,8 @@ atom/atom.symlink/nohup.out
 config/config.symlink/Atom
 config/config.symlink/google-chrome
 config/config.symlink/gtk-2.0
+config/config.symlink/filezilla
+config/config.symlink/dconf/user
 
 vim/vim.symlink/bundle
 
