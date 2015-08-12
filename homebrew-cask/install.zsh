@@ -7,6 +7,7 @@ then
   brew cask install atom
   brew cask install virtualbox
   brew cask install vagrant
+  brew cask install filezilla
   brew cask install gimp
   brew cask install github-desktop
   brew cask install google-chrome
