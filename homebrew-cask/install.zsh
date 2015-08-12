@@ -8,6 +8,7 @@ then
   brew cask install virtualbox
   brew cask install vagrant
   brew cask install gimp
+  brew cask install github-desktop
   brew cask install google-chrome
   brew cask install google-drive
   brew cask install google-hangouts
