@@ -171,6 +171,19 @@ install_antigen () {
     git clone https://github.com/zsh-users/antigen.git ~/.antigen
   fi
 }
+install_for_mac () {
+  # If we're on a Mac, let's install and setup homebrew.
+  if [ "$(uname -s)" == "Darwin" ]
+  then
+    info "installing dependencies"
+    if source bin/dot > /tmp/dotfiles-dot 2>&1
+    then
+      success "dependencies installed"
+    else
+      fail "error installing dependencies"
+    fi
+  fi
+}
 
 
 
@@ -178,20 +191,7 @@ setup_gitconfig
 install_dotfiles
 install_vundle
 install_antigen
-
-
-# If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if source bin/dot > /tmp/dotfiles-dot 2>&1
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-fi
-
+install_for_mac
 install_fonts
 
 # Install Oh my zsh
