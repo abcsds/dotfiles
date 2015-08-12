@@ -154,11 +154,11 @@ install_fonts () {
 install_vundle () {
   # From https://github.com/VundleVim/Vundle.vim
   # Download to symlinked folde
-  if [ -f $DOTFILES_ROOT/vim/vim.symlink/bundle/ ]; then
+  if [ -f $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim ]; then
     echo "Vundler installed"
   else
     echo "Installing Vundler"
-    # git clone https://github.com/VundleVim/Vundle.vim.git $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim
   fi
 }
 
@@ -183,10 +183,11 @@ then
   fi
 fi
 
+install_fonts
+
 # Install Oh my zsh
 # curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
-install_fonts
 # Update font cache
 fc-cache -fv ~/.fonts
 

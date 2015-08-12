@@ -6,8 +6,11 @@ atom/atom.symlink/packages
 atom/atom.symlink/storage
 atom/atom.symlink/themes
 atom/atom.symlink/nohup.out
+
 config/config.symlink/Atom
 config/config.symlink/google-chrome
+config/config.symlink/gtk-2.0
+
 vim/vim.symlink/bundle
 
 git/gitconfig.symlink

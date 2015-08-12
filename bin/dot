@@ -7,12 +7,15 @@
 export DZSH=$HOME/.dotfiles
 
 # Set OS X defaults
+echo "Setting OSX defaults..."
 $DZSH/osx/set-defaults.sh
 
 # Upgrade homebrew
 # brew update
 
 # Install homebrew packages
+echo "Installing homebrew packages..."
 $DZSH/homebrew/install.sh 2>&1
 # Install homebrew-cask packages
+echo "Installing homebrew-cask packages"
 $DZSH/homebrew-cask/install.sh 2>&1
