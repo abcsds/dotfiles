@@ -8,7 +8,7 @@ export EDITOR=vim
 source ~/.antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
-# antigen use oh-my-zsh
+antigen use oh-my-zsh
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -22,7 +22,7 @@ antigen bundle command-not-found
 
 # Load the theme.
 antigen theme abcsds/zsh-themes themes/abscent
-# ABSCENT_MODE='awesome-patched'
+ABSCENT_MODE='awesome-patched'
 # antigen theme agnoster
 
 
@@ -125,9 +125,9 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnuman"
 export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
 # PHP 5.5
-if [ "$(uname -s)"=="Darwin" ]
+if [ -z "$(which brew)" ]
 then
-  export PATH="$PATH:$(brew --prefix homebrew/php/php55)/bin"
+  export PATH="$PATH:$(brew --prefix homebrew/php/php55 )/bin"
 fi
 # Android SDK
 export PATH="$PATH:~/android-sdk/tools/"
@@ -140,7 +140,7 @@ export PATH=/usr/local/openMP/llvm/build/Debug+Asserts/bin:$PATH
 export C_INCLUDE_PATH=/usr/local/openMP/llvm/include:/usr/local/openMP/libomp_oss/exports/common/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=/usr/local/openMP/llvm/include:/usr/local/openMP/libomp_oss/exports/common/include:$CPLUS_INCLUDE_PATH
 export LIBRARY_PATH=/usr/local/openMP/llvm/build/Debug+Asserts/lib:/usr/local/openMP/libomp_oss/exports/mac_32e/lib.thin:$LIBRARY_PATH
-export DYLD_LIBRARY_PATH=/usr/local/openMP/llvm/build/Debug+Asserts/lib:/usr/local/openMP/libomp_oss/exports/mac_32e/lib.thin:$DYLD_LIBRARY_PATH}
+export DYLD_LIBRARY_PATH=/usr/local/openMP/llvm/build/Debug+Asserts/lib:/usr/local/openMP/libomp_oss/exports/mac_32e/lib.thin:$DYLD_LIBRARY_PATH
 
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
