@@ -6,5 +6,5 @@ Plugin 'morhetz/gruvbox'
 Plugin 'xsunsmile/showmarks.git'
 Plugin 'chriskempson/base16-vim'
 
-' Required for Gblame in terminal vim
-Plugin 'godlygeek/csapprox.git' 
+" Required for Gblame in terminal vim
+Plugin 'godlygeek/csapprox.git'
