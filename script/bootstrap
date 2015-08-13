@@ -155,18 +155,18 @@ install_vundle () {
   # From https://github.com/VundleVim/Vundle.vim
   # Download to symlinked folder
   if [ -d $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim ]; then
-    echo "Vundler installed"
+    success "Vundler installed"
   else
-    echo "Installing Vundler"
+    info "Installing Vundler"
     git clone https://github.com/VundleVim/Vundle.vim.git $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim
   fi
 }
 install_antigen () {
   # From http://antigen.sharats.me/
   if [ -d ~/.antigen ]; then
-    echo "Antigen installed"
+    success "Antigen installed"
   else
-    echo "Installing Antigen"
+    info "Installing Antigen"
     # Install antigen
     git clone https://github.com/zsh-users/antigen.git ~/.antigen
   fi
