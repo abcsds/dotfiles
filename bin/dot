@@ -19,6 +19,3 @@ $DZSH/homebrew/install.sh 2>&1
 # Install homebrew-cask packages
 echo "Installing homebrew-cask packages"
 $DZSH/homebrew-cask/install.zsh 2>&1
-
-# Set a variable to avoid repeating
-export XIUDEP="Sure"
