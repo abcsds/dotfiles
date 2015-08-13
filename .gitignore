@@ -12,6 +12,8 @@ config/config.symlink/google-chrome
 config/config.symlink/gtk-2.0
 config/config.symlink/filezilla
 config/config.symlink/dconf/user
+config/config.symlink/libreoffice
+config/config.symlink/menus
 
 vim/vim.symlink/bundle
 
