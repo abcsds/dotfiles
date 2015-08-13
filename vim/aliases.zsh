@@ -5,7 +5,7 @@ MVIM=$(command -v mvim)
 [[ -n $VIM ]] && alias v=$VIM
 
 
-if [ "$(uname -s)" == "Darwin" ]
+if [ "$(uname -s)"=="Darwin" ]
 then
   [[ -n $MVIM ]] && alias mvim="mvim --remote-tab"
 else

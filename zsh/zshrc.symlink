@@ -125,8 +125,8 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnuman"
 export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
 # PHP 5.5
-if [ "$(uname -s)" == "Darwin" ]
-then 
+if [ "$(uname -s)"=="Darwin" ]
+then
   export PATH="$PATH:$(brew --prefix homebrew/php/php55)/bin"
 fi
 # Android SDK
