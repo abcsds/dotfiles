@@ -14,6 +14,10 @@ config/config.symlink/filezilla
 config/config.symlink/dconf/user
 config/config.symlink/libreoffice
 config/config.symlink/menus
+config/config.symlink/Trolltech.conf
+config/config.symlink/dlenya*
+config/config.symlink/tracker
+config/config.symlink/ibus
 
 vim/vim.symlink/bundle
 

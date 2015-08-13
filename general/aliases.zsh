@@ -45,7 +45,7 @@ alias cls='clear'
 
 alias edit="$EDITOR"
 
-alias q='exit'
+# alias q='exit'
 
 alias rb='ruby'
 
@@ -84,7 +84,7 @@ then
 fi
 
 # Some more goodies
-alias which='type -all' # which: Find executables
+# alias which='type -all' # which: Find executables
 alias path='echo -e ${PATH//:/\\n}' # path: Echo all executable Paths
 alias show_options='shopt' # Show_options: display bash options settings
 alias fix_stty='stty sane' # fix_stty: Restore terminal settings when screwed up

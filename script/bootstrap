@@ -195,7 +195,7 @@ install_pip () {
     curl https://bootstrap.pypa.io/get-pip.py 2>/dev/null > $DOTFILES_ROOT/pip/get-pip.py
   fi
   python get-pip.py
-  pip install virtualenv virtualenvwrapper
+  pip install virtualenv virtualenvwrapper Pygments
 }
 
 
