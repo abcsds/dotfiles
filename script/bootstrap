@@ -49,7 +49,6 @@ setup_gitconfig () {
   fi
 }
 
-
 link_file () {
   local src=$1 dst=$2
 
@@ -137,20 +136,6 @@ install_dotfiles () {
   done
 }
 
-install_fonts () {
-  # TODO: don't download if it exists
-  # Download to symlinked folder
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.sh
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.ttf
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/octicons-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/octicons-regular.sh
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/octicons-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/octicons-regular.ttf
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/pomicons-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/pomicons-regular.sh
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/pomicons-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/pomicons-regular.ttf
-
-  # Download configuration file
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf -O $DOTFILES_ROOT/config/config.symlink/fontconfig/conf.d/10-symbols.conf
-
-}
 install_vundle () {
   # From https://github.com/VundleVim/Vundle.vim
   # Download to symlinked folder
@@ -161,16 +146,19 @@ install_vundle () {
     git clone https://github.com/VundleVim/Vundle.vim.git $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim
   fi
 }
+
 install_antigen () {
   # From http://antigen.sharats.me/
-  if [ -d ~/.antigen ]; then
+  # Download to symlinked folder
+  if [ -d $DOTFILES_ROOT/antigen/antigen.symlink ]; then
     success "Antigen installed"
   else
     info "Installing Antigen"
     # Install antigen
-    git clone https://github.com/zsh-users/antigen.git ~/.antigen
+    git clone https://github.com/zsh-users/antigen.git $DOTFILES_ROOT/antigen/antigen.symlink
   fi
 }
+
 install_for_mac () {
   # If we're on a Mac, let's install and setup homebrew.
   if [ "$(uname -s)" == "Darwin" ]
@@ -185,20 +173,28 @@ install_for_mac () {
   fi
 }
 
+install_fonts () {
+  # TODO: don't download if it exists
+  # Download to symlinked folder
+  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.sh
+  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.ttf
+  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/octicons-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/octicons-regular.sh
+  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/octicons-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/octicons-regular.ttf
+  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/pomicons-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/pomicons-regular.sh
+  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/pomicons-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/pomicons-regular.ttf
+  # Download configuration file
+  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf -O $DOTFILES_ROOT/config/config.symlink/fontconfig/conf.d/10-symbols.conf
+  # Update font cache
+  fc-cache -fv ~/.fonts
+}
 
 
 setup_gitconfig
 install_dotfiles
 install_vundle
-install_antigen
 install_for_mac
+install_antigen
 install_fonts
-
-# Install Oh my zsh
-# curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-
-# Update font cache
-fc-cache -fv ~/.fonts
 
 # Finish vim plugin install
 vim +PluginInstall +qall

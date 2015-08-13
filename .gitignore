@@ -18,3 +18,5 @@ config/config.symlink/menus
 vim/vim.symlink/bundle
 
 git/gitconfig.symlink
+
+antigen/antigen.symlink

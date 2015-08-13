@@ -5,8 +5,6 @@ then
 
   # brew cask install alfred
   brew cask install atom
-  brew cask install virtualbox
-  brew cask install vagrant
   brew cask install filezilla
   brew cask install gimp
   brew cask install github-desktop
@@ -32,7 +30,9 @@ then
   brew cask install transmission
   brew cask install tuneup
   brew cask install unetbootin
+  brew cask install vagrant
+  brew cask install virtualbox
 
 fi
 
-# exit 0
+exit 0

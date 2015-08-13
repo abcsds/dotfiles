@@ -24,8 +24,6 @@ then
       sudo yum groupinstall 'Development Tools'
     fi
   fi
-else
-  brew update
 fi
 
 # Make sure we’re using the latest Homebrew.
@@ -140,4 +138,4 @@ brew install wireshark
 # Remove outdated versions from the cellar.
 brew cleanup
 
-# exit 0
+exit 0

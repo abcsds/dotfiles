@@ -773,7 +773,7 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 # for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
 # 	"Dock" "Finder" "Google Chrome" "Google Chrome Canary" "Mail" "Messages" \
-# 	"Safari" "SystemUIServer"  \ # "Terminal"
+# 	"Safari" "SystemUIServer"  \ # "Terminal" Don't kill termial, it's stupid
 # 	"Transmission" "Twitter" "iCal"; do
 # 	killall "${app}" > /dev/null 2>&1
 # done
