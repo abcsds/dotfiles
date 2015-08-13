@@ -29,11 +29,9 @@
  - css color underline
  - set syntax
 
-caps-esc = Seil
 vimtutor
 vimcast
 ag for vim
-virtualenv/virtualenvwrapper
 
 
 ## UPDATES

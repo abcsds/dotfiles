@@ -176,16 +176,26 @@ install_for_mac () {
 install_fonts () {
   # TODO: don't download if it exists
   # Download to symlinked folder
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.sh
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.ttf
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/octicons-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/octicons-regular.sh
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/octicons-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/octicons-regular.ttf
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/pomicons-regular.sh -O $DOTFILES_ROOT/fonts/fonts.symlink/pomicons-regular.sh
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/pomicons-regular.ttf -O $DOTFILES_ROOT/fonts/fonts.symlink/pomicons-regular.ttf
+  curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.sh 2>/dev/null > $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.sh
+  curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.ttf 2>/dev/null > $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.ttf
+  curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/octicons-regular.sh 2>/dev/null > $DOTFILES_ROOT/fonts/fonts.symlink/octicons-regular.sh
+  curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/octicons-regular.ttf 2>/dev/null > $DOTFILES_ROOT/fonts/fonts.symlink/octicons-regular.ttf
+  curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/pomicons-regular.sh 2>/dev/null > $DOTFILES_ROOT/fonts/fonts.symlink/pomicons-regular.sh
+  curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/pomicons-regular.ttf 2>/dev/null > $DOTFILES_ROOT/fonts/fonts.symlink/pomicons-regular.ttf
   # Download configuration file
-  wget -q http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf -O $DOTFILES_ROOT/config/config.symlink/fontconfig/conf.d/10-symbols.conf
+  curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf 2>/dev/null > $DOTFILES_ROOT/config/config.symlink/fontconfig/conf.d/10-symbols.conf
   # Update font cache
   fc-cache -fv ~/.fonts
+}
+
+install_pip () {
+  # Get pip, virtualenv, and virtualenvwrapper
+  if ! [ -f $DOTFILES_ROOT/pip/get-pip.py ]
+  then
+    curl https://bootstrap.pypa.io/get-pip.py 2>/dev/null > $DOTFILES_ROOT/pip/get-pip.py
+  fi
+  python get-pip.py
+  pip install virtualenv virtualenvwrapper
 }
 
 
@@ -195,6 +205,7 @@ install_vundle
 install_for_mac
 install_antigen
 install_fonts
+install_pip
 
 # Finish vim plugin install
 vim +PluginInstall +qall
