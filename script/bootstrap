@@ -205,7 +205,10 @@ install_vundle
 install_for_mac
 install_antigen
 install_fonts
-install_pip
+if [ -z `which pip` ]; then
+  install_pip
+fi
+
 
 # Finish vim plugin install
 vim +PluginInstall +qall

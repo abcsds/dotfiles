@@ -1,21 +1,14 @@
 # shortcut to this dotfiles path is $DZSH
 export DZSH=$HOME/.dotfiles
 
-# your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
-
 # Set Default Editor
 export EDITOR=vim
-
-# Set default blocksize for ls, df, du
-# export BLOCKSIZE=1k
-export BLOCKSIZE=1m
 
 # Source Antigen
 source ~/.antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# antigen use oh-my-zsh
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -132,7 +125,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnuman"
 export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
 # PHP 5.5
-export PATH="$PATH:$(brew --prefix homebrew/php/php55)/bin"
+if [ "$(uname -s)" == "Darwin" ]
+then 
+  export PATH="$PATH:$(brew --prefix homebrew/php/php55)/bin"
+fi
 # Android SDK
 export PATH="$PATH:~/android-sdk/tools/"
 export PATH="$PATH:~/Library/Android/sdk/"
