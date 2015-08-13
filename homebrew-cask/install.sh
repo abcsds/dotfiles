@@ -32,6 +32,7 @@ then
   brew cask install unetbootin
   brew cask install vagrant
   brew cask install virtualbox
+  brew cask install xquartz
 
 fi
 

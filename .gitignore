@@ -20,6 +20,7 @@ config/config.symlink/tracker
 config/config.symlink/ibus
 
 vim/vim.symlink/bundle
+vim/vim.symlink/sessions
 
 git/gitconfig.symlink
 
