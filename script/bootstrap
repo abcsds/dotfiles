@@ -199,5 +199,9 @@ install_fonts
 # Finish vim plugin install
 vim +PluginInstall +qall
 
+# Set zsh
+USER=$(whoami)
+sudo chsh -s $(which zsh) $USER
+
 echo ''
 echo '  All installed!'
