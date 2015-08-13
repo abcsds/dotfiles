@@ -140,4 +140,4 @@ brew install wireshark
 # Remove outdated versions from the cellar.
 brew cleanup
 
-exit 0
+# exit 0
