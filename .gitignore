@@ -9,7 +9,6 @@ atom/atom.symlink/nohup.out
 
 config/config.symlink/Atom
 config/config.symlink/google-chrome
-config/config.symlink/gtk-2.0
 config/config.symlink/filezilla
 config/config.symlink/dconf/user
 config/config.symlink/libreoffice
@@ -18,6 +17,14 @@ config/config.symlink/Trolltech.conf
 config/config.symlink/dlenya*
 config/config.symlink/tracker
 config/config.symlink/ibus
+config/config.symlink/gtk*
+config/config.symlink/nautilus
+config/config.symlink/pulse
+config/config.symlink/evolution
+config/config.symlink/user-dirs*
+config/config.symlink/dleyna*
+config/config.symlink/gnome*
+config/config.symlink/goa*
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
