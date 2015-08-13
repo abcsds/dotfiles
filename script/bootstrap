@@ -173,7 +173,7 @@ install_antigen () {
 }
 install_for_mac () {
   # If we're on a Mac, let's install and setup homebrew.
-  if [ $XIUDEP = "Sure" ] then
+  if [ $XIUDEP = "Sure" ]; then
     success "Dependencies installed"
   else
     if [ "$(uname -s)" == "Darwin" ]
