@@ -40,6 +40,9 @@ if filereadable(expand("~/.vim/vundles.vim"))
   source ~/.vim/vundles.vim
 endif
 
+" To work with solarized dark theme from skwp/vim-colors-solarized
+colorscheme atom-dark-256 
+
 " ================ Turn Off Swap Files ==============
 
 set noswapfile

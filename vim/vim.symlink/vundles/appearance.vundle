@@ -1,5 +1,6 @@
 Plugin 'chrisbra/color_highlight.git'
 Plugin 'skwp/vim-colors-solarized'
+Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jby/tmux.vim.git'
 Plugin 'morhetz/gruvbox'
