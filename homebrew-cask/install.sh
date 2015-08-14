@@ -2,6 +2,7 @@ if test "$(uname)" = "Darwin"
 then
   brew install caskroom/cask/brew-cask
   # install homebrew casks
+  brew cask install xquartz
 
   # brew cask install alfred
   brew cask install atom
@@ -32,7 +33,6 @@ then
   brew cask install unetbootin
   brew cask install vagrant
   brew cask install virtualbox
-  brew cask install xquartz
 
 fi
 
