@@ -223,7 +223,7 @@ function buf ()
 }
 
 
-if [ -z $(which pygmentize) ]
+if [ -z "$(which pygmentize)" ]
 then
     echo "Pygments is required to use this plugin"
     echo "Install it by doing 'pip install Pygments' as the superuser"
