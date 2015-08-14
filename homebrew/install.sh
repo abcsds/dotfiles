@@ -13,9 +13,10 @@ then
   # Install the correct homebrew for each OS type
   if test "$(uname)" = "Darwin"
   then
-    spawn ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    expect "Press RETURN to continue or any other key to abort"
-    send -- "\n"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    # spawn ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    # expect "Press RETURN to continue or any other key to abort"
+    # send -- "\n"
     OSTYPE="Darwin"
   elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
   then
@@ -39,6 +40,9 @@ brew upgrade --all
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install grc coreutils spark
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+# Tap what is needed
+brew tap homebrew/games
+brew tap homebrew/apache
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -129,10 +133,10 @@ brew install gibo
 brew install git-flow
 brew install graphicsmagick
 brew install htop-osx
-brew install apache/httpd24
+brew install httpd24
 brew install iftop
 brew install netcat
-brew install games/nethack
+brew install nethack
 brew install ntopng
 brew install pixman
 brew install proxychains-ng

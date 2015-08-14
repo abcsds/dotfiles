@@ -220,8 +220,7 @@ then
 fi
 
 # Set zsh
-USER=$(whoami)
-sudo chsh -s $(which zsh) $USER
+sudo chsh -s $(which zsh) $(whoami)
 
 echo ''
 echo '  All installed!'
