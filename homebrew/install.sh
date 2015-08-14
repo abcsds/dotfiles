@@ -129,10 +129,10 @@ brew install gibo
 brew install git-flow
 brew install graphicsmagick
 brew install htop-osx
-brew install httpd24
+brew install apache/httpd24
 brew install iftop
 brew install netcat
-brew install nethack
+brew install games/nethack
 brew install ntopng
 brew install pixman
 brew install proxychains-ng
