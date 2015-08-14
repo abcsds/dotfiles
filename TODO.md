@@ -5,8 +5,6 @@
   - github
   - grb256
   - vim-atom-dark https://github.com/gosukiwi/vim-atom-dark
-## zsh
- - abscent theme
 ## keyboard
   - seil
 ## Plugins
