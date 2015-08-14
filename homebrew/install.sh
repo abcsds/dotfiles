@@ -67,6 +67,10 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 brew install homebrew/php/php55 --with-gmp
 
+# Install Java
+brew install caskroom/cask/brew-cask
+brew cask install java
+
 # Tap science and computing
 brew tap homebrew/science
 brew install boost

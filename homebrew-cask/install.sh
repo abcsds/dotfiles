@@ -16,7 +16,6 @@ then
   brew cask install inkscape
   brew cask install insomniax
   brew cask install iterm2
-  brew cask install java
   # brew cask install macvim
   # brew cask install microsoft-office
   brew cask install nethackcocoa
