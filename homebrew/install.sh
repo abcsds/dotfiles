@@ -132,6 +132,7 @@ brew install geoip
 brew install gibo
 brew install git-flow
 brew install graphicsmagick
+brew install gtypist
 brew install htop-osx
 brew install httpd24
 brew install iftop
