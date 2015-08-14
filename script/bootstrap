@@ -213,6 +213,12 @@ fi
 # Finish vim plugin install
 vim +PluginInstall +qall
 
+if [ "$(uname -s)" == "Darwin" ]
+then
+  # Install the Solarized Dark theme for iTerm
+  open "${HOME}/.themes/Solarized Dark.itermcolors"
+fi
+
 # Set zsh
 USER=$(whoami)
 sudo chsh -s $(which zsh) $USER

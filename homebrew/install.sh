@@ -13,7 +13,9 @@ then
   # Install the correct homebrew for each OS type
   if test "$(uname)" = "Darwin"
   then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    spawn ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    expect "Press RETURN to continue or any other key to abort"
+    send -- "\n"
     OSTYPE="Darwin"
   elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
   then
@@ -72,7 +74,7 @@ brew install cmake
 brew install doxygen
 brew install gnuplot
 brew install node
-brew install octave
+brew install octave # requires java from cask
 brew install plotutils
 brew install pyqt
 brew install pyside

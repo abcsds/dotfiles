@@ -27,6 +27,7 @@ config/config.symlink/gnome*
 config/config.symlink/goa*
 config/config.symlink/nautilus
 config/config.symlink/mime*
+config/config.symlink/eog
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
