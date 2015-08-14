@@ -47,3 +47,16 @@ npm update -g
 # Update Ruby & gems
 sudo gem update —system
 sudo gem update
+
+
+https://github.com/unixorn/awesome-zsh-plugins
+zsh plugins
+vim plugins
+abscent theme
+README
+https://github.com/alebcay/awesome-shell
+http://redsymbol.net/articles/unofficial-bash-strict-mode/
+https://github.com/gabrielelana/awesome-terminal-fonts
+https://github.com/Tolchi/dotfile
+https://github.com/bhilburn/powerlevel9k
+https://github.com/skwp/dotfiles/tree/master/vim

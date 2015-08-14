@@ -5,6 +5,7 @@ https://github.com/thoughtbot/dotfiles
 https://github.com/mathiasbynens/dotfiles
 https://github.com/skwp/dotfiles
 https://github.com/holman/dotfiles
+https://github.com/bhilburn/powerlevel9k
 
 ## dotfiles
 
@@ -92,8 +93,3 @@ weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
 dotfiles were an easy way to get into bash customization, and then to jump ship
 to zsh a bit later. A decent amount of the code in these dotfiles stem or are
 inspired from Ryan's original project.
-
-## TODO
-zsh plugins
-vim plugins
-abscent theme
