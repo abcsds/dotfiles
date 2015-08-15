@@ -29,6 +29,7 @@ config/config.symlink/nautilus
 config/config.symlink/mime*
 config/config.symlink/eog
 config/config.symlink/configstore*
+config/config.symlink/user-share
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
