@@ -7,18 +7,9 @@ export EDITOR=vim
 # Source Antigen
 source ~/.antigen/antigen.zsh
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle pip
-antigen bundle lein
-antigen bundle command-not-found
+# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
+# antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the powerlevel9k theme
 antigen theme bhilburn/powerlevel9k powerlevel9k
@@ -45,7 +36,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
 
 # Limit to the last two folders
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 
 # Show promt on next line
 # POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -59,6 +50,7 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 # POWERLEVEL9K_COLOR_SCHEME='light'
 
 # Segment customization
+# Colors at: http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 # POWERLEVEL9K_TIME_FOREGROUND='red'
 # POWERLEVEL9K_TIME_BACKGROUND='blue'
 # POWERLEVEL9K_VCS_FOREGROUND='021' # Dark blue
@@ -66,10 +58,10 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 # These Segments; context, vcs, rspec_stats, symfony2_tests, have additional color options
 
 # Customizing `context` colors for root and non-root users
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="green"
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="cyan"
-POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
-POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="blue"
+ POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="018"
+# POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="cyan"
+# POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
+# POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="blue"
 
 # Advanced `vcs` color customization
 POWERLEVEL9K_VCS_FOREGROUND='blue'
@@ -80,25 +72,24 @@ POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='cyan'
 
 # rspec_stats for good test coverage
-POWERLEVEL9K_RSPEC_STATS_GOOD_FOREGROUND='blue'
-POWERLEVEL9K_RSPEC_STATS_GOOD_BACKGROUND='green'
+# POWERLEVEL9K_RSPEC_STATS_GOOD_FOREGROUND='blue'
+# POWERLEVEL9K_RSPEC_STATS_GOOD_BACKGROUND='green'
 # rspec_stats for average test coverage
-POWERLEVEL9K_RSPEC_STATS_AVG_FOREGROUND='black'
-POWERLEVEL9K_RSPEC_STATS_AVG_BACKGROUND='cyan'
+# POWERLEVEL9K_RSPEC_STATS_AVG_FOREGROUND='black'
+# POWERLEVEL9K_RSPEC_STATS_AVG_BACKGROUND='cyan'
 # rspec_stats for poor test coverage
-POWERLEVEL9K_RSPEC_STATS_BAD_FOREGROUND='red'
-POWERLEVEL9K_RSPEC_STATS_BAD_BACKGROUND='white'
+# POWERLEVEL9K_RSPEC_STATS_BAD_FOREGROUND='red'
+# POWERLEVEL9K_RSPEC_STATS_BAD_BACKGROUND='white'
 
 # symfony2_tests for good test coverage
-POWERLEVEL9K_SYMFONY2_TESTS_GOOD_FOREGROUND='blue'
-POWERLEVEL9K_SYMFONY2_TESTS_GOOD_BACKGROUND='green'
+# POWERLEVEL9K_SYMFONY2_TESTS_GOOD_FOREGROUND='blue'
+# POWERLEVEL9K_SYMFONY2_TESTS_GOOD_BACKGROUND='green'
 # symfony2_tests for average test coverage
-POWERLEVEL9K_SYMFONY2_TESTS_AVG_FOREGROUND='black'
-POWERLEVEL9K_SYMFONY2_TESTS_AVG_BACKGROUND='cyan'
+# POWERLEVEL9K_SYMFONY2_TESTS_AVG_FOREGROUND='black'
+# POWERLEVEL9K_SYMFONY2_TESTS_AVG_BACKGROUND='cyan'
 # symfony2_tests for poor test coverage
-POWERLEVEL9K_SYMFONY2_TESTS_BAD_FOREGROUND='red'
-POWERLEVEL9K_SYMFONY2_TESTS_BAD_BACKGROUND='white'
-
+# POWERLEVEL9K_SYMFONY2_TESTS_BAD_FOREGROUND='red'
+# POWERLEVEL9K_SYMFONY2_TESTS_BAD_BACKGROUND='white'
 
 # Tell antigen that you're done.
 antigen apply
