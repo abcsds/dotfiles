@@ -1,12 +1,3 @@
-## vim
- - Colors:
-  - candy
-  - codeschool
-  - github
-  - grb256
-  - vim-atom-dark https://github.com/gosukiwi/vim-atom-dark
-## keyboard
-  - seil
 ## Plugins
  - emmet
  - prettyfy
@@ -47,10 +38,7 @@ sudo gem update —system
 sudo gem update
 
 
-https://github.com/unixorn/awesome-zsh-plugins
-zsh plugins
 vim plugins
-abscent theme
 README
 https://github.com/alebcay/awesome-shell
 http://redsymbol.net/articles/unofficial-bash-strict-mode/

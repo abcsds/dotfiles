@@ -6,6 +6,8 @@ https://github.com/mathiasbynens/dotfiles
 https://github.com/skwp/dotfiles
 https://github.com/holman/dotfiles
 https://github.com/bhilburn/powerlevel9k
+https://github.com/unixorn/awesome-zsh-plugins
+
 
 ## dotfiles
 

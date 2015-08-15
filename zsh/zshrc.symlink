@@ -7,17 +7,43 @@ export EDITOR=vim
 # Source Antigen
 source ~/.antigen/antigen.zsh
 
+# ======= Antigen Plugins for zsh =======
+# Alias-tips
+antigen bundle djui/alias-tips
+
 # Syntax highlighting bundle.
 # ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
 # antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Do gitiginore files right from zsh
+antigen bundle voronkovich/gitignore.plugin.zsh
+
+# View vim plugin manuals from zsh
+antigen bundle yonchu/vimman
+
+# __ Zsh history substring search __
+antigen bundle zsh-users/zsh-history-substring-search
+# bind UP and DOWN arrow keys
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+# bind UP and DOWN arrow keys (compatibility fallback
+# for Ubuntu 12.04, Fedora 21, and MacOSX 10.9 users)
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+# bind P and N for EMACS mode
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+# bind k and j for VI mode
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
+# ======= Set up the theme =======
 # Load the powerlevel9k theme
 antigen theme bhilburn/powerlevel9k powerlevel9k
 POWERLEVEL9K_MODE='awesome-patched'
 
-# Set up the theme
 # The segments that are currently available are:
-
 # aws - The current AWS profile, if active (more info below)
 # context - Your username and host (more info below)
 # dir - Your current working directory.
@@ -58,17 +84,20 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 # These Segments; context, vcs, rspec_stats, symfony2_tests, have additional color options
 
 # Customizing `context` colors for root and non-root users
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="019"
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="017"
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="cyan"
 # POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
 # POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="blue"
+
+POWERLEVEL9K_DIR_BACKGROUND="cyan"
+# POWERLEVEL9K_DIR_FOREGROUND="white"
 
 # Advanced `vcs` color customization
 POWERLEVEL9K_VCS_FOREGROUND='blue'
 POWERLEVEL9K_VCS_DARK_FOREGROUND='black'
 POWERLEVEL9K_VCS_BACKGROUND='cyan'
 # If VCS changes are detected:
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='green'
 
 # rspec_stats for good test coverage
