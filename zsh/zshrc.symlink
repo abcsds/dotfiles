@@ -39,9 +39,10 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # ======= Set up the theme =======
+
 # Load the powerlevel9k theme
 antigen theme bhilburn/powerlevel9k powerlevel9k
-POWERLEVEL9K_MODE='awesome-patched'
+# POWERLEVEL9K_MODE='awesome-patched'
 
 # The segments that are currently available are:
 # aws - The current AWS profile, if active (more info below)
@@ -92,10 +93,13 @@ POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="cyan"
 POWERLEVEL9K_DIR_BACKGROUND="cyan"
 # POWERLEVEL9K_DIR_FOREGROUND="white"
 
+POWERLEVEL9K_VIRTUALENV_BACKGROUND="17"
+# POWERLEVEL9K_VIRTUALENV_FOREGROUND="white"
+
 # Advanced `vcs` color customization
 POWERLEVEL9K_VCS_FOREGROUND='blue'
 POWERLEVEL9K_VCS_DARK_FOREGROUND='black'
-POWERLEVEL9K_VCS_BACKGROUND='cyan'
+POWERLEVEL9K_VCS_BACKGROUND='050'
 # If VCS changes are detected:
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='green'
