@@ -19,8 +19,10 @@ then
   brew cask install iterm2
   # brew cask install macvim
   # brew cask install microsoft-office
+  brew cask install minecraft
   brew cask install nethackcocoa
   brew cask install vlc
+  brew cask install rstudio
   brew cask install seil
   # brew cask install slack
   brew cask install steam
