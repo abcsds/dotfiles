@@ -1,8 +1,8 @@
 
 function ips ()
 {
-    about 'display all ip addresses for this host'
-    group 'base'
+    # about 'display all ip addresses for this host'
+    # group 'base'
     if command -v ifconfig &>/dev/null
     then
         ifconfig | awk '/inet /{ print $2 }'
@@ -16,27 +16,27 @@ function ips ()
 
 function down4me ()
 {
-    about 'checks whether a website is down for you, or everybody'
-    param '1: website url'
-    example '$ down4me http://www.google.com'
-    group 'base'
+    # about 'checks whether a website is down for you, or everybody'
+    # param '1: website url'
+    # example '$ down4me http://www.google.com'
+    # group 'base'
     curl -s "http://www.downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g'
 }
 
 function myip ()
 {
-    about 'displays your ip address, as seen by the Internet'
-    group 'base'
+    # about 'displays your ip address, as seen by the Internet'
+    # group 'base'
     res=$(curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+')
     echo -e "Your public IP is: ${echo_bold_green} $res ${echo_normal}"
 }
 
 function pickfrom ()
 {
-    about 'picks random line from file'
-    param '1: filename'
-    example '$ pickfrom /usr/share/dict/words'
-    group 'base'
+    # about 'picks random line from file'
+    # param '1: filename'
+    # example '$ pickfrom /usr/share/dict/words'
+    # group 'base'
     local file=$1
     [ -z "$file" ] && reference $FUNCNAME && return
     length=$(cat $file | wc -l)
@@ -46,12 +46,12 @@ function pickfrom ()
 
 function passgen ()
 {
-    about 'generates random password from dictionary words'
-    param 'optional integer length'
-    param 'if unset, defaults to 4'
-    example '$ passgen'
-    example '$ passgen 6'
-    group 'base'
+    # about 'generates random password from dictionary words'
+    # param 'optional integer length'
+    # param 'if unset, defaults to 4'
+    # example '$ passgen'
+    # example '$ passgen 6'
+    # group 'base'
     local i pass length=${1:-4}
     pass=$(echo $(for i in $(eval echo "{1..$length}"); do pickfrom /usr/share/dict/words; done))
     echo "With spaces (easier to memorize): $pass"
@@ -67,10 +67,10 @@ fi
 
 function pmdown ()
 {
-    about 'preview markdown file in a browser'
-    param '1: markdown file'
-    example '$ pmdown README.md'
-    group 'base'
+    # about 'preview markdown file in a browser'
+    # param '1: markdown file'
+    # example '$ pmdown README.md'
+    # group 'base'
     if command -v markdown &>/dev/null
     then
       markdown $1 | browser
@@ -81,60 +81,60 @@ function pmdown ()
 
 function mkcd ()
 {
-    about 'make a directory and cd into it'
-    param 'path to create'
-    example '$ mkcd foo'
-    example '$ mkcd /tmp/img/photos/large'
-    group 'base'
+    # about 'make a directory and cd into it'
+    # param 'path to create'
+    # example '$ mkcd foo'
+    # example '$ mkcd /tmp/img/photos/large'
+    # group 'base'
     mkdir -p -- "$*"
     cd -- "$*"
 }
 
 function lsgrep ()
 {
-    about 'search through directory contents with grep'
-    group 'base'
+    # about 'search through directory contents with grep'
+    # group 'base'
     ls | grep "$*"
 }
 
 function pman ()
 {
-    about 'view man documentation in Preview'
-    param '1: man page to view'
-    example '$ pman bash'
-    group 'base'
+    # about 'view man documentation in Preview'
+    # param '1: man page to view'
+    # example '$ pman bash'
+    # group 'base'
     man -t "${1}" | open -f -a $PREVIEW
 }
 
 function pcurl ()
 {
-    about 'download file and Preview it'
-    param '1: download URL'
-    example '$ pcurl http://www.irs.gov/pub/irs-pdf/fw4.pdf'
-    group 'base'
+    # about 'download file and Preview it'
+    # param '1: download URL'
+    # example '$ pcurl http://www.irs.gov/pub/irs-pdf/fw4.pdf'
+    # group 'base'
     curl "${1}" | open -f -a $PREVIEW
 }
 
 function pri ()
 {
-    about 'display information about Ruby classes, modules, or methods, in Preview'
-    param '1: Ruby method, module, or class'
-    example '$ pri Array'
-    group 'base'
+    # about 'display information about Ruby classes, modules, or methods, in Preview'
+    # param '1: Ruby method, module, or class'
+    # example '$ pri Array'
+    # group 'base'
     ri -T "${1}" | open -f -a $PREVIEW
 }
 
 function quiet ()
 {
-    about 'what *does* this do?'
-    group 'base'
+    # about 'what *does* this do?'
+    # group 'base'
     $* &> /dev/null &
 }
 
 function banish-cookies ()
 {
-    about 'redirect .adobe and .macromedia files to /dev/null'
-    group 'base'
+    # about 'redirect .adobe and .macromedia files to /dev/null'
+    # group 'base'
     rm -r ~/.macromedia ~/.adobe
     ln -s /dev/null ~/.adobe
     ln -s /dev/null ~/.macromedia
@@ -142,9 +142,9 @@ function banish-cookies ()
 
 function usage ()
 {
-    about 'disk usage per directory, in Mac OS X and Linux'
-    param '1: directory name'
-    group 'base'
+    # about 'disk usage per directory, in Mac OS X and Linux'
+    # param '1: directory name'
+    # group 'base'
     if [ $(uname) = "Darwin" ]; then
         if [ -n $1 ]; then
             du -hd $1
@@ -178,22 +178,22 @@ fi
 
 function command_exists ()
 {
-    about 'checks for existence of a command'
-    param '1: command to check'
-    example '$ command_exists ls && echo exists'
-    group 'base'
+    # about 'checks for existence of a command'
+    # param '1: command to check'
+    # example '$ command_exists ls && echo exists'
+    # group 'base'
     type "$1" &> /dev/null ;
 }
 
 mkiso ()
 {
-    about 'creates iso from current dir in the parent dir (unless defined)'
-    param '1: ISO name'
-    param '2: dest/path'
-    param '3: src/path'
-    example 'mkiso'
-    example 'mkiso ISO-Name dest/path src/path'
-    group 'base'
+    # about 'creates iso from current dir in the parent dir (unless defined)'
+    # param '1: ISO name'
+    # param '2: dest/path'
+    # param '3: src/path'
+    # example 'mkiso'
+    # example 'mkiso ISO-Name dest/path src/path'
+    # group 'base'
 
     if type "mkisofs" > /dev/null; then
         [ -z ${1+x} ] && local isoname=${PWD##*/} || local isoname=$1
@@ -214,9 +214,9 @@ mkiso ()
 # useful for administrators and configs
 function buf ()
 {
-    about 'back up file with timestamp'
-    param 'filename'
-    group 'base'
+    # about 'back up file with timestamp'
+    # param 'filename'
+    # group 'base'
     local filename=$1
     local filetime=$(date +%Y%m%d_%H%M%S)
     cp -a "${filename}" "${filename}_${filetime}"
@@ -236,9 +236,9 @@ LESS_BIN=$(which less)
 # pigmentize cat and less outputs
 cat()
 {
-    about 'runs either pygmentize or cat on each file passed in'
-    param '*: files to concatenate (as normally passed to cat)'
-    example 'cat mysite/manage.py dir/text-file.txt'
+    # about 'runs either pygmentize or cat on each file passed in'
+    # param '*: files to concatenate (as normally passed to cat)'
+    # example 'cat mysite/manage.py dir/text-file.txt'
     for var;
     do
         pygmentize "$var" 2>/dev/null || "$CAT_BIN" "$var";
@@ -247,8 +247,8 @@ cat()
 
 less()
 {
-    about 'it pigments the file passed in and passes it to less for pagination'
-    param '$1: the file to paginate with less'
-    example 'less mysite/manage.py'
+    # about 'it pigments the file passed in and passes it to less for pagination'
+    # param '$1: the file to paginate with less'
+    # example 'less mysite/manage.py'
     pygmentize "$*" | "$LESS_BIN" -R
 }

@@ -1,14 +1,14 @@
 function git_remote {
-  about 'adds remote $GIT_HOSTING:$1 to current repo'
-  group 'git'
+  # about 'adds remote $GIT_HOSTING:$1 to current repo'
+  # group 'git'
 
   echo "Running: git remote add origin ${GIT_HOSTING}:$1.git"
   git remote add origin $GIT_HOSTING:$1.git
 }
 
 function git_first_push {
-  about 'push into origin refs/heads/master'
-  group 'git'
+  # about 'push into origin refs/heads/master'
+  # group 'git'
 
   echo "Running: git push origin master:refs/heads/master"
   git push origin master:refs/heads/master
@@ -24,8 +24,8 @@ function git_pub() {
 }
 
 function git_revert() {
-  about 'applies changes to HEAD that revert all changes after this commit'
-  group 'git'
+  # about 'applies changes to HEAD that revert all changes after this commit'
+  # group 'git'
 
   git reset $1
   git reset --soft HEAD@{1}
@@ -34,8 +34,8 @@ function git_revert() {
 }
 
 function git_rollback() {
-  about 'resets the current HEAD to this commit'
-  group 'git'
+  # about 'resets the current HEAD to this commit'
+  # group 'git'
 
   function is_clean() {
     if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]]; then
@@ -101,8 +101,8 @@ function git_rollback() {
 }
 
 function git_remove_missing_files() {
-  about "git rm's missing files"
-  group 'git'
+  # about "git rm's missing files"
+  # group 'git'
 
   git ls-files -d -z | xargs -0 git update-index --remove
 }
@@ -154,8 +154,8 @@ function git_info() {
 }
 
 function git_stats {
-    about 'display stats per author'
-    group 'git'
+    # about 'display stats per author'
+    # group 'git'
 
 # awesome work from https://github.com/esc/git-stats
 # including some modifications

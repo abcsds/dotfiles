@@ -7,10 +7,10 @@ else
 fi
 
 function pyedit() {
-    about 'opens python module in your EDITOR'
-    param '1: python module to open'
-    example '$ pyedit requests'
-    group 'python'
+    # about 'opens python module in your EDITOR'
+    # param '1: python module to open'
+    # example '$ pyedit requests'
+    # group 'python'
 
     xpyc=`python -c "import sys; stdout = sys.stdout; sys.stdout = sys.stderr; import $1; stdout.write($1.__file__)"`
 

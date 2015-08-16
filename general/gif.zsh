@@ -1,12 +1,12 @@
 # From https://gist.github.com/SlexAxton/4989674#comment-1199058
 # Requirements (Mac OS X using Homebrew): brew install ffmpeg gifsicle imagemagick
 function gifify {
-  about 'Converts a .mov file into an into an animated GIF.'
-  group 'gif'
-  param '1: MOV file name'
-  param '2: max width in pixels (optional)'
-  example '$ gifify foo.mov'
-  example '$ gifify foo.mov 600'
+  # about 'Converts a .mov file into an into an animated GIF.'
+  # group 'gif'
+  # param '1: MOV file name'
+  # param '2: max width in pixels (optional)'
+  # example '$ gifify foo.mov'
+  # example '$ gifify foo.mov 600'
 
   if [ -z "$1" ]; then
     echo "$(tput setaf 1)No input file given. Example: gifify example.mov [max width (pixels)]$(tput sgr 0)"

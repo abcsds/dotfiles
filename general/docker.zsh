@@ -13,20 +13,20 @@ if [[ `uname -s` == "Darwin" ]]; then
 fi
 
 function docker-remove-most-recent-container() {
-  about 'attempt to remove the most recent container from docker ps -a'
-  group 'docker'
+  # about 'attempt to remove the most recent container from docker ps -a'
+  # group 'docker'
   docker ps -a | head -2 | tail -1 | awk '{print $NF}' | xargs docker rm
 }
 
 function docker-remove-most-recent-image() {
-  about 'attempt to remove the most recent image from docker images'
-  group 'docker'
+  # about 'attempt to remove the most recent image from docker images'
+  # group 'docker'
   docker images | head -2 | tail -1 | awk '{print $3}' | xargs docker rmi
 }
 
 function docker-remove-images() {
-  about 'attempt to remove images with supplied tags or all if no tags are supplied'
-  group 'docker'
+  # about 'attempt to remove images with supplied tags or all if no tags are supplied'
+  # group 'docker'
   if [ -z "$1" ]; then
     docker rmi $(docker images -q)
   else
@@ -40,8 +40,8 @@ function docker-remove-images() {
 }
 
 function docker-image-dependencies() {
-  about 'attempt to create a Graphiz image of the supplied image ID dependencies'
-  group 'docker'
+  # about 'attempt to create a Graphiz image of the supplied image ID dependencies'
+  # group 'docker'
   if hash dot 2>/dev/null; then
     OUT=$(mktemp -t docker-viz-XXXX.png)
     docker images -viz | dot -Tpng > $OUT
@@ -59,7 +59,7 @@ function docker-image-dependencies() {
 }
 
 function docker-runtime-environment() {
-  about 'attempt to list the environmental variables of the supplied image ID'
-  group 'docker'
+  # about 'attempt to list the environmental variables of the supplied image ID'
+  # group 'docker'
   docker run "$@" env
 }

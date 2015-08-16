@@ -8,8 +8,8 @@
 # fi
 
 function tab() {
-  about 'opens a new terminal tab'
-  group 'osx'
+  # about 'opens a new terminal tab'
+  # group 'osx'
 
   osascript 2>/dev/null <<EOF
     tell application "System Events"
