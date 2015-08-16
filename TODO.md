@@ -1,3 +1,6 @@
+# TODO list
+just some notes for myself.
+
 ## Plugins
  - emmet
  - prettyfy
@@ -18,7 +21,6 @@
  - css color underline
  - set syntax
 
-vimtutor
 vimcast
 ag for vim
 
@@ -39,10 +41,5 @@ sudo gem update
 
 
 vim plugins
-README
 https://github.com/alebcay/awesome-shell
-http://redsymbol.net/articles/unofficial-bash-strict-mode/
 https://github.com/gabrielelana/awesome-terminal-fonts
-https://github.com/Tolchi/dotfile
-https://github.com/bhilburn/powerlevel9k
-https://github.com/skwp/dotfiles/tree/master/vim
