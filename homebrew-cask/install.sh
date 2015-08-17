@@ -6,6 +6,7 @@ then
 
   # brew cask install alfred
   brew cask install atom
+  brew cask install bit-slicer
   brew cask install filezilla
   brew cask install gimp
   brew cask install github-desktop
