@@ -4,10 +4,14 @@
 
 # Here are some examples of reasonable defaults:
 
+OPTIONS=name:Xiutik
+OPTIONS=race:human
+OPTIONS=role:samurai
+OPTIONS=align:chaotic
+OPTIONS=gender:male
 
-OPTIONS=race:human,role:barbarian,align:neutral,gender:female
 OPTIONS=pettype:dog,hilite_pet,showrace
-OPTIONS=catname:Nabi,dogname:Mary
+OPTIONS=catname:Nala,dogname:Nolo
 OPTIONS=fruit:durian
 OPTIONS=autopickup,pickup_types:$?!/=
 OPTIONS=disclose:+i+a+g+c+v
@@ -19,7 +23,7 @@ OPTIONS=showexp,showscore,time
 OPTIONS=runmode:teleport,!rest_on_space
 OPTIONS=number_pad:0,boulder:0
 OPTIONS=pickup_burden:unencumbered
-OPTIONS=sortloot:loot:all
+# OPTIONS=sortloot:loot:all
 OPTIONS=scores:10 top/3 around/own
 
 # turn ghosts and shades into 'X' - great with telepathy for bones detection
@@ -31,193 +35,192 @@ OPTIONS=monsters:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@X'&;:~]
 # last minor: added {X} colors
 # last revision: changed container-apply from 'white' to 'none'
 
-OPTIONS=menucolors
+# OPTIONS=menucolors
 
 #########
 # B/U/C #
 #########
 #MENUCOLOR="^[a-zA-Z$] - "=white #may want to enable this if regularly playing priest.. (priests don't see the 'uncursed')
-MENUCOLOR=" !C"=white
-MENUCOLOR=" !B"=white
-MENUCOLOR=" !UC"=white
-MENUCOLOR=" uncursed"=white
-MENUCOLOR=" ([-0-9]+:[-0-9]+)"=white #nethack doesn't display "uncursed" if charges are known
-MENUCOLOR=" [+-][0-9]"=white
+# MENUCOLOR=" !C"=white
+# MENUCOLOR=" !B"=white
+# MENUCOLOR=" !UC"=white
+# MENUCOLOR=" uncursed"=white
+# MENUCOLOR=" ([-0-9]+:[-0-9]+)"=white #nethack doesn't display "uncursed" if charges are known
+# MENUCOLOR=" [+-][0-9]"=white
 
-MENUCOLOR=" blessed"=cyan
-MENUCOLOR=" cursed"=red
+# MENUCOLOR=" blessed"=cyan
+# MENUCOLOR=" cursed"=red
 
 
 ################
 # WATER SPORTS #
 ################
-MENUCOLOR=" holy water"=cyan&bold
-MENUCOLOR=" blessed clear potion"=cyan&bold
-MENUCOLOR=" blessed potions? called water"=cyan&bold
-MENUCOLOR=" potions? of water named blessed"=cyan&bold
-MENUCOLOR=" potions? called water named blessed"=cyan&bold
-MENUCOLOR=" unholy water"=orange
-MENUCOLOR=" cursed clear potion"=orange
-MENUCOLOR=" cursed potions? called water"=orange
-MENUCOLOR=" potions? called water named cursed"=orange
+# MENUCOLOR=" holy water"=cyan&bold
+# MENUCOLOR=" blessed clear potion"=cyan&bold
+# MENUCOLOR=" blessed potions? called water"=cyan&bold
+# MENUCOLOR=" potions? of water named blessed"=cyan&bold
+# MENUCOLOR=" potions? called water named blessed"=cyan&bold
+# MENUCOLOR=" unholy water"=orange
+# MENUCOLOR=" cursed clear potion"=orange
+# MENUCOLOR=" cursed potions? called water"=orange
+# MENUCOLOR=" potions? called water named cursed"=orange
 
 #################
 # MISCELLANEOUS #
 #################
-MENUCOLOR=" (lit)"=bold
+# MENUCOLOR=" (lit)"=bold
 
 ###########
 # GOODIES #
 ###########
-MENUCOLOR=" bag .* holding"=magenta
-MENUCOLOR=" luckstone"=magenta
-MENUCOLOR=" wand .* wishing"= magenta
-MENUCOLOR=" magic marker"=magenta
-MENUCOLOR=" magic lamp"=magenta
-MENUCOLOR=" unicorn horn[^[]*$"=magenta #this doesn't color the #enhance unicorn horn skill
-MENUCOLOR=" tinning kit"=magenta
-MENUCOLOR=" lamp .* magic"=magenta
-MENUCOLOR=" ring .* regeneration"=magenta
-MENUCOLOR=" ring .* slow digestion"=magenta
-MENUCOLOR=" amulet .* life saving"=magenta
+# MENUCOLOR=" bag .* holding"=magenta
+# MENUCOLOR=" luckstone"=magenta
+# MENUCOLOR=" wand .* wishing"= magenta
+# MENUCOLOR=" magic marker"=magenta
+# MENUCOLOR=" magic lamp"=magenta
+# MENUCOLOR=" unicorn horn[^[]*$"=magenta #this doesn't color the #enhance unicorn horn skill
+# MENUCOLOR=" tinning kit"=magenta
+# MENUCOLOR=" lamp .* magic"=magenta
+# MENUCOLOR=" ring .* regeneration"=magenta
+# MENUCOLOR=" ring .* slow digestion"=magenta
+# MENUCOLOR=" amulet .* life saving"=magenta
 
 #############
 # ARTIFACTS #
 #############
 #unaligned
-MENUCOLOR=" \(Dragonbane\|Fire Brand\|Frost Brand\|Ogresmasher\|Trollsbane\|Werebane\)"=lightgreen
+# MENUCOLOR=" \(Dragonbane\|Fire Brand\|Frost Brand\|Ogresmasher\|Trollsbane\|Werebane\)"=lightgreen
 
 #lawful normal, quest
-MENUCOLOR=" \(Demonbane\|Excalibur\|Grayswandir\|Snickersnee\|Sunsword\)"=lightgreen
-MENUCOLOR=" \(Orb of Detection\|Sceptre of Might\|Magic Mirror of Merlin\|Mitre of Holiness\|Tsurugi of Muramasa\)"=lightgreen
+# MENUCOLOR=" \(Demonbane\|Excalibur\|Grayswandir\|Snickersnee\|Sunsword\)"=lightgreen
+# MENUCOLOR=" \(Orb of Detection\|Sceptre of Might\|Magic Mirror of Merlin\|Mitre of Holiness\|Tsurugi of Muramasa\)"=lightgreen
 
 #neutral normal, quest
-MENUCOLOR=" \(Cleaver\|Giantslayer\|Magicbane\|Mjollnir\|Vorpal Blade\)"=lightgreen
-MENUCOLOR=" \(Heart of Ahriman\|Staff of Aesculapius\|Eyes of the Overworld\|Platinum Yendorian Express Card\|Orb of Fate\|Eye of the Aethiopica\)"=lightgreen
+# MENUCOLOR=" \(Cleaver\|Giantslayer\|Magicbane\|Mjollnir\|Vorpal Blade\)"=lightgreen
+# MENUCOLOR=" \(Heart of Ahriman\|Staff of Aesculapius\|Eyes of the Overworld\|Platinum Yendorian Express Card\|Orb of Fate\|Eye of the Aethiopica\)"=lightgreen
 
 #chaotic normal, quest
-MENUCOLOR=" \(Grimtooth\|Orcrist\|Sting\|Stormbringer\)"=lightgreen
-MENUCOLOR=" \(Longbow of Diana\|Master Key of Thievery\)"=lightgreen
+# MENUCOLOR=" \(Grimtooth\|Orcrist\|Sting\|Stormbringer\)"=lightgreen
+# MENUCOLOR=" \(Longbow of Diana\|Master Key of Thievery\)"=lightgreen
 
 #invocation items
-MENUCOLOR=" \(Bell of Opening\|silver bell\|Candelabrum of Invocation\|candelabrum\|Book of the Dead\|papyrus spellbook\)"=magenta&bold
+# MENUCOLOR=" \(Bell of Opening\|silver bell\|Candelabrum of Invocation\|candelabrum\|Book of the Dead\|papyrus spellbook\)"=magenta&bold
 
 #raison d'etre
-MENUCOLOR=" Amulet of Yendor named"=magenta&bold&underline
+# MENUCOLOR=" Amulet of Yendor named"=magenta&bold&underline
 
 #############
 # BAD STUFF #
 #############
-MENUCOLOR=" loadstone"=red&underline
-MENUCOLOR=" cursed .* luckstone"=orange&underline
+# MENUCOLOR=" loadstone"=red&underline
+# MENUCOLOR=" cursed .* luckstone"=orange&underline
 
 ##############################
 # WATCH OUT, BAG OF HOLDING! #
 ##############################
-MENUCOLOR=" bag .* tricks"=blue&underline
-MENUCOLOR=" wand .* cancellation"=blue&underline
-MENUCOLOR=" wand .* vanish"=blue&underline
+# MENUCOLOR=" bag .* tricks"=blue&underline
+# MENUCOLOR=" wand .* cancellation"=blue&underline
+# MENUCOLOR=" wand .* vanish"=blue&underline
 
 ################
 # SHINY THINGS #
 ################
-MENUCOLOR=" gold piece"=yellow
-MENUCOLOR=" valuable"=brown
-MENUCOLOR=" gems? .* hard"=yellow
+# MENUCOLOR=" gold piece"=yellow
+# MENUCOLOR=" valuable"=brown
+# MENUCOLOR=" gems? .* hard"=yellow
 
 #soft gems
-MENUCOLOR=" \([0-9]+\|an?\|gems? .*\) \(uncursed \|cursed \|blessed \)?\(dilithium\|opal\|garnet\|jasper\|agate\|jet\|obsidian\|jade\|citrine\|chrysoberyl\|amber\|amethyst\|fluorite\|turquoise\)\(e?s\)?\( stones?\| gems?\| crystals?\)?\( named .*\)?$"=brown
+# MENUCOLOR=" \([0-9]+\|an?\|gems? .*\) \(uncursed \|cursed \|blessed \)?\(dilithium\|opal\|garnet\|jasper\|agate\|jet\|obsidian\|jade\|citrine\|chrysoberyl\|amber\|amethyst\|fluorite\|turquoise\)\(e?s\)?\( stones?\| gems?\| crystals?\)?\( named .*\)?$"=brown
 
 #hard gems
-MENUCOLOR=" \([0-9]+\|an?\|gems?.*\) \(uncursed \|cursed \|blessed \)?\(diamond\|rub\(y\|ies\)\|jacinth\|sapphire\|black opal\|emerald\|topaz\|aquamarine\)\(e?s\)?\( stones?\| gems?\)?\( named .*\)?$"=yellow
+# MENUCOLOR=" \([0-9]+\|an?\|gems?.*\) \(uncursed \|cursed \|blessed \)?\(diamond\|rub\(y\|ies\)\|jacinth\|sapphire\|black opal\|emerald\|topaz\|aquamarine\)\(e?s\)?\( stones?\| gems?\)?\( named .*\)?$"=yellow
 
 #######################
 # SPELL FAILURE RATES #
 #######################
-MENUCOLOR=" 0%"=white
-MENUCOLOR=" [1-9]%"=cyan
-MENUCOLOR=" [12][0-9]%"=cyan
-MENUCOLOR=" [3-6][0-9]%"=yellow
-MENUCOLOR=" 7[0-5]%"=yellow
-MENUCOLOR=" 7[6-9]%"=orange
-MENUCOLOR=" 8[0-9]%"=orange
-MENUCOLOR=" 9[0-9]%"=red
-MENUCOLOR=" 100%"=red
+# MENUCOLOR=" 0%"=white
+# MENUCOLOR=" [1-9]%"=cyan
+# MENUCOLOR=" [12][0-9]%"=cyan
+# MENUCOLOR=" [3-6][0-9]%"=yellow
+# MENUCOLOR=" 7[0-5]%"=yellow
+# MENUCOLOR=" 7[6-9]%"=orange
+# MENUCOLOR=" 8[0-9]%"=orange
+# MENUCOLOR=" 9[0-9]%"=red
+# MENUCOLOR=" 100%"=red
 
 ###################
 # FORGOTTEN SPELL #  # thanks, Stevie
 ###################
-MENUCOLOR="[a-zA-Z] - [a-zA-Z ]+ [0-9]\*   [a-z]+ +[0-9]+%"=magenta
+# MENUCOLOR="[a-zA-Z] - [a-zA-Z ]+ [0-9]\*   [a-z]+ +[0-9]+%"=magenta
 
 ############
 # SHOPPING #
 ############
 #This doesn't want to work for my term
-#MENUCOLOR=" (unpaid, [0-9]+ zorkmids?)"=underline
+# MENUCOLOR=" (unpaid, [0-9]+ zorkmids?)"=underline
 
 ############
 # #ENHANCE #  # thanks itsblah
 ############
-MENUCOLOR="^ +[a-z -]+ +\[\(Unskilled\|Basic\|Skilled\|Expert\|Master\|Grand Master\)\]$"=none           # normal
-MENUCOLOR="^ *[a-z] - +[a-z -]+ +\[\(Unskilled\|Basic\|Skilled\|Expert\|Master\|Grand Master\)\]$"=white # ready to enhance
-MENUCOLOR="^ +\* +[a-z -]+ +\[\(Unskilled\|Basic\|Skilled\|Expert\|Master\|Grand Master\)\]$"=white      # enhanceable if more skill slots
-MENUCOLOR="^ +# +[a-z -]+ +\[\(Unskilled\|Basic\|Skilled\|Expert\|Master\|Grand Master\)\]$"=none        # enhanceable if more potential
+# MENUCOLOR="^ +[a-z -]+ +\[\(Unskilled\|Basic\|Skilled\|Expert\|Master\|Grand Master\)\]$"=none           # normal
+# MENUCOLOR="^ *[a-z] - +[a-z -]+ +\[\(Unskilled\|Basic\|Skilled\|Expert\|Master\|Grand Master\)\]$"=white # ready to enhance
+# MENUCOLOR="^ +\* +[a-z -]+ +\[\(Unskilled\|Basic\|Skilled\|Expert\|Master\|Grand Master\)\]$"=white      # enhanceable if more skill slots
+# MENUCOLOR="^ +# +[a-z -]+ +\[\(Unskilled\|Basic\|Skilled\|Expert\|Master\|Grand Master\)\]$"=none        # enhanceable if more potential
 
 ################
 # FORCE COLORS #
 ################
 # Some of these are subject to change !
 
-MENUCOLOR="{R}"=red
-MENUCOLOR="{B}"=blue
-MENUCOLOR="{C}"=cyan
-MENUCOLOR="{G}"=green
-MENUCOLOR="{Y}"=yellow
-MENUCOLOR="{[MP]}"=magenta
-MENUCOLOR="{O}"=orange
-MENUCOLOR="{W}"=white
-MENUCOLOR="{L}"=black
-MENUCOLOR="{y}"=gray
-MENUCOLOR="{g}"=lightgreen
-MENUCOLOR="{b}"=lightblue
-MENUCOLOR="{[mp]}"=lightmagenta
-MENUCOLOR="{c}"=lightcyan
-MENUCOLOR="{N}"=none
-MENUCOLOR="{X}"=bold
-MENUCOLOR="{x}"=dim
-MENUCOLOR="{U}"=underline
-MENUCOLOR="{I}"=inverse
-MENUCOLOR="{K}"=blink
+# MENUCOLOR="{R}"=red
+# MENUCOLOR="{B}"=blue
+# MENUCOLOR="{C}"=cyan
+# MENUCOLOR="{G}"=green
+# MENUCOLOR="{Y}"=yellow
+# MENUCOLOR="{[MP]}"=magenta
+# MENUCOLOR="{O}"=orange
+# MENUCOLOR="{W}"=white
+# MENUCOLOR="{L}"=black
+# MENUCOLOR="{y}"=gray
+# MENUCOLOR="{g}"=lightgreen
+# MENUCOLOR="{b}"=lightblue
+# MENUCOLOR="{[mp]}"=lightmagenta
+# MENUCOLOR="{c}"=lightcyan
+# MENUCOLOR="{N}"=none
+# MENUCOLOR="{X}"=bold
+# MENUCOLOR="{x}"=dim
+# MENUCOLOR="{U}"=underline
+# MENUCOLOR="{I}"=inverse
+# MENUCOLOR="{K}"=blink
 
 ########################
 # LOOT/APPLY CONTAINER #
 ########################
-MENUCOLOR=" is empty. Do what?"=none
-MENUCOLOR="Put something into .*"=none
-MENUCOLOR="Take something out of .*"=none
+# MENUCOLOR=" is empty. Do what?"=none
+# MENUCOLOR="Put something into .*"=none
+# MENUCOLOR="Take something out of .*"=none
 
-MENUCOLOR="cancellation"=magenta&underline
-MENUCOLOR="bag"=magenta&underline
+# MENUCOLOR="cancellation"=magenta&underline
+# MENUCOLOR="bag"=magenta&underline
 
 
 
-MENUCOLOR="wand$"=magenta&underline
-MENUCOLOR="wand named"=magenta&underline
-MENUCOLOR="wand called"=lightmagenta&underline
+# MENUCOLOR="wand$"=magenta&underline
+# MENUCOLOR="wand named"=magenta&underline
+# MENUCOLOR="wand called"=lightmagenta&underline
 
 #  !de-/activate
-OPTIONS=menucolors
+# OPTIONS=menucolors
 
 #  general beatitude
-MENUCOLOR=" blessed "=green
-MENUCOLOR=" cursed "=red
-MENUCOLOR=" uncursed "=yellow
+# MENUCOLOR=" blessed "=green
+# MENUCOLOR=" cursed "=red
+# MENUCOLOR=" uncursed "=yellow
 
 #  identified water
-MENUCOLOR=" holy "=green
-MENUCOLOR=" unholy "=red
+# MENUCOLOR=" holy "=green
+# MENUCOLOR=" unholy "=red
 
-OPTIONS=name:Xiutik
 
 # For more information on what you can set in your nethackrc file, refer to:
 #   http://www.nethack.org/v343/Guidebook.html#_TOCentry_42
