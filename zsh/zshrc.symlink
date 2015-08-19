@@ -227,18 +227,6 @@ if [ -z "$(which brew)" ]
 then
   export PATH="$PATH:$(brew --prefix homebrew/php/php55 )/bin"
 fi
-# Android SDK
-export PATH="$PATH:~/android-sdk/tools/"
-export PATH="$PATH:~/Library/Android/sdk/"
-# Linuxbrew
-export PATH="$PATH:~/.linuxbrew/bin"
-
-# OpenMP
-export PATH=/usr/local/openMP/llvm/build/Debug+Asserts/bin:$PATH
-export C_INCLUDE_PATH=/usr/local/openMP/llvm/include:/usr/local/openMP/libomp_oss/exports/common/include:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/usr/local/openMP/llvm/include:/usr/local/openMP/libomp_oss/exports/common/include:$CPLUS_INCLUDE_PATH
-export LIBRARY_PATH=/usr/local/openMP/llvm/build/Debug+Asserts/lib:/usr/local/openMP/libomp_oss/exports/mac_32e/lib.thin:$LIBRARY_PATH
-export DYLD_LIBRARY_PATH=/usr/local/openMP/llvm/build/Debug+Asserts/lib:/usr/local/openMP/libomp_oss/exports/mac_32e/lib.thin:$DYLD_LIBRARY_PATH
 
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
