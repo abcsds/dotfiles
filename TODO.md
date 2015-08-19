@@ -43,3 +43,7 @@ sudo gem update
 vim plugins
 https://github.com/alebcay/awesome-shell
 https://github.com/gabrielelana/awesome-terminal-fonts
+
+pip
+ turtle virtualenv virtualenvwrapper
+rbenv
