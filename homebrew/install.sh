@@ -136,6 +136,7 @@ brew install gtypist
 brew install htop-osx
 brew install httpd24
 brew install iftop
+brew install klavaro
 brew install netcat
 brew install nethack
 brew install ntopng
