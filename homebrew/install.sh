@@ -43,6 +43,7 @@ sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 # Tap what is needed
 brew tap homebrew/games
 brew tap homebrew/apache
+brew tap homebrew/x11
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
