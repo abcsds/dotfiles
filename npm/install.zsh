@@ -9,3 +9,4 @@ then
   # npm install -g yo bower grunt-cli gulp
   # npm install -g generator-webapp
 fi
+export PATH="$HOME/.node/bin:$PATH"
