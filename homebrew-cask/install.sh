@@ -9,6 +9,7 @@ then
   brew cask install atom
   brew cask install bit-slicer
   brew cask install filezilla
+  brew cask install ganttproject
   brew cask install gimp
   brew cask install github-desktop
   brew cask install google-chrome
