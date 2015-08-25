@@ -24,7 +24,7 @@ then
   # brew cask install microsoft-office
   brew cask install minecraft
   brew cask install nethackcocoa
-  brew cask install vlc
+  brew cask install programmer-dvorak
   brew cask install rstudio
   brew cask install seil
   # brew cask install slack
@@ -38,6 +38,7 @@ then
   brew cask install unetbootin
   brew cask install vagrant
   brew cask install virtualbox
+  brew cask install vlc
 
 fi
 
