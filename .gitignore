@@ -30,6 +30,8 @@ config/config.symlink/mime*
 config/config.symlink/eog
 config/config.symlink/configstore*
 config/config.symlink/user-share
+config/config.symlink/learnyounode
+config/config.symlink/javascripting
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
