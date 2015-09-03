@@ -47,3 +47,8 @@ https://github.com/gabrielelana/awesome-terminal-fonts
 pip
  turtle virtualenv virtualenvwrapper
 rbenv
+
+for server:
+ sudo apt-get install python-pip ruby ruby-dev make gcc nodejs
+ sudo pip install virtualenv virtualenvwrapper
+ sudo gem install jekyll
