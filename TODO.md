@@ -49,7 +49,7 @@ pip
 rbenv
 
 for server:
- sudo apt-get install python-pip ruby ruby-dev make gcc nodejs
+ sudo apt-get install python-pip ruby ruby-dev make gcc nodejs curl build-essential docker.io
  sudo pip install virtualenv virtualenvwrapper
  sudo gem install jekyll
 
