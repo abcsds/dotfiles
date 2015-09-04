@@ -52,3 +52,9 @@ for server:
  sudo apt-get install python-pip ruby ruby-dev make gcc nodejs
  sudo pip install virtualenv virtualenvwrapper
  sudo gem install jekyll
+
+github ssh:
+
+Host github.com
+  Hostname ssh.github.com
+  Port 443
