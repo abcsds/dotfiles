@@ -1,3 +1,3 @@
 " Better key maps for switching between controller and view
-nnoremap ,vv :Eview<cr>
-nnoremap ,cc :Econtroller<cr>
+nnoremap <Leader>vv :Eview<cr>
+nnoremap <Leader>cc :Econtroller<cr>
