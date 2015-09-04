@@ -183,7 +183,7 @@ install_fonts () {
   # curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf 2>/dev/null > $DOTFILES_ROOT/config/config.symlink/fontconfig/conf.d/10-symbols.conf
   # Update font cache
   if [ -z `which fc-cache` ]; then
-    fail "Please install font cache tools"
+    info "Please install font cache tools"
   else
     fc-cache -fv ~/.fonts
   fi
