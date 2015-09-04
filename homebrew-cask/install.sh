@@ -20,7 +20,7 @@ then
   brew cask install inkscape
   brew cask install insomniax
   brew cask install iterm2
-  # brew cask install macvim
+  brew cask install macvim
   # brew cask install microsoft-office
   brew cask install minecraft
   brew cask install nethackcocoa
