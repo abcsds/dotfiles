@@ -146,6 +146,7 @@ brew install proxychains-ng
 brew install qt
 brew install sdl
 brew install snort
+brew install the_silver_searcher
 brew install tor
 brew install wireshark
 
