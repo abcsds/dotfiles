@@ -60,3 +60,5 @@ Host github.com
   Port 443
 
 Comments for linux or mac on vim settings
+
+VPN
