@@ -32,6 +32,7 @@ config/config.symlink/configstore*
 config/config.symlink/user-share
 config/config.symlink/learnyounode
 config/config.symlink/javascripting
+config/config.symlink/cmus/cache
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
