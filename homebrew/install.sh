@@ -120,6 +120,7 @@ brew install ucspi-tcp # `tcpserver` etc.
 
 # Install other useful binaries.
 brew install ack
+brew install cmus
 brew install dark-mode
 brew install git
 brew install git-lfs
