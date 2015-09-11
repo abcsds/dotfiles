@@ -33,6 +33,7 @@ config/config.symlink/user-share
 config/config.symlink/learnyounode
 config/config.symlink/javascripting
 config/config.symlink/cmus/cache
+config/config.symlink/cmus/command-history
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
