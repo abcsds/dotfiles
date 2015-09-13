@@ -6,12 +6,12 @@
 
 OPTIONS=name:Xiutik
 OPTIONS=race:human
-OPTIONS=role:samurai
+OPTIONS=role:knight
 OPTIONS=align:chaotic
 OPTIONS=gender:male
 
 OPTIONS=pettype:dog,hilite_pet,showrace
-OPTIONS=catname:Nala,dogname:Nolo
+OPTIONS=catname:Nala,dogname:Nahui
 OPTIONS=fruit:durian
 OPTIONS=autopickup,pickup_types:$?!/=
 OPTIONS=disclose:+i+a+g+c+v
