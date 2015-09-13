@@ -129,7 +129,7 @@ brew install lua
 brew install speedtest_cli
 brew install tree
 
-brew install elinks
+brew install elinks --devel 
 brew install geoip
 brew install gibo
 brew install git-flow
