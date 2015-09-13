@@ -1,1 +1,3 @@
+set mouse=true
+fset mp3=filename="*.mp3"
 quit
