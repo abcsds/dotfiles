@@ -5,7 +5,6 @@ alias la='ls -AF'       # Compact view, show hidden
 alias ll='ls -FGlAhp' # Preferred 'ls' implementation
 alias l='ls -a'
 alias l1='ls -1'
-alias less='less -FSRXc' # Preferred 'less' implementation
 
 # Move arround
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)
@@ -51,6 +50,9 @@ alias rb='ruby'
 
 # Shell History
 alias h='history'
+
+# Ascii image viewer
+ascii () { convert "$1" pnm:- | aview }
 
 # Tree
 if [ ! -x "$(which tree 2>/dev/null)" ]

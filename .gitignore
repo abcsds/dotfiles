@@ -45,4 +45,4 @@ git/gitconfig.symlink
 antigen/antigen.symlink
 elinks/elinks.symlink/cookies
 elinks/elinks.symlink/globhist
-elinks/elinks.symlink/gotohistg
+elinks/elinks.symlink/gotohist
