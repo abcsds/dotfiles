@@ -24,6 +24,7 @@ then
   # brew cask install microsoft-office
   brew cask install minecraft
   brew cask install nethackcocoa
+  brew cask install supercollider
   brew cask install processing
   brew cask install programmer-dvorak
   brew cask install rstudio
