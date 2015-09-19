@@ -11,13 +11,13 @@ just some notes for myself.
  - indent
  - jekyll
  - languages:
-  - c/c++
-  - django
-  - latex
-  - r
-  - vhdl
-  - python
-  - markdown
+ - c/c++
+ - django
+ - latex
+ - r
+ - vhdl
+ - python
+ - markdown
  - css color underline
  - set syntax
 
