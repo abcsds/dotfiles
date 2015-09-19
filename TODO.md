@@ -46,6 +46,7 @@ https://github.com/gabrielelana/awesome-terminal-fonts
 
 pip
  turtle virtualenv virtualenvwrapper
+ pip install --allow-external SC --allow-unverified SC SC
 rbenv
 
 for server:
