@@ -7,6 +7,7 @@ then
   brew cask install acslogo
   # brew cask install alfred
   brew cask install atom
+  brew cask install audacity
   brew cask install bit-slicer
   brew cask install filezilla
   brew cask install ganttproject
@@ -25,6 +26,8 @@ then
   brew cask install minecraft
   brew cask install nethackcocoa
   brew cask install supercollider
+  brew cask install pd
+  # brew cask install pd-extended
   brew cask install processing
   brew cask install programmer-dvorak
   brew cask install rstudio
