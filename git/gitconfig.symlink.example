@@ -5,6 +5,7 @@
         protocol = https
 [user]
         name = AUTHORNAME
+        username = AUTHORUSERNAME
         email = AUTHOREMAIL
 [credential]
         helper = GIT_CREDENTIAL_HELPER
