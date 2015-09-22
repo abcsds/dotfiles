@@ -36,6 +36,10 @@ config/config.symlink/cmus/cache
 config/config.symlink/cmus/command-history
 config/config.symlink/cmus/lib.pl
 config/config.symlink/cmus/search-history
+config/config.symlink/git-*
+config/config.symlink/how-*
+config/config.symlink/scope-*
+config/config.symlink/tryton
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
