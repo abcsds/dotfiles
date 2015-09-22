@@ -203,10 +203,10 @@ install_pip () {
 
 
 setup_gitconfig
+install_antigen
 install_dotfiles
 install_vundle
 install_for_mac
-install_antigen
 install_fonts
 if [ -z `which pip` ]; then
   install_pip
