@@ -41,6 +41,7 @@ config/config.symlink/how-*
 config/config.symlink/scope-*
 config/config.symlink/tryton
 config/config.symlink/robomongo
+config/config.symlink/ranger
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
