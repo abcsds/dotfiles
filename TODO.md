@@ -50,7 +50,7 @@ pip
 rbenv
 
 for server:
- sudo apt-get install zsh vim tmux python-pip ruby ruby-dev make gcc nodejs curl elinks build-essential docker.io
+ sudo apt-get install zsh vim tmux python-pip ruby ruby-dev make gcc nodejs curl elinks build-essential docker.io fbv
  sudo pip install virtualenv virtualenvwrapper
  sudo gem install jekyll
 
