@@ -140,7 +140,8 @@ brew install htop-osx
 brew install httpd24
 brew install iftop
 brew install klavaro
-brew install midnight-commander
+# brew install vifm
+brew install ranger
 brew install netcat
 brew install nethack
 brew install ntopng
