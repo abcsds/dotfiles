@@ -7,6 +7,9 @@ export EDITOR=vim
 # Source Antigen
 source ~/.antigen/antigen.zsh
 
+# Source inputrc
+source ~/.inputrc
+
 # ======= Antigen Plugins for zsh =======
 # Alias-tips
 antigen bundle djui/alias-tips
