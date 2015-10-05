@@ -99,6 +99,7 @@ brew install sdcc
 # Install Python:
 brew install python
 brew install python3
+brew install rbenv ruby-build
 
 # Install font tools.
 brew tap bramstein/webfonttools
