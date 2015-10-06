@@ -64,8 +64,8 @@ brew install curl
 
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
-brew install macvim
+brew install vim --with-cscope --with-lua --with-client-server --with-luajit --override-system-vi
+brew install macvim --with-lua --with-luajit --with-custom-icons
 brew install tmux
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
