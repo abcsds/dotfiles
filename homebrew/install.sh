@@ -64,8 +64,8 @@ brew install curl
 
 
 # Install more recent versions of some OS X tools.
-brew install vim --with-cscope --with-lua --override-system-vi
-brew install macvim --with-lua --with-luajit --with-custom-icons
+brew install vim --with-cscope --with-lua --with-luajit --with-mzscheme --with-python3 --with-tcl --override-system-vim
+brew install macvim --with-lua --with-luajit --with-custom-icons --with-python3 --with-override-system-vim
 brew install tmux
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
@@ -159,4 +159,5 @@ brew install wireshark
 # Remove outdated versions from the cellar.
 brew cleanup
 
+brew linkapps macvim
 exit 0
