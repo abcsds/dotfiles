@@ -128,10 +128,10 @@ set title               " Show the filename in the window titlebar
 " ================ Key mapping ========================
 
 nnoremap <leader><leader> <c-^>                   " Switch between the last two files
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+" nnoremap <Left> :echoe "Use h"<CR>
+" nnoremap <Right> :echoe "Use l"<CR>
+" nnoremap <Up> :echoe "Use k"<CR>
+" nnoremap <Down> :echoe "Use j"<CR>
 " nnoremap <leader><space> :nohlsearch<CR         " turn off search highlight
 nnoremap <Leader>r :RunInInteractiveShell<space>  " Run commands that require an interactive shell
 
