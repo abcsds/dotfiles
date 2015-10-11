@@ -3,6 +3,8 @@
 " i and l are too easy to mistake for each other slowing
 " down recognition. The home keys and the immediate keys
 " accessible by middle fingers are available
-let g:EasyMotion_keys='asdfjkoweriop'
+" let g:EasyMotion_keys='asdfjkoweriop'
+" Dvorak:
+let g:EasyMotion_keys='aoeuhtns,.pgcr'
 nmap <Leader><ESC> ,,w
 nmap <Leader><S-ESC> ,,b
