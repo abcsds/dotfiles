@@ -108,6 +108,11 @@ brew install sfnt2woff-zopfli
 brew install woff2
 brew install fontconfig
 
+# Install audio tools
+brew install liblo libsndfile libsamplerate jack
+brew install ghc cabal-install
+# Look up Tidal on http://tidal.lurk.org/getting_started.html
+
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
 brew install binutils

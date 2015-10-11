@@ -18,6 +18,7 @@ then
   brew cask install google-hangouts
   brew cask install google-photos-backup
   brew cask install grandperspective
+  brew cask install haskell-platform
   brew cask install inkscape
   brew cask install insomniax
   brew cask install iterm2
