@@ -1,0 +1,4 @@
+(add-to-list 'load-path "~/github/Tidal")
+    (require 'haskell-mode)
+    (require 'tidal)
+(global-set-key "\C-c\C-d" "\C-a\C- \C-n\M-w\C-y")
