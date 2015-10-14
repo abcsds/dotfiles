@@ -156,3 +156,4 @@ map <Leader>hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> 
 
 " <Leader>hp = html preview
 map <silent> <Leader>hp :!open -a Safari %<CR><CR>
+nnoremap <f5> :!python<CR>
