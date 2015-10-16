@@ -62,8 +62,8 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 # virtualenv - Your Python VirtualEnv.
 # vcs - Information about this git or hg repository (if you are in one).
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
 
 # Limit to the last two folders
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -81,21 +81,10 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 
 # Segment customization
 # Colors at: http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
-# POWERLEVEL9K_TIME_FOREGROUND='red'
-# POWERLEVEL9K_TIME_BACKGROUND='blue'
-# POWERLEVEL9K_VCS_FOREGROUND='021' # Dark blue
-
-# These Segments; context, vcs, rspec_stats, symfony2_tests, have additional color options
 
 # Customizing `context` colors for root and non-root users
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="017"
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="cyan"
-# POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
-# POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="blue"
-
-# To recognize server uncomment these color settings:
-# POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="236"
-# POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="white"
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="236"
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="white"
 # POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
 # POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="blue"
 
@@ -103,8 +92,15 @@ POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="cyan"
 POWERLEVEL9K_DIR_BACKGROUND="cyan"
 # POWERLEVEL9K_DIR_FOREGROUND="white"
 
+# Customizing `time` colors
+# POWERLEVEL9K_TIME_FOREGROUND='red'
+# POWERLEVEL9K_TIME_BACKGROUND='blue'
+
+# Customizing `virtualenv` colors
 # POWERLEVEL9K_VIRTUALENV_BACKGROUND="17"
 # POWERLEVEL9K_VIRTUALENV_FOREGROUND="white"
+
+# These Segments; context, vcs, rspec_stats, symfony2_tests, have additional color options
 
 # Advanced `vcs` color customization
 POWERLEVEL9K_VCS_FOREGROUND='blue'
@@ -243,7 +239,6 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export LD_LIBRARY_PATH=/usr/local/lib
 export PYTHONPATH="${PYTHONPATH}:~/github/caffe/python"
-export PYTHONPATH="${PYTHONPATH}:~/caffe/python"
 export PYTHONPATH="${PYTHONPATH}:~/github/caffe/distribute/python"
 export PYTHONPATH="${PYTHONPATH}:~/.pycaffe"
 
