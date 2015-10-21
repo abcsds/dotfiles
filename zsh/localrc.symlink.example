@@ -1,0 +1,28 @@
+-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+-export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnuman"
+-export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
+-export PATH="$HOME/.rbenv/bin:$PATH"
+-# PHP 5.5
+-if [ -z "$(which brew)" ]
+-then
+-  export PATH="$PATH:$(brew --prefix homebrew/php/php55 )/bin"
+-fi
+-
+-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+-
+-export LD_LIBRARY_PATH=/usr/local/lib
+-export PYTHONPATH="${PYTHONPATH}:~/github/caffe/python"
+-export PYTHONPATH="${PYTHONPATH}:~/caffe/python"
+-export PYTHONPATH="${PYTHONPATH}:~/github/caffe/distribute/python"
+-export PYTHONPATH="${PYTHONPATH}:~/.pycaffe"
+-
+-export WORKON_HOME=$HOME/.virtualenvs
+-source /usr/local/bin/virtualenvwrapper.sh
+-
+-eval "$(rbenv init -)"
+-eval "$(thefuck --alias)"
+
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+PATH="/root/.gem/ruby/2.2.0/bin:$PATH"
+jekyll='sudo jekyll'
