@@ -45,7 +45,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # Load the powerlevel9k theme
 antigen theme bhilburn/powerlevel9k powerlevel9k
-# POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_MODE='awesome-patched'
 
 # The segments that are currently available are:
 # aws - The current AWS profile, if active (more info below)
@@ -62,8 +62,9 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 # virtualenv - Your Python VirtualEnv.
 # vcs - Information about this git or hg repository (if you are in one).
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
+# These Segments; context, vcs, rspec_stats, symfony2_tests, have additional color options
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
 
 # Limit to the last two folders
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -88,14 +89,14 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 # These Segments; context, vcs, rspec_stats, symfony2_tests, have additional color options
 
 # Customizing `context` colors for root and non-root users
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="017"
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="cyan"
+# POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="017"
+# POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="cyan"
 # POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
 # POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="blue"
 
 # To recognize server uncomment these color settings:
-# POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="236"
-# POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="white"
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="236"
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="white"
 # POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
 # POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="blue"
 
@@ -226,29 +227,4 @@ done
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-
 unset config_files
-
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnuman"
-export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
-export PATH="$HOME/.rbenv/bin:$PATH"
-# PHP 5.5
-if [ -z "$(which brew)" ]
-then
-  export PATH="$PATH:$(brew --prefix homebrew/php/php55 )/bin"
-fi
-
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
-export LD_LIBRARY_PATH=/usr/local/lib
-export PYTHONPATH="${PYTHONPATH}:~/github/caffe/python"
-export PYTHONPATH="${PYTHONPATH}:~/caffe/python"
-export PYTHONPATH="${PYTHONPATH}:~/github/caffe/distribute/python"
-export PYTHONPATH="${PYTHONPATH}:~/.pycaffe"
-
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-
-eval "$(rbenv init -)"
-eval "$(thefuck --alias)"
