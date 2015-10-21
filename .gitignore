@@ -48,6 +48,8 @@ vim/vim.symlink/sessions
 
 git/gitconfig.symlink
 
+zsh/localrc.symlink
+
 antigen/antigen.symlink
 elinks/elinks.symlink/cookies
 elinks/elinks.symlink/globhist
