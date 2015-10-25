@@ -4,7 +4,7 @@
     invisibles: {}
     softWrapAtPreferredLineLength: true
     showInvisibles: true
-    fontSize: 16
+    fontSize: 17
   core:
     ignoredNames: [
       ".bundle"
