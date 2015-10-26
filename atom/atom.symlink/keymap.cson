@@ -1,4 +1,6 @@
 'atom-text-editor':
   'ctrl-i': 'editor:auto-indent'
 'atom-text-editor':
-  'ctrl-k p': 'git-plus:push'
+  'ctrl-alt-l': 'editor:split-selection-into-lines'
+'atom-text-editor':
+  'alt-p': 'git-plus:push'
