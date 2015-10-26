@@ -1,0 +1,4 @@
+'atom-text-editor':
+  'ctrl-i': 'editor:auto-indent'
+'atom-text-editor':
+  'alt-s': 'editor:split-selection-into-lines'

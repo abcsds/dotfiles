@@ -4,7 +4,7 @@
     invisibles: {}
     softWrapAtPreferredLineLength: true
     showInvisibles: true
-    fontSize: 17
+    fontSize: 18
     scrollPastEnd: true
     tabLength: 4
   core:
@@ -37,3 +37,4 @@
   "git-plus": {}
   "one-dark-ui": {}
   "markdown-preview-plus": {}
+  emmet: {}
