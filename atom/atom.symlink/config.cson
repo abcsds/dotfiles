@@ -4,7 +4,7 @@
     invisibles: {}
     softWrapAtPreferredLineLength: true
     showInvisibles: true
-    fontSize: 18
+    fontSize: 17
     scrollPastEnd: true
     tabLength: 4
   core:
@@ -39,3 +39,6 @@
   "one-dark-ui": {}
   "markdown-preview-plus": {}
   emmet: {}
+  tidal:
+    ghciPath: "/usr/bin/ghci"
+  "git-log": {}
