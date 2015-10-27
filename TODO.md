@@ -63,3 +63,5 @@ Host github.com
 Comments for linux or mac on vim settings
 
 VPN
+
+git-extras

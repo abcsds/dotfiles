@@ -2,9 +2,11 @@
   editor:
     showIndentGuide: true
     invisibles: {}
-    fontSize: 17
     softWrapAtPreferredLineLength: true
     showInvisibles: true
+    fontSize: 18
+    scrollPastEnd: true
+    tabLength: 4
   core:
     ignoredNames: [
       ".bundle"
@@ -15,14 +17,15 @@
       "vendor"
     ]
     themes: [
-      "unity-ui"
-      "glacier-syntax"
+      "one-dark-ui"
+      "solarized-dark-syntax"
     ]
     hideGitIgnoredFiles: false
     disabledPackages: [
       "background-tips"
       "exception-reporting"
       "metrics"
+      "emmet"
     ]
   "spell-check":
     grammars: [
@@ -32,3 +35,7 @@
     ]
   welcome:
     showOnStartup: false
+  "git-plus": {}
+  "one-dark-ui": {}
+  "markdown-preview-plus": {}
+  emmet: {}
