@@ -222,4 +222,6 @@ done
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+export PROJECTS_FOLDER
+
 unset config_files

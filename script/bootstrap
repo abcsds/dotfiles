@@ -50,6 +50,12 @@ setup_gitconfig () {
     success 'gitconfig'
   fi
 }
+setup_folder () {
+  if ! [ -f ~/github ]
+  then
+    mkdir ~/github
+  fi
+}
 
 link_file () {
   local src=$1 dst=$2
@@ -141,23 +147,25 @@ install_dotfiles () {
 install_vundle () {
   # From https://github.com/VundleVim/Vundle.vim
   # Download to symlinked folder
+  info "Installing Vundler"
   if [ -d $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim ]; then
     success "Vundler installed"
   else
-    info "Installing Vundler"
-    git clone https://github.com/VundleVim/Vundle.vim.git $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim  >/tmp/Vundle 2>&1
+    success "Vundler installed"
   fi
 }
 
 install_antigen () {
   # From http://antigen.sharats.me/
   # Download to symlinked folder
+  info "Installing Antigen"
   if [ -d $DOTFILES_ROOT/antigen/antigen.symlink ]; then
     success "Antigen installed"
   else
-    info "Installing Antigen"
     # Install antigen
-    git clone https://github.com/zsh-users/antigen.git $DOTFILES_ROOT/antigen/antigen.symlink
+    git clone https://github.com/zsh-users/antigen.git $DOTFILES_ROOT/antigen/antigen.symlink  >/tmp/antigen 2>&1
+    success "Antigen installed"
   fi
 }
 
@@ -165,8 +173,8 @@ install_for_mac () {
   # If we're on a Mac, let's install and setup homebrew.
   if [ "$(uname -s)" == "Darwin" ]
   then
-    info "installing dependencies"
-    if source bin/dot > /tmp/dotfiles-dot 2>&1
+    info "installing dependencies \n"
+    if source bin/dot
     then
       success "dependencies installed"
     else
@@ -184,7 +192,7 @@ install_fonts () {
   # Download configuration file
   # curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/config/10-symbols.conf 2>/dev/null > $DOTFILES_ROOT/config/config.symlink/fontconfig/conf.d/10-symbols.conf
   # Update font cache
-  if [ -z `which fc-cache` ]; then
+  if ! type fc-cache ; then
     info "Please install font cache tools"
   else
     fc-cache -fv ~/.fonts
@@ -203,12 +211,14 @@ install_pip () {
 
 
 setup_gitconfig
+setup_folder
 install_antigen
 install_dotfiles
 install_vundle
 install_for_mac
 install_fonts
-if [ -z `which pip` ]; then
+
+if  ! type pip 2>/dev/null; then
   install_pip
 fi
 

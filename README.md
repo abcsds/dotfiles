@@ -27,6 +27,11 @@ If you're interested in the philosophy behind why projects like these are
 awesome, you might want to [read Zach Holman's post on the
 subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). I also encourage you to check out his [original work]((https://github.com/holman/dotfiles/issues)
 
+## Requirements
+
+ - git
+ - curl
+
 ## Install
 
 Run this:
