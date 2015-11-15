@@ -210,6 +210,14 @@ install_pip () {
   python get-pip.py
   pip install virtualenv virtualenvwrapper Pygments
 }
+install_npm () {
+  # Install npm packages
+  if ! type fc-cache ; then
+    info "Please install node manualy"
+  else
+    source $DOTFILES_ROOT/npm/install.sh
+  fi
+}
 
 
 setup_gitconfig
@@ -219,6 +227,7 @@ install_dotfiles
 install_vundle
 install_for_mac
 install_fonts
+install_npm
 
 if  ! type pip 2>/dev/null; then
   install_pip
