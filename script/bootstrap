@@ -51,10 +51,12 @@ setup_gitconfig () {
   fi
 }
 setup_folder () {
-  if ! [ -f ~/github ]
+  # Setup local files and folders
+  if [ ! -d ~/github ]
   then
     mkdir ~/github
   fi
+  cat $DOTFILES_ROOT/zsh/localrc.symlink.example > $DOTFILES_ROOT/zsh/localrc.symlink
 }
 
 link_file () {
