@@ -40,5 +40,5 @@
   "markdown-preview-plus": {}
   emmet: {}
   tidal:
-    ghciPath: "/usr/bin/ghci"
+    ghciPath: "/usr/local/bin/ghc"
   "git-log": {}
