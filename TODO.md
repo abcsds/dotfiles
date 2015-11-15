@@ -65,3 +65,11 @@ Comments for linux or mac on vim settings
 VPN
 
 git-extras
+
+
+# tidal
+brew install liblo libsndfile libsamplerate
+
+cabal update
+cabal install cabal-install
+cabal install tidal
