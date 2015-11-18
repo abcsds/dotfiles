@@ -25,8 +25,10 @@ then
   # brew cask install macvim
   # brew cask install microsoft-office
   brew cask install minecraft
+  # brew cask install mongohub
   brew cask install nethackcocoa
   brew cask install supercollider
+  brew cask install pandoc
   brew cask install pd
   # brew cask install pd-extended
   brew cask install processing

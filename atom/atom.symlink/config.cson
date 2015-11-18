@@ -25,7 +25,7 @@
       "background-tips"
       "exception-reporting"
       "metrics"
-      "emmet"
+      "figlet"
     ]
   "spell-check":
     grammars: [
@@ -42,3 +42,6 @@
   tidal:
     ghciPath: "/usr/local/bin/ghc"
   "git-log": {}
+  figlet: {}
+  pigments:
+    extendAutocompleteToVariables: true
