@@ -6,7 +6,6 @@
     showInvisibles: true
     fontSize: 17
     scrollPastEnd: true
-    tabLength: 4
   core:
     ignoredNames: [
       ".bundle"

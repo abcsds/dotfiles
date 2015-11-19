@@ -1,6 +1,11 @@
 'atom-text-editor':
-  'ctrl-i': 'editor:auto-indent'
-'atom-text-editor':
-  'ctrl-alt-l': 'editor:split-selection-into-lines'
-'atom-text-editor':
+  'ctrl-i': 'editor:auto-indent',
+  'ctrl-alt-l': 'editor:split-selection-into-lines',
   'alt-p': 'git-plus:push'
+
+'.platform-darwin atom-text-editor':
+  'cmd-i': 'editor:auto-indent',
+
+'atom-workspace atom-text-editor:not([mini])':
+  'cmd-alt-down': 'editor:add-selection-below',
+  'cmd-alt-up': 'editor:add-selection-above'
