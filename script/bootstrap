@@ -179,6 +179,7 @@ install_for_mac () {
     if source bin/dot
     then
       cp $DOTFILES_ROOT/keyboard/Dvorak-ISO.keylayout ~/Library/Keyboard\ Layouts/Dvorak-ISO.keylayout
+      cp $DOTFILES_ROOT/keyboard/Dvorak-ISO.bundle ~/Library/Keyboard\ Layouts/Dvorak-ISO.bundle
       success "dependencies installed"
     else
       fail "error installing dependencies"

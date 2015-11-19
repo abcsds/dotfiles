@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 3.0.0.43 on 2015-11-18 at 19:25 (CST)-->
-<keyboard group="27" id="30109" maxout="1" name="Dvorak">
+<!--Last edited by Ukelele version 3.0.0.43 on 2015-11-18 at 19:23 (CST)-->
+<keyboard group="6" id="19100" maxout="1" name="Dvorak - ISO">
 	<layouts>
 		<layout first="0" last="0" mapSet="a14" modifiers="f4"/>
 		<layout first="18" last="18" mapSet="1fc" modifiers="f4"/>
@@ -809,7 +809,7 @@
 			<key code="47" output="√"/>
 			<key code="48" output="&#x0009;"/>
 			<key code="49" output=" "/>
-			<key code="50" output="§"/>
+			<key code="50" output=""/>
 			<key code="51" output="&#x0008;"/>
 			<key code="52" output="&#x0003;"/>
 			<key code="53" output="&#x001B;"/>
