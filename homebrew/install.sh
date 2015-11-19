@@ -107,6 +107,7 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 brew install fontconfig
+brew tap caskroom/fonts
 
 # Install audio tools
 brew install liblo libsndfile libsamplerate jack
@@ -137,6 +138,7 @@ brew install tree
 
 brew install aview
 brew install elinks --devel
+brew install homebrew/completions/brew-cask-completion
 brew install geoip
 brew install gibo
 brew install git-flow

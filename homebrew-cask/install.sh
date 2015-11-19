@@ -42,8 +42,24 @@ brew cask install the-unarchiver
 brew cask install transmission
 brew cask install tuneup
 brew cask install unetbootin
+brew cask install ukelele
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
+
+# Install fonts
+brew cask install font-anonymous-pro-for-powerline
+brew cask install font-dejavu-sans-mono-for-powerline
+brew cask install font-droid-sans-mono-for-powerline
+brew cask install font-dejavu-sans-mono-for-powerline
+brew cask install font-fira-mono-for-powerline
+brew cask install font-inconsolata-dz-for-powerline
+brew cask install font-inconsolata-for-powerline
+brew cask install font-inconsolata-g-for-powerline
+brew cask install font-liberation-mono-for-powerline
+brew cask install font-meslo-lg-for-powerline
+brew cask install font-sauce-code-powerline
+brew cask install font-source-code-pro-for-powerline
+brew cask install font-ubuntu-mono-powerline
 
 exit 0

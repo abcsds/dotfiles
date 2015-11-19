@@ -188,7 +188,7 @@ install_for_mac () {
 }
 
 install_fonts () {
-  # TODO: don't download if it exists
+  # TODO: Linux - don't download if it exists
   # Download to symlinked folder
   # curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/fontawesome-regular.ttf 2>/dev/null > $DOTFILES_ROOT/fonts/fonts.symlink/fontawesome-regular.ttf
   # curl http://raw.github.com/gabrielelana/awesome-terminal-fonts/master/build/octicons-regular.ttf 2>/dev/null > $DOTFILES_ROOT/fonts/fonts.symlink/octicons-regular.ttf
@@ -199,7 +199,11 @@ install_fonts () {
   if ! type fc-cache ; then
     info "Please install font cache tools"
   else
-    fc-cache -fv ~/.fonts
+      if [ "$(uname -s)" == "Linux" ]
+      then
+        # Install fonts under linux
+        fc-cache -fv ~/.fonts
+      fi
   fi
 }
 
