@@ -9,3 +9,6 @@
 'atom-workspace atom-text-editor:not([mini])':
   'cmd-alt-down': 'editor:add-selection-below',
   'cmd-alt-up': 'editor:add-selection-above'
+
+'atom-workspace, atom-workspace atom-text-editor':
+  'cmd-shift-M': 'markdown-preview:toggle'
