@@ -2,7 +2,8 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnuman"
 export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
 export PATH="$PATH:/Library/TeX/texbin"
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$PATH:$HOME/Library/Haskell/bin"
+export PATH="$PATH:$HOME/.rbenv/bin"
 
 # PHP 5.5
 # if [ -z "$(which brew)" ]

@@ -4,7 +4,6 @@ atom/atom.symlink/.storage
 atom/atom.symlink/compile-cache/
 atom/atom.symlink/packages
 atom/atom.symlink/storage
-atom/atom.symlink/themes
 atom/atom.symlink/nohup.out
 
 config/config.symlink/*
@@ -23,6 +22,11 @@ zsh/localrc.symlink
 python/get-pip.py
 
 antigen/antigen.symlink
+
 elinks/elinks.symlink/cookies
 elinks/elinks.symlink/globhist
 elinks/elinks.symlink/gotohist
+
+haskell/cabal.symlink/logs
+haskell/cabal.symlink/setup*
+haskell/cabal.symlink/where-is-my-stuff.txt
