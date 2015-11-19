@@ -1,7 +1,7 @@
 brew install caskroom/cask/brew-cask
 # install homebrew casks
 brew cask install xquartz
-brew cask install acslogo
+# brew cask install acslogo
 # brew cask install alfred
 brew cask install atom
 brew cask install audacity
