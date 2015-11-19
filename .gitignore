@@ -20,6 +20,8 @@ git/gitconfig.symlink
 
 zsh/localrc.symlink
 
+python/get-pip.py
+
 antigen/antigen.symlink
 elinks/elinks.symlink/cookies
 elinks/elinks.symlink/globhist

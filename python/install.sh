@@ -1,1 +1,1 @@
-easy_install SpoofMAC
+pip install virtualenv virtualenvwrapper Pygments

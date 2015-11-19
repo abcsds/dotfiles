@@ -148,6 +148,7 @@ install_dotfiles () {
 
 install_vundle () {
   # From https://github.com/VundleVim/Vundle.vim
+  # Package manager for vim
   # Download to symlinked folder
   info "Installing Vundler"
   if [ -d $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim ]; then
@@ -209,36 +210,45 @@ install_fonts () {
 
 install_pip () {
   # Get pip, virtualenv, and virtualenvwrapper
-  if ! [ -f $DOTFILES_ROOT/pip/get-pip.py ]
+  if ! [ -f $DOTFILES_ROOT/python/get-pip.py ]
   then
-    curl https://bootstrap.pypa.io/get-pip.py 2>/dev/null > $DOTFILES_ROOT/pip/get-pip.py
+    curl https://bootstrap.pypa.io/get-pip.py 2>/dev/null > $DOTFILES_ROOT/python/get-pip.py
   fi
-  python get-pip.py
-  pip install virtualenv virtualenvwrapper Pygments
+  python $DOTFILES_ROOT/python/get-pip.py
+  rm $DOTFILES_ROOT/python/get-pip.py
 }
 install_npm () {
   # Install npm packages
-  if ! type fc-cache ; then
+  if ! type npm ; then
     info "Please install node manualy"
   else
     source $DOTFILES_ROOT/npm/install.sh
   fi
 }
+install_python () {
+  # Install python packages
+  if ! type pip ; then
+    info "Please install python manualy"
+  else
+    source $DOTFILES_ROOT/python/install.sh
+  fi
+}
 
-
+# Run installations
 setup_gitconfig
 setup_folder
 install_antigen
 install_dotfiles
 install_vundle
 install_for_mac
-install_fonts
-install_npm
 
 if  ! type pip 2>/dev/null; then
   install_pip
 fi
 
+install_fonts
+install_npm
+install_python
 
 # Finish vim plugin install
 vim +PluginInstall +qall

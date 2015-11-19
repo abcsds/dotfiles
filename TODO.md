@@ -39,7 +39,6 @@ npm update -g
 sudo gem update —system
 sudo gem update
 
-
 vim plugins
 https://github.com/alebcay/awesome-shell
 https://github.com/gabrielelana/awesome-terminal-fonts
