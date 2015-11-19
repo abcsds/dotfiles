@@ -35,7 +35,6 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
-
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install grc coreutils spark
@@ -44,6 +43,8 @@ sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 brew tap homebrew/games
 brew tap homebrew/apache
 brew tap homebrew/x11
+brew tap homebrew/completions
+brew tap homebrew/dupes/
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -55,13 +56,21 @@ brew install gnu-sed --with-default-names
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
 brew install zsh
+
+# Install completions
 brew install zsh-completions
-brew tap homebrew/versions
+brew install brew-cask-completion
+brew install django-completion
+brew install docker-completion
+brew install gem-completion
+brew install grunt-completion
+brew install pip-completion
+
+# brew tap homebrew/versions
 
 # Install `wget` with IRI support and curl
 brew install wget --with-iri
 brew install curl
-
 
 # Install more recent versions of some OS X tools.
 brew install vim --with-cscope --with-lua --with-luajit --with-mzscheme --with-python3 --with-tcl --override-system-vim
@@ -70,7 +79,7 @@ brew install tmux
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
+# brew install homebrew/php/php55 --with-gmp
 
 # Install Java
 brew install caskroom/cask/brew-cask
@@ -110,8 +119,12 @@ brew install fontconfig
 brew tap caskroom/fonts
 
 # Install audio tools
-brew install liblo libsndfile libsamplerate jack
-brew install ghc cabal-install
+brew install liblo
+brew install libsndfile
+brew install libsamplerate
+brew install jack
+brew install ghc
+brew install cabal-install
 # Look up Tidal on http://tidal.lurk.org/getting_started.html
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
@@ -138,7 +151,6 @@ brew install tree
 
 brew install aview
 brew install elinks --devel
-brew install homebrew/completions/brew-cask-completion
 brew install geoip
 brew install gibo
 brew install git-flow
