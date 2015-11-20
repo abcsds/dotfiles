@@ -44,7 +44,7 @@ brew tap homebrew/games
 brew tap homebrew/apache
 brew tap homebrew/x11
 brew tap homebrew/completions
-brew tap homebrew/dupes/
+brew tap homebrew/dupes
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils

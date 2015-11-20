@@ -55,11 +55,12 @@ brew cask install font-dejavu-sans-mono-for-powerline
 brew cask install font-fira-mono-for-powerline
 brew cask install font-inconsolata-dz-for-powerline
 brew cask install font-inconsolata-for-powerline
-brew cask install font-inconsolata-g-for-powerline
 brew cask install font-liberation-mono-for-powerline
 brew cask install font-meslo-lg-for-powerline
 brew cask install font-sauce-code-powerline
 brew cask install font-source-code-pro-for-powerline
 brew cask install font-ubuntu-mono-powerline
+
+# brew cask cleanup
 
 exit 0
