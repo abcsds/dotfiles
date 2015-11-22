@@ -1,0 +1,16 @@
+apm install atom-beautify
+apm install autoclose-html
+apm install blame
+apm install color-picker
+apm install emmet
+apm install figlet
+apm install file-icons
+apm install git-log
+apm install git-plus
+apm install jslint
+apm install language-prolog
+apm install linter-flake8
+apm install merge-conflicts
+apm install pigments
+apm install set-syntax
+apm install tidal

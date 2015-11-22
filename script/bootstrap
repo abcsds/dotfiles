@@ -179,8 +179,8 @@ install_for_mac () {
     info "installing dependencies \n"
     if source bin/dot
     then
-      link_file "$(DOTFILES_ROOT)/keyboard/Dvorak-ISO.keylayout" "~/Library/Keyboard\ Layouts/Dvorak-ISO.keylayout"
-      link_file "$(DOTFILES_ROOT)/keyboard/Dvorak-ISO.bundle" "~/Library/Keyboard\ Layouts/Dvorak-ISO.bundle"
+      link_file "$DOTFILES_ROOT/keyboard/Dvorak-ISO.keylayout" "~/Library/Keyboard\ Layouts/Dvorak-ISO.keylayout"
+      link_file "$DOTFILES_ROOT/keyboard/Dvorak-ISO.bundle" "~/Library/Keyboard\ Layouts/Dvorak-ISO.bundle"
       success "dependencies installed"
     else
       fail "error installing dependencies"
@@ -233,6 +233,14 @@ install_python () {
     source $DOTFILES_ROOT/python/install.sh
   fi
 }
+install_apm () {
+  # Install python packages
+  if ! type apm ; then
+    info "Please install apm manualy"
+  else
+    source $DOTFILES_ROOT/atom/install.sh
+  fi
+}
 
 # Run installations
 setup_gitconfig
@@ -249,6 +257,7 @@ fi
 install_fonts
 install_npm
 install_python
+install_apm
 
 # Finish vim plugin install
 vim +PluginInstall +qall

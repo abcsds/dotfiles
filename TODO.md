@@ -72,18 +72,3 @@ brew install liblo libsndfile libsamplerate
 cabal update
 cabal install cabal-install
 cabal install tidal
-
-
-apm
-├── atom-beautify@0.28.18
-├── autoclose-html@0.19.0
-├── color-picker@2.0.13
-├── emmet@2.3.14
-├── figlet@0.5.2
-├── file-icons@1.6.11
-├── git-plus@5.6.1
-├── jslint@1.5.1
-├── merge-conflicts@1.3.7
-├── pigments@0.18.1
-├── set-syntax@0.3.0
-└── tidal@2.1.0
