@@ -155,6 +155,7 @@ brew install cmus
 brew install dark-mode
 brew install git
 brew install git-lfs
+brew install ffmpeg
 brew install imagemagick --with-webp
 brew install lua
 brew install speedtest_cli

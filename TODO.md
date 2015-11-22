@@ -29,6 +29,9 @@ https://github.com/gabrielelana/awesome-terminal-fonts
  sudo gem install jekyll
 
 
+gem install lolcommits
+gem install jekyll
+
 ## SSH
 github ssh:
 
@@ -46,3 +49,10 @@ brew install liblo libsndfile libsamplerate
 cabal update
 cabal install cabal-install
 cabal install tidal
+
+
+# lolcommits timelapse
+
+```
+convert `find . -type f -name "*.jpg" -print0 | xargs -0 ls -tlr | awk '{print $9}'` timelapse.mpeg
+```

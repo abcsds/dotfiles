@@ -9,6 +9,8 @@
         email = AUTHOREMAIL
 [credential]
         helper = GIT_CREDENTIAL_HELPER
+[init]
+        templatedir = ~/.git_template
 [alias]
         # add
         a = add                           # add
@@ -136,3 +138,7 @@
         # instead of a/b/c/d as prefixes for patches
         # mnemonicprefix = true
       	algorithm = patience
+[filter "lfs"]
+        required = true
+        clean = git-lfs clean %f
+        smudge = git-lfs smudge %f
