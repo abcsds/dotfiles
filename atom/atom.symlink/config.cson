@@ -44,3 +44,4 @@
   figlet: {}
   pigments:
     extendAutocompleteToVariables: true
+  blame: {}
