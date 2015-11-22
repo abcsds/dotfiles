@@ -1,1 +1,2 @@
 Plugin 'ivanov/vim-ipython'
+Plugin 'nvie/vim-flake8'

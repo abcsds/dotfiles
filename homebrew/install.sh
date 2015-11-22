@@ -93,11 +93,17 @@ brew install doxygen
 brew install gnuplot
 brew install node
 brew install octave # requires java from cask
+# brew install opencv
 brew install plotutils
 brew install pyqt
 brew install pyside
 brew install r
 brew install sdcc
+brew install sdl
+brew install sdl_image
+brew install sdl_mixer
+brew install sdl_ttf
+brew install hg
 
 # Install DBMSs
 # brew install mongodb
@@ -108,7 +114,11 @@ brew install sdcc
 # Install Python:
 brew install python
 brew install python3
-brew install ruby rbenv ruby-build
+
+# Install Ruby
+brew install ruby
+brew install rbenv
+brew install ruby-build
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -119,13 +129,14 @@ brew install fontconfig
 brew tap caskroom/fonts
 
 # Install audio tools
+# Look up Tidal on http://tidal.lurk.org/getting_started.html
 brew install liblo
 brew install libsndfile
 brew install libsamplerate
 brew install jack
 brew install ghc
 brew install cabal-install
-# Look up Tidal on http://tidal.lurk.org/getting_started.html
+brew install portmidi
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
