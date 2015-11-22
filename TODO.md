@@ -3,15 +3,7 @@ just some notes for myself.
 
 ## Plugins
  - bower
- - color picker
- - css comb
- - jekyll
- - languages:
-   - c/c++
-   - django
-   - latex
-   - r
-   - vhdl
+ - django
 
 ## UPDATES
 

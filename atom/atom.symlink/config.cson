@@ -45,3 +45,5 @@
   pigments:
     extendAutocompleteToVariables: true
   blame: {}
+  "atom-css-comb":
+    projectConfigs: "~/.csscomb.json"
