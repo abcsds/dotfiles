@@ -16,6 +16,7 @@ vim/vim.symlink/bundle
 vim/vim.symlink/sessions
 
 git/gitconfig.symlink
+git/lolcommits.symlink
 
 zsh/localrc.symlink
 
