@@ -47,3 +47,4 @@
   blame: {}
   "atom-css-comb":
     projectConfigs: "~/.csscomb.json"
+  linter: {}
