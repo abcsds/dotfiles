@@ -48,3 +48,4 @@
   "atom-css-comb":
     projectConfigs: "~/.csscomb.json"
   linter: {}
+  "linter-flake8": {}

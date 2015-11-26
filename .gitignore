@@ -11,6 +11,7 @@ config/config.symlink/*
 !config/config.symlink/fontconfig
 !config/config.symlink/git
 !config/config.symlink/10-symbols.conf
+!config/config.symlink/flake8
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
