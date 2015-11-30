@@ -47,6 +47,7 @@ brew cask install transmission
 brew cask install tuneup
 brew cask install unetbootin
 brew cask install ukelele
+brew cask install usb-overdrive
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
