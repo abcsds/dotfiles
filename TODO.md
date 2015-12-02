@@ -22,6 +22,8 @@ sudo gem update
 ## vim plugins
 https://github.com/alebcay/awesome-shell
 https://github.com/gabrielelana/awesome-terminal-fonts
+https://github.com/ryanoasis/vim-devicons
+https://github.com/ryanoasis/nerd-fonts
 
 ## for server:
  sudo apt-get install zsh vim tmux python-pip ruby ruby-dev make gcc nodejs curl elinks build-essential docker.io fbv

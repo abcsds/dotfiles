@@ -5,7 +5,9 @@ brew cask install xquartz
 brew cask install atom
 brew cask install audacity
 brew cask install bit-slicer
+brew cask install drop-to-gif
 brew cask install filezilla
+brew cask install gifs
 brew cask install gimp
 brew cask install github-desktop
 # brew cask install gns3
@@ -28,6 +30,7 @@ brew cask install nethackcocoa
 brew cask install nodebox
 brew cask install supercollider
 brew cask install spear
+brew cask install openscad
 brew cask install pandoc
 brew cask install pd
 # brew cask install pd-extended
