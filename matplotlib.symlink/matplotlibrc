@@ -1,2 +1,2 @@
-backend      : GtkAgg
+backend      : Qt4Agg
 # backend      : template

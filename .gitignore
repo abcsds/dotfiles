@@ -32,3 +32,5 @@ elinks/elinks.symlink/gotohist
 haskell/cabal.symlink/logs
 haskell/cabal.symlink/setup*
 haskell/cabal.symlink/where-is-my-stuff.txt
+
+matplotlib.symlink/fontList*
