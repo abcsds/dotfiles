@@ -30,6 +30,7 @@ pip3 install python-osc
 pip3 install flake8
 pip3 install flake8-docstrings
 pip3 install hg+http://bitbucket.org/pygame/pygame
+# pip install pygame --allow-external pygame --allow-unverified pygame
 
 # TODO:
 # pip install turtle

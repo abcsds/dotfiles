@@ -3,7 +3,7 @@ if [ $(uname) = "Linux" ]
 then
   alias serve='python2 -m SimpleHTTPServer'
 else
-  alias serve='open http://localhost:8000 && python -m SimpleHTTPServer'
+  alias serve='open http://localhost:8000 && python2 -m SimpleHTTPServer'
 fi
 
 function pyedit() {

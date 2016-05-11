@@ -17,6 +17,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 eval "$(rbenv init -)"
 eval "$(thefuck --alias)"

@@ -155,5 +155,5 @@ nmap sk :SplitjoinJoin<cr>
 map <Leader>hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
 " <Leader>hp = html preview
-map <silent> <Leader>hp :!open -a Safari %<CR><CR>
+map <silent> <Leader>hp :!open -a Chrome %<CR><CR>
 nnoremap <f5> :!python<CR>

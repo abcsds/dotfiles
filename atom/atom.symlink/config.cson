@@ -1,51 +1,47 @@
 "*":
-  editor:
-    showIndentGuide: true
-    invisibles: {}
-    softWrapAtPreferredLineLength: true
-    showInvisibles: true
-    fontSize: 17
-    scrollPastEnd: true
   core:
-    ignoredNames: [
-      ".bundle"
-      ".git"
-      "log"
-      "repositories"
-      "tmp"
-      "vendor"
-    ]
-    themes: [
-      "one-dark-ui"
-      "solarized-dark-syntax"
-    ]
-    hideGitIgnoredFiles: false
     disabledPackages: [
       "background-tips"
       "exception-reporting"
       "metrics"
       "figlet"
+      "linter-flake8"
+      "jslint"
     ]
+    hideGitIgnoredFiles: false
+    ignoredNames: [
+      ".bundle"
+      ".git"
+      "tmp"
+    ]
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    fontSize: 16
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrapAtPreferredLineLength: true
+  emmet: {}
+  "git-log": {}
+  "git-plus": {}
+  linter: {}
+  "linter-flake8": {}
+  "markdown-pdf": {}
+  "markdown-preview-plus": {}
+  pigments:
+    extendAutocompleteToVariables: true
   "spell-check":
     grammars: [
       "text.plain"
       "source.gfm"
       "text.git-commit"
+      "text.tex.latex"
     ]
-  welcome:
-    showOnStartup: false
-  "git-plus": {}
-  "one-dark-ui": {}
-  "markdown-preview-plus": {}
-  emmet: {}
   tidal:
     ghciPath: "/usr/local/bin/ghc"
-  "git-log": {}
-  figlet: {}
-  pigments:
-    extendAutocompleteToVariables: true
-  blame: {}
-  "atom-css-comb":
-    projectConfigs: "~/.csscomb.json"
-  linter: {}
-  "linter-flake8": {}
+  welcome:
+    showOnStartup: false

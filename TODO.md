@@ -58,3 +58,6 @@ cabal install tidal
 ```
 convert `find . -type f -name "*.jpg" -print0 | xargs -0 ls -tlr | awk '{print $9}'` timelapse.mpeg
 ```
+
+To enable tor systemwise:
+ set `networksetup -setsocksfirewallproxy` when starting tor and disable it when stopped. For CLI `export http_proxy=http://127.0.0.1:9050`
