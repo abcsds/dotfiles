@@ -2,3 +2,7 @@
 #   'Snippet Name':
 #     'prefix': 'Snippet Trigger'
 #     'body': 'Hello World!'
+'.source.python':
+  '#!':
+    'prefix': '#!'
+    'body':'#! /usr/local/bin/python'

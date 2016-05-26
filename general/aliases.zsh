@@ -134,7 +134,9 @@ alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP' # lsockU: Display only open UD
 alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP' # lsockT: Display only open TCP sockets
 alias openPorts='sudo lsof -i | grep LISTEN' # openPorts: All listening connections
 alias showBlocked='sudo ipfw list' # showBlocked: All ipfw rules inc/ blocked IPs
-
+alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport' # Airport Utility
+## airport en1 sniff 6
+## aircrack-ng -c -s -a 2 -b 90:c7:92:76:93:20 -l ~/Desktop/key.txt /tmp/airportSnifflSDKx8.cap
 
 # ii: display useful host related informaton
 # -------------------------------------------------------------------

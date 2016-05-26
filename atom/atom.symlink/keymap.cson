@@ -6,6 +6,9 @@
 '.platform-darwin atom-text-editor':
   'cmd-i': 'editor:auto-indent',
 
+'.platform-darwin atom-workspace':
+  'cmd-?': 'hashrocket:insert',
+
 'atom-workspace atom-text-editor:not([mini])':
   'cmd-alt-down': 'editor:add-selection-below',
   'cmd-alt-up': 'editor:add-selection-above'

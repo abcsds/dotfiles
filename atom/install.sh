@@ -1,5 +1,6 @@
 apm install atom-beautify
 apm install atom-css-comb
+apm install autocomplete-python
 apm install autoclose-html
 apm install blame
 apm install color-picker
@@ -8,6 +9,7 @@ apm install figlet
 apm install file-icons
 apm install git-log
 apm install git-plus
+apm install hashrocket
 apm install jekyll
 apm install jslint
 apm install language-latex
@@ -18,5 +20,6 @@ apm install linter
 apm install linter-flake8
 apm install merge-conflicts
 apm install pigments
+apm install python-tools
 apm install set-syntax
 apm install tidal

@@ -145,8 +145,10 @@ brew install dns2tcp
 brew install fcrackzip
 brew install hydra
 brew install john
+brew install ncrack
 brew install nmap
 brew install pngcheck
+brew install reaver
 brew install ucspi-tcp # `tcpserver` etc.
 
 # Install other useful binaries.

@@ -4,5 +4,6 @@ then
   then
     brew cask install mactex
   fi
+  tlmgr update --self
   tlmgr install IEEEtran elsarticle
 fi

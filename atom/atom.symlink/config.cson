@@ -8,6 +8,7 @@
       "linter-flake8"
       "jslint"
     ]
+    excludeVcsIgnoredPaths: false
     hideGitIgnoredFiles: false
     ignoredNames: [
       ".bundle"
@@ -43,5 +44,7 @@
     ]
   tidal:
     ghciPath: "/usr/local/bin/ghc"
+  "tree-view":
+    hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
