@@ -5,6 +5,7 @@ atom/atom.symlink/compile-cache/
 atom/atom.symlink/packages
 atom/atom.symlink/storage
 atom/atom.symlink/nohup.out
+atom/atom.symlink/blob-store
 
 config/config.symlink/*
 !config/config.symlink/cmus
@@ -12,6 +13,7 @@ config/config.symlink/*
 !config/config.symlink/git
 !config/config.symlink/10-symbols.conf
 !config/config.symlink/flake8
+!config/config.symlink/inkscape
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions

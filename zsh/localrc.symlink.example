@@ -3,6 +3,7 @@ export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreut
 export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Library/Haskell/bin"
+export PATH="$PATH:/Library/TeX/texbin/"
 export PATH="$PATH:$HOME/.rbenv/bin"
 
 # PHP 5.5
