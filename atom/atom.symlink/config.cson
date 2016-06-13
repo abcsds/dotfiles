@@ -1,12 +1,16 @@
 "*":
   core:
     disabledPackages: [
-      "background-tips"
       "exception-reporting"
       "metrics"
       "figlet"
       "linter-flake8"
       "jslint"
+      "latextools"
+      "latex-completions"
+      "latex"
+      "markdown-preview"
+      "emmet"
     ]
     excludeVcsIgnoredPaths: false
     hideGitIgnoredFiles: false
@@ -20,7 +24,6 @@
       "solarized-dark-syntax"
     ]
   editor:
-    fontSize: 16
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
@@ -29,10 +32,29 @@
   emmet: {}
   "git-log": {}
   "git-plus": {}
+  "latex-plus":
+    advancedEnabled: true
+    ghostscriptBin: "/usr/local/bin/"
+    texBin: "/Library/TeX/texbin/"
+  latextools:
+    darwin:
+      texpath: "/Library/TeX/texbin:/usr/texbin:/usr/local/bin"
   linter: {}
+  "linter-chktex":
+    chktexArgs: [
+      "-n22"
+      "-n30"
+      "-e16"
+    ]
   "linter-flake8": {}
   "markdown-pdf": {}
-  "markdown-preview-plus": {}
+  "markdown-preview-plus":
+    enableLatexRenderingByDefault: true
+    enablePandoc: true
+    pandocBibliography: true
+    pandocPath: "/usr/local/bin/pandoc"
+    pandocRemoveReferences: false
+    useGitHubStyle: true
   pigments:
     extendAutocompleteToVariables: true
   "spell-check":

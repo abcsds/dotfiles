@@ -14,4 +14,5 @@
   'cmd-alt-up': 'editor:add-selection-above'
 
 'atom-workspace, atom-workspace atom-text-editor':
-  'cmd-shift-M': 'markdown-preview:toggle'
+  'cmd-shift-M': 'markdown-preview-plus:toggle'
+  'cmd-shift-X': 'markdown-preview-plus:toggle-render-latex'
