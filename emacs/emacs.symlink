@@ -1,7 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/load")
+
+;; https://github.com/JuliaLang/julia-emacs
+(add-to-list 'load-path "path-to-julia-mode")
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
-(add-to-list 'load-path "~/github/Tidal")
-    (require 'haskell-mode)
-    (require 'tidal)
-(global-set-key "\C-c\C-d" "\C-a\C- \C-n\M-w\C-y")
+(require 'julia-mode)
