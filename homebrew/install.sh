@@ -91,6 +91,7 @@ brew install boost
 brew install cmake
 brew install doxygen
 brew install gnuplot
+brew install neuron
 brew install node
 brew install octave # requires java from cask
 # brew install opencv

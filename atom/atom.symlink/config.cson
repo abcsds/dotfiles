@@ -11,6 +11,10 @@
       "latex"
       "markdown-preview"
       "emmet"
+      "uber-juno"
+      "tool-bar"
+      "julia-client"
+      "ink"
     ]
     excludeVcsIgnoredPaths: false
     hideGitIgnoredFiles: false
@@ -66,7 +70,18 @@
     ]
   tidal:
     ghciPath: "/usr/local/bin/ghc"
-  "tree-view":
-    hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
+"tree-view":
+  hideVcsIgnoredFiles: false
+".bibtex.text":
+  editor:
+    softWrap: false
+    softWrapAtPreferredLineLength: true
+".latex.memoir.tex.text":
+  editor:
+    softWrapAtPreferredLineLength: false
+".latex.tex.text":
+  editor:
+    softWrap: true
+    softWrapAtPreferredLineLength: false
