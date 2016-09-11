@@ -40,7 +40,7 @@ zsh/localrc.symlink
 
 python/get-pip.py
 
-antigen/antigen.symlink
+antigen/antigen.symlink/repos
 
 elinks/elinks.symlink/cookies
 elinks/elinks.symlink/globhist

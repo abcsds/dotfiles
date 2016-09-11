@@ -6,6 +6,7 @@ pip2 install pyobjc
 pip2 install ipython
 pip2 install virtualenv
 pip2 install virtualenvwrapper
+pip2 install autoenv
 pip2 install numpy
 pip2 install Pygments
 # pip2 install pygame

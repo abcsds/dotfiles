@@ -159,18 +159,19 @@ install_vundle () {
   fi
 }
 
-install_antigen () {
-  # From http://antigen.sharats.me/
-  # Download to symlinked folder
-  info "Installing Antigen"
-  if [ -d $DOTFILES_ROOT/antigen/antigen.symlink ]; then
-    success "Antigen installed"
-  else
-    # Install antigen
-    git clone https://github.com/zsh-users/antigen.git $DOTFILES_ROOT/antigen/antigen.symlink  >/tmp/antigen 2>&1
-    success "Antigen installed"
-  fi
-}
+# install_antigen () {
+# Just brew install antigen
+#   # From http://antigen.sharats.me/
+#   # Download to symlinked folder
+#   info "Installing Antigen"
+#   if [ -d $DOTFILES_ROOT/antigen/antigen.symlink ]; then
+#     success "Antigen installed"
+#   else
+#     # Install antigen
+#     git clone https://github.com/zsh-users/antigen.git $DOTFILES_ROOT/antigen/antigen.symlink  >/tmp/antigen 2>&1
+#     success "Antigen installed"
+#   fi
+# }
 
 install_for_mac () {
   # If we're on a Mac, let's install and setup homebrew.
@@ -245,7 +246,7 @@ install_apm () {
 # Run installations
 setup_gitconfig
 setup_folder
-install_antigen
+# install_antigen
 install_dotfiles
 install_vundle
 install_for_mac

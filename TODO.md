@@ -61,3 +61,16 @@ convert `find . -type f -name "*.jpg" -print0 | xargs -0 ls -tlr | awk '{print $
 
 To enable tor systemwise:
  set `networksetup -setsocksfirewallproxy` when starting tor and disable it when stopped. For CLI `export http_proxy=http://127.0.0.1:9050`
+
+# iterm color schemes
+https://github.com/mbadolato/iTerm2-Color-Schemes/tarball/master
+- darkside
+- chalk
+- DimmedMonokai
+- idleToes
+- MaterialDark
+- Misterioso
+- Obsidian
+- Neutron
+- OceanMaterial
+- Solarized Dark Higher Contrast

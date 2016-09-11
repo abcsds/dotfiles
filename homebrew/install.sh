@@ -56,6 +56,11 @@ brew install gnu-sed --with-default-names
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
 brew install zsh
+brew install antigen
+brew install zsh-syntax-highlighting
+brew install zsh-history-substring-search
+brew install zsh-autosuggestions
+brew install zshdb
 
 # Install completions
 brew install zsh-completions
@@ -65,6 +70,8 @@ brew install docker-completion
 brew install gem-completion
 brew install grunt-completion
 brew install pip-completion
+brew install ruby-completion
+brew install vagrant-completion
 
 # brew tap homebrew/versions
 
@@ -79,7 +86,6 @@ brew install tmux
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-# brew install homebrew/php/php55 --with-gmp
 
 # Install Java
 brew install caskroom/cask/brew-cask
@@ -99,7 +105,6 @@ brew install plotutils
 brew install pyqt
 brew install pyside
 brew install r
-brew install sdcc
 brew install sdl
 brew install sdl_image
 brew install sdl_mixer
@@ -183,10 +188,10 @@ brew install ntopng
 brew install pixman
 brew install proxychains-ng
 brew install qt
-brew install sdl
 brew install snort
 brew install thefuck
 brew install the_silver_searcher
+brew install todo-txt
 brew install tor
 brew install wireshark
 

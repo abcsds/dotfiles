@@ -1,9 +1,9 @@
 # Atom.io editor abbreviations
-a() {
-  if [ "$1" = "" ] ; then
-    exec atom .
+function a () {
+  if [[ -n $1 ]]; then
+    atom "$1"
   else
-    exec atom "$1"
+    atom .
   fi
 }
 alias apmup='apm update --no-confirm'

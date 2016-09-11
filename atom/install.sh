@@ -30,6 +30,7 @@ apm install latex-plus
 apm install linter
 apm install linter-flake8
 apm install markdown-preview-plus
+apm install material-syntax
 apm install merge-conflicts
 apm install pdf-view
 apm install pandoc-convert

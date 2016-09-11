@@ -25,9 +25,10 @@
     ]
     themes: [
       "one-dark-ui"
-      "solarized-dark-syntax"
+      "material-syntax"
     ]
   editor:
+    fontSize: 13
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
@@ -72,8 +73,6 @@
     ghciPath: "/usr/local/bin/ghc"
   welcome:
     showOnStartup: false
-"tree-view":
-  hideVcsIgnoredFiles: false
 ".bibtex.text":
   editor:
     softWrap: false
@@ -85,3 +84,5 @@
   editor:
     softWrap: true
     softWrapAtPreferredLineLength: false
+"tree-view":
+  hideVcsIgnoredFiles: false
