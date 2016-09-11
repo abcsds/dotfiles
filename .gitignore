@@ -14,6 +14,21 @@ config/config.symlink/*
 !config/config.symlink/10-symbols.conf
 !config/config.symlink/flake8
 !config/config.symlink/inkscape
+!config/config.symlink/nvim
+
+python/virtualenvs.symlink/*
+!python/virtualenvs.symlink/get_env_details
+!python/virtualenvs.symlink/initialize
+!python/virtualenvs.symlink/postactivate
+!python/virtualenvs.symlink/postdeactivate
+!python/virtualenvs.symlink/postmkproject
+!python/virtualenvs.symlink/postmkvirtualenv
+!python/virtualenvs.symlink/postrmvirtualenv
+!python/virtualenvs.symlink/preactivate
+!python/virtualenvs.symlink/predeactivate
+!python/virtualenvs.symlink/premkproject
+!python/virtualenvs.symlink/premkvirtualenv
+!python/virtualenvs.symlink/prermvirtualenv
 
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
