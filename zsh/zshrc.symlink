@@ -4,119 +4,8 @@ export DZSH=$HOME/.dotfiles
 # Set Default Editor
 export EDITOR=vim
 
-# Source Antigen
-source ~/.antigen/antigen.zsh
-
 # Source inputrc
 source ~/.inputrc
-
-# ======= Antigen Plugins for zsh =======
-# Alias-tips
-antigen bundle djui/alias-tips
-
-# Syntax highlighting bundle.
-# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
-# antigen bundle zsh-users/zsh-syntax-highlighting
-
-# Do gitiginore files right from zsh
-antigen bundle voronkovich/gitignore.plugin.zsh
-
-# View vim plugin manuals from zsh
-antigen bundle yonchu/vimman
-
-# ======= Set up the theme =======
-
-# Load the powerlevel9k theme
-antigen theme bhilburn/powerlevel9k powerlevel9k
-POWERLEVEL9K_MODE='awesome-patched'
-
-# The segments that are currently available are:
-# aws - The current AWS profile, if active (more info below)
-# context - Your username and host (more info below)
-# dir - Your current working directory.
-# history - The command number for the current line.
-# node_version - Show the version number of the installed Node.js.
-# rbenv - Ruby environment information (if one is active).
-# rspec_stats - Show a ratio of test classes vs code classes for RSpec.
-# status - The return code of the previous command, and status of background jobs.
-# symfony2_tests - Show a ratio of test classes vs code classes for Symfony2.
-# symfony2_version - Show the current Symfony2 version, if you are in a Symfony2-Project dir.
-# time - System time.
-# virtualenv - Your Python VirtualEnv.
-# vcs - Information about this git or hg repository (if you are in one).
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
-
-# Limit to the last two folders
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-
-# Show promt on next line
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
-# POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="↳ "
-
-# Disable right prompt
-# POWERLEVEL9K_DISABLE_RPROMPT=true
-
-# Light colorscheme
-# POWERLEVEL9K_COLOR_SCHEME='light'
-
-# Segment customization
-# Colors at: http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
-
-# Customizing `context` colors for root and non-root users
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="236"
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="white"
-# POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
-# POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="blue"
-
-# Customizing `dir` colors
-POWERLEVEL9K_DIR_BACKGROUND="cyan"
-# POWERLEVEL9K_DIR_FOREGROUND="white"
-
-# Customizing `time` colors
-# POWERLEVEL9K_TIME_FOREGROUND='red'
-# POWERLEVEL9K_TIME_BACKGROUND='blue'
-
-# Customizing `virtualenv` colors
-# POWERLEVEL9K_VIRTUALENV_BACKGROUND="17"
-# POWERLEVEL9K_VIRTUALENV_FOREGROUND="white"
-
-# These Segments; context, vcs, rspec_stats, symfony2_tests, have additional color options
-
-# Advanced `vcs` color customization
-POWERLEVEL9K_VCS_FOREGROUND='blue'
-POWERLEVEL9K_VCS_DARK_FOREGROUND='black'
-POWERLEVEL9K_VCS_BACKGROUND='050'
-# If VCS changes are detected:
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='green'
-
-# rspec_stats for good test coverage
-# POWERLEVEL9K_RSPEC_STATS_GOOD_FOREGROUND='blue'
-# POWERLEVEL9K_RSPEC_STATS_GOOD_BACKGROUND='green'
-# rspec_stats for average test coverage
-# POWERLEVEL9K_RSPEC_STATS_AVG_FOREGROUND='black'
-# POWERLEVEL9K_RSPEC_STATS_AVG_BACKGROUND='cyan'
-# rspec_stats for poor test coverage
-# POWERLEVEL9K_RSPEC_STATS_BAD_FOREGROUND='red'
-# POWERLEVEL9K_RSPEC_STATS_BAD_BACKGROUND='white'
-
-# symfony2_tests for good test coverage
-# POWERLEVEL9K_SYMFONY2_TESTS_GOOD_FOREGROUND='blue'
-# POWERLEVEL9K_SYMFONY2_TESTS_GOOD_BACKGROUND='green'
-# symfony2_tests for average test coverage
-# POWERLEVEL9K_SYMFONY2_TESTS_AVG_FOREGROUND='black'
-# POWERLEVEL9K_SYMFONY2_TESTS_AVG_BACKGROUND='cyan'
-# symfony2_tests for poor test coverage
-# POWERLEVEL9K_SYMFONY2_TESTS_BAD_FOREGROUND='red'
-# POWERLEVEL9K_SYMFONY2_TESTS_BAD_BACKGROUND='white'
-
-# ======= End theme setup =======
-
-# Tell antigen that you're done.
-antigen apply
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -136,8 +25,8 @@ do
   source $file
 done
 
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+# load everything but the path, antigen, and completion files
+for file in ${${${config_files:#*/path.zsh}:#*/antigen.zsh}:#*/completion.zsh}
 do
   source $file
 done
@@ -146,12 +35,27 @@ done
 autoload -U compinit
 compinit
 
+autoload -U compdef
+compinit
+
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
   source $file
 done
 
+# Load antigen file
+for file in ${(M)config_files:#*/antigen.zsh}
+do
+  source $file
+done
+
+# In order to use this build of zsh as your login shell,
+# it must be added to /etc/shells.
+# Add the following to your zshrc to access the online help:
+# unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -190,19 +94,6 @@ done
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
