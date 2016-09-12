@@ -13,6 +13,9 @@ antigen bundle djui/alias-tips
 # Do gitiginore files right from zsh
 antigen bundle voronkovich/gitignore.plugin.zsh
 
+# Git rebase
+# antigen bundle smallhadroncollider/antigen-git-rebase
+
 # Autosugestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
