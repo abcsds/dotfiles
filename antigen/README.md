@@ -16,3 +16,5 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 ```
 
 The theme being used is currently [bhilburn's powerlevel9k](https://github.com/bhilburn/powerlevel9k).
+
+Current error when trying to use oh-my-zsh: all bundles break and zsh suffers a horrible death with a broken pipe. Installed zshdb to try to debug the process, but there are no apparent solutions

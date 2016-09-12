@@ -64,13 +64,5 @@ To enable tor systemwise:
 
 # iterm color schemes
 https://github.com/mbadolato/iTerm2-Color-Schemes/tarball/master
-- darkside
-- chalk
-- DimmedMonokai
-- idleToes
-- MaterialDark
-- Misterioso
-- Obsidian
-- Neutron
-- OceanMaterial
-- Solarized Dark Higher Contrast
+- [*] Solarized Dark Higher Contrast
+[download](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20Higher%20Contrast.itermcolors)
