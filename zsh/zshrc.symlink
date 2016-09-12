@@ -7,6 +7,11 @@ export EDITOR=vim
 # Source inputrc
 source ~/.inputrc
 
+# initialize autocomplete here, otherwise functions won't be loaded
+# [[ -a ~/.zcompdump* ]] && rm ~/.zcompdump*
+autoload -U compinit; compinit
+autoload -U +X bashcompinit; bashcompinit
+
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -30,13 +35,6 @@ for file in ${${${config_files:#*/path.zsh}:#*/antigen.zsh}:#*/completion.zsh}
 do
   source $file
 done
-
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
-
-autoload -U compdef
-compinit
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
