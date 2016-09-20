@@ -2,7 +2,9 @@ brew install caskroom/cask/brew-cask
 
 brew cask install xquartz
 brew cask install atom
+brew cask install amethyst # http://ianyh.com/amethyst/
 brew cask install gimp
+brew cask install brew cask install gitkraken
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install google-photos-backup
@@ -21,6 +23,7 @@ brew cask install qlmarkdown
 brew cask install rstudio
 brew cask install seil
 brew cask install slack
+# brew cask install spectacle
 brew cask install steam
 # brew cask install sublime-text
 brew cask install telegram

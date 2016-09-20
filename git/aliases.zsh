@@ -23,3 +23,11 @@ alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gdv='git diff -w "$@" | vim -R -'
 alias gcount='git shortlog -sn'
 alias gexport='git archive --format zip --output'
+
+# lolcommits
+function commitlapse() {
+  CWD=$(pwd)
+  cd ~/.lolcommits
+  convert `find . -type f -name "*.jpg" -print0 | xargs -0 ls -tlr | awk '{print $9}'` ~/Desktop/timelapse.mpeg
+  cd $CWD
+}

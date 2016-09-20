@@ -174,6 +174,7 @@ brew install elinks --devel
 brew install geoip
 brew install gibo
 brew install git-flow
+brew install googler
 brew install graphicsmagick
 brew install gtypist
 brew install htop-osx
@@ -191,6 +192,7 @@ brew install qt
 brew install snort
 brew install thefuck
 brew install the_silver_searcher
+brew install tig
 brew install todo-txt
 brew install tor
 brew install wireshark

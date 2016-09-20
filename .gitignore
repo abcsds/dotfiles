@@ -50,4 +50,14 @@ haskell/cabal.symlink/logs
 haskell/cabal.symlink/setup*
 haskell/cabal.symlink/where-is-my-stuff.txt
 
+ruby/rbenv.symlink/shims
+ruby/rbenv.symlink/versions
+
+zenmap/zenmap.symlink/recent_scans.txt
+zenmap/zenmap.symlink/target_list.txt
+zenmap/zenmap.symlink/zenmap_version
+zenmap/zenmap.symlink/zenmap.db
+
+julia/julia.symlink/*
+
 matplotlib.symlink/fontList*
