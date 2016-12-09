@@ -16,7 +16,7 @@ apm install jslint
 apm install language-brainfuck
 apm install language-common-lisp
 apm install language-docker
-apm install language-emacs-li
+apm install language-emacs-lisp
 apm install language-julia
 apm install language-latex
 apm install language-pfm
