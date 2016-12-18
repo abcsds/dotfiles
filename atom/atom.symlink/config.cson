@@ -1,20 +1,14 @@
 "*":
+  "autocomplete-python":
+    useKite: false
+  "command-palette": {}
   core:
     disabledPackages: [
-      "exception-reporting"
       "metrics"
-      "figlet"
-      "linter-flake8"
-      "jslint"
-      "latextools"
-      "latex-completions"
-      "latex"
       "markdown-preview"
+      "atom-css-comb"
       "emmet"
-      "uber-juno"
-      "tool-bar"
-      "julia-client"
-      "ink"
+      "archive-view"
     ]
     excludeVcsIgnoredPaths: false
     hideGitIgnoredFiles: false
@@ -23,20 +17,34 @@
       ".git"
       "tmp"
     ]
+    packagesWithKeymapsDisabled: [
+      "emmet"
+    ]
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "material-syntax"
     ]
   editor:
-    fontSize: 13
+    fontSize: 15
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
     softWrapAtPreferredLineLength: true
-  emmet: {}
+  emmet:
+    useEmmetComments: true
+  "exception-reporting":
+    userId: "5f65f7e8-d082-bbd4-6180-10399e1a9442"
+  "file-icons":
+    coloured: false
   "git-log": {}
   "git-plus": {}
+  # JULIA:
+  "julia-client":
+    enableMenu: false
+    enableToolBar: false
+    launchOnStartup: false
   "latex-plus":
     advancedEnabled: true
     ghostscriptBin: "/usr/local/bin/"
@@ -44,15 +52,6 @@
   latextools:
     darwin:
       texpath: "/Library/TeX/texbin:/usr/texbin:/usr/local/bin"
-  linter: {}
-  "linter-chktex":
-    chktexArgs: [
-      "-n22"
-      "-n30"
-      "-e16"
-    ]
-  "linter-flake8": {}
-  "markdown-pdf": {}
   "markdown-preview-plus":
     enableLatexRenderingByDefault: true
     enablePandoc: true
@@ -60,6 +59,7 @@
     pandocPath: "/usr/local/bin/pandoc"
     pandocRemoveReferences: false
     useGitHubStyle: true
+    useLazyHeaders: false
   pigments:
     extendAutocompleteToVariables: true
   "spell-check":
@@ -69,20 +69,12 @@
       "text.git-commit"
       "text.tex.latex"
     ]
-  tidal:
-    ghciPath: "/usr/local/bin/ghc"
+  "tool-bar":
+    position: "Left"
+    visible: false
+  "uber-juno":
+    disable: true
   welcome:
     showOnStartup: false
-".bibtex.text":
-  editor:
-    softWrap: false
-    softWrapAtPreferredLineLength: true
-".latex.memoir.tex.text":
-  editor:
-    softWrapAtPreferredLineLength: false
-".latex.tex.text":
-  editor:
-    softWrap: true
-    softWrapAtPreferredLineLength: false
 "tree-view":
   hideVcsIgnoredFiles: false
