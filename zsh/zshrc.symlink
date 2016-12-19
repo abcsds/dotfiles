@@ -14,8 +14,7 @@ source ~/.inputrc
 # Additionally, if you receive "zsh compinit: insecure directories" warnings when attempting
 # to load these completions, you may need to run this:
 # chmod go-w '/usr/local/share'
-# [[ -a ~/.zcompdump* ]] && rm -f ~/.zcompdump*
-autoload -U compinit; compinit
+autoload -U compinit; compinit # FIXME: zshdb: ** Internal debug error _Dbg_is_file(): null file to find
 autoload -U +X bashcompinit; bashcompinit
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
@@ -36,8 +35,8 @@ do
   source $file
 done
 
-# load everything but the path, antigen, and completion files
-for file in ${${${config_files:#*/path.zsh}:#*/antigen.zsh}:#*/completion.zsh}
+# load everything but the path, antigen, and completion files (and antigen repos)
+for file in ${${${${config_files:#*/path.zsh}:#*/antigen.zsh}:#*/completion.zsh}:#*/antigen.symlink/*}
 do
   source $file
 done
@@ -49,6 +48,8 @@ do
 done
 
 # Load antigen file
+[[ -a ~/.zcompdump* ]] && rm -f ~/.zcompdump*
+source $(brew --prefix)/share/antigen/antigen.zsh
 for file in ${(M)config_files:#*/antigen.zsh}
 do
   source $file
@@ -103,6 +104,8 @@ HELPDIR=/usr/local/share/zsh/help
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # ======= Set up the theme =======
+# TODO: fix this mess :P
+POWERLEVEL9K_INSTALLATION_PATH=~/.dotfiles/antigen/antigen.symlink/repos/https-COLON--SLASH--SLASH-github.com-SLASH-bhilburn-SLASH-powerlevel9k.git
 
 # Load the powerlevel9k theme
 antigen theme bhilburn/powerlevel9k powerlevel9k
@@ -192,6 +195,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs rbenv virtualenv)
 antigen apply
 
 # ======= End theme setup =======
+
+antigen use oh-my-zsh
 
 export PROJECTS_FOLDER
 

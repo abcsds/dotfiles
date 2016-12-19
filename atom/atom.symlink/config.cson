@@ -1,80 +1,92 @@
 "*":
   "autocomplete-python":
     useKite: false
+  "autoupdate-packages":
+    handling: "Update automatically and silently"
+    lastUpdateTimestamp: 1482130697006
   "command-palette": {}
   core:
     disabledPackages: [
-      "metrics"
-      "markdown-preview"
-      "atom-css-comb"
-      "emmet"
-      "archive-view"
+      "relative-numbers"
     ]
-    excludeVcsIgnoredPaths: false
-    hideGitIgnoredFiles: false
-    ignoredNames: [
-      ".bundle"
-      ".git"
-      "tmp"
-    ]
-    packagesWithKeymapsDisabled: [
-      "emmet"
-    ]
-    telemetryConsent: "limited"
-    themes: [
-      "one-dark-ui"
-      "material-syntax"
-    ]
+    telemetryConsent: "no"
+  "easy-motion-redux":
+    replaceCharacters: "uhetonasidpg.c,r'lyfkmjwqv;zxb"
   editor:
+    fontFamily: "Hack"
     fontSize: 15
-    invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
+    softWrap: true
     softWrapAtPreferredLineLength: true
-  emmet:
-    useEmmetComments: true
-  "exception-reporting":
-    userId: "5f65f7e8-d082-bbd4-6180-10399e1a9442"
+  emmet: {}
+  "exception-reporting": {}
   "file-icons":
     coloured: false
   "git-log": {}
   "git-plus": {}
-  # JULIA:
-  "julia-client":
-    enableMenu: false
-    enableToolBar: false
-    launchOnStartup: false
-  "latex-plus":
-    advancedEnabled: true
-    ghostscriptBin: "/usr/local/bin/"
-    texBin: "/Library/TeX/texbin/"
-  latextools:
-    darwin:
-      texpath: "/Library/TeX/texbin:/usr/texbin:/usr/local/bin"
-  "markdown-preview-plus":
-    enableLatexRenderingByDefault: true
-    enablePandoc: true
-    pandocBibliography: true
-    pandocPath: "/usr/local/bin/pandoc"
-    pandocRemoveReferences: false
-    useGitHubStyle: true
-    useLazyHeaders: false
+  "highlight-line": {}
+  "julia-client": {}
+  "latex-plus": {}
+  latextools: {}
+  linter:
+    statusIconScope: "File"
+  "markdown-preview-plus": {}
   pigments:
     extendAutocompleteToVariables: true
-  "spell-check":
-    grammars: [
-      "text.plain"
-      "source.gfm"
-      "text.git-commit"
-      "text.tex.latex"
+  proton:
+    core:
+      inputProvider: "vim-mode-plus"
+      leaderKey: "space"
+      modeKey: ","
+      "post-init-timeout": 3000
+      quickOpenProvider: "normal"
+      relativeLineNumbers: false
+      selectedLayers: [
+        "core"
+        "tools/git"
+        "tools/linter"
+        "lang/clojure"
+        "lang/html"
+        "lang/json"
+        "lang/julia"
+        "lang/latex"
+        "lang/markdown"
+        "lang/python"
+        "lang/sass"
+        "apps/notes"
+      ]
+      showTabBar: true
+      whichKeyDelay: 0.4
+      whichKeyDelayOnInit: false
+      whichKeyDisabled: false
+      wipeUserConfigs: true
+    latex:
+      "latexmk-provider": "latex"
+  "spell-check": {}
+  "theme-switch":
+    profiles: [
+      "nucleus-dark-ui atom-dark-fusion-syntax"
+      "atom-material-ui atom-material-syntax"
+      "atom-dark-ui atom-dark-syntax"
+      "atom-light-ui atom-light-syntax"
+      "one-dark-ui one-dark-syntax"
+      "one-light-ui one-light-syntax"
     ]
-  "tool-bar":
-    position: "Left"
-    visible: false
-  "uber-juno":
-    disable: true
+  "tool-bar": {}
+  "uber-juno": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+  "vim-mode-plus":
+    incrementalSearch: true
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
   welcome:
     showOnStartup: false
+  zentabs:
+    maximumOpenedTabs: 10
+    neverCloseUnsaved: true
 "tree-view":
   hideVcsIgnoredFiles: false

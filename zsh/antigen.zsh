@@ -26,7 +26,7 @@ antigen bundle voronkovich/gitignore.plugin.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Navegation tools
-# source /usr/local/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
+source /usr/local/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
 
 # == Syntax highlighting ==
 # ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)

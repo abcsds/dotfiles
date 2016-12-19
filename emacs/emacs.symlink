@@ -1,8 +1,0 @@
-(add-to-list 'load-path "~/.emacs.d/load")
-
-;; https://github.com/JuliaLang/julia-emacs
-(add-to-list 'load-path "path-to-julia-mode")
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-
-(require 'julia-mode)
