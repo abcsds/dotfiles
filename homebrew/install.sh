@@ -83,12 +83,14 @@ brew install curl
 brew install vim --with-cscope --with-lua --with-luajit --with-mzscheme --with-python3 --with-tcl --override-system-vim
 brew install macvim --with-lua --with-luajit --with-custom-icons --with-python3 --with-override-system-vim
 brew install tmux
+brew install emacs --with-imagemagick
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
 # Install Java
 brew install caskroom/cask/brew-cask
+brew install mas
 brew cask install java
 
 # Tap science and computing
@@ -99,16 +101,9 @@ brew install doxygen
 brew install gnuplot
 brew install neuron
 brew install node
-brew install octave # requires java from cask
 # brew install opencv
 brew install plotutils
-brew install pyqt
-brew install pyside
 brew install r
-brew install sdl
-brew install sdl_image
-brew install sdl_mixer
-brew install sdl_ttf
 brew install hg
 
 # Install DBMSs
@@ -130,7 +125,7 @@ brew install ruby-build
 brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
-brew install woff2
+brew install bramstein/webfonttools/woff2
 brew install fontconfig
 brew tap caskroom/fonts
 
@@ -140,8 +135,6 @@ brew install liblo
 brew install libsndfile
 brew install libsamplerate
 brew install jack
-brew install ghc
-brew install cabal-install
 brew install portmidi
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
@@ -180,7 +173,7 @@ brew install gtypist
 brew install htop-osx
 brew install httpd24
 brew install iftop
-brew install klavaro
+brew install homebrew/gui/klavaro
 # brew install vifm
 brew install ranger
 brew install netcat
