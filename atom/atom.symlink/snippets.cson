@@ -5,4 +5,4 @@
 '.source.python':
   '#!':
     'prefix': '#!'
-    'body':'#! /usr/local/bin/python'
+    'body':'#! /usr/local/bin/python3'

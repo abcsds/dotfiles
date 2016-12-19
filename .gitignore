@@ -1,18 +1,20 @@
 atom/atom.symlink/.apm
 atom/atom.symlink/.node-gyp
 atom/atom.symlink/.storage
-atom/atom.symlink/compile-cache/
-atom/atom.symlink/packages
-atom/atom.symlink/storage
-atom/atom.symlink/nohup.out
 atom/atom.symlink/blob-store
+atom/atom.symlink/compile-cache/
+atom/atom.symlink/config.cson
+atom/atom.symlink/nohup.out
+atom/atom.symlink/packages
+atom/atom.symlink/recovery
+atom/atom.symlink/storage
 
 config/config.symlink/*
+!config/config.symlink/10-symbols.conf
 !config/config.symlink/cmus
+!config/config.symlink/flake8
 !config/config.symlink/fontconfig
 !config/config.symlink/git
-!config/config.symlink/10-symbols.conf
-!config/config.symlink/flake8
 !config/config.symlink/inkscape
 !config/config.symlink/nvim
 
@@ -55,8 +57,8 @@ ruby/rbenv.symlink/versions
 
 zenmap/zenmap.symlink/recent_scans.txt
 zenmap/zenmap.symlink/target_list.txt
-zenmap/zenmap.symlink/zenmap_version
 zenmap/zenmap.symlink/zenmap.db
+zenmap/zenmap.symlink/zenmap_version
 
 julia/julia.symlink/*
 
