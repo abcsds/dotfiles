@@ -2,22 +2,6 @@
 " Mac specific General vim sanity improvements
 " ========================================
 "
-" ========================================
-" RSI Prevention - keyboard remaps
-" ========================================
-" Certain things we do every day as programmers stress
-" out our hands. For example, typing underscores and
-" dashes are very common, and in position that require
-" a lot of hand movement. Vim to the rescue
-"
-" Now using the middle finger of either hand you can type
-" underscores with apple-k or apple-d, and add Shift
-" to type dashes
-imap <silent> <D-k> _
-imap <silent> <D-d> _
-imap <silent> <D-K> -
-imap <silent> <D-D> -
-
 " Change inside various enclosures with Cmd-" and Cmd-'
 " The f makes it find the enclosure so you don't have
 " to be standing inside it
@@ -30,7 +14,7 @@ nnoremap <D-]> f]ci]
 
 " ==== NERD tree
 " Cmd-Shift-N for nerd tree
-nmap <D-N> :NERDTreeToggle<CR>
+nmap <D-\> :NERDTreeToggle<CR>
 
 " move up/down quickly by using Cmd-j, Cmd-k
 " which will move us around by functions

@@ -27,5 +27,6 @@ else
   end
 endif
 
-colorscheme solarized
+" colorscheme solarized
+colorscheme atom-dark-256
 set background=dark
