@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>org.sil.ukelele.keyboardlayout.</string>
+	<string>org.sil.ukelele.keyboardlayout.dvorak-iso</string>
 	<key>CFBundleName</key>
-	<string></string>
+	<string>MyDvorak</string>
 	<key>CFBundleVersion</key>
 	<string></string>
-	<key>KLInfo_Dvorak - ISO</key>
+	<key>KLInfo_MyDvorak</key>
 	<dict>
 		<key>TISInputSourceID</key>
-		<string>org.sil.ukelele.keyboardlayout..dvorak-iso</string>
+		<string>org.sil.ukelele.keyboardlayout.dvorak-iso.mydvorak</string>
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>
