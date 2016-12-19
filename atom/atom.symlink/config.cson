@@ -1,13 +1,17 @@
 "*":
+  "'nvatom'": {}
   "autocomplete-python":
     useKite: false
   "autoupdate-packages":
     handling: "Update automatically and silently"
-    lastUpdateTimestamp: 1482130697006
+    lastUpdateTimestamp: 1482136816401
   "command-palette": {}
   core:
     disabledPackages: [
       "relative-numbers"
+      "Parinfer"
+      "proto-repl"
+      "linter-clojure"
     ]
     telemetryConsent: "no"
   "easy-motion-redux":
@@ -33,6 +37,8 @@
   linter:
     statusIconScope: "File"
   "markdown-preview-plus": {}
+  nvatom:
+    directory: "~/.notes"
   pigments:
     extendAutocompleteToVariables: true
   proton:
@@ -47,7 +53,6 @@
         "core"
         "tools/git"
         "tools/linter"
-        "lang/clojure"
         "lang/html"
         "lang/json"
         "lang/julia"

@@ -29,7 +29,6 @@
     ;; Languages
     ;; Get more at github.com/dvcrn/proton/tree/master/src/cljs/proton/layers/lang
     ;; -----------------------------------
-    :lang/clojure
     :lang/html
     :lang/json
     :lang/julia
@@ -37,6 +36,7 @@
     :lang/markdown
     :lang/python
     :lang/sass
+    ;; :lang/clojure
     ;; :lang/csharp
     ;; :lang/elixir
     ;; :lang/javascript
@@ -134,6 +134,9 @@
 
     ;; Tree view
     ["tree-view.hideVcsIgnoredFiles" false]
+
+    ;; NVAtom
+    ["nvatom.directory" "~/.notes"]
 
   ]
 

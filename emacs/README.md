@@ -1,8 +1,6 @@
 # Emacs
 Configuration for emacs. Using [spacemacs](https://github.com/syl20bnr/spacemacs). All config is under spacemacs.symlink.
 
-TODO: submodule syl20bnr/spacemacs to emacs.d.symlink
-
 ```
 (fset 'yes-or-no-p 'y-or-n-p)
 
