@@ -4,6 +4,9 @@ export DZSH=$HOME/.dotfiles
 # Set Default Editor
 export EDITOR=atom
 
+# Set 256 color term
+export TERM="xterm-256color"
+
 # Source inputrc
 source ~/.inputrc
 

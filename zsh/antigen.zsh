@@ -2,7 +2,13 @@
 # ====================== Antigen ======================
 
 # Source Antigen
-source $(brew --prefix)/share/antigen/antigen.zsh
+if [ "$(uname -s)" == "Darwin" ]
+then
+  source $(brew --prefix)/share/antigen/antigen.zsh
+else
+  source ~/.dotfiles/antigen/antigen.zsh
+fi
+
 # When in trouble: rm -rf $(brew --prefix)/share/antigen/.cache
 
 # ======= Antigen Plugins for zsh =======
