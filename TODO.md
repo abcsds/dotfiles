@@ -5,6 +5,7 @@ just some notes for myself.
 
 ### Update App Store apps
 sudo softwareupdate -i -a
+mas upgrade
 ### Update Homebrew (Cask) & packages
 brew update
 brew upgrade
@@ -20,7 +21,6 @@ https://github.com/alebcay/awesome-shell
 https://github.com/gabrielelana/awesome-terminal-fonts
 https://github.com/ryanoasis/vim-devicons
 https://github.com/ryanoasis/nerd-fonts
-
 
 git-extras
 
