@@ -12,11 +12,10 @@ atom/atom.symlink/storage
 config/config.symlink/*
 !config/config.symlink/10-symbols.conf
 !config/config.symlink/cmus
-!config/config.symlink/flake8
 !config/config.symlink/fontconfig
 !config/config.symlink/git
 !config/config.symlink/inkscape
-!config/config.symlink/nvim
+!config/config.symlink/klavaro
 
 python/virtualenvs.symlink/*
 !python/virtualenvs.symlink/get_env_details
