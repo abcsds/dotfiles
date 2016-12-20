@@ -1,4 +1,4 @@
-if [ "$(uname -s)" == "Darwin" ]
+if [ "$(uname -s)"=="Darwin" ]
   then
   export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
   export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnuman"

@@ -2,7 +2,7 @@
 # ====================== Antigen ======================
 
 # Source Antigen
-if [ "$(uname -s)" == "Darwin" ]
+if [ "$(uname -s)"=="Darwin" ]
 then
   source $(brew --prefix)/share/antigen/antigen.zsh
 else
@@ -54,6 +54,3 @@ bindkey "^[[B" history-substring-search-down
 # bind k and j for VI mode
 # bindkey -M vicmd "k" history-substring-search-up
 # bindkey -M vicmd "j" history-substring-search-down
-
-# Tell antigen that you're done.
-antigen apply

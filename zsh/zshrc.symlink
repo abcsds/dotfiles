@@ -191,12 +191,12 @@ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="048"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs rbenv virtualenv)
 
-# Apply theme
-antigen apply
-
 # ======= End theme setup =======
 
 antigen use oh-my-zsh
+
+# Tell antigen that you're done.
+antigen apply
 
 export PROJECTS_FOLDER
 

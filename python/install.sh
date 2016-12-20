@@ -1,4 +1,4 @@
-if [ "$(uname -s)" == "Darwin" ]
+if [ "$(uname -s)"=="Darwin" ]
 then
   # Python2
   pip2 install --upgrade pip
