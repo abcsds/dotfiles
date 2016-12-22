@@ -12,8 +12,6 @@
 [init]
         templatedir = ~/.git_template
 [alias]
-        # See all alias
-        alias = config --get-regexp ^alias\.
 
         # add
         a = add                           # add
