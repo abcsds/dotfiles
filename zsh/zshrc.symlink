@@ -17,6 +17,10 @@ source ~/.inputrc
 autoload -U compinit; compinit # FIXME: zshdb: ** Internal debug error _Dbg_is_file(): null file to find
 autoload -U +X bashcompinit; bashcompinit
 
+# Set the prompt
+autoload -Uz promptinit; promptinit
+prompt redhat
+
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
