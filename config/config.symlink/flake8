@@ -1,4 +1,0 @@
-[flake8]
-# 126 128 under and overindented
-# ignore = E502,
-max-line-length = 85

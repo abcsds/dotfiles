@@ -28,5 +28,6 @@ else
 endif
 
 " colorscheme solarized
-colorscheme atom-dark-256
+" colorscheme atom-dark-256
+colorscheme desert
 set background=dark
