@@ -303,7 +303,8 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-	font xft:Noto Sans 10.5
+#    font xft:Noto Sans 10.5
+    font xft:Ubuntu Mono derivative Powerline 12
 	strip_workspace_numbers yes
 
 	colors {
@@ -338,7 +339,7 @@ client.background       #2B2C2B
 #############################
 
 # Set inner/outer gaps
-gaps inner 10
+gaps inner 2
 gaps outer -4
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
