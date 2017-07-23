@@ -41,7 +41,7 @@ zsh/localrc.symlink
 
 python/get-pip.py
 
-antigen/antigen.symlink/repos
+antigen/antigen.symlink
 
 elinks/elinks.symlink/cookies
 elinks/elinks.symlink/globhist
@@ -62,3 +62,5 @@ zenmap/zenmap.symlink/zenmap_version
 julia/julia.symlink/*
 
 matplotlib.symlink/fontList*
+
+notes/*

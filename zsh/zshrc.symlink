@@ -2,7 +2,7 @@
 export DZSH=$HOME/.dotfiles
 
 # Set Default Editor
-export EDITOR=atom
+export EDITOR=emacsclient
 
 # Set 256 color term
 export TERM="xterm-256color"
@@ -14,7 +14,8 @@ source ~/.inputrc
 # Additionally, if you receive "zsh compinit: insecure directories" warnings when attempting
 # to load these completions, you may need to run this:
 # chmod go-w '/usr/local/share'
-autoload -U compinit; compinit # FIXME: zshdb: ** Internal debug error _Dbg_is_file(): null file to find
+autoload -Uz compinit; 
+# compinit # FIXME: zshdb: ** Internal debug error _Dbg_is_file(): null file to find
 autoload -U +X bashcompinit; bashcompinit
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
@@ -105,7 +106,7 @@ HELPDIR=/usr/local/share/zsh/help
 
 # ======= Set up the theme =======
 # TODO: fix this mess :P
-POWERLEVEL9K_INSTALLATION_PATH=~/.dotfiles/antigen/antigen.symlink/repos/https-COLON--SLASH--SLASH-github.com-SLASH-bhilburn-SLASH-powerlevel9k.git
+POWERLEVEL9K_INSTALLATION_PATH=~/.dotfiles/antigen/antigen.symlink/bundles/bhilburn/powerlevel9k
 
 # Load the powerlevel9k theme
 antigen theme bhilburn/powerlevel9k powerlevel9k

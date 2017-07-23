@@ -88,6 +88,9 @@
     :emmet
     :markdown-preview-plus
     :relative-numbers
+    :linter-flake8
+    :linter-markdown
+    :python-yapf
   ]
   ;; Proton takes over your atom configuration. All settings that are not listed here will get wiped
   ;; Configurations are denoted as 2 element vector consisting of k/v
@@ -120,7 +123,7 @@
     ["file-icons.coloured" false]
 
     ;; Editor
-    ["editor.fontSize" 15]
+    ["editor.fontSize" 14]
     ["editor.scrollPastEnd" true]
     ["editor.showIndentGuide" true]
     ["editor.showInvisibles" true]
@@ -148,6 +151,11 @@
   ;; :keybindings {:z {:category "foo-category"
   ;;                   :y {:title "execute hello"
   ;;                       :action "hello"}}}
+  ;;
+  ;; :keybindings {:p {:category "project"
+  ;;                 :y {:title "copy project path"
+  ;;                     :action "editor:copy-project-path",
+  ;;                     :target ".editor.is-focused"}}}
   :keybindings {}
 
   ;; Want some custom behavior inside a certain window?
@@ -161,5 +169,6 @@
             {:selector "atom-workspace atom-text-editor:not([mini])" :keymap [["cmd-alt-down" "editor:add-selection-below"]]}
             {:selector "atom-workspace atom-text-editor:not([mini])" :keymap [["cmd-alt-up" "editor:add-selection-above"]]}
             {:selector ".platform-darwin atom-text-editor" :keymap [["cmd-i" "editor:auto-indent"]]}
+            {:selector ".tree-view" :keymap [[":" "vim-mode-plus-ex-mode:open"]]}
   ]
 }

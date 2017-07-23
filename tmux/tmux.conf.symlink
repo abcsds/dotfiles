@@ -4,8 +4,8 @@ set -g bell-action any
 # Default termtype. If the rcfile sets $TERM, that overrides this value.
 set -g default-terminal screen-256color
 
-# Keep your finger on ctrl, or don't
-bind-key ^D detach-client
+# Detach from current session
+bind-key k detach-client
 
 # Create splits and vertical splits
 bind-key v split-window -h -p 50 -c "#{pane_current_path}"

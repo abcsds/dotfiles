@@ -1,1 +1,1 @@
-apm install proton-mode
+# apm install proton-mode

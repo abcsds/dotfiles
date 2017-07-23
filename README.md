@@ -5,12 +5,12 @@
 My dotfiles made by taking my favorite settings from the dotfiles of some of the best developers and communities out there:
 
 - The installation script from [Zach Holman](https://github.com/holman).
-- Most vim config from [Yan Pritzker's dotfiles](https://github.com/skwp/dotfiles).
 - Most Mac OSX configurations from [Mathias Bynens](https://github.com/mathiasbynens/dotfiles).
 - Some other goodies from [thoughtbot](https://github.com/thoughtbot/dotfiles).
 - The amazing theme is [Ben Hilburn's powerlevel9k](https://github.com/bhilburn/powerlevel9k).
 - The nethackrc example I got from [Tolchi's dotfiles](https://github.com/Tolchi/dotfile
 ), but it's currently not working.
+- Several other places arround the web. I'll try to keep some documentation for specific sources in the folder corresponding to every subject or app.
 
 
 

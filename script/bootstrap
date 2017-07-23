@@ -146,19 +146,6 @@ install_dotfiles () {
   done
 }
 
-install_vundle () {
-  # From https://github.com/VundleVim/Vundle.vim
-  # Package manager for vim
-  # Download to symlinked folder
-  info "Installing Vundler"
-  if [ -d $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim ]; then
-    success "Vundler installed"
-  else
-    git clone https://github.com/VundleVim/Vundle.vim.git $DOTFILES_ROOT/vim/vim.symlink/bundle/Vundle.vim  >/tmp/Vundle 2>&1
-    success "Vundler installed"
-  fi
-}
-
 # install_antigen () {
 # Just brew install antigen
 #   # From http://antigen.sharats.me/
@@ -250,20 +237,19 @@ setup_gitconfig
 setup_folder
 # install_antigen
 install_dotfiles
-install_vundle
-install_for_mac
+# install_for_mac
 
 if  ! type pip 2>/dev/null; then
   install_pip
 fi
 
 install_fonts
-install_npm
+# install_npm
 install_python
-install_apm
+# install_apm
 
-# Finish vim plugin install
-vim +PluginInstall +qall
+# Install spacevim
+nvim --startuptime /dev/stdout -c quit
 
 if [ "$(uname -s)" == "Darwin" ]
 then

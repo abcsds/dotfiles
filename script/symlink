@@ -116,8 +116,8 @@ install_dotfiles () {
 
 install_dotfiles
 
-# Vim plugin install
-vim +PluginInstall +qall
+# Install spacevim
+nvim --startuptime /dev/stdout -c quit
 
 echo ''
 echo '  All symlinked!'

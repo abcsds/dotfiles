@@ -4,7 +4,7 @@
     useKite: false
   "autoupdate-packages":
     handling: "Update automatically and silently"
-    lastUpdateTimestamp: 1482136816401
+    lastUpdateTimestamp: 1500219344873
   "command-palette": {}
   core:
     disabledPackages: [
@@ -12,13 +12,16 @@
       "Parinfer"
       "proto-repl"
       "linter-clojure"
+      "linter-flake8"
+      "python-yapf"
+      "linter-markdown"
+      "environment"
     ]
     telemetryConsent: "no"
   "easy-motion-redux":
     replaceCharacters: "uhetonasidpg.c,r'lyfkmjwqv;zxb"
   editor:
     fontFamily: "Hack"
-    fontSize: 15
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
@@ -34,8 +37,8 @@
   "julia-client": {}
   "latex-plus": {}
   latextools: {}
-  linter:
-    statusIconScope: "File"
+  linter: {}
+  "linter-ui-default": {}
   "markdown-preview-plus": {}
   nvatom:
     directory: "~/.notes"
@@ -43,6 +46,7 @@
     extendAutocompleteToVariables: true
   proton:
     core:
+      alwaysShowWelcomeScreen: true
       inputProvider: "vim-mode-plus"
       leaderKey: "space"
       modeKey: ","
@@ -80,13 +84,13 @@
       "one-light-ui one-light-syntax"
     ]
   "tool-bar": {}
+  "tree-view": {}
   "uber-juno": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
   "vim-mode-plus":
     incrementalSearch: true
-    useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
   welcome:
     showOnStartup: false
