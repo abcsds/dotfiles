@@ -369,6 +369,8 @@ you should place your code here."
   ;; 'evil-visual-line 'evil-goto-line
   ;; (global-set-key (kbd "s-<backspace>") 'errase-to-beginning-of-line)
 
+  ;; (define-key evil-insert-state-map (kbd "s-<backspace>") 'erase-to-beginning-of-line)
+
   ;; Duplicating text as in sublime, atom, etc...
   (global-set-key (kbd "s-D") 'spacemacs/duplicate-line-or-region)
 
@@ -385,9 +387,9 @@ you should place your code here."
   (global-set-key (kbd "s-\\") 'neotree-toggle)
   ;; (global-set-key (kbd "s-n") 'switch-to-scratch-buffer)
   (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
-  (setq mouse-wheel-progressive-speed nil)
+  (setq mouse-wheel-progressive-speed 't)
   ;; (setq mouse-wheel-follow-mouse 't)
-  (setq scroll-step 2)
+  (setq scroll-step 1)
 
 
   ;; Neotree

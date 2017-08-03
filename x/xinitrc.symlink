@@ -1,2 +1,5 @@
-setxkbmap dvorak
-exec i3
+if [ "$(uname -s)" == "Linux" ]
+then
+  setxkbmap dvorak
+  exec i3
+fi
