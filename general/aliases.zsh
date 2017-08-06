@@ -1,10 +1,22 @@
 # List directory contents
-alias sl=ls
-alias ls='ls -G'        # Compact view, show colors
-alias la='ls -AF'       # Compact view, show hidden
-alias ll='ls -FGlAhp' # Preferred 'ls' implementation
-alias l='ls -a'
-alias l1='ls -1'
+
+command -v exa >/dev/null 2>&1 || { echo >&2 "exa not found, fallback to ls"; }
+
+if hash exa 2>/dev/null ; then
+    alias sl=exa
+    alias ls='exa'        # Compact view, show colors
+    alias la='exa -a'      # Compact view, show hidden
+    alias ll='exa -al'     # Preferred 'ls' implementation
+    alias l='exa -l'
+    alias l1='exa -1'
+else
+    alias sl=ls
+    alias ls='ls -G'        # Compact view, show colors
+    alias la='ls -AF'       # Compact view, show hidden
+    alias ll='ls -FGlAhp' # Preferred 'ls' implementation
+    alias l='ls -a'
+    alias l1='ls -1'
+fi
 
 # Move arround
 alias cd..='cd ../' # Go back 1 directory level (for fast typers)

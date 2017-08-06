@@ -88,6 +88,7 @@ brew install tmux
 brew install grep
 brew install openssh
 brew install screen
+brew install exa
 
 # Install Java
 brew install caskroom/cask/brew-cask
