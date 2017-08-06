@@ -44,7 +44,6 @@ clean_files=${clean_files:#*/completion.zsh}        # Remove completion files
 clean_files=${clean_files:#*/antigen.symlink/*}     # Remove antigen repos
 clean_files=${clean_files:#*/atom.symlink/*}        # Remove atom repos
 clean_files=${clean_files:#*/emacs.d.symlink/*}     # Remove emacs repos
-clean_files=${clean_files:#*/SpaceVim.d.symlink/*}  # Remove spacevim repos
 clean_files=${clean_files:#*/vim.symlink/*}         # Remove vim repos
 clean_files=${clean_files:#*/julia.symlink/*}       # Remove julia repos
 clean_files=${clean_files:#*/virtualenvs.symlink/*} # Remove virtualenv repos
@@ -59,7 +58,7 @@ do
   source $file
 done
 
-# Load antigen file
+# Load antigen config
 for file in ${(M)config_files:#*/antigen.zsh}
 do
   source $file

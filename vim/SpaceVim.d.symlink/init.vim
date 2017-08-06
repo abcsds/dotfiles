@@ -19,6 +19,9 @@ call SpaceVim#layers#load('lang#vim')
 " call SpaceVim#layers#load('lang#xml')
 call SpaceVim#layers#load('shell')   
 call SpaceVim#layers#load('tools#screensaver')
+
+let g:spacevim_default_indent = 4
+let g:spacevim_max_column     = 80
 let g:spacevim_enable_vimfiler_welcome = 1
 let g:spacevim_enable_debug = 1
 let g:deoplete#auto_complete_delay = 150
@@ -32,5 +35,8 @@ if has('python3')
 endif
 let g:clang2_placeholder_next = ''
 let g:clang2_placeholder_prev = ''
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
 

@@ -4,26 +4,10 @@ if [ "$(uname -s)"=="Darwin" ]
   export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnuman"
   export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
   export PATH="$PATH:/Library/TeX/texbin"
-  export PATH="$PATH:$HOME/Library/Haskell/bin"
-  export PATH="$PATH:/Library/TeX/texbin/"
   export PATH="$PATH:$HOME/.rbenv/bin"
-
-  # PHP 5.5
-  # if [ -z "$(which brew)" ]
-  # then
-  #   export PATH="$PATH:$(brew --prefix homebrew/php/php55 )/bin"
-  # fi
-
-  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
-  export LD_LIBRARY_PATH=/usr/local/lib
 
   export WORKON_HOME=$HOME/.virtualenvs
   source /usr/local/bin/virtualenvwrapper.sh
-  export ANDROID_HOME=/usr/local/opt/android-sdk
-  export MSF_DATABASE_CONFIG=/usr/local/share/metasploit-framework/config/database.yml
-
-  MORSE_BLENDER=/opt/homebrew-cask/Caskroom/blender/2.77/Blender.app/Contents/MacOS/blender
 
   eval "$(rbenv init -)"
   eval "$(thefuck --alias)"
