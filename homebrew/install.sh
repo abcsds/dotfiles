@@ -89,6 +89,7 @@ brew install grep
 brew install openssh
 brew install screen
 brew install exa
+brew install pinfo
 
 # Install Java
 brew install caskroom/cask/brew-cask
