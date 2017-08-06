@@ -64,3 +64,5 @@ julia/julia.symlink/*
 matplotlib.symlink/fontList*
 
 notes/*
+
+**/.#*
