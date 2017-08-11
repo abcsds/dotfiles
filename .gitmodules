@@ -1,6 +1,6 @@
-[submodule "notes"]
-	path = notes
-	url = https://github.com/abcsds/notes.git
 [submodule "emacs/emacs.d.symlink"]
 	path = emacs/emacs.d.symlink
 	url = https://github.com/syl20bnr/spacemacs.git
+[submodule "git-webui/git-webui.symlink"]
+	path = git-webui/git-webui.symlink
+	url = https://github.com/alberthier/git-webui
