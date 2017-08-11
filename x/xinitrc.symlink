@@ -2,4 +2,6 @@ if [ "$(uname -s)" == "Linux" ]
 then
   setxkbmap dvorak
   exec i3
+else
+  xterm -fa SourceCodePro+Powerline+Awesome -fs 14 -fg green -bg black
 fi
