@@ -1,50 +1,50 @@
-
-# ====================== Antigen ======================
-
-[[ -a ~/.zcompdump* ]] && rm -f ~/.zcompdump*
-# Source Antigen
 if [ "$(uname -s)"=="Darwin" ]
 then
-  source $(brew --prefix)/share/antigen/antigen.zsh
+    export ZPLUG_HOME=/usr/local/opt/zplug
+    source $ZPLUG_HOME/init.zsh
 else
-  source ~/.dotfiles/antigen/antigen.zsh
+    if [ ! -d ~/.zplug ];then
+        git clone https://github.com/b4b4r07/zplug ~/.zplug
+    fi
+    export ZPLUG_HOME=~/.zplug
+    source $ZPLUG_HOME/init.zsh
 fi
 
-# When in trouble: rm -rf $(brew --prefix)/share/antigen/.cache
 
-# ======= Antigen Plugins for zsh =======
+# Manage zplug with zplug
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # Alias-tips
-antigen bundle djui/alias-tips
+zplug "djui/alias-tips", from:github, defer:2
 
-# Do gitiginore files right from zsh
-antigen bundle voronkovich/gitignore.plugin.zsh
-
-# Git rebase
-# antigen bundle smallhadroncollider/antigen-git-rebase
+# gitignore creation
+# use example: `gi emacs` 'gii emacs'
+zplug "voronkovich/gitignore.plugin.zsh", from:github, defer:3
 
 # Autosugestions
-antigen bundle zsh-users/zsh-autosuggestions
+zplug "zsh-users/zsh-autosuggestions", from:github, defer:1
 
-# Navegation tools
-antigen bundle psprint/zsh-navigation-tools
+# Navigation tools
+zplug "psprint/zsh-navigation-tools", from:github, defer:3
 
-# == Syntax highlighting ==
-# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
-antigen bundle zsh-users/zsh-syntax-highlighting
+# Syntax highlighting
+zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:1
 
-# ======= History look up  =======
-antigen bundle zsh-users/zsh-history-substring-search
+# Search substring
+zplug "zsh-users/zsh-history-substring-search"
+
+# Load if "if" tag returns true
+# zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 
 # bind UP and DOWN arrow keys
 # zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+# bindkey "$terminfo[kcuu1]" history-substring-search-up
+# bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # bind UP and DOWN arrow keys (compatibility fallback
 # for Ubuntu 12.04, Fedora 21, and MacOSX 10.9 users)
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
+# bindkey "^[[A" history-substring-search-up
+# bindkey "^[[B" history-substring-search-down
 
 # bind P and N for EMACS mode
 # bindkey -M emacs "^P" history-substring-search-up
@@ -54,14 +54,7 @@ bindkey "^[[B" history-substring-search-down
 # bindkey -M vicmd "j" history-substring-search-down
 
 
-
-# ======= Set up the theme =======
-# TODO: fix this mess :P
-# POWERLEVEL9K_INSTALLATION_PATH=~/.dotfiles/antigen/antigen.symlink/bundles/bhilburn/powerlevel9k
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-
-# Load the powerlevel9k theme
-antigen theme bhilburn/powerlevel9k powerlevel9k
+# ========================= Load Theme ======================================
 POWERLEVEL9K_MODE="awesome-patched"
 
 # https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
@@ -144,9 +137,11 @@ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="048"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs rbenv virtualenv)
 
-# ======= End theme setup =======
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
-antigen use oh-my-zsh
+if [ $(zplug check) ]
+then
+    zplug install
+fi
 
-# Tell antigen that you're done.
-antigen apply
+zplug load
