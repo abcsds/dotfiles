@@ -1,3 +1,5 @@
+# BENCHMARK=1 && zmodload zsh/zprof
+
 # shortcut to this dotfiles path is $DZSH
 export DZSH=$HOME/.dotfiles
 
@@ -10,14 +12,6 @@ export TERM="xterm-256color"
 # Source inputrc
 source ~/.inputrc
 
-# initialize autocomplete here, otherwise functions won't be loaded
-# Additionally, if you receive "zsh compinit: insecure directories" warnings when attempting
-# to load these completions, you may need to run this:
-# chmod go-w '/usr/local/share'
-# autoload -Uz compinit; 
-# compinit # FIXME: zshdb: ** Internal debug error _Dbg_is_file(): null file to find
-# autoload -U +X bashcompinit; bashcompinit
-
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -26,58 +20,14 @@ then
   source ~/.localrc
 fi
 
-# all of our zsh files
-typeset -U config_files
-config_files=($DZSH/**/*.zsh)
+# Load '.zsh' files
+source $DZSH/zsh/config.zsh
+source $DZSH/zsh/fpath.zsh
+source $DZSH/zsh/aliases.zsh
+source $DZSH/zsh/completion.zsh
 
-# load the path files
-for file in ${(M)config_files:#*/path.zsh}
-do
-  source $file
-done
-
-# load everything but the path, antigen, and completion files (and antigen repos)
-# clean_files=${${${${config_files:#*/path.zsh}:#*/antigen.zsh}:#*/completion.zsh}:#*/antigen.symlink/*}
-typeset -U clean_files
-clean_files=${config_files:#*/path.zsh}             # Remove path files
-clean_files=${clean_files:#*/antigen.zsh}           # Remove antigen zsh file
-clean_files=${clean_files:#*/completion.zsh}        # Remove completion files
-clean_files=${clean_files:#*/antigen.symlink/*}     # Remove antigen repos
-clean_files=${clean_files:#*/atom.symlink/*}        # Remove atom repos
-clean_files=${clean_files:#*/emacs.d.symlink/*}     # Remove emacs repos
-clean_files=${clean_files:#*/vim.symlink/*}         # Remove vim repos
-clean_files=${clean_files:#*/julia.symlink/*}       # Remove julia repos
-clean_files=${clean_files:#*/virtualenvs.symlink/*} # Remove virtualenv repos
-for file in ${clean_files}
-do
-    # source $file
-    # echo $file
-done
-
-# load every alias file
-for file in ${(M)config_files:#*/aliases.zsh}
-do
-  source $file
-done
-
-# load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}
-do
-  source $file
-done
-
-# Load antigen config
-# for file in ${(M)config_files:#*/antigen.zsh}
-# do
-#   source $file
-# done
-
-
-# Load zplug config
-for file in ${(M)config_files:#*/zplug.zsh}
-do
-    source $file
-done
+# Load zplug plugins
+source $DZSH/zsh/zplug.zsh
 
 # In order to use this build of zsh as your login shell,
 # it must be added to /etc/shells.
@@ -124,12 +74,11 @@ HELPDIR=/usr/local/share/zsh/help
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-
 export PROJECTS_FOLDER
 
-unset config_files
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if [[ -n "$BENCHMARK" ]];then
+    zprof > "$HOME/.zsh_benchmark"
+    # zprof
+fi
