@@ -46,6 +46,7 @@ if [ $(uname) = "Linux" ]
 then
   alias ls="ls --color=auto"
 fi
+
 which gshuf &> /dev/null
 if [ $? -eq 0 ]
 then
@@ -57,6 +58,7 @@ alias k='clear'
 alias cls='clear'
 
 alias edit="$EDITOR"
+alias e="$EDITOR"
 
 # alias q='exit'
 
@@ -104,9 +106,7 @@ fi
 # Some more goodies
 # alias which='type -all' # which: Find executables
 alias path='echo -e ${PATH//:/\\n}' # path: Echo all executable Paths
-alias show_options='shopt' # Show_options: display bash options settings
-alias fix_stty='stty sane' # fix_stty: Restore terminal settings when screwed up
-alias cic='set completion-ignore-case On' # cic: Make tab-completion case-insensitive
+alias show_options='setopt' # Show_options: display zsh options settings
 
 # Find
 alias qfind="find . -name " # qfind: Quickly search for file
@@ -143,6 +143,11 @@ then
   alias flushDNS='dscacheutil -flushcache' # flushDNS: Flush out the DNS Cache
   alias ipInfo0='ipconfig getpacket en0' # ipInfo0: Get info on connections for en0
   alias ipInfo1='ipconfig getpacket en1' # ipInfo1: Get info on connections for en1
+  alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport' # Airport Utility
+  alias spoofEMac='sudo ifconfig en0 ether 00:11:22:33:44:55' # Change MacAddress on ethernet interface
+  alias spoofWMac='sudo ifconfig en1 ether 00:11:22:33:44:55' # Change MacAddress on wireless interface
+  ## airport en1 sniff 6
+  ## aircrack-ng -c -s -a 2 -b 90:c7:92:76:93:20 -l ~/Desktop/key.txt /tmp/airportSnifflSDKx8.cap
 fi
 alias netCons='lsof -i' # netCons: Show all open TCP/IP sockets
 alias lsock='sudo /usr/sbin/lsof -i -P' # lsock: Display open sockets
@@ -150,11 +155,7 @@ alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP' # lsockU: Display only open UD
 alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP' # lsockT: Display only open TCP sockets
 alias openPorts='sudo lsof -i | grep LISTEN' # openPorts: All listening connections
 alias showBlocked='sudo ipfw list' # showBlocked: All ipfw rules inc/ blocked IPs
-alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport' # Airport Utility
-alias spoofEMac='sudo ifconfig en0 ether 00:11:22:33:44:55' # Change MacAddress on ethernet interface
-alias spoofWMac='sudo ifconfig en1 ether 00:11:22:33:44:55' # Change MacAddress on wireless interface
-## airport en1 sniff 6
-## aircrack-ng -c -s -a 2 -b 90:c7:92:76:93:20 -l ~/Desktop/key.txt /tmp/airportSnifflSDKx8.cap
+
 
 # ii: display useful host related informaton
 # -------------------------------------------------------------------
@@ -229,7 +230,7 @@ fi
 alias g='git'
 alias get='git'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias gl="git --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gus='git reset HEAD'
@@ -250,19 +251,31 @@ function commitlapse() {
   convert `find . -type f -name "*.jpg" -print0 | xargs -0 ls -tlr | awk '{print $9}'` ~/Desktop/timelapse.mpeg
   cd $CWD
 }
+function lallcommits() {
+    echo "Enabling lolcomits for all repos in the project folder"
+    for D in `ls -d $PROJECTS_FOLDER/*/`
+    do
+	      echo "Enabling lolcomits in: $D";
+	      cd $D;
+	      lolcommits -e;
+    done
+}
 
 #======================================== Homebrew
-alias bup='brew update && brew upgrade --all'
-alias bupc='brew update && brew upgrade --all && brew cleanup'
-alias bout='brew outdated'
-alias bin='brew install'
-alias brm='brew uninstall'
-alias bcl='brew cleanup'
-alias bls='brew list'
-alias bsr='brew search'
-alias binf='brew info'
-alias bdr='brew doctor'
-alias bed='brew edit'
+if test "$(uname)" = "Darwin"
+then
+    alias bup='brew update && brew upgrade --all'
+    alias bupc='brew update && brew upgrade --all && brew cleanup'
+    alias bout='brew outdated'
+    alias bin='brew install'
+    alias brm='brew uninstall'
+    alias bcl='brew cleanup'
+    alias bls='brew list'
+    alias bsr='brew search'
+    alias binf='brew info'
+    alias bdr='brew doctor'
+    alias bed='brew edit'
+fi
 
 #======================================== Homebrew Cask
 if test "$(uname)" = "Darwin"

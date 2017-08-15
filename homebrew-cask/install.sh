@@ -13,6 +13,7 @@ brew cask install insomniax
 brew cask install iterm2
 brew cask install julia
 brew cask install jupyter-notebook-ql
+brew cask install lepton
 brew cask install mactex
 brew cask install microsoft-office
 brew cask install nmap

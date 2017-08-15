@@ -5,8 +5,9 @@
         protocol = https
 [user]
         name = AUTHORNAME
-        username = AUTHORUSERNAME
         email = AUTHOREMAIL
+[github]
+        user = AUTHORUSERNAME
 [credential]
         helper = GIT_CREDENTIAL_HELPER
 [init]
@@ -143,3 +144,7 @@
         required = true
         clean = git-lfs clean %f
         smudge = git-lfs smudge %f
+[init]
+	      templatedir = ~/.git_template
+[webui]
+	      autoupdate = true

@@ -81,7 +81,7 @@ brew install wget --with-iri
 brew install curl
 
 # Install more recent versions of some OS X tools.
-brew install vim --with-cscope --with-luajit --with-mzscheme --with-python3 --with-tcl --override-system-vim
+brew install vim --with-cscope --with-lua --with-mzscheme --with-python3 --with-tcl --override-system-vim
 brew install neovim
 brew install emacs-plus
 brew install tmux
