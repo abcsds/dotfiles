@@ -146,21 +146,14 @@ install_dotfiles () {
   done
 }
 
-install_for_mac () {
-  # If we're on a Mac, let's install and setup homebrew.
-  if [ "$(uname -s)" == "Darwin" ]
+install_homebrew () {
+  # Setup homebrew.
+  info "installing dependencies \n"
+  if source bin/dot
   then
-    info "installing dependencies \n"
-    if source bin/dot
-    then # ln: ~/Library/Keyboard\ Layouts/Dvorak-ISO.keylayout: No such file or directory
-      if [ ! -d "~/Library/Keyboard\ Layouts/" ]; then
-        mkdir "~/Library/Keyboard\ Layouts/"
-      fi
-      link_file "$DOTFILES_ROOT/keyboard/MyDvorak.bundle" "~/Library/Keyboard\ Layouts/MyDvorak.bundle"
-      success "dependencies installed"
-    else
-      fail "error installing dependencies"
-    fi
+    success "dependencies installed"
+  else
+    fail "error installing dependencies"
   fi
 }
 
@@ -184,15 +177,6 @@ install_fonts () {
   fi
 }
 
-install_pip () {
-  # Get pip, virtualenv, and virtualenvwrapper
-  if ! [ -f $DOTFILES_ROOT/python/get-pip.py ]
-  then
-    curl https://bootstrap.pypa.io/get-pip.py 2>/dev/null > $DOTFILES_ROOT/python/get-pip.py
-  fi
-  python $DOTFILES_ROOT/python/get-pip.py
-  rm $DOTFILES_ROOT/python/get-pip.py
-}
 install_npm () {
   # Install npm packages
   if ! type npm ; then
@@ -204,7 +188,7 @@ install_npm () {
 install_python () {
   # Install python packages
   if ! type pip ; then
-    info "Please install python manualy"
+    info "Please install python-pip manualy"
   else
     source $DOTFILES_ROOT/python/install.sh
   fi
@@ -218,16 +202,14 @@ install_apm () {
   fi
 }
 
-# Run installations
+
+
+# ================= Actual installation
+
 setup_gitconfig
 setup_folder
-# install_antigen
 install_dotfiles
-# install_for_mac
-
-if  ! type pip 2>/dev/null; then
-  install_pip
-fi
+install_homebrew
 
 install_fonts
 # install_npm
@@ -236,12 +218,6 @@ install_python
 
 # Install spacevim
 nvim --startuptime /dev/stdout -c quit
-
-if [ "$(uname -s)" == "Darwin" ]
-then
-  # Install the Solarized Dark theme for iTerm
-  open "${HOME}/.themes/Solarized Dark.itermcolors"
-fi
 
 # Set zsh
 sudo chsh -s $(which zsh) $(whoami)

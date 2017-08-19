@@ -1,6 +1,7 @@
 brew install caskroom/cask/brew-cask
 
 brew cask install xquartz
+brew cask install alarm-clock
 brew cask install android-file-transfer
 # brew cask install atom
 # brew cask install dash

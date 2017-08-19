@@ -26,6 +26,10 @@ then
     elif ! type "yum" > /dev/null; then
       sudo yum groupinstall 'Development Tools'
     fi
+    test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$PATH"
+    test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    test -r ~/.localrc && echo 'export PATH="$(brew --prefix)/bin:$PATH"' >>~/.localrc
+    echo 'export PATH="$(brew --prefix)/bin:$PATH"' >>~/.localrc
   fi
 fi
 
@@ -45,7 +49,6 @@ brew tap homebrew/games
 brew tap homebrew/x11
 brew tap homebrew/completions
 brew tap d12frosted/emacs-plus # for Spacemacs
-# brew tap homebrew/dupes
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -96,9 +99,11 @@ brew install caskroom/cask/brew-cask
 brew install mas       # Appstore cli
 brew cask install java
 
-# Install git and lfs
+# Install git
 brew install git
 brew install git-lfs
+brew install git-extras
+brew install hub
 
 # Install Python:
 brew install python

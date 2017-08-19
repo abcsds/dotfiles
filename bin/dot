@@ -6,14 +6,34 @@
 # to make sure you're on the latest and greatest.
 export DZSH=$HOME/.dotfiles
 
-# Set OS X defaults
-echo "Setting OSX defaults..."
-$DZSH/osx/set-defaults.sh
 
-# Install homebrew packages
-echo "Installing homebrew packages..."
-$DZSH/homebrew/install.sh 2>&1
+if [ "$(uname -s)" == "Darwin" ]
+then
+    # Set OS X defaults
+    echo "Setting OSX defaults..."
+    $DZSH/osx/set-defaults.sh
 
-# Install homebrew-cask packages
-echo "Installing homebrew-cask packages"
-$DZSH/homebrew-cask/install.sh 2>&1
+    # Set OSX keyboard
+    # ln: ~/Library/Keyboard\ Layouts/Dvorak-ISO.keylayout: No such file or directory
+    if [ ! -d "~/Library/Keyboard\ Layouts/" ]; then
+        mkdir "~/Library/Keyboard\ Layouts/"
+    fi
+    link_file "$DOTFILES_ROOT/keyboard/MyDvorak.bundle" "~/Library/Keyboard\ Layouts/MyDvorak.bundle"
+
+    # Install homebrew packages
+    echo "Installing homebrew packages..."
+    $DZSH/homebrew/install.sh 2>&1
+
+    # Install homebrew-cask packages
+    echo "Installing homebrew-cask packages"
+    $DZSH/homebrew-cask/install.sh 2>&1
+
+    # Install solarized theme for iterm2
+    open "${DZSH}/themes.symlink/Solarized Dark.itermcolors" 2>&1
+else
+    # Install homebrew packages
+    echo "Installing homebrew packages..."
+    $DZSH/homebrew/install.sh 2>&1
+fi
+
+

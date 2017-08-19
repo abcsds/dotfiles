@@ -61,10 +61,42 @@ bindkey "^[[B" history-substring-search-down
 
 
 # ========================= Load Theme ======================================
-POWERLEVEL9K_MODE="awesome-patched"
+if [ "$(uname -s)" = "Darwin" ]
+then
+    POWERLEVEL9K_MODE="awesome-patched"
+
+    # Wifi on OSX
+    POWERLEVEL9K_CUSTOM_WIFI_SIGNAL="zsh_wifi_signal"
+    POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_BACKGROUND="blue"
+    POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_FOREGROUND="yellow"
+
+    zsh_wifi_signal(){
+        local output=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I) 
+        local airport=$(echo $output | grep 'AirPort' | awk -F': ' '{print $2}')
+
+        if [ "$airport" = "Off" ]; then
+            local color='%F{yellow}'
+            echo -n "%{$color%}Wifi Off"
+        else
+            local ssid=$(echo $output | grep ' SSID' | awk -F': ' '{print $2}')
+            local speed=$(echo $output | grep 'lastTxRate' | awk -F': ' '{print $2}')
+            local color='%F{yellow}'
+
+            [[ $speed -gt 100 ]] && color='%F{green}'
+            [[ $speed -lt 50 ]] && color='%F{red}'
+
+            echo -n "%{$color%}$ssid $speed Mb/s%{%f%}" # removed char not in my PowerLine font 
+        fi
+    }
+else
+    POWERLEVEL9K_MODE="compatible"
+    # Maybe also clear colors for the backgrounds:
+    # POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="clear"
+fi
 
 # https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
 # The segments that are currently available are:
+# https://github.com/bhilburn/powerlevel9k/blob/master/README.md#available-prompt-segments
 
 # aws - The current AWS profile, if active (more info below)
 # context - Your username and host (more info below)
@@ -98,7 +130,11 @@ POWERLEVEL9K_MODE="awesome-patched"
 # Segment customization
 # Colors at: http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 
-# Customizing `context` colors for root and non-root users
+# Colors for OS icon
+POWERLEVEL9K_OS_ICON_BACKGROUND="white"
+POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
+
+# Customizing `czsh-autosuggestionontext` colors for root and non-root users
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="240"
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="015"
 # POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
@@ -115,6 +151,8 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 # POWERLEVEL9K_TIME_BACKGROUND="blue"
 # POWERLEVEL9K_TIME_FORMAT="%D{%S:%M:%H}"
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='245'
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 
 # Customizing `virtualenv` colors
 POWERLEVEL9K_VIRTUALENV_BACKGROUND="214"
@@ -140,8 +178,8 @@ POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="000"
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="048"
 
 # Putting it together
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs rbenv virtualenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir) #os_icon 
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time vcs rbenv virtualenv)
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 

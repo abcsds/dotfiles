@@ -20,6 +20,11 @@ call SpaceVim#layers#load('lang#vim')
 call SpaceVim#layers#load('shell')   
 call SpaceVim#layers#load('tools#screensaver')
 
+let g:spacevim_custom_plugins = [['terryma/vim-multiple-cursors']]
+  " \ ['keith/swift.vim', { 'on_ft' : 'swift'}],
+  " \ ['leafgarland/typescript-vim', { 'on_ft' : 'typescript' }],
+  " \ ]
+
 let g:spacevim_default_indent = 4
 let g:spacevim_max_column     = 80
 let g:spacevim_enable_vimfiler_welcome = 1
