@@ -3,5 +3,5 @@ then
   setxkbmap dvorak
   exec i3
 else
-  xterm -fa SourceCodePro+Powerline+Awesome -fs 14 -fg green -bg black
+  xterm -fa Monaco -fs 14 -fg green -bg black
 fi
