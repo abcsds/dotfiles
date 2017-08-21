@@ -36,3 +36,4 @@ install zplug on linux
 update all aliases and git-aliases
 not so fancy for linux
 linuxbrew not running since we don't know if it's installed.
+git submadules into automatic installation

@@ -4,6 +4,7 @@ if [ "$(uname -s)"=="Darwin" ]
   export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnuman"
   export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
   export PATH="$PATH:/Library/TeX/texbin"
+  export PATH="$PATH:$HOME/.git-webui/release/libexec/git-core"
   export PATH="$PATH:$HOME/.rbenv/bin"
 
   export WORKON_HOME=$HOME/.virtualenvs
