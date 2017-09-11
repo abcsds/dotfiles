@@ -1,9 +1,9 @@
-if [ "$(uname -s)"=="Darwin" ]
+if [[ '$(uname -s)'=='Darwin' ]]
 then
     export ZPLUG_HOME=/usr/local/opt/zplug
     source $ZPLUG_HOME/init.zsh
 else
-    if [ ! -d ~/.zplug ];then
+    if [[ ! -d ~/.zplug ]] ;then
         git clone https://github.com/b4b4r07/zplug ~/.zplug
     fi
     export ZPLUG_HOME=~/.zplug
@@ -61,7 +61,7 @@ bindkey "^[[B" history-substring-search-down
 
 
 # ========================= Load Theme ======================================
-if [ "$(uname -s)" = "Darwin" ]
+if [[ "$(uname -s)" == "Darwin" ]]
 then
     POWERLEVEL9K_MODE="awesome-patched"
 
