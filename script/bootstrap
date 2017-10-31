@@ -190,7 +190,8 @@ install_python () {
   if ! type pip ; then
     info "Please install python-pip manualy"
   else
-    source $DOTFILES_ROOT/python/install.sh
+    # source $DOTFILES_ROOT/python/install.sh
+    info "Please install python packages manually"
   fi
 }
 install_apm () {
