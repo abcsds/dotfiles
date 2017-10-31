@@ -65,6 +65,7 @@ brew cask install font-source-code-pro
 brew cask install font-source-code-pro-for-powerline
 brew cask install font-ubuntu-mono-powerline
 brew cask install font-awesome-terminal-fonts
+brew cask install font-hack
 
 brew cask cleanup
 

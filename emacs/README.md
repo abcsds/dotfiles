@@ -73,3 +73,21 @@ display-time
 SPC t w
 
 ```
+## TODO
+```
+  ;; (global-set-key (kbd "S-s-<left>") 'mark-to-end-of-line)
+  ;; 'evil-visual-line 'evil-end-of-line
+  ;; (global-set-key (kbd "S-s-<right>") 'mark-to-beginning-of-line)
+  ;; 'evil-visual-line 'evil-first-non-blank
+  ;; (global-set-key (kbd "S-s-<up>") 'mark-to-beginning-of-buffer)
+  ;; 'evil-visual-line 'evil-goto-first-line 
+  ;; (global-set-key (kbd "S-s-<down>") 'mark-to-end-of-buffer)
+  ;; 'evil-visual-line 'evil-goto-line
+  ;; (global-set-key (kbd "s-<backspace>") 'errase-to-beginning-of-line)
+```
+
+auto-indent to visual and tab
+select and tab to add indentation
+select shift and tab to remove indentation
+shift-backspace 
+add all this to osx layer

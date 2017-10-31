@@ -1,0 +1,38 @@
+"*":
+  "autocomplete-python":
+    useKite: false
+  core:
+    disabledPackages: [
+      "linter-julia"
+      "relative-numbers"
+      "Parinfer"
+      "proto-repl"
+      "linter-clojure"
+      "python-yapf"
+      "linter-markdown"
+      "environment"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontFamily: "Hack"
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  "exception-reporting":
+    userId: "918c7bca-3d56-4a93-9dc2-19ae980ff86d"
+  "linter-flake8":
+    ignoreErrorCodes: [
+      "E501"
+      "E221"
+      "E203"
+    ]
+  "linter-ui-default": {}
+  welcome:
+    showOnStartup: false
+  zentabs:
+    maximumOpenedTabs: 10
+    neverCloseUnsaved: true
+"tree-view":
+  hideVcsIgnoredFiles: false

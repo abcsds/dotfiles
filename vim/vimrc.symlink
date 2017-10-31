@@ -1,0 +1,13 @@
+" No compatibility functions
+set nocompatible
+" Enable syntax
+syntax enable
+" Enable plugins
+filetype plugin on
+
+" Fuzzy finding
+" Finding files
+set path+=**
+" Display all matches when tab-completing
+set wildmenu
+
