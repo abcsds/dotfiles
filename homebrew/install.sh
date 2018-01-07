@@ -48,7 +48,7 @@ brew tap homebrew/games
 # brew tap homebrew/apache
 brew tap homebrew/x11
 brew tap homebrew/completions
-brew tap d12frosted/emacs-plus # for Spacemacs
+# brew tap d12frosted/emacs-plus # for Spacemacs
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -56,9 +56,7 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-# Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/ba sh` to `/etc/shells` before
-# running `chsh`.
+
 brew install zsh
 brew install antigen
 brew install zsh-syntax-highlighting
@@ -77,7 +75,6 @@ brew install pip-completion
 # brew install ruby-completion
 brew install vagrant-completion
 
-# brew tap homebrew/versions
 
 # Install `wget` with IRI support and curl
 brew install wget --with-iri
@@ -111,18 +108,19 @@ brew install python3
 
 # Tap science and computing
 brew tap homebrew/science
-brew install boost
+# brew install boost
 brew install cmake
-brew install doxygen
+# brew install doxygen
 brew install gnuplot
-brew install neuron
+# brew install neuron
 brew install node
 # brew install opencv
 brew install plotutils
 brew install r
-brew install hg
+# brew install hg
 brew install numpy
 brew install matplotlib
+brew install scipy
 
 # Install DBMSs
 # brew install mongodb
@@ -171,7 +169,7 @@ brew install dark-mode # control MacOSX darkmode from cli
 brew install ffmpeg
 brew install imagemagick --with-webp
 brew install lua
-brew install speedtest_cli
+# brew install speedtest_cli
 brew install tree
 
 brew install aview
@@ -179,26 +177,26 @@ brew install elinks --devel
 brew install geoip
 brew install gibo
 # brew install git-flow
-brew install googler
+# brew install googler
 brew install graphicsmagick
-brew install gtypist
+# brew install gtypist
 brew install htop-osx
 brew install iftop
-brew install homebrew/gui/klavaro
-brew install ranger
+# brew install homebrew/gui/klavaro
+# brew install ranger
 brew install netcat
 brew install nethack
 brew install ntopng
 brew install pixman
 brew install proxychains-ng
-brew install qt
-brew install snort
+# brew install qt
+# brew install snort
 brew install thefuck
 brew install the_silver_searcher
 brew install tig
-brew install todo-txt
+# brew install todo-txt
 brew install tor
-brew install wireshark
+# brew install wireshark
 
 # Remove outdated versions from the cellar.
 brew cleanup

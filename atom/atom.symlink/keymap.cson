@@ -1,0 +1,2 @@
+'atom-workspace atom-text-editor:not([mini])':
+  'alt-cmd-down': 'editor:add-selection-below'
