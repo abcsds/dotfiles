@@ -68,7 +68,7 @@ brew install zshdb
 brew install zsh-completions
 brew install brew-cask-completion
 # brew install django-completion
-brew install docker-completion
+# brew install docker-completion
 brew install gem-completion
 # brew install grunt-completion
 brew install pip-completion
@@ -113,8 +113,8 @@ brew install cmake
 # brew install doxygen
 brew install gnuplot
 # brew install neuron
-brew install node
-# brew install opencv
+# brew install node
+brew install opencv
 brew install plotutils
 brew install r
 # brew install hg
@@ -157,10 +157,16 @@ brew install fcrackzip
 brew install hydra
 brew install john
 brew install ncrack
+brew install netcat
 brew install nmap
 brew install pngcheck
+brew install proxychains-ng
 brew install reaver
+brew install snort
+brew install tor
 brew install ucspi-tcp # `tcpserver` etc.
+# brew install wireshark
+
 
 # Install other useful binaries.
 brew install ack
@@ -168,7 +174,6 @@ brew install cmus
 brew install dark-mode # control MacOSX darkmode from cli
 brew install ffmpeg
 brew install imagemagick --with-webp
-brew install lua
 # brew install speedtest_cli
 brew install tree
 
@@ -176,7 +181,6 @@ brew install aview
 brew install elinks --devel
 brew install geoip
 brew install gibo
-# brew install git-flow
 # brew install googler
 brew install graphicsmagick
 # brew install gtypist
@@ -184,19 +188,13 @@ brew install htop-osx
 brew install iftop
 # brew install homebrew/gui/klavaro
 # brew install ranger
-brew install netcat
 brew install nethack
 brew install ntopng
 brew install pixman
-brew install proxychains-ng
 # brew install qt
-# brew install snort
 brew install thefuck
 brew install the_silver_searcher
 brew install tig
-# brew install todo-txt
-brew install tor
-# brew install wireshark
 
 # Remove outdated versions from the cellar.
 brew cleanup
