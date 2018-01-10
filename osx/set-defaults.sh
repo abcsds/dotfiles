@@ -166,8 +166,8 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+# defaults write NSGlobalDomain KeyRepeat -int 1
+# defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
@@ -659,7 +659,7 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Install the Solarized Dark theme for iTerm
-open "${HOME}/.themes/Solarized Dark Higher Contrast.itermcolors"
+# open "${HOME}/.themes/Solarized Dark Higher Contrast.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -861,7 +861,7 @@ defaults write org.digitality.alarmclock2 WakeFromSleep -bool true
 ###############################################################################
 
 # Keep insomniax safe for CPU overheating
-c
+# c
 defaults write net.semaja2.InsomniaX CPUSafety -bool true
 
 ###############################################################################

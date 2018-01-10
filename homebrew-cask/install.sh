@@ -8,7 +8,7 @@ brew cask install dash
 brew cask install firefox
 # brew cask install gitter
 brew cask install google-chrome
-brew cask install google-drive
+brew cask install google-drive-file-stream
 brew cask install grandperspective
 brew cask install insomniax
 brew cask install iterm2
@@ -17,9 +17,7 @@ brew cask install jupyter-notebook-ql
 # brew cask install lepton
 brew cask install mactex
 brew cask install microsoft-office
-brew cask install nmap
 # brew cask install openrefine
-brew cask install pandoc
 brew cask install qlmarkdown
 brew cask install rstudio
 brew cask install seil
@@ -56,14 +54,12 @@ brew cask install steam
 brew cask install vlc
 
 # Install fonts
-brew cask install font-anonymous-pro-for-powerline
 brew cask install font-dejavu-sans-mono-for-powerline
 brew cask install font-droid-sans-mono-for-powerline
 brew cask install font-inconsolata-for-powerline
 brew cask install font-liberation-mono-for-powerline
 brew cask install font-source-code-pro
 brew cask install font-source-code-pro-for-powerline
-brew cask install font-ubuntu-mono-powerline
 brew cask install font-awesome-terminal-fonts
 brew cask install font-hack
 

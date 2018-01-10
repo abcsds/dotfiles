@@ -4,7 +4,7 @@
 export DZSH=$HOME/.dotfiles
 
 # Set Default Editor
-export EDITOR=emacsclient
+export EDITOR=nvim
 
 # Set 256 color term
 export TERM="xterm-256color"

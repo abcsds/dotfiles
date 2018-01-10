@@ -37,17 +37,14 @@ fi
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install grc coreutils spark
 # sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+
 # Tap what is needed
-brew tap homebrew/games
-# brew tap homebrew/apache
-brew tap homebrew/x11
-brew tap homebrew/completions
 # brew tap d12frosted/emacs-plus # for Spacemacs
 
 # Install some other useful utilities like `sponge`.

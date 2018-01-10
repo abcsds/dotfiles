@@ -14,11 +14,12 @@ then
     $DZSH/osx/set-defaults.sh
 
     # Set OSX keyboard
+    # FIXME
     # ln: ~/Library/Keyboard\ Layouts/Dvorak-ISO.keylayout: No such file or directory
-    if [ ! -d "~/Library/Keyboard\ Layouts/" ]; then
-        mkdir "~/Library/Keyboard\ Layouts/"
-    fi
-    link_file "$DOTFILES_ROOT/keyboard/MyDvorak.bundle" "~/Library/Keyboard\ Layouts/MyDvorak.bundle"
+    # if [ ! -d "~/Library/Keyboard\ Layouts/" ]; then
+    #     mkdir "~/Library/Keyboard\ Layouts/"
+    # fi
+    # link_file "$DOTFILES_ROOT/keyboard/MyDvorak.bundle" "~/Library/Keyboard\ Layouts/MyDvorak.bundle"
 
     # Install homebrew packages
     echo "Installing homebrew packages..."
