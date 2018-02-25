@@ -27,7 +27,7 @@ source $DZSH/zsh/aliases.zsh
 source $DZSH/zsh/completion.zsh
 
 # Load zplug plugins
-source $DZSH/zsh/zplug.zsh
+# source $DZSH/zsh/zplug.zsh
 
 # In order to use this build of zsh as your login shell,
 # it must be added to /etc/shells.
