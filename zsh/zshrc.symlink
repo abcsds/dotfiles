@@ -78,9 +78,14 @@ export PROJECTS_FOLDER=~/github
 
 if [ `uname` = "Darwin" ]; then
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+  # Plugins on OSX
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+  bindkey '^[[A' history-substring-search-up
+  bindkey '^[[B' history-substring-search-down
 fi
 
 if [[ -n "$BENCHMARK" ]];then
