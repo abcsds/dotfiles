@@ -27,6 +27,7 @@ brew cask install telegram
 brew cask install torbrowser
 brew cask install the-unarchiver
 brew cask install transmission
+brew cask install tunnelblick
 # brew cask install tuneup
 # brew cask install unetbootin
 brew cask install ukelele
