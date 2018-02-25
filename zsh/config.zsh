@@ -5,6 +5,14 @@ fpath=($DZSH/functions $fpath)
 autoload -U $DZSH/functions/*(:t)
 autoload -Uz vcs_info
 
+autoload -Uz run-help-git
+autoload -Uz run-help-ip
+autoload -Uz run-help-openssl
+autoload -Uz run-help-p4
+autoload -Uz run-help-sudo
+autoload -Uz run-help-svk
+autoload -Uz run-help-svn
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -20,6 +28,7 @@ setopt EXTENDED_HISTORY # add timestamps to history
 setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
+setopt COMPLETE_ALIASES
 setopt IGNORE_EOF
 
 setopt APPEND_HISTORY # adds history
@@ -100,5 +109,6 @@ setprompt() {
 
   PS2=$'%_>'
   # RPROMPT=$'${vcs_info_msg_0_} %(?0..%F{red}%?%f)'
+  RPROMPT=$'${vcs_info_msg_0_} ${check_last_exit_code}'
 }
 setprompt
