@@ -71,7 +71,7 @@ then
     POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_FOREGROUND="yellow"
 
     zsh_wifi_signal(){
-        local output=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I) 
+        local output=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I)
         local airport=$(echo $output | grep 'AirPort' | awk -F': ' '{print $2}')
 
         if [ "$airport" = "Off" ]; then
@@ -85,7 +85,7 @@ then
             [[ $speed -gt 100 ]] && color='%F{green}'
             [[ $speed -lt 50 ]] && color='%F{red}'
 
-            echo -n "%{$color%}$ssid $speed Mb/s%{%f%}" # removed char not in my PowerLine font 
+            echo -n "%{$color%}$ssid $speed Mb/s%{%f%}" # removed char not in my PowerLine font
         fi
     }
 else
@@ -178,7 +178,7 @@ POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="000"
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="048"
 
 # Putting it together
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir) #os_icon 
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir) #os_icon
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time vcs rbenv virtualenv)
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme

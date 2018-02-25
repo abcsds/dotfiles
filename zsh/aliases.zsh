@@ -84,7 +84,7 @@ if [ $(uname) = "Darwin" ]
 then
   alias f='open -a Finder ./' # f: Opens current directory in MacOS Finder
   trash () { command mv "$@" ~/.Trash ; } # trash: Moves a file to the MacOS trash
-  ql () { qlmanage -p "$*" >& /dev/null; } # ql: Opens any file in MacOS Quicklook Preview
+  # ql () { qlmanage -p "$*" >& /dev/null; } # ql: Opens any file in MacOS Quicklook Preview
   spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
   alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete"
   # finderShowHidden: Show hidden files in Finder
