@@ -55,7 +55,6 @@ brew install findutils
 brew install gnu-sed --with-default-names
 
 brew install zsh
-brew install antigen
 brew install zsh-syntax-highlighting
 brew install zsh-history-substring-search
 brew install zsh-autosuggestions
