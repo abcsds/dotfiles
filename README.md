@@ -74,4 +74,4 @@ If you like this dotfiles but run into any trouble, you can [open an issue](http
 
 ## License
 
-All work here is licesed under the MIT license, you can read more on the `LICENCE.md` file.
+All work here is licensed under the MIT license, you can read more on the `LICENCE.md` file.

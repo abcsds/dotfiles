@@ -32,8 +32,6 @@ https://github.com/mbadolato/iTerm2-Color-Schemes/tarball/master
 - [*] Solarized Dark Higher Contrast
 [download](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20Higher%20Contrast.itermcolors)
 
-install zplug on linux
 update all aliases and git-aliases
 not so fancy for linux
-linuxbrew not running since we don't know if it's installed.
-git submadules into automatic installation
+forget linuxbrew stick to pacman :)
