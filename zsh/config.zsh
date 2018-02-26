@@ -101,10 +101,11 @@ setprompt() {
     %(!.%F{red}%n%f.%F{white}%n%f)
     @
     %F{cyan}%m%f
-    ": "
+    ":"
     %2~
     " "
     %(!.%F{red}%#%f.%F{green}\$%f)
+    " "
   '}}
 
   PS2=$'%_>'
