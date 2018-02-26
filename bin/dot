@@ -33,8 +33,9 @@ then
     open "${DZSH}/themes.symlink/Solarized Dark.itermcolors" 2>&1
 else
     # Install homebrew packages
-    echo "Installing homebrew packages..."
-    $DZSH/homebrew/install.sh 2>&1
+    echo "You running linux. I don't think there's homebrew for linux..."
+    if [ -f "/etc/arch-release" ]; then
+      echo "Installing some Arch packages..."
+      $DZSH/arch/install.sh 2>&1
+    fi
 fi
-
-

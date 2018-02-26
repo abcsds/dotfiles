@@ -203,8 +203,6 @@ install_apm () {
   fi
 }
 
-
-
 # ================= Actual installation
 
 setup_gitconfig
@@ -217,14 +215,14 @@ install_fonts
 install_python
 # install_apm
 
-# Install spacevim
-nvim --startuptime /dev/stdout -c quit
+# Install submodules
+git submodule init
+git submodule update
+
+# vim --startuptime /dev/stdout +qall
 
 # Set zsh
 sudo chsh -s $(which zsh) $(whoami)
-
-# Setup solarized dark theme on iterm2
-# open "${HOME}/.themes/Solarized Dark Higher Contrast.itermcolors"
 
 echo ''
 echo '  All installed!'
