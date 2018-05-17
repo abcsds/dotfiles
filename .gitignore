@@ -6,6 +6,7 @@ atom/atom.symlink/compile-cache/
 atom/atom.symlink/nohup.out
 atom/atom.symlink/packages
 atom/atom.symlink/recovery
+atom/atom.symlink/split-diff
 atom/atom.symlink/storage
 
 config/config.symlink/*
