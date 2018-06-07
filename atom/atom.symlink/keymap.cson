@@ -1,2 +1,6 @@
-'atom-workspace atom-text-editor:not([mini])':
+'.platform-darwin atom-workspace atom-text-editor:not([mini])':
   'alt-cmd-down': 'editor:add-selection-below'
+  'alt-cmd-up': 'editor:add-selection-above'
+  'cmd-i': 'editor:auto-indent'
+'.platform-darwin .tree-view':
+  'cmd-shift-o': 'tree-view:show-in-file-manager'

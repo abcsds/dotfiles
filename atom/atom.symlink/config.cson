@@ -1,4 +1,6 @@
 "*":
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
   "autocomplete-python":
     useKite: false
   core:
@@ -11,28 +13,54 @@
       "python-yapf"
       "linter-markdown"
       "environment"
+      "metrics"
     ]
     telemetryConsent: "no"
+    titleBar: "custom"
   editor:
     fontFamily: "Hack"
+    fontSize: 15
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
   "exception-reporting":
-    userId: "918c7bca-3d56-4a93-9dc2-19ae980ff86d"
+    userId: "7f870440-db64-4aa1-a1df-2085387ed9f6"
+  "julia-client":
+    consoleOptions: {}
+    firstBoot: false
+    juliaOptions:
+      startupArguments: [
+        "-p 2"
+      ]
+    uiOptions:
+      enableMenu: true
+      enableToolBar: true
+  "latex-plus":
+    texBin: "/Library/TeX/texbin/tex"
   "linter-flake8":
     ignoreErrorCodes: [
       "E501"
       "E221"
       "E203"
     ]
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 292
+  "status-bar": {}
+  "tool-bar":
+    position: "Left"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "uber-juno":
+    disable: true
   welcome:
     showOnStartup: false
   zentabs:
     maximumOpenedTabs: 10
     neverCloseUnsaved: true
+".python.source":
+  editor:
+    tabType: "soft"
 "tree-view":
   hideVcsIgnoredFiles: false
