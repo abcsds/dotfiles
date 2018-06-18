@@ -18,7 +18,6 @@
     telemetryConsent: "no"
     titleBar: "custom"
   editor:
-    fontFamily: "Hack"
     fontSize: 15
     scrollPastEnd: true
     showIndentGuide: true

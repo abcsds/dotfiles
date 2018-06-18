@@ -4,3 +4,15 @@
   'cmd-i': 'editor:auto-indent'
 '.platform-darwin .tree-view':
   'cmd-shift-o': 'tree-view:show-in-file-manager'
+
+'.platform-win32 atom-workspace atom-text-editor:not([mini])':
+  'ctrl-alt-down': 'editor:add-selection-below'
+  'ctrl-alt-up': 'editor:add-selection-above'
+  'ctrl-right': 'editor:move-to-end-of-line'
+  'ctrl-left': 'editor:move-to-beginning-of-line'
+  'ctrl-up': 'editor:move-to-start-of-screen-line'
+  'ctrl-down': 'editor:move-to-end-of-screen-line'
+  'ctrl-shift-right': 'editor:select-to-end-of-line'
+  'ctrl-shift-left': 'editor:select-to-beginning-of-line'
+  'ctrl-shift-up': 'core:select-to-top'
+  'ctrl-shift-down': 'core:select-to-bottom'
