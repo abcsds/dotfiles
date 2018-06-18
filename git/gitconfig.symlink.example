@@ -1,154 +1,151 @@
-# Sample gitconfig
-#
-
 [hub]
-	protocol = https
+  protocol = https
 [user]
-	name = AUTHORNAME
-	email = AUTHOREMAIL
+  name = AUTHORNAME
+  email = AUTHOREMAIL
 [github]
-	user = AUTHORUSERNAME
+  user = AUTHORUSERNAME
 [credential]
-	helper = GIT_CREDENTIAL_HELPER
+  helper = GIT_CREDENTIAL_HELPER
 [init]
-	templatedir = ~/.git_template
+  templatedir = ~/.git_template
 [alias]
-	# add
-	a = add                           # add
-	aa = add --all
-	chunkyadd = add --patch           # stage commits chunk by chunk
+  # add
+  a = add                           # add
+  aa = add --all
+  chunkyadd = add --patch           # stage commits chunk by chunk
 
-	# via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
-	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
-	snapshots = !git stash list --grep snapshot
+  # via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+  snapshots = !git stash list --grep snapshot
 
-	#via http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
-	recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+  #via http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
+  recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 
-	# branch
-	b = branch -v                     # branch (verbose)
+  # branch
+  b = branch -v                     # branch (verbose)
 
-	# commit
-	c = commit -m                     # commit with message
-	ca = commit -am                   # commit all with message
-	ci = commit                       # commit
-	amend = commit --amend            # ammend your last commit
-	ammend = commit --amend           # ammend your last commit
+  # commit
+  c = commit -m                     # commit with message
+  ca = commit -am                   # commit all with message
+  ci = commit                       # commit
+  amend = commit --amend            # ammend your last commit
+  ammend = commit --amend           # ammend your last commit
 
-	# checkout
-	co = checkout                     # checkout
-	nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
+  # checkout
+  co = checkout                     # checkout
+  nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
 
-	# cherry-pick
-	cp = cherry-pick -x               # grab a change from a branch
+  # cherry-pick
+  cp = cherry-pick -x               # grab a change from a branch
 
-	# diff
-	d = diff                          # diff unstaged changes
-	dc = diff --cached                # diff staged changes
-	last = diff HEAD^                 # diff last committed change
+  # diff
+  d = diff                          # diff unstaged changes
+  dc = diff --cached                # diff staged changes
+  last = diff HEAD^                 # diff last committed change
 
-	# log
-	l = log --graph --date=short
-	lg = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
-	short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
-	simple = log --pretty=format:\" * %s\"
-	shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
+  # log
+  l = log --graph --date=short
+  lg = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+  short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
+  simple = log --pretty=format:\" * %s\"
+  shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
 
-	# pull
-	pl = pull                         # pull
-	pullall = pull --recurse-submodules # pull submodules too
-	plr = pull --rebase               # rebase instead of merge
+  # pull
+  pl = pull                         # pull
+  pullall = pull --recurse-submodules # pull submodules too
+  plr = pull --rebase               # rebase instead of merge
 
-	# push
-	ps = push                         # push
-	pushall = push --recurse-submodules=on-demand # push submodules also
+  # push
+  ps = push                         # push
+  pushall = push --recurse-submodules=on-demand # push submodules also
 
-	# rebase
-	rc = rebase --continue            # continue rebase
-	rs = rebase --skip                # skip rebase
+  # rebase
+  rc = rebase --continue            # continue rebase
+  rs = rebase --skip                # skip rebase
 
-	# remote
-	r = remote -v                     # show remotes (verbose)
+  # remote
+  r = remote -v                     # show remotes (verbose)
 
-	# reset
-	unstage = reset HEAD              # remove files from index (tracking)
-	uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
-	filelog = log -u                  # show changes to a file
-	mt = mergetool                    # fire up the merge tool
+  # reset
+  unstage = reset HEAD              # remove files from index (tracking)
+  uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
+  filelog = log -u                  # show changes to a file
+  mt = mergetool                    # fire up the merge tool
 
-	# stash
-	ss = stash                        # stash changes
-	sl = stash list                   # list stashes
-	sa = stash apply                  # apply stash (restore changes)
-	sd = stash drop                   # drop stashes (destory changes)
+  # stash
+  ss = stash                        # stash changes
+  sl = stash list                   # list stashes
+  sa = stash apply                  # apply stash (restore changes)
+  sd = stash drop                   # drop stashes (destory changes)
 
-	# status
-	s = status -s                     # status
-	st = status                       # status
-	stat = status                     # status
+  # status
+  s = status -s                     # status
+  st = status                       # status
+  stat = status                     # status
 
-	# tag
-	t = tag -n                        # show tags with <n> lines of each tag message
+  # tag
+  t = tag -n                        # show tags with <n> lines of each tag message
 
-	# svn helpers
-	svnr = svn rebase
-	svnd = svn dcommit
-	svnl = svn log --oneline --show-commit
+  # svn helpers
+  svnr = svn rebase
+  svnd = svn dcommit
+  svnl = svn log --oneline --show-commit
 
-	# Goodies
-	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
-	co       = checkout
-	promote  = !$DZSH/bin/git-promote
-	wtf      = !$DZSH/bin/git-wtf
-	rank-contributors = !$DZSH/bin/git-rank-contributors
-	count    = !git shortlog -sn
-	alias    = config --get-regexp ^alias\\.
-	webui    = !$DZSH/.git-webui/release/libexec/git-core/git-webui
+  # Goodies
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  co       = checkout
+  promote  = !$DZSH/bin/git-promote
+  wtf      = !$DZSH/bin/git-wtf
+  rank-contributors = !$DZSH/bin/git-rank-contributors
+  count    = !git shortlog -sn
+  alias    = config --get-regexp ^alias\\.
+  webui    = !$DZSH/.git-webui/release/libexec/git-core/git-webui
 [color]
-	diff   = auto
-	status = auto
-	branch = auto
-	ui     = true
+  diff   = auto
+  status = auto
+  branch = auto
+  ui     = true
 [core]
-	excludesfile = ~/.gitignore
-	editor       = nvim
+  excludesfile = ~/.gitignore
+  editor       = nvim
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [merge]
-	summary = true
-	verbosity = 1
-	tool = mvimdiff
+  summary = true
+  verbosity = 1
+  tool = mvimdiff
 [mergetool]
-	keepBackup = false
-	prompt = false
+  keepBackup = false
+  prompt = false
 [mergetool "mvimdiff"]
-	cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
-	keepbackup=false
+  cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
+  keepbackup=false
 [difftool]
-	prompt = false
+  prompt = false
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [push]
-	# See `git help config` (search for push.default)
-	# for more information on different options of the below setting.
-	#
-	# Setting to git 2.0 default to suppress warning message
-	default = simple
+  # See `git help config` (search for push.default)
+  # for more information on different options of the below setting.
+  #
+  # Setting to git 2.0 default to suppress warning message
+  default = simple
 [commit]
-	template = ~/.gitmessage
+  template = ~/.gitmessage
 [diff]
-	# Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
-	# instead of a/b/c/d as prefixes for patches
-	# mnemonicprefix = true
-	algorithm = patience
+  # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
+  # instead of a/b/c/d as prefixes for patches
+  # mnemonicprefix = true
+  algorithm = patience
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
 [init]
-	templatedir = ~/.git_template
+  templatedir = ~/.git_template
 [webui]
-	autoupdate = true
+  autoupdate = true
 [rerere]
-	enabled = true
+  enabled = true
