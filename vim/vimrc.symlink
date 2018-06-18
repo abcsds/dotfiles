@@ -3,7 +3,7 @@ set nocompatible
 " Enable syntax
 syntax enable
 " Enable plugins
-filetype plugin on
+filetype plugin indent on
 
 " Fuzzy finding
 " Finding files
@@ -11,5 +11,20 @@ set path+=**
 " Display all matches when tab-completing
 set wildmenu
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
 " Bindings
-map <C-n> :NERDTreeToggle<CR>
+map <C-\> :NERDTreeToggle<CR>
+map <D-\> :NERDTreeToggle<CR>
+
+" Python
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=80
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
