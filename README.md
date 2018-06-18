@@ -7,12 +7,7 @@ My dotfiles made by taking my favorite settings from the dotfiles of some of the
 - The installation script from [Zach Holman](https://github.com/holman).
 - Most Mac OSX configurations from [Mathias Bynens](https://github.com/mathiasbynens/dotfiles).
 - Some other goodies from [thoughtbot](https://github.com/thoughtbot/dotfiles).
-- The amazing theme is [Ben Hilburn's powerlevel9k](https://github.com/bhilburn/powerlevel9k).
-- The nethackrc example I got from [Tolchi's dotfiles](https://github.com/Tolchi/dotfile
-), but it's currently not working.
-- Several other places arround the web. I'll try to keep some documentation for specific sources in the folder corresponding to every subject or app.
-
-
+- Several other places around the web. I'll try to keep some documentation for specific sources in the folder corresponding to every subject or app.
 
 ## Dotfiles
 
@@ -33,8 +28,6 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). I also
  - curl
 
 ## Install
-
-Run this:
 
 ```sh
 git clone https://github.com/abcsds/dotfiles.git ~/.dotfiles

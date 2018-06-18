@@ -9,19 +9,17 @@ mas upgrade
 ### Update Homebrew (Cask) & packages
 brew update
 brew upgrade
-### Update npm & packages
-npm install npm -g
-npm update -g
 ### Update Ruby & gems
 sudo gem update —system
 sudo gem update
+### Update dotfiles
+cd ~/.dotfiles && git sup
 
-## vim plugins
+
+Checkout:
+https://github.com/zplug/zplug
 https://github.com/alebcay/awesome-shell
 https://github.com/gabrielelana/awesome-terminal-fonts
-https://github.com/ryanoasis/vim-devicons
-https://github.com/ryanoasis/nerd-fonts
-
 git-extras
 
 To enable tor systemwise:

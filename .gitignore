@@ -15,6 +15,7 @@ config/config.symlink/*
 !config/config.symlink/git
 !config/config.symlink/inkscape
 !config/config.symlink/klavaro
+config/config.symlink/inkscape/*.log
 
 python/virtualenvs.symlink/*
 !python/virtualenvs.symlink/get_env_details
