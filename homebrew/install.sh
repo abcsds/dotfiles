@@ -77,7 +77,7 @@ brew install wget --with-iri
 brew install curl
 
 # Install more recent versions of some OS X tools.
-brew install vim --with-cscope --with-lua --with-mzscheme --with-python3 --with-tcl --override-system-vim
+brew install vim --with-lua --with-python3 --with-tcl
 brew install neovim
 brew install emacs-plus
 brew install tmux
@@ -151,6 +151,7 @@ brew install binutils
 brew install dns2tcp
 brew install fcrackzip
 brew install hydra
+brew install hwloc
 brew install john
 brew install ncrack
 brew install netcat
@@ -186,7 +187,10 @@ brew install iftop
 # brew install ranger
 brew install nethack
 brew install ntopng
+brew install pandoc
+brew install pandoc-citeproc
 brew install pixman
+brew install pv
 # brew install qt
 brew install thefuck
 brew install the_silver_searcher
