@@ -62,9 +62,10 @@ alias e="$EDITOR"
 
 # alias q='exit'
 
-alias rb='ruby'
 alias py='python'
+alias pipdate="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 alias jl='julia'
+alias jlup='julia -e "Pkg.update()"'
 
 # Shell History
 alias h='history'
@@ -172,8 +173,20 @@ alias showBlocked='sudo ipfw list' # showBlocked: All ipfw rules inc/ blocked IP
 # }
 
 # ---------------------------------------
-# WEB DEVELOPMENT
+# DEVELOPMENT
 # ---------------------------------------
+
+# Atom editor
+function a () {
+  if [[ -n $1 ]]; then
+    atom "$1"
+  else
+    atom .
+  fi
+}
+
+alias apmup='apm update --no-confirm'
+
 
 # alias apacheEdit='sudo edit /etc/httpd/httpd.conf' # apacheEdit: Edit httpd.conf
 # alias apacheRestart='sudo apachectl graceful' # apacheRestart: Restart Apache
@@ -334,3 +347,5 @@ alias reload!='. ~/.zshrc'
 test_colors() {
   for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 }
+
+alias serve='open http://localhost:8000 && python3 -m http.server'

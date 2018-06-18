@@ -8,6 +8,7 @@ if [ "$(uname -s)"=="Darwin" ]
   export PATH="$PATH:$HOME/.rbenv/bin"
 
   export WORKON_HOME=$HOME/.virtualenvs
+  VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
   source /usr/local/bin/virtualenvwrapper.sh
 
   eval "$(rbenv init -)"

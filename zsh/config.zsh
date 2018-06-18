@@ -111,5 +111,18 @@ setprompt() {
   PS2=$'%_>'
   # RPROMPT=$'${vcs_info_msg_0_} %(?0..%F{red}%?%f)'
   RPROMPT=$'${vcs_info_msg_0_} ${check_last_exit_code}'
+  if [ $(uname) = "Darwin" ]
+  then
+    PS1=${(j::Q)${(Z:Cn:):-$'
+      %(!.%F{red}%n%f.%F{white}%n%f)
+      @
+      %F{cyan}%m%f
+      ":"
+      %2~
+      " "
+      %(!.%F{red}%%f.%F{green}\%f)
+      %F{green}%f
+    '}}
+  fi
 }
 setprompt

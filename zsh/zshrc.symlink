@@ -25,6 +25,7 @@ source $DZSH/zsh/config.zsh
 source $DZSH/zsh/fpath.zsh
 source $DZSH/zsh/aliases.zsh
 source $DZSH/zsh/completion.zsh
+source $DZSH/general/*.zsh
 
 # Load zplug plugins
 # source $DZSH/zsh/zplug.zsh
