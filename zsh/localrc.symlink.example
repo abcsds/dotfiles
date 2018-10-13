@@ -6,6 +6,7 @@ if [ "$(uname -s)"=="Darwin" ]
   export PATH="$PATH:/Library/TeX/texbin"
   export PATH="$PATH:$HOME/.git-webui/release/libexec/git-core"
   export PATH="$PATH:$HOME/.rbenv/bin"
+  export PATH="$PATH:$HOME/.local/bin"
 
   export WORKON_HOME=$HOME/.virtualenvs
   VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
