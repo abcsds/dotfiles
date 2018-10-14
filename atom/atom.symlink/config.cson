@@ -29,10 +29,7 @@
   "julia-client":
     consoleOptions: {}
     firstBoot: false
-    juliaOptions:
-      startupArguments: [
-        "-p 2"
-      ]
+    juliaOptions: {}
     uiOptions:
       enableMenu: true
       enableToolBar: true
