@@ -76,6 +76,7 @@ HELPDIR=/usr/local/share/zsh/help
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 export PROJECTS_FOLDER=~/github
+export LC_ALL=C  # Shell in english
 
 if [ `uname` = "Darwin" ]; then
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

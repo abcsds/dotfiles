@@ -9,8 +9,8 @@ if [ "$(uname -s)"=="Darwin" ]
   export PATH="$PATH:$HOME/.local/bin"
 
   export WORKON_HOME=$HOME/.virtualenvs
-  VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-  source /usr/local/bin/virtualenvwrapper.sh
+  VIRTUALENVWRAPPER_PYTHON=python3
+  source virtualenvwrapper.sh
 
   eval "$(rbenv init -)"
   eval "$(thefuck --alias)"

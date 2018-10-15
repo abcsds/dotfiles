@@ -59,6 +59,7 @@ zenmap/zenmap.symlink/target_list.txt
 zenmap/zenmap.symlink/zenmap.db
 zenmap/zenmap.symlink/zenmap_version
 
+!julia/julia.symlink/
 julia/julia.symlink/*
 
 jupyter/jupyter.symlink/*
