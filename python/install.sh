@@ -1,123 +1,123 @@
 if [ "$(uname -s)"=="Darwin" ]
 then
   # Python2
-  # pip2 install --upgrade pip
-  # pip2 install --upgrade setuptools
-  # pip2 install ctypes --allow-external ctypes --allow-unverified ctypes
-  # pip2 install pyobjc
-  # pip2 install ipython
-  # pip2 install virtualenv
-  # pip2 install virtualenvwrapper
-  # pip2 install autoenv
-  # pip2 install numpy
-  # pip2 install Pygments
-  # pip2 install pygame
-  # pip2 install simplecv
-  # pip2 install matplotlib
+  # pip2 install --user --upgrade pip
+  # pip2 install --user --upgrade setuptools
+  # pip2 install --user ctypes --allow-external ctypes --allow-unverified ctypes
+  # pip2 install --user pyobjc
+  # pip2 install --user ipython
+  # pip2 install --user virtualenv
+  # pip2 install --user virtualenvwrapper
+  # pip2 install --user autoenv
+  # pip2 install --user numpy
+  # pip2 install --user Pygments
+  # pip2 install --user pygame
+  # pip2 install --user simplecv
+  # pip2 install --user matplotlib
 
   # Python3
-  pip3 install --upgrade pip
-  pip3 install --upgrade setuptools
-  pip3 install beautifulsoup4
-  pip3 install coursera-dl
-  pip3 install flake8
-  pip3 install googletrans
-  pip3 install idx2numpy
-  pip3 install ipython
-  pip3 install ipywidgets
-  pip3 install jupyter
-  pip3 install jupyter-console
-  pip3 install jupyter-contrib-nbextensions
-  pip3 install jupyter-highlight-selected-word
-  pip3 install jupyter-tensorboard
-  pip3 install Markdown
-  pip3 install matplotlib
-  pip3 install mne
-  pip3 install mpi4py
-  pip3 install nbconvert
-  pip3 install neovim
-  pip3 install networkx
-  pip3 install nilearn
-  pip3 install nltk
-  pip3 install notebook
-  pip3 install numpy
-  pip3 install pandas
-  pip3 install Pillow
-  pip3 install PsychoPy
-  pip3 install Pweave
-  pip3 install Pygments
-  pip3 install pyserial
-  pip3 install python-telegram-bot
-  pip3 install regex
-  pip3 install scikit-learn
-  pip3 install scikit-surprise
-  pip3 install scipy
-  pip3 install seaborn
-  pip3 install SimpleCV
-  pip3 install sklearn
-  pip3 install spyder
-  pip3 install sympy
-  pip3 install tensorboard
-  pip3 install tensorflow
-  pip3 install tensorflow-tensorboard
-  pip3 install tweepy
-  pip3 install urllib3
-  pip3 install virtualenv
-  pip3 install virtualenv-clone
-  pip3 install virtualenvwrapper
-  pip3 install youtube-dl
+  pip3 install --user --upgrade pip
+  pip3 install --user --upgrade setuptools
+  pip3 install --user beautifulsoup4
+  pip3 install --user coursera-dl
+  pip3 install --user flake8
+  pip3 install --user googletrans
+  pip3 install --user idx2numpy
+  pip3 install --user ipython
+  pip3 install --user ipywidgets
+  pip3 install --user jupyter
+  pip3 install --user jupyter-console
+  pip3 install --user jupyter-contrib-nbextensions
+  pip3 install --user jupyter-highlight-selected-word
+  pip3 install --user jupyter-tensorboard
+  pip3 install --user Markdown
+  pip3 install --user matplotlib
+  pip3 install --user mne
+  pip3 install --user mpi4py
+  pip3 install --user nbconvert
+  pip3 install --user neovim
+  pip3 install --user networkx
+  pip3 install --user nilearn
+  pip3 install --user nltk
+  pip3 install --user notebook
+  pip3 install --user numpy
+  pip3 install --user pandas
+  pip3 install --user Pillow
+  pip3 install --user PsychoPy
+  pip3 install --user Pweave
+  pip3 install --user Pygments
+  pip3 install --user pyserial
+  pip3 install --user python-telegram-bot
+  pip3 install --user regex
+  pip3 install --user scikit-learn
+  pip3 install --user scikit-surprise
+  pip3 install --user scipy
+  pip3 install --user seaborn
+  pip3 install --user SimpleCV
+  pip3 install --user sklearn
+  pip3 install --user spyder
+  pip3 install --user sympy
+  pip3 install --user tensorboard
+  pip3 install --user tensorflow
+  pip3 install --user tensorflow-tensorboard
+  pip3 install --user tweepy
+  pip3 install --user urllib3
+  pip3 install --user virtualenv
+  pip3 install --user virtualenv-clone
+  pip3 install --user virtualenvwrapper
+  pip3 install --user youtube-dl
 
   # ln -s /usr/local/bin/python3 /usr/local/bin/python
   # ln -s /usr/local/bin/pip3    /usr/local/bin/pip
 
 else
-  pip install --upgrade pip
-  pip install --upgrade setuptools
-  pip install beautifulsoup4
-  pip install coursera-dl
-  pip install flake8
-  pip install googletrans
-  pip install idx2numpy
-  pip install ipython
-  pip install ipywidgets
-  pip install jupyter
-  pip install jupyter-console
-  pip install jupyter-contrib-nbextensions
-  pip install jupyter-highlight-selected-word
-  pip install jupyter-tensorboard
-  pip install Markdown
-  pip install matplotlib
-  pip install mne
-  pip install mpi4py
-  pip install nbconvert
-  pip install networkx
-  pip install nilearn
-  pip install nltk
-  pip install notebook
-  pip install numpy
-  pip install pandas
-  pip install Pillow
-  pip install PsychoPy
-  pip install Pweave
-  pip install Pygments
-  pip install pyserial
-  pip install python-telegram-bot
-  pip install regex
-  pip install scikit-learn
-  pip install scikit-surprise
-  pip install scipy
-  pip install seaborn
-  pip install SimpleCV
-  pip install sklearn
-  pip install spyder
-  pip install sympy
-  pip install tensorboard
-  pip install tensorflow
-  pip install tensorflow-tensorboard
-  pip install tweepy
-  pip install urllib3
-  pip install virtualenv
-  pip install virtualenv-clone
-  pip install virtualenvwrapper
-  pip install youtube-dl
+  pip install --user --upgrade pip
+  pip install --user --upgrade setuptools
+  pip install --user beautifulsoup4
+  pip install --user coursera-dl
+  pip install --user flake8
+  pip install --user googletrans
+  pip install --user idx2numpy
+  pip install --user ipython
+  pip install --user ipywidgets
+  pip install --user jupyter
+  pip install --user jupyter-console
+  pip install --user jupyter-contrib-nbextensions
+  pip install --user jupyter-highlight-selected-word
+  pip install --user jupyter-tensorboard
+  pip install --user Markdown
+  pip install --user matplotlib
+  pip install --user mne
+  pip install --user mpi4py
+  pip install --user nbconvert
+  pip install --user networkx
+  pip install --user nilearn
+  pip install --user nltk
+  pip install --user notebook
+  pip install --user numpy
+  pip install --user pandas
+  pip install --user Pillow
+  pip install --user PsychoPy
+  pip install --user Pweave
+  pip install --user Pygments
+  pip install --user pyserial
+  pip install --user python-telegram-bot
+  pip install --user regex
+  pip install --user scikit-learn
+  pip install --user scikit-surprise
+  pip install --user scipy
+  pip install --user seaborn
+  pip install --user SimpleCV
+  pip install --user sklearn
+  pip install --user spyder
+  pip install --user sympy
+  pip install --user tensorboard
+  pip install --user tensorflow
+  pip install --user tensorflow-tensorboard
+  pip install --user tweepy
+  pip install --user urllib3
+  pip install --user virtualenv
+  pip install --user virtualenv-clone
+  pip install --user virtualenvwrapper
+  pip install --user youtube-dl
 fi

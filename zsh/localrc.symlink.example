@@ -12,6 +12,5 @@ if [ "$(uname -s)"=="Darwin" ]
   VIRTUALENVWRAPPER_PYTHON=python3
   source virtualenvwrapper.sh
 
-  eval "$(rbenv init -)"
   eval "$(thefuck --alias)"
 fi
