@@ -1,14 +1,14 @@
-if [[ '$(uname -s)'=='Darwin' ]]
-then
-    export ZPLUG_HOME=/usr/local/opt/zplug
-    source $ZPLUG_HOME/init.zsh
-else
+# if [[ '$(uname -s)'=='Darwin' ]]
+# then
+#     export ZPLUG_HOME=/usr/local/opt/zplug
+#     source $ZPLUG_HOME/init.zsh
+# else
     if [[ ! -d ~/.zplug ]] ;then
         git clone https://github.com/b4b4r07/zplug ~/.zplug
     fi
     export ZPLUG_HOME=~/.zplug
     source $ZPLUG_HOME/init.zsh
-fi
+# fi
 
 
 # Manage zplug with zplug
@@ -181,7 +181,7 @@ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="048"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir) #os_icon
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time vcs rbenv virtualenv)
 
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+# zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
 if [ $(zplug check) ]
 then
