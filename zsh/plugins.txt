@@ -1,0 +1,32 @@
+# Alias-tips
+djui/alias-tips
+
+# example from oh-my-zsh
+# robbyrussell/oh-my-zsh path:plugins/aws
+
+# Tmux session manager
+RobertAudi/tsm
+
+# gitignore creation
+# use example: `gi emacs` 'gii emacs'
+voronkovich/gitignore.plugin.zsh
+
+# Autosugestions
+zsh-users/zsh-autosuggestions
+
+# Navigation tools
+psprint/zsh-navigation-tools
+
+zsh-users/zsh-completions
+
+# Syntax highlighting
+zsh-users/zsh-syntax-highlighting
+
+# Search substring
+zsh-users/zsh-history-substring-search
+
+# shell theme (not for vconsole :P)
+bhilburn/powerlevel9k
+
+# Use cd with tab
+changyuheng/zsh-interactive-cd

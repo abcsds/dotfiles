@@ -3,8 +3,20 @@
 # shortcut to this dotfiles path is $DZSH
 export DZSH=$HOME/.dotfiles
 
+# Linux distro being used:
+export DISTRO=$(cat /etc/issue | awk '{print $1}')
+
+# Check if in vconsole
+case $(tty) in
+  (/dev/tty[1-9]) export CONSOLE='virtual';;
+              (*) export CONSOLE='terminal';;
+esac
+
+# Check the OS
+export OS="$(uname -s)"
+
 # Set Default Editor
-export EDITOR=nvim
+export EDITOR=vim
 
 # Set 256 color term
 export TERM="xterm-256color"
@@ -29,6 +41,9 @@ source $DZSH/general/*.zsh
 
 # Load zplug plugins
 # source $DZSH/zsh/zplug.zsh
+
+# Alternatively load plugins with antibody
+source $DZSH/zsh/antibody.zsh
 
 # In order to use this build of zsh as your login shell,
 # it must be added to /etc/shells.
