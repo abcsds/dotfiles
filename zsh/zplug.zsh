@@ -1,14 +1,14 @@
-# if [[ '$(uname -s)'=='Darwin' ]]
-# then
-#    export ZPLUG_HOME=/usr/local/opt/zplug
-#    source $ZPLUG_HOME/init.zsh
-# else
+if [[ $OS == 'Darwin' ]]
+then
+   export ZPLUG_HOME=/usr/local/opt/zplug
+   source $ZPLUG_HOME/init.zsh
+elif [[ $OS == 'Linux' ]]
     if [[ ! -d ~/.zplug ]] ;then
         git clone https://github.com/b4b4r07/zplug ~/.zplug
     fi
     export ZPLUG_HOME=~/.zplug
     source $ZPLUG_HOME/init.zsh
-# fi
+fi
 
 # Manage zplug with zplug
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'

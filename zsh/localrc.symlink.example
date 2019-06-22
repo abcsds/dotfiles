@@ -11,7 +11,8 @@ if [ "$(uname -s)"=="Darwin" ]
   export WORKON_HOME=$HOME/.virtualenvs
   VIRTUALENVWRAPPER_PYTHON=python3
   source virtualenvwrapper.sh
-
-  eval "$(rbenv init -)"
-  eval "$(thefuck --alias)"
 fi
+export XKB_DEFAULT_LAYOUT=us;
+export XKB_DEFAULT_VARIANT=dvorak-alt-intl;
+export XKB_DEFAULT_MODEL=pc101;
+

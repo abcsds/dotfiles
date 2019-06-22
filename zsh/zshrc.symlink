@@ -40,7 +40,7 @@ source $DZSH/zsh/completion.zsh
 source $DZSH/general/*.zsh
 
 # Load zplug plugins
-# source $DZSH/zsh/zplug.zsh
+source $DZSH/zsh/zplug.zsh
 
 # Alternatively load plugins with antibody
 source $DZSH/zsh/antibody.zsh

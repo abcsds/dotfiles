@@ -1,0 +1,68 @@
+! Xft
+! Xft*antialias : true
+! Xft*hinting   : 1
+! Xft*dpi       :96
+
+! URxvt
+
+! General settings
+
+URxvt.saveLinse: 32767
+URxvt.scrollBar: false
+URxvt.scrollstyle: rxvt
+URxvt.urgentOnBell: True
+URxvt.font: xft:noto:size=16
+URxvt.letterSpace: -7
+URxvt.transparent: true
+URxvt.shading: 20
+! urxvt*depth: 32
+! urxvt*background: rgba:0000/0000/0200/c800
+
+URxvt.perl-ext-common: default,clipboard,matcher,resize-font,url-select
+
+! Clipboard extention
+URxvt.clipboard.autocopy: true
+Urxvt.keysym.Mod4-c: perl:clipboard:copy
+Urxvt.keysym.Mod4-v: perl:clipboard:paste
+Urxvt.keysym.M-c: perl:clipboard:copy
+Urxvt.keysym.M-v: perl:clipboard:paste
+URxvt.copyCommand:  xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+
+! Keybindings
+
+! Clickable links
+URxvt.url-launcher: xdg-open
+URxvt.matcher.button: 1
+URxvt.underlineURLs: True
+
+! MAIA colorscheme
+! special
+URxvt.foreground:   #1ABC9C
+URxvt.background:   #2C2C2C
+URxvt.cursorColor:  #c5c8c6
+! black
+URxvt.color0:       #3F3F3F
+URxvt.color8:       #709080
+! red
+URxvt.color1:       #705050
+URxvt.color9:       #DCA3A3
+! green
+URxvt.color2:       #60B48A
+URxvt.color10:      #72D5A3
+! yellow
+URxvt.color3:       #DFAF8F
+URxvt.color11:      #F0DFAF
+! blue
+URxvt.color4:       #3498DB
+URxvt.color12:      #7EB2E6
+! magenta
+URxvt.color5:       #5B2C70
+URxvt.color13:      #9B59B6
+! cyan
+URxvt.color6:       #8CD0D3
+URxvt.color14:      #93E0E3
+! white
+URxvt.color7:       #DCDCCC
+URxvt.color15:      #FFFFFF
+
