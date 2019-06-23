@@ -1,6 +1,6 @@
 if [[ $OS == "Linux" ]]; then
-  setxkbmap dvorak-alt-int
-  exec i3
+  setxkbmap dvorak
+  exec i3 --shmlog-size=26214400
 else
   xterm -fa Monaco -fs 14 -fg green -bg black
 fi
