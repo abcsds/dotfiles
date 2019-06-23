@@ -6,8 +6,6 @@ if [[ $DISTRO == "Arch" ]]; then
       exit 1
     else
       yay -S antibody
-      source <(antibody init)
-      antibody bundle < $DZSH/zsh/plugins.txt > $DZSH/zsh/ant_plugins.sh
     fi
   fi
 
@@ -19,11 +17,20 @@ elif [[ $DISTRO == "Manjaro" ]]; then
       exit 1
     else
       yay -S antibody
-      source <(antibody init)
-      antibody bundle < $DZSH/zsh/plugins.txt > $DZSH/zsh/ant_plugins.sh
     fi
   fi
 fi
+
+if [[ ! -f $DZSH/zsh/ant_plugins.sh ]]; then
+  source <(antibody init)
+  antibody bundle < $DZSH/zsh/plugins.txt > $DZSH/zsh/ant_plugins.sh
+fi
+
+# If all else fails, call this function and restart
+function load_antibody() {
+  source <(antibody init)
+  antibody bundle < $DZSH/zsh/plugins.txt > $DZSH/zsh/ant_plugins.sh
+}
 
 # Start antibody
 source $DZSH/zsh/ant_plugins.sh
