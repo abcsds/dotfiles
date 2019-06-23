@@ -1,5 +1,6 @@
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
 if [[ $OS == "Darwin" ]]; then
-  export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
   export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
   export PATH="$PATH:/Library/TeX/texbin"
   export PATH="$PATH:$HOME/.git-webui/release/libexec/git-core"
@@ -17,6 +18,7 @@ elif [[ $OS == "Linux" ]]; then
 fi
 
 export PATH="$PATH:/$HOME/.dotfiles/bin"
+export PATH="$PATH:/$HOME/.local/bin"
 export XKB_DEFAULT_LAYOUT=us;
 export XKB_DEFAULT_VARIANT=dvorak-alt-intl;
 export XKB_DEFAULT_MODEL=pc101;

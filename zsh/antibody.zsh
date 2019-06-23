@@ -1,3 +1,9 @@
+# Setup plugins
+
+# Powerlevel9k
+source $DZSH/zsh/theme.zsh
+
+
 if [[ $DISTRO == "Arch" ]]; then
   # echo "Antibody for Arch"
   if ! type antibody > /dev/null; then
@@ -21,19 +27,28 @@ elif [[ $DISTRO == "Manjaro" ]]; then
   fi
 fi
 
-if [[ ! -f $DZSH/zsh/ant_plugins.sh ]]; then
-  source <(antibody init)
-  antibody bundle < $DZSH/zsh/plugins.txt > $DZSH/zsh/ant_plugins.sh
-fi
+# =========== Static loading (faster)
+# if [[ ! -f $DZSH/zsh/ant_plugins.sh ]]; then
+#   source <(antibody init)
+#   antibody bundle < $DZSH/zsh/plugins.txt > $DZSH/zsh/ant_plugins.sh
+# fi
 
 # If all else fails, call this function and restart
-function load_antibody() {
-  source <(antibody init)
-  antibody bundle < $DZSH/zsh/plugins.txt > $DZSH/zsh/ant_plugins.sh
-}
+# function load_antibody() {
+#   source <(antibody init)
+#   antibody bundle < $DZSH/zsh/plugins.txt > $DZSH/zsh/ant_plugins.sh
+# }
 
 # Start antibody
-source $DZSH/zsh/ant_plugins.sh
+# source $DZSH/zsh/ant_plugins.sh
+
+
+# =========== Dynamic loading
+source <(antibody init)
+if [[ $CONSOLE == "terminal" ]]; then
+  antibody bundle bhilburn/powerlevel9k
+fi
+antibody bundle < $DZSH/zsh/plugins.txt
 
 # Substring search key bindings
 # bind UP and DOWN arrow keys
@@ -45,9 +60,3 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 # for Ubuntu 12.04, Fedora 21, and MacOSX 10.9 users)
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
-
-# Powerlevel9k
-if [[ $CONSOLE == "terminal" ]]; then
-  antibody bundle bhilburn/powerlevel9k
-  source $DZSH/zsh/theme.zsh
-fi
