@@ -1,5 +1,4 @@
-if [[ $OS == "Darwin" ]]
-then
+if [[ $OS == "Darwin" ]]; then
 
     POWERLEVEL9K_MODE="awesome-patched"
 
@@ -26,8 +25,7 @@ then
             echo -n "%{$color%}$ssid $speed Mb/s%{%f%}" # removed char not in my PowerLine font
         fi
     }
-elif [[ $OS == "Linux" ]]
-then
+elif [[ $OS == "Linux" ]]; then
   POWERLEVEL9K_MODE="Powerlevel9k"
 
 else

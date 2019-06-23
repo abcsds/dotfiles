@@ -4,6 +4,23 @@
 
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd)
+# shortcut to this dotfiles path is $DZSH
+export DZSH=$HOME/.dotfiles
+# Linux distro being used
+export DISTRO=$(cat /etc/issue | awk '{print $1}')
+# Check if in vconsole
+case $(tty) in
+  (/dev/tty[1-9]) export CONSOLE='virtual';;
+              (*) export CONSOLE='terminal';;
+esac
+# Check the OS
+export OS="$(uname -s)"
+# Set the projects folder
+export PROJECTS_FOLDER=~/github
+# Set Default Editor
+export EDITOR=vim
+# Set 256 color term
+export TERM="xterm-256color"
 
 set -e
 
@@ -33,8 +50,7 @@ setup_gitconfig () {
     info 'setup gitconfig'
 
     git_credential='cache'
-    if [ "$(uname -s)" == "Darwin" ]
-    then
+    if [[ $OS == "Darwin" ]]; then
       git_credential='osxkeychain'
     fi
 
@@ -52,10 +68,7 @@ setup_gitconfig () {
 }
 setup_folder () {
   # Setup local files and folders
-  if [ ! -d ~/github ]
-  then
-    mkdir ~/github
-  fi
+  mkdir -p $PROJECTS_FOLDER
   cat $DOTFILES_ROOT/zsh/localrc.symlink.example > $DOTFILES_ROOT/zsh/localrc.symlink
 }
 
@@ -65,21 +78,14 @@ link_file () {
   local overwrite= backup= skip=
   local action=
 
-  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
-  then
-
-    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
-    then
+  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
+    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ] ; then
 
       local currentSrc="$(readlink $dst)"
 
-      if [ "$currentSrc" == "$src" ]
-      then
-
+      if [ "$currentSrc" == "$src" ]; then
         skip=true;
-
       else
-
         user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
         [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
         read -n 1 action
@@ -169,34 +175,33 @@ install_fonts () {
   if ! type fc-cache ; then
     info "Please install font cache tools\n"
   else
-      if [ "$(uname -s)" == "Linux" ]
-      then
-        # Install fonts under linux
-        fc-cache -fv ~/.fonts
-      fi
+    if [[ $OS == "Linux" ]]; then
+      # Install fonts under linux
+      fc-cache -fv ~/.fonts
+    fi
   fi
 }
 
 install_npm () {
   # Install npm packages
-  if ! type npm ; then
+  if ! type npm  > /dev/null ; then
     info "Please install node manualy\n"
   else
     source $DOTFILES_ROOT/npm/install.sh
   fi
 }
+
 install_python () {
   # Install python packages
-  if ! type pip ; then
-    info "Please install python-pip manualy"
+  if ! type pip > /dev/null ; then
+    echo "There isn't pip"
   else
-    # source $DOTFILES_ROOT/python/install.sh
-    info "Please install python packages manually"
+    source $DOTFILES_ROOT/python/install.sh
   fi
 }
 install_apm () {
   # Install python packages
-  if ! type apm ; then
+  if ! type apm  > /dev/null ; then
     info "Please install apm manualy"
   else
     source $DOTFILES_ROOT/atom/install.sh

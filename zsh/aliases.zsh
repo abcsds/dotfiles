@@ -2,7 +2,7 @@
 # List directory contents
 command -v exa >/dev/null 2>&1 || { echo >&2 "exa not found, fallback to ls"; }
 
-if hash exa 2>/dev/null ; then
+if hash exa >/dev/null ; then
     alias sl=exa
     alias ls='exa'        # Compact view, show colors
     alias la='exa -a'      # Compact view, show hidden
@@ -17,8 +17,7 @@ else
     alias l='ls -a'
     alias l1='ls -1'
 fi
-if [[ $OS == "Linux" ]]
-then
+if [[ $OS == "Linux" ]]; then
   alias ls="ls --color=auto"
 fi
 
@@ -55,8 +54,7 @@ alias jl='julia'
 alias jlup='julia -e "Pkg.update()"'
 
 which gshuf &> /dev/null
-if [ $? -eq 0 ]
-then
+if [ $? -eq 0 ]; then
   alias shuf=gshuf
 fi
 
@@ -64,8 +62,7 @@ fi
 ascii () { convert "$1" pnm:- | aview }
 
 # Tree
-if [ ! -x "$(which tree 2>/dev/null)" ]
-then
+if [ ! -x "$(which tree 2>/dev/null)" ]; then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
 
@@ -118,8 +115,7 @@ alias editHosts='sudo edit /etc/hosts' # editHosts: Edit /etc/hosts file
 # Use `hub` as our git wrapper:
 #   http://defunkt.github.com/hub/
 hub_path=$(which hub)
-if (( $+commands[hub] ))
-then
+if (( $+commands[hub] )) ; then
   alias git=$hub_path
 fi
 
@@ -169,7 +165,6 @@ test_colors() {
 }
 
 #======================================== MacOS
-if [[ $OS == "Darwin" ]]
-then
+if [[ $OS == "Darwin" ]]; then
   source $DZSH/zsh/mac.zsh
 fi

@@ -94,12 +94,11 @@ HELPDIR=/usr/local/share/zsh/help
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-if [[ $OS == "Darwin" ]]
-then
+if [[ $OS == "Darwin" ]]; then
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
-if [[ -n "$BENCHMARK" ]];then
+if [[ -n "$BENCHMARK" ]]; then
     zprof > "$HOME/.zsh_benchmark"
     # zprof
 fi

@@ -1,6 +1,5 @@
-if [[ $DISTRO == "Arch" ]]
-then
-# echo "Antibody for Arch"
+if [[ $DISTRO == "Arch" ]]; then
+  # echo "Antibody for Arch"
   if ! type antibody > /dev/null; then
     if ! type yay > /dev/null; then
       echo "ERROR: yay not installed"
@@ -12,9 +11,8 @@ then
     fi
   fi
 
-elif [[ $DISTRO == "Manjaro" ]]
-then
-# echo "Antibody for Manjaro"
+elif [[ $DISTRO == "Manjaro" ]]; then
+  # echo "Antibody for Manjaro"
   if ! type antibody > /dev/null; then
     if ! type yay > /dev/null; then
       echo "ERROR: yay not installed"
@@ -42,7 +40,6 @@ bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
 # Powerlevel9k
-if [[ $CONSOLE == "terminal" ]]
-then
+if [[ $CONSOLE == "terminal" ]]; then
   source $DZSH/zsh/theme.zsh
 fi

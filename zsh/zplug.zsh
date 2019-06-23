@@ -59,14 +59,12 @@ bindkey "^[[B" history-substring-search-down
 # bindkey -M vicmd "j" history-substring-search-down
 
 # Powerlevel9k
-if [[ $CONSOLE == "terminal" ]]
-then
+if [[ $CONSOLE == "terminal" ]]; then
   source $DZSH/zsh/theme.zsh
   zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 fi
 
-if [ $(zplug check) ]
-then
+if [[ $(zplug check) ]]; then
     zplug install
 fi
 

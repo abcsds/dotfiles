@@ -1,0 +1,16 @@
+pacman-contrib
+zsh
+git
+curl
+python
+python-pip
+openssh
+openvpn
+firefox
+xorg-server
+xorg-xinit
+rxvt-unicode
+terminus-font
+vim
+tmux
+go
