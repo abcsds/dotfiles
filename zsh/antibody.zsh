@@ -48,5 +48,6 @@ bindkey "^[[B" history-substring-search-down
 
 # Powerlevel9k
 if [[ $CONSOLE == "terminal" ]]; then
+  antibody bundle bhilburn/powerlevel9k
   source $DZSH/zsh/theme.zsh
 fi

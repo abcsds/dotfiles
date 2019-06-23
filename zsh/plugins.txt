@@ -25,8 +25,5 @@ zsh-users/zsh-syntax-highlighting
 # Search substring
 zsh-users/zsh-history-substring-search
 
-# shell theme (not for vconsole :P)
-bhilburn/powerlevel9k
-
 # Use cd with tab
 changyuheng/zsh-interactive-cd
