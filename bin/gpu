@@ -1,0 +1,3 @@
+#!/bin/sh
+#
+nvidia-smi | awk '{ print $13}' | sed '/^$/d'

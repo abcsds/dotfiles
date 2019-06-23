@@ -1,9 +1,10 @@
+# For testing startup times uncomment next line
 # BENCHMARK=1 && zmodload zsh/zprof
 
 # shortcut to this dotfiles path is $DZSH
 export DZSH=$HOME/.dotfiles
 
-# Linux distro being used:
+# Linux distro being used
 export DISTRO=$(cat /etc/issue | awk '{print $1}')
 
 # Check if in vconsole
@@ -14,6 +15,9 @@ esac
 
 # Check the OS
 export OS="$(uname -s)"
+
+# Set the projects folder
+export PROJECTS_FOLDER=~/github
 
 # Set Default Editor
 export EDITOR=vim
@@ -40,7 +44,7 @@ source $DZSH/zsh/completion.zsh
 source $DZSH/general/*.zsh
 
 # Load zplug plugins
-source $DZSH/zsh/zplug.zsh
+# source $DZSH/zsh/zplug.zsh
 
 # Alternatively load plugins with antibody
 source $DZSH/zsh/antibody.zsh
@@ -90,19 +94,9 @@ HELPDIR=/usr/local/share/zsh/help
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-export PROJECTS_FOLDER=~/github
-export LC_ALL=C  # Shell in english
-
-if [ `uname` = "Darwin" ]; then
+if [[ $OS == "Darwin" ]]
+then
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-  # Plugins on OSX
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-  bindkey '^[[A' history-substring-search-up
-  bindkey '^[[B' history-substring-search-down
 fi
 
 if [[ -n "$BENCHMARK" ]];then

@@ -1,6 +1,6 @@
-if [ "$(uname -s)" == "Linux" ]
+if [ $OS == "Linux" ]
 then
-  setxkbmap dvorak
+  setxkbmap dvorak-alt-int
   exec i3
 else
   xterm -fa Monaco -fs 14 -fg green -bg black

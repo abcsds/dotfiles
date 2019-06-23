@@ -19,11 +19,13 @@
     titleBar: "custom"
   editor:
     fontSize: 15
+    invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
+    tabType: "soft"
   "exception-reporting":
     userId: "7f870440-db64-4aa1-a1df-2085387ed9f6"
   "julia-client":
@@ -47,7 +49,7 @@
   "tool-bar":
     position: "Left"
   "tree-view":
-    hideVcsIgnoredFiles: true
+    hideVcsIgnoredFiles: false
   "uber-juno":
     disable: true
   welcome:

@@ -38,6 +38,7 @@ git/gitconfig.symlink
 git/lolcommits.symlink
 
 zsh/localrc.symlink
+zsh/ant_plugins.sh
 
 python/get-pip.py
 
