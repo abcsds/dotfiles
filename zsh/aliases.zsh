@@ -35,11 +35,11 @@ alias ~="cd ~" # ~: Go Home
 # Directory
 alias	md='mkdir -p'
 alias	rd='rmdir'
-alias cp='cp -iv' # Preferred 'cp' implementation
-alias mv='mv -iv' # Preferred 'mv' implementation
+alias cp='cp -iv' # Confirm before overwriting
+alias mv='mv -iv' # Confirm before overwriting
 alias mkdir='mkdir -pv' # Preferred 'mkdir' implementation
 mcd () { mkdir -p "$1" && cd "$1"; } # mcd: Makes new Dir and jumps inside
-# Shell History
+# Shell
 alias h='history'
 alias _="sudo"
 alias c='clear'
@@ -48,6 +48,9 @@ alias cls='clear'
 alias edit="$EDITOR"
 alias e="$EDITOR"
 # alias q='exit'
+# Disks
+alias df='df -h'      # Human-readable sizes
+alias free='free -m'  # Show sizes in MB
 alias py='python'
 alias pipdate="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 alias jl='julia'

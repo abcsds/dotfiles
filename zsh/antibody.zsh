@@ -1,9 +1,4 @@
 # Setup plugins
-
-# Powerlevel9k
-source $DZSH/zsh/theme.zsh
-
-
 if [[ $DISTRO == "Arch" ]]; then
   # echo "Antibody for Arch"
   if ! type antibody > /dev/null; then
@@ -45,9 +40,12 @@ fi
 
 # =========== Dynamic loading
 source <(antibody init)
-if [[ $CONSOLE == "terminal" ]]; then
-  antibody bundle bhilburn/powerlevel9k
-fi
+
+# Powerlevel9k
+# if [[ $CONSOLE == "terminal" ]]; then
+#   source $DZSH/zsh/theme.zsh
+#   antibody bundle bhilburn/powerlevel9k
+# fi
 antibody bundle < $DZSH/zsh/plugins.txt
 
 # Substring search key bindings

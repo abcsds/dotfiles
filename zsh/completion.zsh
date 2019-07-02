@@ -1,32 +1,10 @@
-###################################### Ruby
-# Taken from
-#   https://github.com/sstephenson/rbenv/blob/master/completions/rbenv.zsh
-
-autoload -U compinit && compinit -i
-
-if [[ ! -o interactive ]]; then
-    return
-fi
-
-compctl -K _rbenv rbenv
-
-_rbenv() {
-    local word words completions
-    read -cA words
-    word="${words[2]}"
-
-    if [ "${#words}" -eq 2 ]; then
-        completions="$(rbenv commands)"
-    else
-        completions="$(rbenv completions "${word}")"
-    fi
-
-    reply=("${(ps:\n:)completions}")
-}
-
-###################################### Zsh
-# matches case insensitive for lowercase
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive tab completion
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"   # Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' rehash true                        # automatically find new executables in path
+# Speed up completions
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path $DZSH/.zsh/cache
 
 # pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
