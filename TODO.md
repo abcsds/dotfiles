@@ -1,6 +1,9 @@
 # TODO list
 just some notes for myself.
 
+## Improvement to zsh
+change the default prompt: now using manjaro's pompt: getting rid of powerlevel9k is the goal :)
+
 ## UPDATES
 
 ### Update App Store apps
