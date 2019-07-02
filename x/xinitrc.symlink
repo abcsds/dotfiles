@@ -67,10 +67,14 @@ get_session(){
 	echo "dbus-launch ${dbus_args[*]}"
 }
 
+startup(){
+  setxkbmap dvorak
+  xrandr --output eDP1 --scale .75x.75
+}
+
 if [[ $OS == "Linux" ]]; then
-  # setxkbmap dvorak
-  xrandr --output eDP1 --scale .8x.8
   exec $(get_session)
+  exec $(startup)
 elif [[ $OS == "Darwin" ]]; then
   xterm
 fi
