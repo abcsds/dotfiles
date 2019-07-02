@@ -5,6 +5,9 @@
 '.platform-darwin .tree-view':
   'cmd-shift-o': 'tree-view:show-in-file-manager'
 
+'.platform-linux':
+  'ctrl-alt-s': 'sort-words:sort-case-insensitive'
+
 '.platform-win32 atom-workspace atom-text-editor:not([mini])':
   'ctrl-alt-down': 'editor:add-selection-below'
   'ctrl-alt-up': 'editor:add-selection-above'

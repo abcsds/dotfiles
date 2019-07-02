@@ -21,3 +21,4 @@ noto-fonts
 yakuake
 exa
 ranger
+neofetch

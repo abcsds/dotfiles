@@ -154,7 +154,7 @@ install_dotfiles () {
 
 install_homebrew () {
   # Setup homebrew.
-  info "installing dependencies \n"
+  info "installing OSX dependencies \n"
   if source bin/dot
   then
     success "dependencies installed"
