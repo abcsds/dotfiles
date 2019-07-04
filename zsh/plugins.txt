@@ -9,7 +9,7 @@ RobertAudi/tsm
 
 # gitignore creation
 # use example: `gi emacs` 'gii emacs'
-voronkovich/gitignore.plugin.zsh
+# voronkovich/gitignore.plugin.zsh
 
 # Autosugestions
 zsh-users/zsh-autosuggestions

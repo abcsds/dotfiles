@@ -29,7 +29,6 @@ pyserial
 python-telegram-bot
 regex
 scikit-learn
-scikit-surprise
 scipy
 seaborn
 SimpleCV

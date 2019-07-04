@@ -1,11 +1,11 @@
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 
 if [[ $OS == "Darwin" ]]; then
   export PATH="$PATH:/opt/X11/bin:/opt/pkgconfig/bin"
   export PATH="$PATH:/Library/TeX/texbin"
   export PATH="$PATH:$HOME/.git-webui/release/libexec/git-core"
   export PATH="$PATH:$HOME/.rbenv/bin"
-  export PATH="$PATH:$HOME/.local/bin"
 
   export WORKON_HOME=$HOME/.virtualenvs
   VIRTUALENVWRAPPER_PYTHON=python3
