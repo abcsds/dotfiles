@@ -49,3 +49,4 @@ apm install pigments
 apm install python-tools
 apm install set-syntax
 # apm install tidal
+apm install zotero-picker
