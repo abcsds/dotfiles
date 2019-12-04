@@ -101,7 +101,7 @@
   rank-contributors = !$DZSH/bin/git-rank-contributors
   count    = !git shortlog -sn
   alias    = config --get-regexp ^alias\\.
-  webui    = !$DZSH/.git-webui/release/libexec/git-core/git-webui
+  webui    = !~/.git-webui/release/libexec/git-core/git-webui
 [color]
   diff   = auto
   status = auto
