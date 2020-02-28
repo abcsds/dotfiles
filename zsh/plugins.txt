@@ -26,4 +26,4 @@ zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
 
 # Use cd with tab
-changyuheng/zsh-interactive-cd
+# changyuheng/zsh-interactive-cd

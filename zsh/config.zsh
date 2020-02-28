@@ -13,9 +13,10 @@ autoload -Uz run-help-sudo
 autoload -Uz run-help-svk
 autoload -Uz run-help-svn
 
-HISTFILE=~/.zsh_history
+HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
+WORDCHARS=${WORDCHARS//\/[&.;]}         # Don't consider certain characters part of the word
 
 setopt NO_BG_NICE                       # don't nice background tasks
 setopt NO_HUP
@@ -60,12 +61,6 @@ setopt complete_aliases
 setopt AUTO_CD # No cd needed to change directories
 
 zle -N newtab
-
-HISTFILE=~/.zhistory
-HISTSIZE=10000
-SAVEHIST=5000
-WORDCHARS=${WORDCHARS//\/[&.;]}         # Don't consider certain characters part of the word
-
 
 ## Keybindings section
 bindkey -e
@@ -136,7 +131,7 @@ bindkey '^[[Z' undo                               # Shift+tab undo last action
 # Theming section
 # autoload -U compinit colors zcalc
 # compinit -d
-# colors
+autoload -U colors && colors
 
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'

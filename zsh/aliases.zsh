@@ -163,7 +163,7 @@ alias txa='tmux a -t'
 
 #======================================== ZSH
 alias reload!='. ~/.zshrc'
-test_colors() {
+color_test() {
   for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 }
 

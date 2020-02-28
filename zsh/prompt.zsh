@@ -1,20 +1,9 @@
-# Fallback PROMPT
+# Left prompt
+# PROMPT="%B[%F{004}%n%f@%F{010}%m%f %F{015}%1~%f] %(?.%F{cyan}.%F{red})%(!.#.>>>)%f%b "
+PROMPT="%B[%{$fg[004]%}%n%{$reset_color%}@%{$fg[010]%}%m%{$reset_color%} %{$fg[015]%}%1~%{$reset_color%}] %(?.%{$fg[cyan]%}.%{$fg[red]%})%(!.#.>>>)%{$reset_color%}%b "
 
-# vcs
-zstyle ':vcs_info:*' enable git
-precmd() {
-    vcs_info
-}
-
-# Prompt (on left side) similar to default bash prompt, or redhat zsh prompt with colors
- #PROMPT="%(!.%{$fg[red]%}[%n@%m %1~]%{$reset_color%}# .%{$fg[green]%}[%n@%m %1~]%{$reset_color%}$ "
-# Maia prompt
-PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
-
-## Prompt on right side:
-#  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
-#  - shows exit status of previous command (if previous command finished with an error)
-#  - is invisible, if neither is the case
+# Right prompt
+ZLE_RPROMPT_INDENT=0 # solution to cursor shifting https://superuser.com/questions/655607/removing-the-useless-space-at-the-end-of-the-right-prompt-of-zsh-rprompt
 
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"                              # plus/minus     - clean repo
@@ -74,100 +63,34 @@ git_prompt_string() {
   local git_where="$(parse_git_branch)"
 
   # If inside a Git repository, print its branch and state
+  # [ -n "$git_where" ] && echo "%(?..%F{red}X%f) $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
   [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
-
-  # If not inside the Git repo, print exit codes of last command (only if it failed)
-  [ ! -n "$git_where" ] && echo "%{$fg[red]%} %(?..[%?])"
 }
 
-# Right prompt with exit status of previous command if not successful
- #RPROMPT="%{$fg[red]%} %(?..[%?])"
-# Right prompt with exit status of previous command marked with ✓ or ✗
- #RPROMPT="%(?.%{$fg[green]%}✓ %{$reset_color%}.%{$fg[red]%}✗ %{$reset_color%})"
-
-zstyle ':vcs_info:git*'           formats "$(parse_git_dirty)[%b] %F{green}%c%f %F{yellow}%u%f"
+zstyle ':vcs_info:*' enable git
+# zstyle ':vcs_info:git*'           formats "$(parse_git_dirty)[%b] %F{green}%c%f %F{yellow}%u%f"
+zstyle ':vcs_info:git*'           formats "$(parse_git_dirty)"
 zstyle ':vcs_info:*'              check-for-changes true
-# zstyle ':vcs_info:*:prompt:*'     check-for-changes true
-# zstyle ':vcs_info:*:prompt:*'     stagedstr         "%{$fg[green]%}*%{$reset_color%}"
-# zstyle ':vcs_info:*:prompt:*'     unstagedstr       "%{$fg[red]%}*%{$reset_color%}"
-# zstyle ':vcs_info:*:prompt:*'     branchformat      "%r"
-# zstyle ':vcs_info:*:prompt:*'     formats           "%u%c%{$fg[green]%}[%b]%{$reset_color%}"
-# zstyle ':vcs_info:*:prompt:*'     nvcsformats       ""
-
-# exit code
-function check_last_exit_code() {
-  local LAST_EXIT_CODE=$?
-  if [[ $LAST_EXIT_CODE -ne 0 ]]; then
-    local EXIT_CODE_PROMPT=%F{red}$LAST_EXIT_CODE%f
-    echo "$EXIT_CODE_PROMPT"
-  fi
-}
-
-setopt prompt_subst
-
-# if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then
-#   p_host='%F{yellow}%M%f'
-# else
-#   p_host='%F{green}%M%f'
-# fi
-#
-# PS1=${(j::Q)${(Z:Cn:):-$'
-#   %(!.%F{red}%n%f.%F{white}%n%f)
-#   @
-#   %F{cyan}%m%f
-#   ":"
-#   %2~
-#   " "
-#   %(!.%F{red}%#%f.%F{green}\$%f)
-#   " "
-# '}}
-#
-# PS2=$'%_>'
-# # RPROMPT=$'${vcs_info_msg_0_} %(?0..%F{red}%?%f)'
-# RPROMPT=$'${vcs_info_msg_0_} ${check_last_exit_code}'
-# if [ $OS = "Darwin" ]
-# then
-#   PS1=${(j::Q)${(Z:Cn:):-$'
-#     %(!.%F{red}%n%f.%F{white}%n%f)
-#     @
-#     %F{cyan}%m%f
-#     ":"
-#     %2~
-#     " "
-#     %(!.%F{red}%%f.%F{green}\%f)
-#     %F{green}%f
-#   '}}
-# fi
+zstyle ':vcs_info:*:prompt:*'     check-for-changes true
+zstyle ':vcs_info:*:prompt:*'     stagedstr         "%{$fg[green]%}*%{$reset_color%}"
+zstyle ':vcs_info:*:prompt:*'     unstagedstr       "%{$fg[red]%}*%{$reset_color%}"
+zstyle ':vcs_info:*:prompt:*'     branchformat      "%r"
+zstyle ':vcs_info:*:prompt:*'     formats           "%u%c%{$fg[green]%}[%b]%{$reset_color%}"
+zstyle ':vcs_info:*:prompt:*'     nvcsformats       ""
+# vcs
+precmd()          { vcs_info }
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
 
 # Apply different settigns for different terminals
 case $(basename "$(cat "/proc/$PPID/comm")") in
   login)
-    RPROMPT="%{$fg[red]%} %(?..[%?])"
-    alias x='startx ~/.xinitrc'      # Type name of desired desktop after x, xinitrc is configured for it
+    RPROMPT="$(git_prompt_string)"
     ;;
 #  'tmux: server')
 #        RPROMPT='$(git_prompt_string)'
-# ## Base16 Shell color themes.
-# #possible themes: 3024, apathy, ashes, atelierdune, atelierforest, atelierhearth,
-# #atelierseaside, bespin, brewer, chalk, codeschool, colors, default, eighties,
-# #embers, flat, google, grayscale, greenscreen, harmonic16, isotope, londontube,
-# #marrakesh, mocha, monokai, ocean, paraiso, pop (dark only), railscasts, shapesifter,
-# #solarized, summerfruit, tomorrow, twilight
-# #theme="eighties"
-# #Possible variants: dark and light
-# #shade="dark"
-# #BASE16_SHELL="/usr/share/zsh/scripts/base16-shell/base16-$theme.$shade.sh"
-# #[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-# # Use autosuggestion
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-#   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 #     ;;
   *)
     RPROMPT='$(git_prompt_string)'
-    # Use autosuggestion
-    # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-    ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
     ;;
 esac

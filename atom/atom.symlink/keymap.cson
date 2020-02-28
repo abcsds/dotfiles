@@ -5,8 +5,10 @@
 '.platform-darwin .tree-view':
   'cmd-shift-o': 'tree-view:show-in-file-manager'
 
-'.platform-linux':
+'.platform-linux atom-workspace atom-text-editor:not([mini])':
   'ctrl-alt-s': 'sort-words:sort-case-insensitive'
+  'ctrl-shift-l': 'editor:split-selections-into-lines'
+  'ctrl-shift-j': 'grammar-selector:show'
 
 '.platform-win32 atom-workspace atom-text-editor:not([mini])':
   'ctrl-alt-down': 'editor:add-selection-below'
