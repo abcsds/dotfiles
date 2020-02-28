@@ -1,6 +1,6 @@
 # Left prompt
-# PROMPT="%B[%F{004}%n%f@%F{010}%m%f %F{015}%1~%f] %(?.%F{cyan}.%F{red})%(!.#.>>>)%f%b "
-PROMPT="%B[%{$fg[004]%}%n%{$reset_color%}@%{$fg[010]%}%m%{$reset_color%} %{$fg[015]%}%1~%{$reset_color%}] %(?.%{$fg[cyan]%}.%{$fg[red]%})%(!.#.>>>)%{$reset_color%}%b "
+PROMPT="%B[%F{004}%n%f@%F{010}%m%f %F{015}%1~%f] %(?.%F{cyan}.%F{red})%(!.#.>>>)%f%b "
+# PROMPT="%B[%{$fg[004]%}%n%{$reset_color%}@%{$fg[010]%}%m%{$reset_color%} %{$fg[015]%}%1~%{$reset_color%}] %(?.%{$fg[cyan]%}.%{$fg[red]%})%(!.#.>>>)%{$reset_color%}%b "
 
 # Right prompt
 ZLE_RPROMPT_INDENT=0 # solution to cursor shifting https://superuser.com/questions/655607/removing-the-useless-space-at-the-end-of-the-right-prompt-of-zsh-rprompt
