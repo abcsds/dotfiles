@@ -1,13 +1,7 @@
-atom/atom.symlink/.apm
-atom/atom.symlink/.node-gyp
-atom/atom.symlink/.storage
-atom/atom.symlink/blob-store
-atom/atom.symlink/compile-cache/
-atom/atom.symlink/nohup.out
-atom/atom.symlink/packages
-atom/atom.symlink/recovery
-atom/atom.symlink/split-diff
-atom/atom.symlink/storage
+atom/atom.symlink/*
+!atom/atom.symlink/config.cson
+!atom/atom.symlink/keymap.cson
+!atom/atom.symlink/snippets.cson
 
 config/config.symlink/*
 !config/config.symlink/10-symbols.conf
@@ -31,6 +25,14 @@ python/virtualenvs.symlink/*
 !python/virtualenvs.symlink/premkvirtualenv
 !python/virtualenvs.symlink/prermvirtualenv
 
+themes.symlink/*
+!themes.symlink/Solarized Dark Higher Contrast.itermcolors
+!themes.symlink/Solarized Dark.itermcolors
+!themes.symlink/Solarized Light.itermcolors
+!themes.symlink/Solarized Dark Higher Contrast.terminal
+!themes.symlink/Solarized Dark.terminal
+
+
 vim/vim.symlink/bundle
 vim/vim.symlink/sessions
 
@@ -41,16 +43,6 @@ zsh/localrc.symlink
 zsh/ant_plugins.sh
 
 python/get-pip.py
-
-antigen/antigen.symlink
-
-elinks/elinks.symlink/cookies
-elinks/elinks.symlink/globhist
-elinks/elinks.symlink/gotohist
-
-haskell/cabal.symlink/logs
-haskell/cabal.symlink/setup*
-haskell/cabal.symlink/where-is-my-stuff.txt
 
 ruby/rbenv.symlink/shims
 ruby/rbenv.symlink/versions
