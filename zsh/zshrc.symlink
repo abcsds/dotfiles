@@ -17,7 +17,7 @@ esac
 export OS="$(uname -s)"
 
 # Set the projects folder
-export PROJECTS_FOLDER=~/github
+export PROJECTS_FOLDER=~/code
 
 # Set Default Editor
 export EDITOR=vim

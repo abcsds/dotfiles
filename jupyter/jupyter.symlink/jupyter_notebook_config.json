@@ -2,7 +2,7 @@
   "NotebookApp": {
     "nbserver_extensions": {
       "jupyter_nbextensions_configurator": true,
-      "jupyter_tensorboard": false
+      "jupyter_tensorboard": true
     }
   }
 }
