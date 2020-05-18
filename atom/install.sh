@@ -32,15 +32,18 @@ apm install language-matlab
 apm install language-r
 # apm install language-vhdl
 apm install language-viml
-# apm install latex
+apm install latex
 apm install latex-autocomplete
-apm install latex-plus
+apm install latex-hyperclick
+# apm install latex-plus
 # apm install latextools
 apm install linter
+apm install linter-chktex
 apm install linter-flake8
 apm install linter-julia
 apm install linter-ui-default
 # apm install markdown-preview-plus
+apm install markdown-scroll-sync
 apm install material-syntax
 # apm install merge-conflicts
 # apm install pdf-view

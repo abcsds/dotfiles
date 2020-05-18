@@ -19,6 +19,7 @@ else
 fi
 if [[ $OS == "Linux" ]]; then
   alias ls="ls --color=auto"
+  alias open="xdg-open"
 fi
 
 # Move arround

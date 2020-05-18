@@ -7,6 +7,16 @@ VIRTUALENVWRAPPER_PYTHON=python3
 source virtualenvwrapper.sh
 
 export PATH="$PATH:/$HOME/.dotfiles/bin"
+
+# Xkb settings
 export XKB_DEFAULT_LAYOUT=us;
 export XKB_DEFAULT_VARIANT=dvorak-alt-intl;
 export XKB_DEFAULT_MODEL=pc101;
+
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+
+# Added by a script
