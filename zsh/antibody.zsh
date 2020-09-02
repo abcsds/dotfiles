@@ -13,11 +13,11 @@ if [[ $DISTRO == "Arch" ]]; then
 elif [[ $DISTRO == "Manjaro" ]]; then
   # echo "Antibody for Manjaro"
   if ! type antibody > /dev/null; then
-    if ! type yay > /dev/null; then
-      echo "ERROR: yay not installed"
+    if ! type pamac > /dev/null; then
+      echo "ERROR: pamac not installed"
       exit 1
     else
-      yay -S antibody
+      pamac build antibody
     fi
   fi
 fi
