@@ -53,9 +53,9 @@
   shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
 
   # pull
-  pl = pull                         # pull
-  pullall = pull --recurse-submodules # pull submodules too
-  plr = pull --rebase               # rebase instead of merge
+  pl      = pull                         # pull
+  pullall = pull --recurse-submodules    # pull submodules too
+  plr     = pull --rebase                # rebase instead of merge
 
   # push
   ps = push                         # push
@@ -109,7 +109,7 @@
   ui     = true
 [core]
   excludesfile = ~/.gitignore
-  editor       = nvim
+  editor       = atom
 [apply]
   whitespace = nowarn
 [merge]
@@ -126,6 +126,8 @@
   prompt = false
 [help]
   autocorrect = 1
+[pull]
+  rebase true # don't merge on public repos
 [push]
   # See `git help config` (search for push.default)
   # for more information on different options of the below setting.
