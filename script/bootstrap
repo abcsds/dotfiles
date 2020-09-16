@@ -218,7 +218,7 @@ install_homebrew
 install_fonts
 # install_npm
 install_python
-# install_apm
+install_apm
 
 # Install submodules
 git submodule init
