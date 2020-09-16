@@ -4,17 +4,17 @@
 # shortcut to this dotfiles path is $DZSH
 export DZSH=$HOME/.dotfiles
 
+# Check the OS
+export OS="$(uname -s)"
+
 # Linux distro being used
-export DISTRO=$(cat /etc/issue | awk '{print $1}')
+[[ "$OS" == 'Linux' ]] && export DISTRO=$(cat /etc/issue | awk '{print $1}')
 
 # Check if in vconsole
 case $(tty) in
   (/dev/tty[1-9]) export CONSOLE='virtual';;
               (*) export CONSOLE='terminal';;
 esac
-
-# Check the OS
-export OS="$(uname -s)"
 
 # Set the projects folder
 export PROJECTS_FOLDER=~/code
