@@ -28,10 +28,6 @@ arjen-gray-theme
   :config
   (use-theme 'arjen-gray t))
 
-(if (eq system-type 'darwin)
-  (set-face-atribute 'default nil :font "Powerline")
-  (set-face-atribute 'default nil :font "SomeFont" :height 160))
-
 all-the-icons
 (use-package all-the-icons
   :ensure t)
@@ -80,7 +76,7 @@ SPC t w
   ;; (global-set-key (kbd "S-s-<right>") 'mark-to-beginning-of-line)
   ;; 'evil-visual-line 'evil-first-non-blank
   ;; (global-set-key (kbd "S-s-<up>") 'mark-to-beginning-of-buffer)
-  ;; 'evil-visual-line 'evil-goto-first-line 
+  ;; 'evil-visual-line 'evil-goto-first-line
   ;; (global-set-key (kbd "S-s-<down>") 'mark-to-end-of-buffer)
   ;; 'evil-visual-line 'evil-goto-line
   ;; (global-set-key (kbd "s-<backspace>") 'errase-to-beginning-of-line)
@@ -89,5 +85,5 @@ SPC t w
 auto-indent to visual and tab
 select and tab to add indentation
 select shift and tab to remove indentation
-shift-backspace 
+shift-backspace
 add all this to osx layer

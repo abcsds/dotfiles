@@ -10,17 +10,10 @@ My dotfiles made by taking my favorite settings from the dotfiles of some of the
 - Several other places around the web. I'll try to keep some documentation for specific sources in the folder corresponding to every subject or app.
 
 ## Dotfiles
-
-Dotfiles are the configuration files that define how you personalize your system. Cloning these can get you up and running in a new system within minutes.
-
 I chose [Zach Holman's dotfiles](https://github.com/holman/dotfiles) as the base of this repo for its great bootstrap script and it's topical configuration. Where if you want to add a specific topic for configuration you can simply add a topic directory and put
 files in there. Anything with an extension of `.zsh` will get automatically
 included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
-
-If you're interested in the philosophy behind why projects like these are
-awesome, you might want to [read Zach Holman's post on the
-subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). I also encourage you to check out his [original work]((https://github.com/holman/dotfiles/issues)
 
 ## Requirements
 
@@ -60,11 +53,3 @@ There's a few special files in the hierarchy. For preformance reasons, all files
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
-
-## Bugs
-
-If you like this dotfiles but run into any trouble, you can [open an issue](https://github.com/abcsds/dotfiles/issues).
-
-## License
-
-All work here is licensed under the MIT license, you can read more on the `LICENCE.md` file.

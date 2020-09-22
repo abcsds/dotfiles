@@ -1,3 +1,4 @@
+import Pkg
 Pkg.update()
 # Pkg.add("ASCIIPlots")
 # Pkg.add("AWS")
@@ -96,7 +97,6 @@ Pkg.add("GitHub")
 # Pkg.add("Hexagons")
 # Pkg.add("Hiccup")
 # Pkg.add("HiddenMarkovModels")
-# Pkg.add("Homebrew")
 # Pkg.add("HttpCommon")
 # Pkg.add("HttpParser")
 # Pkg.add("HttpServer")

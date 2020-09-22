@@ -1,6 +1,7 @@
 vim
 python
 pacman-contrib
+pamac-cli
 zsh
 python-pip
 openssh

@@ -1,4 +1,5 @@
 pacman-contrib
+pamac-cli
 zsh
 git
 curl

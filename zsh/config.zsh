@@ -142,12 +142,3 @@ export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-r
-
-function greeting () {
-  if ! type neofetch  > /dev/null ; then
-    # Print a greeting message when shell is started
-    echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
-  else
-    neofetch
-  fi
-}

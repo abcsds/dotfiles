@@ -16,9 +16,10 @@ esac
 # Check the OS
 export OS="$(uname -s)"
 # Set the projects folder
-export PROJECTS_FOLDER=~/github
+export PROJECTS_FOLDER=~/code
 # Set Default Editor
 export EDITOR=vim
+export VISUAL=atom
 # Set 256 color term
 export TERM="xterm-256color"
 
@@ -50,9 +51,6 @@ setup_gitconfig () {
     info 'setup gitconfig'
 
     git_credential='cache'
-    if [[ $OS == "Darwin" ]]; then
-      git_credential='osxkeychain'
-    fi
 
     user ' - What is your github author name?'
     read -e git_authorname
@@ -152,17 +150,6 @@ install_dotfiles () {
   done
 }
 
-install_homebrew () {
-  # Setup homebrew.
-  info "installing OSX dependencies \n"
-  if source bin/dot
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-}
-
 install_fonts () {
   # TODO: Linux - don't download if it exists
   # Download to symlinked folder
@@ -179,15 +166,6 @@ install_fonts () {
       # Install fonts under linux
       fc-cache -fv ~/.fonts
     fi
-  fi
-}
-
-install_npm () {
-  # Install npm packages
-  if ! type npm  > /dev/null ; then
-    info "Please install node manualy\n"
-  else
-    source $DOTFILES_ROOT/npm/install.sh
   fi
 }
 
@@ -213,10 +191,8 @@ install_apm () {
 setup_gitconfig
 setup_folder
 install_dotfiles
-install_homebrew
 
 install_fonts
-# install_npm
 install_python
 install_apm
 

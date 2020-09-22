@@ -45,6 +45,10 @@
     ]
   "linter-ui-default":
     panelHeight: 292
+  "spell-check":
+    locales: [
+      "en-US"
+    ]
   "status-bar": {}
   "tool-bar":
     position: "Left"

@@ -47,14 +47,27 @@ alias k='clear'
 alias cls='clear'
 alias edit="$EDITOR"
 alias e="$EDITOR"
-# alias q='exit'
+alias q='exit'
+
+function greeting () {
+  if ! type neofetch  > /dev/null ; then
+    # Print a greeting message when shell is started
+    echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
+  else
+    neofetch
+  fi
+}
+
 # Disks
 alias df='df -h'      # Human-readable sizes
 alias free='free -m'  # Show sizes in MB
+# Python
 alias py='python'
 alias pipdate="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
+# Julia
 alias jl='julia'
-alias jlup='julia -e "Pkg.update()"'
+alias jlup='julia -e "import Pkg; Pkg.update()"'
+alias pluto'julia -e "import Pluto; Pluto.run()"'
 
 which gshuf &> /dev/null
 if [ $? -eq 0 ]; then
@@ -166,8 +179,3 @@ alias reload!='. ~/.zshrc'
 color_test() {
   for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 }
-
-#======================================== MacOS
-if [[ $OS == "Darwin" ]]; then
-  source $DZSH/zsh/mac.zsh
-fi

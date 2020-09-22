@@ -115,15 +115,6 @@ function pcurl ()
     curl "${1}" | open -f -a $PREVIEW
 }
 
-function pri ()
-{
-    # about 'display information about Ruby classes, modules, or methods, in Preview'
-    # param '1: Ruby method, module, or class'
-    # example '$ pri Array'
-    # group 'base'
-    ri -T "${1}" | open -f -a $PREVIEW
-}
-
 function quiet ()
 {
     # about 'what *does* this do?'
@@ -131,50 +122,17 @@ function quiet ()
     $* &> /dev/null &
 }
 
-function banish-cookies ()
-{
-    # about 'redirect .adobe and .macromedia files to /dev/null'
-    # group 'base'
-    rm -r ~/.macromedia ~/.adobe
-    ln -s /dev/null ~/.adobe
-    ln -s /dev/null ~/.macromedia
-}
-
 function usage ()
 {
-    # about 'disk usage per directory, in Mac OS X and Linux'
+    # about 'disk usage per directory'
     # param '1: directory name'
     # group 'base'
-    if [ $(uname) = "Darwin" ]; then
-        if [ -n $1 ]; then
-            du -hd $1
-        else
-            du -hd 1
-        fi
-
-    elif [ $(uname) = "Linux" ]; then
-        if [ -n $1 ]; then
-            du -h --max-depth=1 $1
-        else
-            du -h --max-depth=1
-        fi
+    if [ -n $1 ]; then
+        du -h --max-depth=1 $1
+    else
+        du -h --max-depth=1
     fi
 }
-
-if [ ! -e $BASH_IT/plugins/enabled/todo.plugin.bash ]; then
-# if user has installed todo plugin, skip this...
-    function t ()
-    {
-        about 'one thing todo'
-        param 'if not set, display todo item'
-        param '1: todo text'
-        if [[ "$*" == "" ]] ; then
-            cat ~/.t
-        else
-            echo "$*" > ~/.t
-        fi
-    }
-fi
 
 function command_exists ()
 {

@@ -72,9 +72,5 @@ startup(){
   xrandr --output eDP1 --scale .75x.75
 }
 
-if [[ $OS == "Linux" ]]; then
-  exec $(get_session)
-  exec $(startup)
-elif [[ $OS == "Darwin" ]]; then
-  xterm
-fi
+exec $(get_session)
+exec $(startup)
