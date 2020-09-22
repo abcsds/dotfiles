@@ -58,6 +58,9 @@ source $DZSH/zsh/antibody.zsh
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 
+# Uncomment the following line to use case-sensitive completion.
+CASE_SENSITIVE="false"
+
 greeting
 
 if [[ -n "$BENCHMARK" ]]; then

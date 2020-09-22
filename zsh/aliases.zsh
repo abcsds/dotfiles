@@ -93,6 +93,18 @@ ff () { /usr/bin/find . -name "$@" ; } # ff: Find file under the current directo
 ffs () { /usr/bin/find . -name "$@"'*' ; } # ffs: Find file whose name starts with a given string
 ffe () { /usr/bin/find . -name '*'"$@" ; } # ffe: Find file whose name ends with a given string
 
+# Find a git repository by url
+function gfind () {
+  pushd;
+  for d in `find / -name ".git"`; do
+    cd $d/..;
+    URL=$(git config --get remote.origin.url);
+    [[ $1 == $URL ]] && echo `pwd`:;
+    echo;
+  done;
+  popd;
+}
+
 
 # findPid: find out the pid of a specified process
 # -----------------------------------------------------

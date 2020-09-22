@@ -29,7 +29,7 @@ apm install language-latex
 apm install language-matlab
 # apm install language-pfm
 # apm install language-prolog
-apm install language-r
+# apm install language-r
 # apm install language-vhdl
 apm install language-viml
 apm install latex

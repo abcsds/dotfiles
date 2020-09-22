@@ -3,6 +3,11 @@ atom/atom.symlink/*
 !atom/atom.symlink/keymap.cson
 !atom/atom.symlink/snippets.cson
 
+fonts/fonts.symlink/.uuid
+fonts/fonts.symlink/fonts.dir
+
+julia/julia.symlink
+
 python/virtualenvs.symlink/*
 !python/virtualenvs.symlink/get_env_details
 !python/virtualenvs.symlink/initialize

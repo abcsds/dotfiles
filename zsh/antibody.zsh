@@ -2,11 +2,11 @@
 if [[ $DISTRO == "Arch" ]]; then
   # echo "Antibody for Arch"
   if ! type antibody > /dev/null; then
-    if ! type yay > /dev/null; then
-      echo "ERROR: yay not installed"
+    if ! type pamac > /dev/null; then
+      echo "ERROR: pamac not installed"
       exit 1
     else
-      yay -S antibody
+      pamac build antibody
     fi
   fi
 
