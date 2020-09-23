@@ -38,6 +38,6 @@ apm install pigments
 apm install python-tools
 apm install python-black
 apm install set-syntax
-apm install sort-words
+apm install sort-lines
 apm install split-diff
 apm install zotero-picker

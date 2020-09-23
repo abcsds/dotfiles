@@ -5,7 +5,7 @@ just some notes for myself.
  - Get all shell functions to one folder
  - Consolidate binaries in the bin folder
  - Consolidate installation of software
- - What to do with config folder?
+ - What to do with config folder?: `filename.conflink` should be linked to `~/.config/filename` maybe?
  - pamac installations (see software list down on this document)
  - gif from image sequence function
 

@@ -1,5 +1,5 @@
 [flake8]
-  max-line-length = 80
+  max-line-length = 88
   # it's not a bug that we aren't using all of hacking, ignore:
   # F812: list comprehension redefines ...
   # H101: Use TODO(NAME)
@@ -15,3 +15,4 @@
   # E221: Whitespace before operator
   # E203: Whitespace before :
   ignore = E221, E203
+  extend-ignore = E203, W503
