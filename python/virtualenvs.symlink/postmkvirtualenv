@@ -1,3 +1,5 @@
 #!/usr/local/bin/zsh
 # This hook is sourced after a new virtualenv is activated.
-
+python -m pip install --upgrade pip
+python -m pip install 'python-language-server[all]'
+python -m pip install ipython ipykernel

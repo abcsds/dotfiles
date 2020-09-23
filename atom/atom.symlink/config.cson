@@ -5,13 +5,6 @@
     useKite: false
   core:
     disabledPackages: [
-      "linter-julia"
-      "relative-numbers"
-      "Parinfer"
-      "proto-repl"
-      "linter-clojure"
-      "python-yapf"
-      "linter-markdown"
       "environment"
       "metrics"
     ]
@@ -26,8 +19,6 @@
     softWrap: true
     softWrapAtPreferredLineLength: true
     tabType: "soft"
-  "exception-reporting":
-    userId: "7f870440-db64-4aa1-a1df-2085387ed9f6"
   "julia-client":
     consoleOptions: {}
     firstBoot: false
@@ -35,8 +26,6 @@
     uiOptions:
       enableMenu: true
       enableToolBar: true
-  "latex-plus":
-    texBin: "/Library/TeX/texbin/tex"
   "linter-flake8":
     ignoreErrorCodes: [
       "E501"
@@ -58,11 +47,6 @@
     disable: true
   welcome:
     showOnStartup: false
-  zentabs:
-    maximumOpenedTabs: 10
-    neverCloseUnsaved: true
 ".python.source":
   editor:
     tabType: "soft"
-"tree-view":
-  hideVcsIgnoredFiles: false
