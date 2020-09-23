@@ -88,6 +88,9 @@
   # tag
   t = tag -n                        # show tags with <n> lines of each tag message
 
+  # submodules
+  sup = submodule update --recursive --jobs 8 --remote --merge
+
   # svn helpers
   svnr = svn rebase
   svnd = svn dcommit
