@@ -2,9 +2,10 @@
 just some notes for myself.
 
  - update all aliases and git-aliases
- - Get all functions to one folder
+ - Get all shell functions to one folder
  - Consolidate binaries in the bin folder
- - Consolidate installation
+ - Consolidate installation of software
+ - What to do with config folder?
  - pamac installations (see software list down on this document)
  - gif from image sequence function
 
@@ -17,14 +18,9 @@ sudo gem update
 cd ~/.dotfiles && git sup
 
 
-Checkout:
-https://github.com/zplug/zplug
-https://github.com/alebcay/awesome-shell
-https://github.com/gabrielelana/awesome-terminal-fonts
-git-extras
-
 To enable tor systemwise:
  set `networksetup -setsocksfirewallproxy` when starting tor and disable it when stopped. For CLI `export http_proxy=http://127.0.0.1:9050`
+ This works on mac, how to make it work on arch? systemd?
 
 
 Software

@@ -1,8 +1,6 @@
 apm install atom-beautify
 apm install autocomplete-bibtex
 apm install autocomplete-python
-apm install city-lights-syntax
-apm install city-lights-ui
 apm install color-picker
 # apm install figlet
 apm install file-icons
@@ -30,11 +28,10 @@ apm install linter-chktex
 apm install linter-flake8
 apm install linter-julia
 apm install linter-ui-default
-# apm install markdown-preview-plus
+apm install markdown-preview-plus
 apm install markdown-scroll-sync
 apm install material-syntax
-# apm install merge-conflicts
-# apm install pdf-view
+apm install pdf-view-plus
 # apm install pandoc-convert
 apm install pigments
 # apm install proton
