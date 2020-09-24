@@ -182,6 +182,10 @@ function lallcommits() {
     done
 }
 
+#======================================== Pandoc
+
+alias panmd='pandoc --from markdown --template eisvogel --listings'
+
 #======================================== Tmux
 alias txl='tmux ls'
 alias txn='tmux new -s'
