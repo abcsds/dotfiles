@@ -1,5 +1,9 @@
+autopep8
+black
 coursera-dl
 flake8
+ipykernel
+ipython
 jupyter
 jupyter-console
 matplotlib
@@ -10,6 +14,7 @@ pandas
 Pillow
 PsychoPy
 Pygments
+pylint
 python-telegram-bot
 scikit-learn
 scipy
