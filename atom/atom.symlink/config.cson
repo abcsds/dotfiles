@@ -7,25 +7,30 @@
     disabledPackages: [
       "environment"
       "metrics"
+      "ink"
+      "julia-client"
+      "uber-juno"
+      "latex-plus"
     ]
     telemetryConsent: "no"
     titleBar: "custom"
   editor:
     fontSize: 15
+    softWrap: true
+    softWrapAtPreferredLineLength: true
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
-    softWrap: true
-    softWrapAtPreferredLineLength: true
     tabType: "soft"
-  "julia-client":
-    consoleOptions: {}
-    firstBoot: false
-    juliaOptions: {}
-    uiOptions:
-      enableMenu: true
-      enableToolBar: true
+  latex:
+    opener: "pdf-view"
+    outputDirectory: "aux"
+  "latex-plus":
+    advancedEnabled: true
+    projectDefaults:
+      postCompileAction: "copy"
+    texBin: "/usr/bin/tex"
   "linter-flake8":
     ignoreErrorCodes: [
       "E501"
@@ -38,13 +43,8 @@
     locales: [
       "en-US"
     ]
-  "status-bar": {}
-  "tool-bar":
-    position: "Left"
   "tree-view":
     hideVcsIgnoredFiles: false
-  "uber-juno":
-    disable: true
   welcome:
     showOnStartup: false
 ".python.source":
