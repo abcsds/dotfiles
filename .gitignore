@@ -8,6 +8,9 @@ fonts/fonts.symlink/fonts.dir
 
 julia/julia.symlink
 
+ruby/gems.symlink
+themes.symlink
+
 python/virtualenvs.symlink/*
 !python/virtualenvs.symlink/get_env_details
 !python/virtualenvs.symlink/initialize
