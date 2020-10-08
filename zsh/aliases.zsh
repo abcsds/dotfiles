@@ -68,7 +68,7 @@ alias pipdate="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 
 # Julia
 alias jl='julia'
 alias jlup='julia -e "import Pkg; Pkg.update()"'
-alias pluto'julia -e "import Pluto; Pluto.run()"'
+alias pluto='julia -e "import Pluto; Pluto.run()"'
 
 which gshuf &> /dev/null
 if [ $? -eq 0 ]; then
