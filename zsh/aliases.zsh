@@ -191,6 +191,9 @@ alias txl='tmux ls'
 alias txn='tmux new -s'
 alias txa='tmux a -t'
 
+#======================================== LaTeX
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+
 #======================================== ZSH
 alias reload!='. ~/.zshrc'
 color_test() {
