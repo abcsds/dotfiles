@@ -116,7 +116,7 @@ install_dotfiles () {
 
 install_dotfiles
 
-# Install spacevim
+# Run nvim for the first time
 nvim --startuptime /dev/stdout -c quit
 
 echo ''

@@ -140,6 +140,7 @@ function a () {
 
 alias apmup='apm update --no-confirm'
 alias editHosts='sudo edit /etc/hosts' # editHosts: Edit /etc/hosts file
+alias vim='nvim'
 
 #======================================== Git
 # Use `hub` as our git wrapper:
@@ -162,7 +163,7 @@ alias gd='git diff'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
-alias gdv='git diff -w "$@" | vim -R -'
+alias gdv='git diff -w "$@" | nvim -R -'
 alias gcount='git shortlog -sn'
 alias gexport='git archive --format zip --output'
 

@@ -1,4 +1,4 @@
-vim
+neovim
 python
 pacman-contrib
 pamac-cli

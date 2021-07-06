@@ -24,24 +24,20 @@ To enable tor systemwise:
 
 
 Software
-A list of software I sometimes use, but don't install automatically.
-- zsh
+A list of software I sometimes use, but should re-check every once in a while
 - zshdb
 - wget
 - curl
-- vim
+- nvim
 - emacs
 - tmux
 - exa
 - netcat
 - nmap
 - proxychains
-- snort
 - tor
-- wireshark
 - htop
 - iftop
-- nethack
 - ntopng
 - pandoc
 - pandoc-citeproc

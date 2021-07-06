@@ -20,7 +20,7 @@ esac
 export PROJECTS_FOLDER=~/code
 
 # Set Default Editor
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL=atom
 
 # Set 256 color term

@@ -9,5 +9,5 @@ pamac-cli
 python
 python-pip
 tmux
-vim
+neovim
 zsh

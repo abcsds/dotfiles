@@ -1,5 +1,6 @@
-# OSX       taken from: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
-# ----------------------------------------------------------------------------------------------
+# OSX
+# from: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+# ------------------------------------------------------------------------------
 .DS_Store
 # Thumbnails
 ._*
@@ -7,32 +8,17 @@
 .Spotlight-V100
 .Trashes
 
-# Windows   taken from: https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
-# ----------------------------------------------------------------------------------------------
+# Windows
+# from: https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
+# ------------------------------------------------------------------------------
 # Windows image file caches
 Thumbs.db
-
 # Folder config file
 Desktop.ini
 
-# Tags      taken from: https://github.com/github/gitignore/blob/master/Global/Tags.gitignore
-# ----------------------------------------------------------------------------------------------
-# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
-TAGS
-!TAGS/
-tags
-!tags/
-gtags.files
-GTAGS
-GRTAGS
-GPATH
-cscope.files
-cscope.out
-cscope.in.out
-cscope.po.out
-
-# Vim       taken from: https://github.com/github/gitignore/blob/master/Global/vim.gitignore
-# ----------------------------------------------------------------------------------------------
+# Vim
+# from: https://github.com/github/gitignore/blob/master/Global/vim.gitignore
+# ------------------------------------------------------------------------------
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 *.un~
@@ -40,20 +26,15 @@ Session.vim
 .netrwhist
 *~
 
-# SASS
-# ----------------------------------------------------------------------------------------------
-.sass-cache
+# Dev
+# ------------------------------------------------------------------------------
 
-# Compiled Python files
+.sass-cache
 *.pyc
 
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
-
-# Automatically created by GitHub for Mac
-# To make edits, delete these initial comments, or else your changes may be lost!
-
 .DS_Store
 .AppleDouble
 .LSOverride
