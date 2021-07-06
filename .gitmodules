@@ -1,9 +1,0 @@
-[submodule "emacs/emacs.d.symlink"]
-	path = emacs/emacs.d.symlink
-	url = https://github.com/syl20bnr/spacemacs.git
-[submodule "git-webui/git-webui.symlink"]
-	path = git-webui/git-webui.symlink
-	url = https://github.com/alberthier/git-webui.git
-[submodule "vim/vim.symlink/pack/pkg/start/dein.vim"]
-	path = vim/vim.symlink/pack/pkg/start/dein.vim
-	url = https://github.com/Shougo/dein.vim

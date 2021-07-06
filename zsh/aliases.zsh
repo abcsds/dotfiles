@@ -126,6 +126,7 @@ alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP' # lsockU: Display only open UD
 alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP' # lsockT: Display only open TCP sockets
 alias openPorts='sudo lsof -i | grep LISTEN' # openPorts: All listening connections
 alias showBlocked='sudo ipfw list' # showBlocked: All ipfw rules inc/ blocked IPs
+alias ssh-hosts="grep -P \"^Host ([^*]+)$\" $HOME/.ssh/config | sed 's/Host //'"
 
 #======================================== Development
 # Atom editor
