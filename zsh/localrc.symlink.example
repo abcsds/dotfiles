@@ -3,7 +3,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # Python virtual environments
 export WORKON_HOME=$HOME/.virtualenvs
-VIRTUALENVWRAPPER_PYTHON=python3
+export VIRTUALENVWRAPPER_PYTHON=python3
 source virtualenvwrapper.sh
 
 export PATH="$PATH:/$HOME/.dotfiles/bin"
@@ -15,8 +15,6 @@ export XKB_DEFAULT_MODEL=pc101;
 
 
 # Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-
-
-# Added by a script
+export GEM_HOME="$HOME/.gems"
+export PATH="$HOME/.gems/bin:$PATH"
+export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"

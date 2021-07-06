@@ -4,6 +4,7 @@ author: [Author]
 date: 2017-02-20
 subject: "Markdown"
 tags: [Markdown, Example]
+bibliography: bibliography.bib
 ...
 
 # Vinaque sanguine metuenti cuiquam Alcyone fixus
