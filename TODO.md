@@ -15,7 +15,7 @@ just some notes for myself.
 sudo gem update —system
 sudo gem update
 ### Update dotfiles
-cd ~/.dotfiles && git sup
+cd ~/.dotfiles && git sup && git submodule update --remote --merge #?
 
 
 To enable tor systemwise:

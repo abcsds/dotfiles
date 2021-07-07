@@ -33,6 +33,7 @@ apm install markdown-scroll-sync
 apm install material-syntax
 apm install pdf-view-plus
 # apm install pandoc-convert
+apm install package-control
 apm install pigments
 # apm install proton
 apm install python-tools
