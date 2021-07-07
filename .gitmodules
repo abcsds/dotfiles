@@ -1,0 +1,3 @@
+[submodule "git-webui/git-webui.symlink"]
+	path = git-webui/git-webui.symlink
+	url = https://github.com/alberthier/git-webui
