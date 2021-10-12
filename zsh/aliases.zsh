@@ -40,6 +40,7 @@ alias cp='cp -iv' # Confirm before overwriting
 alias mv='mv -iv' # Confirm before overwriting
 alias mkdir='mkdir -pv' # Preferred 'mkdir' implementation
 mcd () { mkdir -p "$1" && cd "$1"; } # mcd: Makes new Dir and jumps inside
+
 # Shell
 alias h='history'
 alias _="sudo"
@@ -49,6 +50,9 @@ alias cls='clear'
 alias edit="$EDITOR"
 alias e="$EDITOR"
 alias q='exit'
+
+# Permissions
+alias allgroups='getent group | cut -d: -f1'
 
 function greeting () {
   if ! type neofetch  > /dev/null ; then

@@ -1,0 +1,10 @@
+[Unit]
+Description=Process the system bucket.
+
+[Service]
+Type=simple
+ExecStart=bkt
+# ExecStart=%h/.dotfiles/bin/bkt
+
+[Install]
+WantedBy=default.target

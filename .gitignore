@@ -3,6 +3,9 @@ atom/atom.symlink/*
 !atom/atom.symlink/keymap.cson
 !atom/atom.symlink/snippets.cson
 
+bkt/bkt.symlink/
+!bkt/bkt.symlink/.gitkeep
+
 fonts/fonts.symlink/.uuid
 fonts/fonts.symlink/fonts.dir
 
