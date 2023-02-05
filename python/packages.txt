@@ -16,10 +16,8 @@ PsychoPy
 Pygments
 pylint
 python-telegram-bot
-scikit-learn
 scipy
 seaborn
-sklearn
 sympy
 virtualenv
 virtualenvwrapper

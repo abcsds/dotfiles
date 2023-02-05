@@ -1,27 +1,27 @@
 # Setup plugins
-if [[ $DISTRO == "Arch" ]]; then
-  # echo "Antibody for Arch"
-  if ! type antibody > /dev/null; then
-    if ! type pamac > /dev/null; then
-      echo "ERROR: pamac not installed"
-      exit 1
-    else
-      pamac build antibody
-    fi
-  fi
-
-elif [[ $DISTRO == "Manjaro" ]]; then
-  # echo "Antibody for Manjaro"
-  if ! type antibody > /dev/null; then
-    if ! type pamac > /dev/null; then
-      echo "ERROR: pamac not installed"
-      exit 1
-    else
-      pamac build antibody
-    fi
-  fi
-fi
-
+# if [[ $DISTRO == "Arch" ]]; then
+#   # echo "Antibody for Arch"
+#   if ! type antibody > /dev/null; then
+#     if ! type pamac > /dev/null; then
+#       echo "ERROR: pamac not installed"
+#       exit 1
+#     else
+#       pamac build antibody
+#     fi
+#   fi
+# 
+# elif [[ $DISTRO == "Manjaro" ]]; then
+#   # echo "Antibody for Manjaro"
+#   if ! type antibody > /dev/null; then
+#     if ! type pamac > /dev/null; then
+#       echo "ERROR: pamac not installed"
+#       exit 1
+#     else
+#       pamac build antibody
+#     fi
+#   fi
+# fi
+# 
 # =========== Static loading (faster)
 # if [[ ! -f $DZSH/zsh/ant_plugins.sh ]]; then
 #   source <(antibody init)
