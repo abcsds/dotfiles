@@ -2,12 +2,7 @@
 
 > If I have seen further it is by standing on the shoulders of Giants.
 
-My dotfiles made by taking my favorite settings from the dotfiles of some of the best developers and communities out there:
-
-- The installation script from [Zach Holman](https://github.com/holman).
-- Most Mac OSX configurations from [Mathias Bynens](https://github.com/mathiasbynens/dotfiles).
-- Some other goodies from [thoughtbot](https://github.com/thoughtbot/dotfiles).
-- Several other places around the web. I'll try to keep some documentation for specific sources in the folder corresponding to every subject or app.
+My dotfiles
 
 ## Dotfiles
 I chose [Zach Holman's dotfiles](https://github.com/holman/dotfiles) as the base of this repo for its great bootstrap script and it's topical configuration. Where if you want to add a specific topic for configuration you can simply add a topic directory and put
