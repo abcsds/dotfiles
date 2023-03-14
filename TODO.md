@@ -4,9 +4,7 @@ just some notes for myself.
  - update all aliases and git-aliases
  - Get all shell functions to one folder
  - Consolidate binaries in the bin folder
- - Consolidate installation of software
  - What to do with config folder?: `filename.conflink` should be linked to `~/.config/filename` maybe?
- - pamac installations (see software list down on this document)
  - gif from image sequence function
 
 ## UPDATES
@@ -31,7 +29,6 @@ A list of software I sometimes use, but should re-check every once in a while
 - nvim
 - emacs
 - tmux
-- exa
 - netcat
 - nmap
 - proxychains
@@ -42,13 +39,3 @@ A list of software I sometimes use, but should re-check every once in a while
 - pandoc
 - pandoc-citeproc
 
-- atom
-- firefox
-- julia
-- telegram
-- calibre
-- inkscape
-- krita
-- minecraft
-- steam
-- vlc

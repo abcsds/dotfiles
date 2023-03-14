@@ -1,4 +1,3 @@
-atom
 base-devel
 curl
 firefox
