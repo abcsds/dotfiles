@@ -121,16 +121,16 @@ alias showBlocked='sudo ipfw list' # showBlocked: All ipfw rules inc/ blocked IP
 alias ssh-hosts="grep -P \"^Host ([^*]+)$\" $HOME/.ssh/config | sed 's/Host //'"
 
 #======================================== Development
-# Atom editor
-function a () {
-  if [[ -n $1 ]]; then
-    atom "$1"
-  else
-    atom .
-  fi
-}
+# # Atom editor
+# function a () {
+#   if [[ -n $1 ]]; then
+#     atom "$1"
+#   else
+#     atom .
+#   fi
+# }
 
-alias apmup='apm update --no-confirm'
+# alias apmup='apm update --no-confirm'
 alias editHosts='sudo edit /etc/hosts' # editHosts: Edit /etc/hosts file
 alias vim='nvim'
 
@@ -166,7 +166,7 @@ function commitlapse() {
   convert `find . -type f -name "*.jpg" -print0 | xargs -0 ls -tlr | awk '{print $9}'` ~/Desktop/timelapse.mpeg
   cd $CWD
 }
-function lallcommits() {
+function lolcommits() {
     echo "Enabling lolcomits for all repos in the project folder"
     for D in `ls -d $PROJECTS_FOLDER/*/`
     do

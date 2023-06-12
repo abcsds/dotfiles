@@ -177,14 +177,6 @@ install_python () {
     source $DOTFILES_ROOT/python/install.sh
   fi
 }
-install_apm () {
-  # Install python packages
-  if ! type apm  > /dev/null ; then
-    info "Please install apm manualy"
-  else
-    source $DOTFILES_ROOT/atom/install.sh
-  fi
-}
 
 # ================= Actual installation
 
@@ -194,11 +186,10 @@ install_dotfiles
 
 install_fonts
 install_python
-install_apm
 
 # Install submodules
-git submodule init
-git submodule update
+# git submodule init
+# git submodule update
 
 # vim --startuptime /dev/stdout +qall
 # nvim --startuptime /dev/stdout +qall
