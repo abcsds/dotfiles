@@ -45,7 +45,6 @@ source $DZSH/zsh/config.zsh
 source $DZSH/zsh/prompt.zsh
 source $DZSH/zsh/fpath.zsh
 source $DZSH/zsh/aliases.zsh
-source $DZSH/zsh/completion.zsh
 source $DZSH/general/*.zsh
 
 # Alternatively load plugins with antibody
@@ -54,6 +53,25 @@ source $DZSH/general/*.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
+# Substring search key bindings
+# bind UP and DOWN arrow keys
+# zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+# bind UP and DOWN arrow keys (compatibility fallback
+# for Ubuntu 12.04, Fedora 21, and MacOSX 10.9 users)
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+
+# substring search settings
+# HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=8'
+# HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=1'
+# HISTORY_SUBSTRING_SEARCH_GLOBBING_FLAGS='c'
+# HISTORY_SUBSTRING_SEARCH_FUZZY='true'
+
 
 # In order to use this build of zsh as your login shell,
 # it must be added to /etc/shells.
@@ -71,3 +89,20 @@ if [[ -n "$BENCHMARK" ]]; then
     zprof > "$HOME/.zsh_benchmark"
     # zprof
 fi
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

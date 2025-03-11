@@ -59,6 +59,12 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
+# substring search settings
+# HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=8'
+# HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=1'
+# HISTORY_SUBSTRING_SEARCH_GLOBBING_FLAGS='c'
+# HISTORY_SUBSTRING_SEARCH_FUZZY='true'
+
 # autosuggestions settings
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'

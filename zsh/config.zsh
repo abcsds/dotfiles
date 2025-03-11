@@ -129,6 +129,18 @@ CASE_SENSITIVE="false"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive tab completion
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"   # Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' rehash true                        # automatically find new executables in path
+# Speed up completions
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path $DZSH/.zsh/cache
+
+# pasting with tabs doesn't perform completion
+zstyle ':completion:*' insert-tab pending
+
+
 # Theming section
 # autoload -U compinit colors zcalc
 # compinit -d
