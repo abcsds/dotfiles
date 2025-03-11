@@ -1,0 +1,7 @@
+{
+    "copilot.enable": true,
+    "copilot.suggestion.enable": true,
+    "copilot.acceptKey": "<C-l>",
+    "snippets.ultisnips.pythonPrompt": false
+  }
+  

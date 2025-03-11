@@ -178,6 +178,14 @@ install_python () {
   fi
 }
 
+install_nvim () {
+  # link nvim config if .config/nvim doesn't exist
+  if [ ! -d $HOME/.config/nvim ]; then
+    ln -s $DOTFILES_ROOT/nvim $HOME/.config/nvim
+  fi
+  nvim --startuptime /dev/stdout +qall
+}
+
 # ================= Actual installation
 
 setup_gitconfig
@@ -186,6 +194,7 @@ install_dotfiles
 
 install_fonts
 install_python
+install_nvim
 
 # Install submodules
 # git submodule init
