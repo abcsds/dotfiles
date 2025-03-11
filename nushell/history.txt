@@ -1,0 +1,11 @@
+config nu
+$env.config.buffer_editor = "nvim"
+config nu
+exit
+config nu
+$env.config.buffer_editor = "nvim"
+config nu
+nvim nvim/
+code .
+nvim nvim/
+config nu
