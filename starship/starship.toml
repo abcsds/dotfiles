@@ -1,0 +1,149 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Other options
+# (fg:#9A348E bg:#FCA17D)\
+# (fg:#DA627D bg:#FCA17D)\
+# (fg:#FCA17D bg:#86BBD8)\
+# (fg:#86BBD8 bg:#06969A)\
+# (fg:#06969A bg:#33658A)\
+# (fg:#33658A)\
+# $git_commit\
+# $git_state\
+# $git_metrics\
+# $docker_context\
+# $nix_shell\
+# $memory_usage\
+# $sudo\
+# $cmd_duration\
+# $line_break\
+# $jobs\
+# $battery\
+# $time\
+# $status\
+# $shell\
+# $character\
+
+format = """
+[【](fg: #33658A)\
+$os\
+$username\
+[𝋠 ](fg: #33658A)\
+$hostname\
+[】](fg:  #33658A)\
+:$directory\
+[❯ ](fg:#06969A)\
+"""
+ 
+right_format = """
+$git_branch\
+$git_status\
+$julia\
+$python
+$nix_shell\
+$quarto\
+$container\
+$rust\
+$scala\
+$docker_context\
+$cmd_duration\
+$time\
+"""
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+continuation_prompt = "[·](bright-black) "
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[➜](bold #06969A)' 
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[os]
+format = "[($symbol )]($style)"
+style = "(fg:#DA627D)"
+disabled = false
+
+[username]
+style_user = 'bold #86BBD8'
+style_root = 'bold #DA627D'
+show_always = true
+format = '$user($style)'
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](fg:#33658A)[$hostname](bold #06969A)'
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+format = '[$path]($style)[$read_only]($read_only_style)'
+style = 'fg:#86BBD8'
+read_only = '🔒'
+truncation_symbol = '⩫/'
+home_symbol = '🏠'
+
+[git_branch]
+format = 'on [$symbol$branch(:$remote_branch)]($style) '
+# symbol = '🌱 '
+symbol = ' '
+truncation_length = 20
+truncation_symbol = '𝋢'
+style = 'bold #9A348E'
+# ignore_branches = ['master', 'main']
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )' # The default format for git_status
+conflicted = '🏳' # This branch has merge conflicts.
+ahead = '⇡${count}' # The format of ahead
+behind = '⇣${count}' # The format of behind
+diverged = '⇕⇡${ahead_count}⇣${behind_count}' # The format of diverged
+up_to_date = '' # The format of up_to_date
+untracked = '?' # The format of untracked
+stashed = '$' # The format of stashed
+modified = '!' # The format of modified
+staged = '+\($count\)]' # The format of staged
+renamed = '»' # The format of renamed
+deleted = '✘' # The format of deleted
+typechanged = "" # The format of typechanged
+style = 'bold #DA627D' # The style for the module.
+ignore_submodules = false # gnore changes to submodules.
+disabled = false # Disables the git_status module.
+
+[julia]
+format = '$symbol [($version )]($style)'
+version_format = 'v${raw}' # The version format. Available vars are raw, major, minor, & patch
+detect_extensions = ['jl'] # Which extensions should trigger this module.
+detect_files = ['Project.toml', 'Manifest.toml'] # Which filenames should trigger this module.
+symbol = 'ஃ' # A format string representing the symbol of Julia.
+style = 'bold #9A348E' # The style for the module.
+disabled = false # Disables the julia module.
+
+[python]
+format = '${symbol} [${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)' # The format for the module.
+version_format = 'v${raw}' # The version format. Available vars are raw, major, minor, & patch
+symbol = '𝧜' # A format string representing the symbol of Python
+style = 'yellow bold' # The style for the module.
+python_binary = ['python', 'python3'] # Configures the python binaries that Starship should executes when getting the version.
+
+[nix_shell]
+format = '$symbol [$state( \($name\))]($style) ' # The format for the module.
+symbol = '❄️ ' # A format string representing the symbol of nix-shell.
+style = 'bold #86BBD8' # The style for the module.
+impure_msg = '🏶' # A format string shown when the shell is impure.
+pure_msg = '🏵' # A format string shown when the shell is pure.
+unknown_msg = '' # A format string shown when it is unknown if the shell is pure/impure.
+disabled = false # Disables the nix_shell module.
+heuristic = false # Attempts to detect new nix shell-style shells with a heuristic.
+
+[time]
+format = '| [$time]($style) ' # The format string for the module.
+use_12hr = false # Enables 12 hour formatting
+style = 'bold #FCA17D' # The style for the module time
+utc_time_offset = 'local' # Sets the UTC offset to use. Range from -24 < x < 24. Allows floats to accommodate 30/45 minute timezone offsets.
+disabled = false # Disables the time module.
+time_range = '07:00:00-23:00:00' # Sets the time range during which the module will be shown. Times must be specified in 24-hours format

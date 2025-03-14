@@ -11,6 +11,8 @@ fonts/fonts.symlink/fonts.dir
 
 julia/julia.symlink
 
+nushell/history.txt
+
 ruby/gems.symlink
 themes.symlink
 

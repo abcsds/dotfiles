@@ -34,7 +34,11 @@ require("lazy").setup({
   -- File explorer (nvim-tree, as a Nerdtree-like file viewer)
   {
     "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = { 
+            "nvim-tree/nvim-web-devicons",
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+        },
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
     config = function()
       require("nvim-tree").setup({
@@ -132,7 +136,7 @@ require("lazy").setup({
     config = function()
       local cmp = require("cmp")
       local luasnip = require("luasnip")
-      require("luasnip,loaders.from_vscode").lazy_load()
+      require("luasnip.loaders.from_vscode").lazy_load()
       luasnip.config.setup({
         history = true,
       })
@@ -311,5 +315,12 @@ require("lazy").setup({
     --   },
     -- },
   },
+
+  -- Nushell
+  -- {
+  --   'LhKipp/nvim-nu',
+  --   build = ':TSInstall nu',
+  --   opts = {}
+  -- }
 
 })

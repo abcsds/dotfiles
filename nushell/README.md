@@ -1,0 +1,26 @@
+Goals for nushell
+
+- [x] Getting my Aliases from zsh
+- [x] Atuin
+- [x] A greeting (neofetch?) fastfetch
+- [x] A prompt
+- [x] Julia stuff (carapace )
+- [x] A tree view of folders?
+- [x] Finding anything
+- [x] Modifying the path
+- [x] venvs python and julia
+- [x] list user processes
+- [x] HTTP server in current folder (python?)
+- [x] List open sockets, udp, tcp, all listening connections
+- [x] List ssh hosts
+- [x] git alias?
+- [ ] lolcommits?
+- [x] Pandoc: eisvogel and other templates
+- [x] Tmux and Zellij
+- [ ] A colortest
+- [ ] For each dotfile-folder, specialized .nu files
+- [ ] Loading those .nu files.
+- [x] XKB_DEFAULT
+- [ ] Alias-tips?
+- [x] Suggestions for: Docker, Vagrant, Julia, Python
+- [~] Take over firefox: list open tabs, store and analyze them, read browsing history, stats and graphs.

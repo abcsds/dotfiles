@@ -179,13 +179,30 @@ install_python () {
 }
 
 install_nvim () {
-  # link nvim config if .config/nvim doesn't exist
   if [ ! -d $HOME/.config/nvim ]; then
     ln -s $DOTFILES_ROOT/nvim $HOME/.config/nvim
   fi
   nvim --startuptime /dev/stdout +qall
 }
 
+setup_nushell () {
+  if [ ! -d $HOME/.config/nushell ]; then
+    ln -s $DOTFILES_ROOT/nushell $HOME/.config/nushell
+  fi
+}
+
+setup_atuin () {
+    if [ ! -d $HOME/.config/atuin/ ]; then
+        ln -s $DOTFILES_ROOT/atuin $HOME/.config/atuin
+        # source $DOTFILES_ROOT/atuin/init.nu
+    fi
+}
+
+setup starship () {
+  if [ ! -d $HOME/.config/starship ]; then
+    ln -s $DOTFILES_ROOT/starship $HOME/.config/starship
+  fi
+}
 # ================= Actual installation
 
 setup_gitconfig
@@ -195,6 +212,8 @@ install_dotfiles
 install_fonts
 install_python
 install_nvim
+setup_nushell
+setup_atuin
 
 # Install submodules
 # git submodule init
@@ -204,7 +223,7 @@ install_nvim
 # nvim --startuptime /dev/stdout +qall
 
 # Set zsh
-sudo chsh -s $(which zsh) $(whoami)
+sudo chsh -s $(which nu) $(whoami)
 
 echo ''
 echo '  All installed!'

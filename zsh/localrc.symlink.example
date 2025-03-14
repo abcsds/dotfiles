@@ -18,3 +18,13 @@ export XKB_DEFAULT_MODEL=pc101;
 export GEM_HOME="$HOME/.gems"
 export PATH="$HOME/.gems/bin:$PATH"
 export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
+
+export HF_DATASETS_CACHE="/home/beto/Everything/data/HF/"
+
+source "/usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh"
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+export MLFLOW_TRACKING_URI=http://localhost:5000
+export MLFLOW_S3_ENDPOINT_URL=http://localhost:9000

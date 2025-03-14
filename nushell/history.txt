@@ -9,3 +9,680 @@ nvim nvim/
 code .
 nvim nvim/
 config nu
+exit
+ls
+ls | sort-by size | reverse
+docker ps
+docker ps | table 
+help commands | explore
+docker ps | tabulate 
+docker ps | table 
+docker ps | table | explore
+ls
+ls julia/
+ls julia/julia.symlink/
+l
+ls
+ls python/
+date now | date to-timezone "Europe/Vienna"
+date now | date to-timezone "Europe/Madrid"
+date now | date to-timezone "Mexico City"
+date now | date to-timezone "Ameryca/Mexico City"
+date now | date to-timezone "Ameryca/Mexico_City"
+date now | date to-timezone "America/Mexico_City"
+date now | date to-timezone "Europe/Vienna"
+[one two three] | to yaml
+[[framework, language]; [Django, Python] [Laravel, PHP]]
+ls
+open nushell/config.nu
+cd 
+cd Documents/NBack/
+open meta.csv
+open meta.csv | sort-by DOB
+open meta.csv | sort-by DOB | first 5
+open meta.csv | sort-by DOB | first 10
+$env.PATH
+sys temp 
+sys cpu
+sys mem 
+sys disks 
+sys users 
+sys cpu 
+which nu
+which docker
+docker ps | to csv 
+docker ps | table
+gh copilot suggest nushell to make docker ps into a table
+docker ps | from csv | get id, names, status | to table
+docker ps | from csv | get id, names, status 
+docker ps | from csv 
+docker ps | from ssv 
+docker ps | from ssv | sort-by CREATED
+docker ps | from ssv | explore 
+nvim nushell/config.nu
+^ssh-agent -c<\n>    | lines<\n>    | first 2<\n>    | parse "setenv {name} {value};"<\n>    | transpose -r<\n>    | into record<\n>    | load-env
+ssh-agent
+exit
+ssh-add ~/.ssh/jupiter
+ssh-add ~/.ssh/jupiter | nothing
+ssh-add ~/.ssh/jupiter 
+nvim ~/.ssh/ipadfido.pub
+exit
+ssh-add ~/.ssh/jupiter | nothing<\n>
+ssh-add ~/.ssh/jupiter o> /dev/null
+exit
+ssh-add ~/.ssh/jupiter | ignore
+ssh-add ~/.ssh/jupiter | save --raw /dev/null
+ssh-add ~/.ssh/jupiter | save /dev/null
+ssh-add ~/.ssh/jupiter o+e> (std null-device)
+use st
+ssh-add ~/.ssh/jupiter o+e> (std null-device)
+exit
+pamac search neofetch
+pamac install neofetch
+pamac search fastfetch
+sudo pacman -S fastfetch
+code ~/code/nix
+fastfetch
+exit
+ls
+fastfetch 
+cd code/nix
+exit
+ls
+exit
+nix shell .#Jupiter
+ls
+fastfetch 
+nvim .
+ranger .
+$env.EDITOR = nvim
+nvim .
+ip a
+ip a 
+ip a | from tsv
+gh copilot suggest nushell to make ip a into structured data
+ip a | from json
+gh copilot suggest nushell to make ip a into structured data
+parse "ip a"
+parse
+help parse
+ip a 
+ip a | parse 
+ip a | parse "ip a"
+ip -h <\n>| lines <\n>| where $it =~ "OBJECT :=" <\n>| parse "OBJECT := { $subcommands }" <\n>| get subcommands <\n>| str split " | " <\n>| str trim
+ip -h <\n>| lines <\n>| where $it =~ "OBJECT :=" <\n>| parse "OBJECT := { $subcommands }" <\n>| get subcommands <\n>| split column " | " <\n>| str trim<\n>
+ip -h <\n>| lines <\n>| find "OBJECT :=" <\n>| split row "{ " " }" <\n>| get 1 <\n>| split column " | " <\n>| str trim
+ip -h <\n>| lines <\n>| find "OBJECT :=" <\n>| split row "{ " <\n>| get 1 <\n>| split column " | " <\n>| str trim
+ip -h <\n>| lines <\n>| find "OBJECT :=" <\n>| split row "{"<\n>| get 1 <\n>| split row "}" <\n>| get 0 <\n>| split column "|"<\n>| str trim
+ip -h <\n>| lines <\n>| find "OBJECT :="
+ip -h
+ip -a
+ip a
+pamac search atuin
+atuin init nu | save ~/.dotfiles/atuin/init.nu
+mkdir atuin
+atuin init nu | save ~/.dotfiles/atuin/init.nu
+open atuin/init.nu
+open atuin/init.nu | less
+open atuin/init.nu | bat
+pamac search bat
+sudo pacman -S bat
+open atuin/init.nu | bat
+ln -s atuin/ ~/.config/atuin/
+ls ~/.config/atuin/
+bat /home/beto/.config/atuin/config.toml
+rm /home/beto/.config/atuin/atuin
+mv /home/beto/.config/atuin/config.toml ~/.dotfiles/atuin/
+rm ~/.config/atuin/
+ln -s atuin/ ~/.config/atuin/
+ln -s atuin/ ~/.config/
+ls ~/.config/atuin/
+ls ~/.config/atuin
+ls ~/.config/atuin/
+source atuin/init.nu
+rm ~/.config/atuin/
+Error: could not load client settings<\n><\n>Caused by:<\n>   0: could not create dir "/home/beto/.config/atuin"<\n>   1: failed to create directory `/home/beto/.config/atuin`<\n>   2: File exists (os error 17)<\n><\n>Location:<\n>    crates/atuin-client/src/settings.rs:816:14
+exit
+source atuin/init.nu
+Error: could not load client settings<\n><\n>Caused by:<\n>   0: could not create dir "/home/beto/.config/atuin"<\n>   1: failed to create directory `/home/beto/.config/atuin`<\n>   2: File exists (os error 17)<\n><\n>Location:<\n>    crates/atuin-client/src/settings.rs:816:14exit
+exit
+source atuin/init.nu
+ls
+ls nushell/history.txt
+read nushell/history.txt
+open nushell/history.txt 
+open nushell/history.txt | from csv 
+open nushell/history.txt | from ssv 
+open nushell/history.txt | from ssv -n
+open nushell/history.txt | from ssv -n | select column0
+open nushell/history.txt | from ssv -n | select column0 | lines
+open nushell/history.txt | lines
+open nushell/history.txt | lines | parse 
+open nushell/history.txt | lines | print "var {name}: {value}"
+open nushell/history.txt | lines | print "var {name}: {value}";
+open nushell/history.txt | lines | print 
+open nushell/history.txt | lines | each | print
+open nushell/history.txt | lines | each print
+open nushell/history.txt | lines | eval
+open nushell/history.txt | lines | parse
+parse --help
+open nushell/history.txt | lines | source
+exit
+$env.DOTFILES_ROOT = "/home/beto/.dotfiles"<\n>
+$env.DOTFILES_ROOT 
+$env.DOTFILES_ROOT + "/atuin/init.nu"
+$env.DOTFILES_ROOT = "/home/beto/.dotfiles/"<\n>
+$env.DOTFILES_ROOT + "atuin/init.nu"
+exit
+atuin import zsh
+atuin stats
+atuin stats --help
+atuin stats -c 100
+atuin stats -c 100 | from ssv -n 
+atuin stats -c 10
+atuin stats --help
+atuin stats -c 20 -n 2
+atuin stats -c 40 -n 2
+atuin --help
+atuin search --help
+atuin search --limit 5 nix
+atuin stats yesterday
+atuin stats 3 weeks ago
+atuin stats 4 weeks ago
+atuin stats 4 weeks ago -n 20
+atuin stats 4 weeks ago -c 10
+atuin stats 4 weeks ago -c 20
+$env.DZSH = "/home/beto/.dotfiles/"
+$env.DZSH
+env
+$env.DZSH
+read /etc/os-release
+open /etc/os-release
+open /etc/os-release | parse "{name}={value"
+open /etc/os-release | parse "{name}={value}"
+open /etc/os-release | parse "{name}={value}" | select name
+open /etc/os-release | parse "{name}={value}" | select name == "NAME"
+open /etc/os-release | parse "{name}={value}" | where name == "NAME"
+open /etc/os-release | parse "{name}={value}" | where name == "NAME" | get value
+open /etc/os-release | parse "{name}={value}" | where name == "NAME" | get value | trim
+$(open $env.DZSH/arch/minimal.txt)
+open $env.DZSH/arch/minimal.txt
+open $env.DZSH /arch/minimal.txt
+open $env.DZSH + /arch/minimal.txt
+open $env.DZSH+"/arch/minimal.txt"
+open $env.DZSH + "/arch/minimal.txt"
+open ($env.DZSH + "/arch/minimal.txt")
+open $($env.DZSH + "/arch/minimal.txt")
+open $($env.DZSH + /arch/minimal.txt)
+which git 
+(which git)
+(which git).path
+...(which git).path
+stat ...(which git).path
+stat ...(which nix).path
+stat ...(which nix).path | lines
+stat ...(which nix).path | from ssv 
+stat ...(which nix).path
+$"/tmp/(random int)"
+$"/tmp/(random int).txt"
+$"/tmp/(random bool).txt"
+random bool
+random dice 
+random dice -d 2
+sum (random dice -d 2)
+sum ...(random dice -d 2)
+...(random dice -d 2)
+(random dice -d 2) | sum 
+(random dice -d 2) 
+(random dice -d 2).value
+(random dice -d 2)
+(random dice -d 2) | sum
+sum
+sum --help
+(random dice -d 2) | reduce {|x,y| $x + $y}
+(random dice -d 2) | reduce +
+sys cpu 
+sys cpu | length
+julia -p $"(sys cpu | length)"
+sys temp 
+sys temp | select unit temp
+$env.PATH
+$env.LAST_EXIT_CODE
+nvim $nu.config-path
+exit
+ls **/*.sqlite
+ls **/*.db
+ls ../**/*.db
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 | get trial_id
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 | save $"/tmp/(random uuid)"
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 | select value | save $"/tmp/(random uuid)"
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 | select value 
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 | select value | save $"/tmp/222.txt"
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 | select value 
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 | get value
+open ../Documents/ULSA/LaSalle2024/Documents/DualTask/optuna.db | get trial_values | sort-by value | first 5 | get value > o
+$env.FOO? | default "ABC"
+$env.FOO?
+default --help 
+ls -laf
+ls -Af
+ls -af
+ls -a
+ls -af
+ls
+ll
+exit
+ll
+ls
+mkdir eraseme
+ls eraseme/
+rm eraseme/
+cat
+history
+_
+c
+clear
+groups
+du
+du -h
+df
+df | from ssv 
+pamac search starship
+exit
+sudo pacman -S starship
+exit
+cd ~/code/nix
+cd ~/Documents/NBack/
+ls
+git status
+df
+sys disks 
+free 
+sys mem 
+alias 2d6 = (random dice -d 6) | reduce {|x,y| $x + $y}<\n>
+alias 2d6 = $"((random dice -d 6) | reduce {|x,y| $x + $y})"<\n>
+pip list --outdated --format=freeze
+pip list --outdated
+pip list --outdated | from ssv 
+pip list --outdated | from ssv | select Package 
+shuffle 
+shuf
+aview
+ls 
+ls ll
+ll
+ls -f
+ls -f **/*
+ls ./**.* | get name
+alias tree = {<\n>    ls -f ./**.* | get name | each {<\n>        let replaced1 = ($it | str replace -r '[^/]+/' '|____')<\n>        let replaced2 = ($replaced1 | str replace -r '____\|' ' |')<\n>        echo $replaced2<\n>    }<\n>}
+alias tree = ls -f ./**.* | get name | each {<\n>        let replaced1 = ($it | str replace -r '[^/]+/' '|____')<\n>        let replaced2 = ($replaced1 | str replace -r '____\|' ' |')<\n>        echo $replaced2<\n>    }<\n>
+ls -f ./**.* | get name
+ls  ./**.* | get name
+ls  ./**/* | get name
+ls  ./**/* | get name | replace -r '[^/]+/' '|____' | replace -r '____\|' ' |'
+ls  ./**/* | get name | each {|x| x| replace -r '[^/]+/' '|____' | replace -r '____\|' ' |' }
+ls  ./**/* | get name | each { replace -r '[^/]+/' '|____' | replace -r '____\|' ' |' }
+ls  ./**/* | get name | each { replace  '[^/]+/' '|____' | replace -r '____\|' ' |' }
+ls  ./**/* | get name | each { replace  '[^/]+/' '|____' | replace '____\|' ' |' }
+ls  ./**/* | get name | each { replace  '/' '|____' | replace '____\|' ' |' }
+replace --help
+ls  ./**/* | get name | each { str replace  '/' '|____' | str replace '____\|' ' |' }
+ls  ./**/* | get name | each { str replace -a '/' '|____' | str replace '____\|' ' |' }
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' } | str replace -ar '|____|' ' |' } | sort | str join '\n'
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' | str replace -ar '|____|' ' |' } | sort | str join '\n'
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' }  | sort | str join '\n'
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' } 
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' | str replace -ar '|____|' ' |' } 
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' } 
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' } | print
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' } | lines
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' } | to text
+cd
+cd ~/.dotfiles/
+cd ~/.dotfiles/nushell/
+exit
+ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' } | to text
+ln -s starship/ ~/.config/
+exit
+env
+$env
+$env.HOME
+exit
+path
+lsof 
+lsof -t -c 
+ps 
+ps --help 
+ps
+ps --help 
+ps -l
+ps -l | columns 
+ps -l | select user_id
+whoami
+ps -u beto
+whoami -h 
+whoami
+id 
+id -u beto
+exit
+ps -l
+exit
+ps -l | where user_id == (id -u $env.USER)
+pamac search carapace
+exit
+$env.CARAPACE_BRIDGES = 'zsh,bash'
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu<\n>
+pamac search carapace
+sudo pacman -S carapace
+pamac install carapace
+exit
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu<\n>
+exit
+random dice -d 6 | reduce $x $y { $x + $y }
+random dice -d 6 | reduce {|x,y| $x + $y}
+random dice -d 2 | reduce {|x,y| $x + $y}
+exit
+python -m SimpleHTTPServer
+python -m http.server
+lsof -i
+lsof -i | from ssv 
+lsof -i | find LISTEN
+lsof -i | find LISTEN | from ssv
+lsof -i | from ssv | find LISTEN 
+sudo lsof -i | from ssv | find LISTEN 
+sudo lsof -iPn | from ssv | find LISTEN 
+sudo lsof -in | from ssv | find LISTEN 
+sudo lsof -iP | from ssv | find LISTEN 
+sudo lsof -i -P -n | from ssv | find LISTEN 
+sudo lsof -iP | from ssv | find LISTEN 
+sudo lsof -i -P -n | from ssv | find LISTEN 
+sudo lsof -i -P -n | from ssv | find TCP
+sudo lsof -i -P -n | from ssv | find UDP
+sudo lsof -P -n | from ssv | find UDP
+sudo lsof -nP | from ssv | find UDP
+ipfw
+open ~/.ssh/config | find Host
+which find
+open ~/.ssh/config
+exit
+which open
+open ~/.ssh/config 
+open ~/.ssh/config | find -r '^Host' | str trim | str replace -a 'Host ' ''
+open ~/.ssh/config | find -r '^Host'
+open ~/.ssh/config | find -r 'Host'
+open ~/.ssh/config | find -r '^Host'
+open ~/.ssh/config | find -r '^Host '
+open ~/.ssh/config | find -r '^Host+'
+open ~/.ssh/config | find -r '^[Host]+'
+open ~/.ssh/config | find -r 'Host'
+open ~/.ssh/config | lines | find Host
+open ~/.ssh/config | lines | find -r "^Host"
+open ~/.ssh/config | lines | find -r "^Host" | replace "Host " ""
+open ~/.ssh/config | lines | find -r "^Host" | replace "Host " "" | to text 
+open ~/.ssh/config | lines | find -r "^Host" | replace "Host " "" | print
+open ~/.ssh/config | lines | find -r "^Host" | replace "Host " "" | echo
+open ~/.ssh/config | lines | find -r "^Host" | replace "Host " "" | print
+open ~/.ssh/config | lines | find -r "^Host" | replace "Host " "" 
+exit
+git diff -w "$@" | nvim -R -
+git shortlog -sn
+help config nu
+exit
+$nu.config-path
+chsh -s /bin/nu beto 
+config nu
+nvim
+nix search nufetch
+nix search nixpkgs nufetch
+pamac search zoxide
+sudo pacman -S zoxide
+fastfetch 
+atuin stats -c 100 | from ssv -n 
+atuin stats -c 40 | from ssv -n 
+atuin stats -c 20 | from ssv -n 
+atuin stats -c 20  
+nvim $nu.env-path
+ls
+exit
+code .
+pamac search broot
+sudo pacman -S broot
+cd ~/code/nix
+nix run github:nix-community/nixos-generators -- --help
+atuin stats -c 20  
+ps -u beto
+ps -l | where user_id == (id -u $env.USER)
+ps | where user_id == (id -u $env.USER)
+ps
+ps -l
+ps -l | columns
+ps -l | select user_id
+ps | where user_id == (id -u $env.USER)
+ps -l | where user_id == (id -u $env.USER)
+ps -l | where user_id == 1000
+ps -l | where user_id == (id -u $env.USER)
+ps -l | where user_id == $"(id -u $env.USER)"
+$"(id -u $env.USER)"
+as int $"(id -u $env.USER)"
+id -u $env.USER
+id -u $env.USER | into int 
+ps -l | where user_id == (id -u $env.USER | into int)
+ps -l | where user_id == (id -u $env.USER | into int)exit
+exit
+myps 
+$env.config.color_config | sort
+{|x| { fg: "#ff0000" bg: "#0000ff" attr: b } }
+{ fg: "#ff0000" bg: "#0000ff" attr: b }
+(ansi red) | print text | (ansi reset)
+$"(ansi red) text (ansi reset)"
+nix run github:nix-community/nixos-generators -- -f iso --flake .#Voyager
+cp /nix/store/6z3zjx41xycjj3dk3fj6f4d3dg24izcn-nixos-plasma6-25.05.20250309.e3e32b6-x86_64-linux.iso/iso/nixos-plasma6-25.05.20250309.e3e32b6-x86_64-linux.iso ~/Downloads/nixos-plasma6.iso
+pamac search vivid
+sudo pacman -S vivid
+~/.mozilla/firefox/your_profile/places.sqlite 
+ls ~/.mozilla/firefox/
+ls ~/.mozilla/firefox/ | sort-by type
+ls ~/.mozilla/firefox/**/places.db
+ls ~/.mozilla/firefox
+ls ~/.mozilla/firefox/2sxkwst4.default/
+open ~/.mozilla/firefox/2sxkwst4.default/places.sqlite
+open ~/.mozilla/firefox/**.default/places.sqlite
+open ~/.mozilla/firefox/*.default/places.sqlite
+open ~/.mozilla/firefox/*.default/places.sqlite | select url, visit_count, last_visit_date | sort-by last_visit_date | reverse
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places |containers select url, visit_count, last_visit_date | sort-by last_visit_date | reverse
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url, visit_count, last_visit_date | sort-by last_visit_date | reverse
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | sort-by last_visit_date | reverse
+ls ~/.mozilla/firefox/
+ls ~/.mozilla/firefox/ | sort-by type size
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | sort-by last_visit_date | reverse
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | sort-by last_visit_date 
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | sort-by last_visit_date
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date 
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | reverse 
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | sort-by last_visit_date
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | sort-by visit_count
+open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | sort-by -r visit_count
+ls ~/.mozilla/firefox/2sxkwst4.default/ | sort-by type size
+open ~/.mozilla/firefox/*.default/sessionstore.jsonlz4
+open ~/.mozilla/firefox/*.default/sessionstore.jsonlz4 | from json
+which lz4
+lz4 -d ~/.mozilla/firefox/*.default/sessionstore.jsonlz4 | from json
+lz4 -d ~/.mozilla/firefox/*.default/sessionstore.jsonlz4 o | from json
+ls ~/.mozilla/firefox/2sxkwst4.default/ | sort-by type size
+lz4 -d ~/.mozilla/firefox/*.default/sessionstore.jsonlz4 o | from json
+lz4 -d ~/.mozilla/firefox/2sxkwst4.default/sessionstore.jsonlz4 
+lz4 -d ~/.mozilla/firefox/2sxkwst4.default/sessionstore.jsonlz4 $out 
+lz4 -d ~/.mozilla/firefox/2sxkwst4.default/sessionstore.jsonlz4 /dev/stdout | from json
+exit
+firefox-history 
+exit
+firefox-history 
+firefox-history | explore
+explore 
+git shortlog -sn | explore
+explore ~/code/XDF.jl/test/testdata/sub_test_str.xdf
+open ~/code/XDF.jl/test/testdata/sub_test_str.xdf | explore
+open ~/code/XDF.jl/test/testdata/sub_test_str.xdf 
+open ~/code/XDF.jl/test/testdata/sub_test_str.xdf | explore
+lz4jsoncat ~/.mozilla/firefox/*default*/sessionstore-backups/recovery.jsonlz4
+lz4cat ~/.mozilla/firefox/*.default/sessionstore-backups/recovery.jsonlz4 | from json
+lz4cat ~/.mozilla/firefox/2sxkwst4.default/sessionstore.jsonlz4 | from json
+ls
+exit
+open ~/code/XDF.jl/test/testdata/sub_test_str.xdf 
+exit
+ls
+zsh
+podman run --rm -v .:/path zircethezav/gitleaks:latest detect --source="/path" --verbose --no-git
+podman run -it --rm  -v `pwd`:/app -w /app ghcr.io/zircethezav/gitleaks:latest detect --source="/app" --verbose --no-git
+nix run nixpkgs#gitleaks -c detect --source=. --verbose --no-git
+nix run nixpkgs#gitleaks -- detect --source=. --verbose --no-git
+nix run nixpkgs#gitleaks -- detect --source=~/code --verbose --no-git
+nix run nixpkgs#gitleaks -- detect --source=/home/beto/code --verbose --no-git
+nix run nixpkgs#gitleaks -- detect --source=/home/beto/code/** --verbose --no-git
+ls result
+cd ~
+ls /home/beto/Documents/ams/ApplicationsWS2024/MontanLeoben/
+cd /home/beto/Documents/ams/ApplicationsWS2024/MontanLeoben/
+ls
+pamac search pandoc
+sudo pacman -S pandoc-bin
+nix run nixpkgs#pandoc -- --help
+ls
+nix run nixpkgs#pandoc -- -f Cover.md -o Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.pdf
+opn Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.pdf
+opn Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.pdf
+opn Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.pdf
+opn Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.pdf
+opn Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.pdf
+opn Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.pdf
+opn Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.pdf
+opn Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.doc
+nix run nixpkgs#pandoc -- Cover.md -o Cover.docx
+opn Cover.docx
+cd
+cd code/kokoro-tts
+echo "What's up my man? What are you up to? Wanna swing that way or does it hang this way?" | ./kokoro-tts /dev/stdin --stream --voice "af_sarah"
+exit
+cd 
+cd .dotfiles/
+code nushell/env.nu 
+exit
+activate 
+exit
+echo "Hello World" | ./kokoro-tts /dev/stdin --stream --voice "af_sarah:60,am_adam:40"
+exit
+ls /home/beto/Everything/**.txt | explore
+ls /home/beto/Everything/**/*.txt | explore
+exit
+ls `/home/beto/Everything/Calibre Library/**/*.txt` | explore
+ls `/home/beto/Everything/Bkp/**/*.txt` | explore
+./kokoro-tts `/home/beto/Everything/Calibre Library/Lilla D. Windsor/Lectures and Clippings From My Scra (158)/Lectures and Clippings From My - Lilla D. Windsor.txt` --stream --voice "af_sarah"
+./kokoro-tts ` /home/beto/Everything/Bkp/Torrents/Hypnotherapy/hypnosis/hypnosis.txt` --stream --voice "af_sarah"
+ls `/home/beto/Everything/Bkp/Torrents/**/*.txt` | explore
+./kokoro-tts `/home/beto/Everything/Bkp/Torrents/Hypnotherapy/hypnosis/hypnosis.txt` --stream --voice "af_sarah"
+cd ~/Documents/ams/ApplicationsWS2024/MontanLeoben/
+ls
+nix run nixpkgs#pandoc -- Cover.md -o Cover.pdf
+opn Cover.pdf
+nix run nixpkgs#pandoc -- Cover.md -o Cover.docx
+ls `/home/beto/Everything/Documents/**/*.txt` | explore
+exit
+$env.PATH = ($env.PATH | split row (char esep) | prepend '.venv/bin')
+which python 
+which pip
+exit
+julia -p $"(sys cpu | length)"
+julia -t $"(sys cpu | length)"
+exit
+activate 
+exit
+/home/beto/.starship/cache/
+ls
+exit
+ls ~/.config/starship
+ls ~/.config/starship/starship.*
+ls ~/.config/starship/*
+exit
+ls
+cd ~/.dotfiles/
+git s
+cd ~/Documents/NBack/
+ls
+cd ..
+cd NBack/
+cd ..
+cd NBack/
+cd
+exit
+activate 
+exit
+nix shell .#Jupiter
+nix shell .#Voyager
+nix shell .#Calixto
+nix shell .#default
+nix-shell -p nu
+flake update
+nix flakecd
+nix flake update
+cd ~/Documents/NBack/
+exit
+nix-shell -p nushell
+cd
+ls
+ls ~/.config/starship/*
+ls ~/.config/nvim/after/plugin/lsp.lua
+cd
+cd Documents/NBack/
+nix store gc
+time
+date
+sleep 2
+^sleep 2
+nix flake check 
+git add .
+nix flake check --impure
+cd 
+cd .dotfiles/
+source arch/install.nu
+open /etc/os-release | parse "{name}={value}" | where name == "NAME" | get value | trim
+open /etc/os-release | parse "{name}={value}" | where name == "NAME" | get value 
+start .
+gh suggest nushell command to show the 10 most visited websites on firefox from the default profile under .default
+gh copilot suggest nushell command to show the 10 most visited websites on firefox from the default profile under .default
+carapace  cat 
+git s
+nix run 'nixpkgs#nixos-rebuild' -- switch --flake '.#Saturn' --use-remote-sudo --impure --target-host Saturn
+git add nushell/README.md 
+git s
+git add nushell/
+git s
+git add .gitignore 
+git add TODO.md 
+git add nvim/
+git s
+git add nushell/history.txt
+git s
+git add script/bootstrap 
+git add tor
+git add zsh
+git add atuin
+git add starship
+git s

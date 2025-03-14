@@ -1,3 +1,6 @@
+use std
+use std/log
+
 # config.nu
 #
 # Installed by:
@@ -18,168 +21,178 @@
 # them for future reference.
 $env.config.show_banner = false
 $env.config.buffer_editor = "nvim"
+$env.config.table.mode = "rounded"
 
-# let dark_theme = {
-#     # color for nushell primitives
-#     separator: white
-#     leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
-#     header: green_bold
-#     empty: blue
-#     # Closures can be used to choose colors for specific values.
-#     # The value (in this case, a bool) is piped into the closure.
-#     bool: {|| if $in { 'light_cyan' } else { 'light_gray' } }
-#     int: white
-#     filesize: {|e|
-#       if $e == 0b {
-#         'white'
-#       } else if $e < 1mb {
-#         'cyan'
-#       } else { 'blue' }
-#     }
-#     duration: white
-#     date: {|| (date now) - $in |
-#       if $in < 1hr {
-#         'red3b'
-#       } else if $in < 6hr {
-#         'orange3'
-#       } else if $in < 1day {
-#         'yellow3b'
-#       } else if $in < 3day {
-#         'chartreuse2b'
-#       } else if $in < 1wk {
-#         'green3b'
-#       } else if $in < 6wk {
-#         'darkturquoise'
-#       } else if $in < 52wk {
-#         'deepskyblue3b'
-#       } else { 'dark_gray' }
-#     }    
-#     range: white
-#     float: white
-#     string: white
-#     nothing: white
-#     binary: white
-#     cellpath: white
-#     row_index: green_bold
-#     record: white
-#     list: white
-#     block: white
-#     hints: dark_gray
+# Environment variables?
+$env.USER = $"(whoami)"
+$env.HOME = $"/home/($env.USER)"
+$env.DOTFILES_ROOT = $"($env.HOME)/.dotfiles"
+$env.PROJECTS_ROOT = $"($env.HOME)/code"
+$env.EDITOR = "nvim"
+$env.VISUAL = "code"
+$env.PATH = ($env.PATH | prepend $'($env.DOTFILES_ROOT)/bin')
+$env.PATH = ($env.PATH | append $'($env.HOME)/.local/bin')
+# TODO: Console or terminal?
+# case $(tty) in
+#   (/dev/tty[1-9]) export CONSOLE='virtual';;
+#               (*) export CONSOLE='terminal';;
+# esac
 
-#     shape_and: purple_bold
-#     shape_binary: purple_bold
-#     shape_block: blue_bold
-#     shape_bool: light_cyan
-#     shape_custom: green
-#     shape_datetime: cyan_bold
-#     shape_directory: cyan
-#     shape_external: cyan
-#     shape_externalarg: green_bold
-#     shape_filepath: cyan
-#     shape_flag: blue_bold
-#     shape_float: purple_bold
-#     # shapes are used to change the cli syntax highlighting
-#     shape_garbage: { fg: "#FFFFFF" bg: "#FF0000" attr: b}
-#     shape_globpattern: cyan_bold
-#     shape_int: purple_bold
-#     shape_internalcall: cyan_bold
-#     shape_list: cyan_bold
-#     shape_literal: blue
-#     shape_matching_brackets: { attr: u }
-#     shape_nothing: light_cyan
-#     shape_operator: yellow
-#     shape_or: purple_bold
-#     shape_pipe: purple_bold
-#     shape_range: yellow_bold
-#     shape_record: cyan_bold
-#     shape_redirection: purple_bold
-#     shape_signature: green_bold
-#     shape_string: green
-#     shape_string_interpolation: cyan_bold
-#     shape_table: blue_bold
-#     shape_variable: purple
+# Locale
+$env.LC_TIME = "en_US.UTF-8"
+$env.LC_MONETARY = "de_AT.UTF-8"
+$env.LC_NUMERIC = "de_AT.UTF-8"
+$env.LC_PAPER = "de_AT.UTF-8"
+$env.LC_TELEPHONE = "de_AT.UTF-8"
+$env.LC_NAME = "de_AT.UTF-8"
+$env.LC_ADDRESS = "de_AT.UTF-8"
+$env.LC_IDENTIFICATION = "de_AT.UTF-8"
+$env.LC_MEASUREMENT = "de_AT.UTF-8" 
+$env.LC_MESSAGES = "en_US.UTF-8"
+$env.LC_COLLATE = "en_US.UTF-8"
+$env.LC_CTYPE = "en_US.UTF-8"
+$env.LC_ALL = "en_US.UTF-8"
+
+# Extract Firefox history stats
+def firefox-history [] {
+    open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | sort-by -r visit_count
+}
+
+# Extract Firefox open tabs
+# def  firefox-tabs [] {
+
 # }
 
-# let light_theme = {
-#     # color for nushell primitives
-#     separator: dark_gray
-#     leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
-#     header: green_bold
-#     empty: blue
-#     # Closures can be used to choose colors for specific values.
-#     # The value (in this case, a bool) is piped into the closure.
-#     bool: {|| if $in { 'dark_cyan' } else { 'dark_gray' } }
-#     int: dark_gray
-#     filesize: {|e|
-#       if $e == 0b {
-#         'dark_gray'
-#       } else if $e < 1mb {
-#         'cyan_bold'
-#       } else { 'blue_bold' }
-#     }
-#     duration: dark_gray
-#   date: {|| (date now) - $in |
-#     if $in < 1hr {
-#       'red3b'
-#     } else if $in < 6hr {
-#       'orange3'
-#     } else if $in < 1day {
-#       'yellow3b'
-#     } else if $in < 3day {
-#       'chartreuse2b'
-#     } else if $in < 1wk {
-#       'green3b'
-#     } else if $in < 6wk {
-#       'darkturquoise'
-#     } else if $in < 52wk {
-#       'deepskyblue3b'
-#     } else { 'dark_gray' }
-#   }
-#     range: dark_gray
-#     float: dark_gray
-#     string: dark_gray
-#     nothing: dark_gray
-#     binary: dark_gray
-#     cellpath: dark_gray
-#     row_index: green_bold
-#     record: white
-#     list: white
-#     block: white
-#     hints: dark_gray
+# Theme
+$env.LS_COLORS = (vivid generate snazzy)
 
-#     shape_and: purple_bold
-#     shape_binary: purple_bold
-#     shape_block: blue_bold
-#     shape_bool: light_cyan
-#     shape_custom: green
-#     shape_datetime: cyan_bold
-#     shape_directory: cyan
-#     shape_external: cyan
-#     shape_externalarg: green_bold
-#     shape_filepath: cyan
-#     shape_flag: blue_bold
-#     shape_float: purple_bold
-#     # shapes are used to change the cli syntax highlighting
-#     shape_garbage: { fg: "#FFFFFF" bg: "#FF0000" attr: b}
-#     shape_globpattern: cyan_bold
-#     shape_int: purple_bold
-#     shape_internalcall: cyan_bold
-#     shape_list: cyan_bold
-#     shape_literal: blue
-#     shape_matching_brackets: { attr: u }
-#     shape_nothing: light_cyan
-#     shape_operator: yellow
-#     shape_or: purple_bold
-#     shape_pipe: purple_bold
-#     shape_range: yellow_bold
-#     shape_record: cyan_bold
-#     shape_redirection: purple_bold
-#     shape_signature: green_bold
-#     shape_string: green
-#     shape_string_interpolation: cyan_bold
-#     shape_table: blue_bold
-#     shape_variable: purple
-# }
+# Prompt
+
+# Alias
+alias ll = ls -laf
+alias opn = xdg-open
+alias cat = bat
+alias top = htop
+
+alias mv = mv -iv # Confirm, verbose
+alias cp = cp -iv # Confirm before overwriting
+alias rm = rm -t # Use trash
+
+alias _ = sudo
+alias c = clear
+alias k = clear
+alias cls = clear
+alias q = exit
+
+# If broot tree = broot
+# else
+# alias tree = ls  ./**/* | get name | each { str replace -ar '[^/]*/' '|____' } | to text
+
+alias py = python
+alias pipdate = pip list --outdated | from ssv | select Package | each { pip install -U $it.Package }
+alias activate = sh -i -c 'source .venv/bin/activate ; nu'
+# Alternative:
+# $env.PATH = ($env.PATH | split row (char esep)
+#   | prepend './venv/bin'
+
+alias jl = julia
+alias jlup = julia --project=. -e "import Pkg; Pkg.update()"
+alias jlinstall = julia --project=. -e "import Pkg; Pkg.instantiate()"
+alias pluto = julia --project=. -e "import Pkg; Pkg.add(\"Pluto\"); import Pluto; Pluto.run()"
+
+def 2d6 [] {
+    random dice -d 2 | math sum
+}
+
+# install nix profile to work with nu
+def nix-comfyshell [] {
+    nix profile install 'nixpkgs#nushell'
+    nix profile install 'nixpkgs#starship'
+    nix profile install 'nixpkgs#carapace'
+    nix profile install 'nixpkgs#atuin'
+    nix profile install 'nixpkgs#broot'
+    nix profile install 'nixpkgs#btop'
+    nix profile install 'nixpkgs#fzf'
+    nix profile install 'nixpkgs#ranger'
+    nix profile install 'nixpkgs#starship'
+    nix profile install 'nixpkgs#vivid'
+    nix profile install 'nixpkgs#zoxide'
+}
+
+# list user's processes
+def myps [] {
+    ps -l | where user_id == (id -u $env.USER | into int)
+}
+
+alias serve = python -m http.server
+alias openPorts = sudo lsof -i -P -n | from ssv | find LISTEN
+alias openTCP = sudo lsof -i -P -n | from ssv | find TCP
+alias openUDP = sudo lsof -i -P -n | from ssv | find UDP
+alias sshHosts = open ~/.ssh/config | lines | find -r "^Host" | replace "Host " "" 
+
+# Git
+alias g = git
+alias glog = git log --graph --pretty=oneline --abbrev-commit --date=relative
+alias gp = git push origin HEAD
+alias gpp = git pull --rebase
+alias gd = git diff
+alias gco = git checkout
+alias gcm = git commit -m
+alias gca = git commit --amend
+alias gcl = git clone
+alias gb = git branch
+alias gs = git status -sb
+alias ghist = git shortlog -sn
+def gexport [name] {
+    git archive --format zip --output $name.zip HEAD
+}
+
+alias panmd = pandoc --from markdown --template eisvogel --listings
+
+# Tmux
+alias txl = tmux ls
+alias txn = tmux new -s
+alias txk = tmux kill-session -t
+alias txa = tmux attach -t
+
+# Zellij
+alias zj = zellij
+alias zl = zellij list
+alias zk = zellij kill
+alias za = zellij attach
+
+# LaTeX
+# alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+
+# Xkb settings
+$env.XKB_DEFAULT_LAYOUT = "us"
+$env.XKB_DEFAULT_VARIANT = "dvorak-alt-intl"
+$env.XKB_DEFAULT_MODEL = "pc101"
+
+# HF TODO
+$env.HF_DATASETS_CACHE = "/home/beto/Everything/data/HF/"
+
+# Load Atuin # TODO absolute path
+source $"/home/beto/.dotfiles/atuin/init.nu"
+
+# Load Starship # TODO: absolute path
+$env.STARSHIP_CONFIG = $"/home/beto/.dotfiles/starship/starship.toml"
+$env.STARSHIP_CACHE = $"/home/beto/.starship/cache"
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
+# Add ssh-agent to the environment
+^ssh-agent -c
+    | lines
+    | first 2
+    | parse "setenv {name} {value};"
+    | transpose -r
+    | into record
+    | load-env
+
+ssh-add ~/.ssh/jupiter o+e> (std null-device)
+
+fastfetch
 
 # # External completer example
 # # let carapace_completer = {|spans|

@@ -32,10 +32,11 @@ A list of software I sometimes use, but should re-check every once in a while
 - netcat
 - nmap
 - proxychains
-- tor
 - htop
 - iftop
 - ntopng
 - pandoc
 - pandoc-citeproc
 
+bat
+ripgrep

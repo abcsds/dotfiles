@@ -1,7 +1,11 @@
 # Neovim config
+# 2025 Update
+Setup on `~/.config/nvim/init.vim.`
 
-## TODO:
+
+Must support:
 julia
 python
 markdown
 pandoc
+LaTeX

@@ -16,3 +16,12 @@
 #
 # You can remove these comments if you want or leave
 # them for future reference.
+
+# Carapace
+## ~/.config/nushell/env.nu
+$env.CARAPACE_BRIDGES = 'zsh,bash' # Optional
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+
+#~/.config/nushell/config.nu
+source ~/.cache/carapace/init.nu
