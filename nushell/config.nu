@@ -175,6 +175,15 @@ $env.HF_DATASETS_CACHE = "/home/beto/Everything/data/HF/"
 # Load Atuin # TODO absolute path
 source $"/home/beto/.dotfiles/atuin/init.nu"
 
+# Carapace
+## ~/.config/nushell/env.nu
+$env.CARAPACE_BRIDGES = 'zsh,bash' # Optional
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+
+#~/.config/nushell/config.nu
+source ~/.cache/carapace/init.nu
+
 # Load Starship # TODO: absolute path
 $env.STARSHIP_CONFIG = $"/home/beto/.dotfiles/starship/starship.toml"
 $env.STARSHIP_CACHE = $"/home/beto/.starship/cache"

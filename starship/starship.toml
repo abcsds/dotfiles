@@ -1,13 +1,15 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Other options
-# (fg:#9A348E bg:#FCA17D)\
-# (fg:#DA627D bg:#FCA17D)\
-# (fg:#FCA17D bg:#86BBD8)\
-# (fg:#86BBD8 bg:#06969A)\
-# (fg:#06969A bg:#33658A)\
+# Palette:
+# (fg:#9A348E)\
+# (fg:#DA627D)\
+# (fg:#FCA17D)\
+# (fg:#86BBD8)\
+# (fg:#06969A)\
 # (fg:#33658A)\
+
+# Other options:
 # $git_commit\
 # $git_state\
 # $git_metrics\
@@ -22,25 +24,41 @@
 # $time\
 # $status\
 # $shell\
-# $character\
+# $character\ 
+
+#  Fire
+#  Small Bits
+#  Large Bits
+#  Arrow
+#  Rising Triangle
 
 format = """
-[【](fg: #33658A)\
+[](#9A348E)\
 $os\
 $username\
-[𝋠 ](fg: #33658A)\
+[](bg:#DA627D fg:#9A348E)\
 $hostname\
-[】](fg:  #33658A)\
-:$directory\
-[❯ ](fg:#06969A)\
+[](fg:#DA627D bg:#FCA17D)\
+$directory\
+[](fg:#FCA17D bg:#86BBD8)\
+$julia\
+[](fg:#86BBD8 bg:#06969A)\
+$python\
+[](fg:#06969A bg:#33658A)\
+$nix_shell\
+[ ](fg:#33658A)\
 """
+#  Lego
+#  Arrow
+#  Fire
+#  Ice
+#  Hexagons!
+#  Big Bits
+#  Rising Triangle
  
 right_format = """
 $git_branch\
 $git_status\
-$julia\
-$python
-$nix_shell\
 $quarto\
 $container\
 $rust\
@@ -65,77 +83,99 @@ disabled = true
 
 [os]
 format = "[($symbol )]($style)"
-style = "(fg:#DA627D)"
+style = "(fg:#FCA17D bg: #06969A)"
 disabled = false
 
 [username]
-style_user = 'bold #86BBD8'
-style_root = 'bold #DA627D'
-show_always = true
-format = '$user($style)'
+style_root = 'fg:bold #FCA17D bg: #9A348E' # The style used when the user is root/admin.
+# style_user = 'fg:bold #33658A bg:#86BBD8' 
+style_user = "fg:bold #06969A bg:#9A348E" # The style used for non-root users.
+detect_env_vars = [] # Which environment variable(s) should trigger this module.
+format = '[ $user ]($style)' # The format for the module.
+show_always = true # Always shows the username module.
+disabled = false # Disables the username module.
+aliases = {} # Translate system usernames to something else.
 
 [hostname]
-ssh_only = false
-format = '[$ssh_symbol](fg:#33658A)[$hostname](bold #06969A)'
+ssh_only = false  # Only show hostname when connected to an SSH session.
+ssh_symbol = '' # A format string representing the symbol when connected to SSH session.
+trim_at = '.' # String that the hostname is cut off at, after the first match. '.' will stop after the first dot. '' will disable any truncation.
+detect_env_vars = []  # Which environment variable(s) should trigger this module.
+format = '[ $ssh_symbol$hostname ]($style)' # The format for the module.
+style = 'fg:bold #FCA17D bg:#DA627D' # The style for the module.
+disabled = false  # Disables the hostname module.
+aliases = {} # Translate system hostnames to something else. If trim_at is specified, only the first part will be matched and replaced.
 
 [directory]
 truncation_length = 4
 truncate_to_repo = true
-format = '[$path]($style)[$read_only]($read_only_style)'
-style = 'fg:#86BBD8'
-read_only = '🔒'
-truncation_symbol = '⩫/'
-home_symbol = '🏠'
+format = '[ $path ]($style)[$read_only]($read_only_style)'
+style = 'fg:bold #9A348E bg:#FCA17D'
+read_only = ''
+truncation_symbol = '󰇘/'
+home_symbol = '󱂵'
+# 
+# Wizard's hat: 󱑷
+[directory.substitutions]
+"Everything" = "󰝸 "
+"Everywhere" = "󰇈 "
+"Documents" = "󰈙 "
+"Downloads" = "󰉍 "
+"Music" = "󱍙 "
+"Pictures" = "󰉏 "
+"code" = "󰲂 "
+"firefox" = " "
+"nix" = " "
+".dotfiles" = "󱗿 "
 
 [git_branch]
 format = 'on [$symbol$branch(:$remote_branch)]($style) '
-# symbol = '🌱 '
-symbol = ' '
+symbol = ' '
 truncation_length = 20
 truncation_symbol = '𝋢'
 style = 'bold #9A348E'
-# ignore_branches = ['master', 'main']
+ignore_branches = ['master', 'main']
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )' # The default format for git_status
-conflicted = '🏳' # This branch has merge conflicts.
+conflicted = '' # This branch has merge conflicts.
 ahead = '⇡${count}' # The format of ahead
 behind = '⇣${count}' # The format of behind
-diverged = '⇕⇡${ahead_count}⇣${behind_count}' # The format of diverged
+diverged = '⇡${ahead_count}⇣${behind_count}' # The format of diverged
 up_to_date = '' # The format of up_to_date
-untracked = '?' # The format of untracked
-stashed = '$' # The format of stashed
-modified = '!' # The format of modified
-staged = '+\($count\)]' # The format of staged
-renamed = '»' # The format of renamed
-deleted = '✘' # The format of deleted
+untracked = '' # The format of untracked
+stashed = '󰏖' # The format of stashed
+modified = '' # The format of modified
+staged = ' $count ' # The format of staged
+renamed = '' # The format of renamed
+deleted = ' $count ' # The format of deleted
 typechanged = "" # The format of typechanged
 style = 'bold #DA627D' # The style for the module.
 ignore_submodules = false # gnore changes to submodules.
 disabled = false # Disables the git_status module.
 
 [julia]
-format = '$symbol [($version )]($style)'
+format = '[ $symbol($version) ]($style)'
 version_format = 'v${raw}' # The version format. Available vars are raw, major, minor, & patch
 detect_extensions = ['jl'] # Which extensions should trigger this module.
 detect_files = ['Project.toml', 'Manifest.toml'] # Which filenames should trigger this module.
-symbol = 'ஃ' # A format string representing the symbol of Julia.
-style = 'bold #9A348E' # The style for the module.
+symbol = '' # A format string representing the symbol of Julia.
+style = 'fg:bold #33658A bg:#86BBD8'# The style for the module.
 disabled = false # Disables the julia module.
 
 [python]
-format = '${symbol} [${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)' # The format for the module.
+format = '[ ${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)' # The format for the module.
 version_format = 'v${raw}' # The version format. Available vars are raw, major, minor, & patch
-symbol = '𝧜' # A format string representing the symbol of Python
-style = 'yellow bold' # The style for the module.
+symbol = '' # A format string representing the symbol of Python
+style = 'fg:bold #FCA17D bg:#06969A' # The style for the module.
 python_binary = ['python', 'python3'] # Configures the python binaries that Starship should executes when getting the version.
 
 [nix_shell]
-format = '$symbol [$state( \($name\))]($style) ' # The format for the module.
-symbol = '❄️ ' # A format string representing the symbol of nix-shell.
-style = 'bold #86BBD8' # The style for the module.
-impure_msg = '🏶' # A format string shown when the shell is impure.
-pure_msg = '🏵' # A format string shown when the shell is pure.
+format = '[ $symbol$state(\($name\))]($style)' # The format for the module.
+symbol = ' ' # A format string representing the symbol of nix-shell.
+style = 'fg:bold #86BBD8 bg:#33658A' # The style for the module.
+impure_msg = '' # A format string shown when the shell is impure.
+pure_msg = '' # A format string shown when the shell is pure.
 unknown_msg = '' # A format string shown when it is unknown if the shell is pure/impure.
 disabled = false # Disables the nix_shell module.
 heuristic = false # Attempts to detect new nix shell-style shells with a heuristic.
