@@ -53,6 +53,17 @@ $env.LC_COLLATE = "en_US.UTF-8"
 $env.LC_CTYPE = "en_US.UTF-8"
 $env.LC_ALL = "en_US.UTF-8"
 
+# # Make sure abcsds/dotfiles are a git repo cloned on /home/beto/.dotfiles
+# if (ls /home/beto/.dotfiles/.git | is-not-empty) {
+#     git pull /home/beto/.dotfiles
+# } else {
+#     try {
+#         git clone git@github.com:abcsds/.dotfiles /home/beto/.dotfiles
+#     } catch {
+#         print $"Dotfile clone failed, Credentials?"
+#     }
+# }
+
 # Extract Firefox history stats
 def firefox-history [] {
     open ~/.mozilla/firefox/*.default/places.sqlite | get moz_places | select url visit_count last_visit_date | sort-by -r visit_count
@@ -122,6 +133,34 @@ def nix-comfyshell [] {
 # list user's processes
 def myps [] {
     ps -l | where user_id == (id -u $env.USER | into int)
+}
+
+# Benchmark dd's bs
+# def ddbs [] {
+#     let total = 1073741824  # Total bytes to write (1GB)
+#     for bs in [4K, 8K, 16K, 32K, 64K, 128K, 256K, 512K, 1M, 2M, 4M, 8M, 16M, 32M, 64M, 128M, 256M, 512M, 1G] {
+#         let count = (($total | into filesize) // ($"($bs)B" | into filesize))
+#         let result = (timeit {dd if=/dev/random of=/dev/null bs=$'($bs)' count=$'($count)' o+e> /dev/null})
+#         print $'BlockSize: ($bs), Time: ($result)'
+#     }
+# }
+
+# Test different block sizes for throughput:
+# ddbs if=/dev/zero of=/dev/null --total 1073741824
+def ddbs [
+    if:string
+    of:string = "/dev/null"
+    --total $total:int = 1073741824  # Total bytes to write (1GB)
+    # 100 MB
+    # --total $total:int = 104857600
+] {
+    for bs in [4K, 8K, 16K, 32K, 64K, 128K, 256K, 512K, 1M, 2M, 4M, 8M, 16M, 32M, 64M, 128M, 256M, 512M, 1G] {
+        # print $"Processing block size: ($bs) for ($total) bytes from ($if) to ($of)"
+        let count = (($total | into filesize) // ($"($bs)B" | into filesize))
+        let result = (timeit {dd if=$"($if)" of=$"($of)" bs=$'($bs)' count=$'($count)' o+e> /dev/null}) #  o+e> /dev/null
+        print $'BlockSize: ($bs), Time: ($result)'
+        echo { BlockSize: $bs, Time: $result }
+    }
 }
 
 alias serve = python -m http.server
