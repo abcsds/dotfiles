@@ -198,22 +198,23 @@ setup_atuin () {
     fi
 }
 
-setup starship () {
+setup_starship () {
   if [ ! -d $HOME/.config/starship ]; then
     ln -s $DOTFILES_ROOT/starship $HOME/.config/starship
   fi
 }
 # ================= Actual installation
 
-setup_gitconfig
+# setup_gitconfig
 setup_folder
 install_dotfiles
 
-install_fonts
-install_python
+# install_fonts
+# install_python
 install_nvim
 setup_nushell
 setup_atuin
+setup_starship
 
 # Install submodules
 # git submodule init
