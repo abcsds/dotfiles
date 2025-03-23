@@ -33,20 +33,20 @@
 #  Rising Triangle
 
 format = """
-[](#9A348E)\
+[](#33658A)\
 $os\
 $username\
-[](bg:#DA627D fg:#9A348E)\
+[](fg:#33658A bg:#06969A)\
 $hostname\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:#06969A bg:#86BBD8)\
 $directory\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:#86BBD8 bg:#FCA17D)\
 $julia\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:#FCA17D bg:#DA627D)\
 $python\
-[](fg:#06969A bg:#33658A)\
+[](fg:#DA627D bg:#9A348E)\
 $nix_shell\
-[ ](fg:#33658A)\
+[ ](fg:#9A348E)\
 """
 #  Lego
 #  Arrow
@@ -87,9 +87,9 @@ style = "(fg:#FCA17D bg: #06969A)"
 disabled = false
 
 [username]
-style_root = 'fg:bold #FCA17D bg: #9A348E' # The style used when the user is root/admin.
+style_root = 'fg:bold #FCA17D bg: #33658A' # The style used when the user is root/admin.
 # style_user = 'fg:bold #33658A bg:#86BBD8' 
-style_user = "fg:bold #06969A bg:#9A348E" # The style used for non-root users.
+style_user = "fg:bold #06969A bg:#33658A" # The style used for non-root users.
 detect_env_vars = [] # Which environment variable(s) should trigger this module.
 format = '[ $user ]($style)' # The format for the module.
 show_always = true # Always shows the username module.
@@ -102,7 +102,7 @@ ssh_symbol = '' # A format string representing the symbol when connected to S
 trim_at = '.' # String that the hostname is cut off at, after the first match. '.' will stop after the first dot. '' will disable any truncation.
 detect_env_vars = []  # Which environment variable(s) should trigger this module.
 format = '[ $ssh_symbol$hostname ]($style)' # The format for the module.
-style = 'fg:bold #FCA17D bg:#DA627D' # The style for the module.
+style = 'fg:bold #FCA17D bg:#06969A' # The style for the module.
 disabled = false  # Disables the hostname module.
 aliases = {} # Translate system hostnames to something else. If trim_at is specified, only the first part will be matched and replaced.
 
@@ -110,7 +110,7 @@ aliases = {} # Translate system hostnames to something else. If trim_at is speci
 truncation_length = 4
 truncate_to_repo = true
 format = '[ $path ]($style)[$read_only]($read_only_style)'
-style = 'fg:bold #9A348E bg:#FCA17D'
+style = 'fg:bold #9A348E bg:#86BBD8'
 read_only = ''
 truncation_symbol = '󰇘/'
 home_symbol = '󱂵'
@@ -160,20 +160,20 @@ version_format = 'v${raw}' # The version format. Available vars are raw, major, 
 detect_extensions = ['jl'] # Which extensions should trigger this module.
 detect_files = ['Project.toml', 'Manifest.toml'] # Which filenames should trigger this module.
 symbol = '' # A format string representing the symbol of Julia.
-style = 'fg:bold #33658A bg:#86BBD8'# The style for the module.
+style = 'fg:bold #06969A bg:#FCA17D'# The style for the module.
 disabled = false # Disables the julia module.
 
 [python]
 format = '[ ${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)' # The format for the module.
 version_format = 'v${raw}' # The version format. Available vars are raw, major, minor, & patch
 symbol = '' # A format string representing the symbol of Python
-style = 'fg:bold #FCA17D bg:#06969A' # The style for the module.
+style = 'fg:bold #FCA17D bg:#DA627D' # The style for the module.
 python_binary = ['python', 'python3'] # Configures the python binaries that Starship should executes when getting the version.
 
 [nix_shell]
 format = '[ $symbol$state(\($name\))]($style)' # The format for the module.
 symbol = ' ' # A format string representing the symbol of nix-shell.
-style = 'fg:bold #86BBD8 bg:#33658A' # The style for the module.
+style = 'fg:bold #86BBD8 bg:#9A348E' # The style for the module.
 impure_msg = '' # A format string shown when the shell is impure.
 pure_msg = '' # A format string shown when the shell is pure.
 unknown_msg = '' # A format string shown when it is unknown if the shell is pure/impure.
