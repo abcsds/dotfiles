@@ -189,6 +189,10 @@ setup_nushell () {
   if [ ! -d $HOME/.config/nushell ]; then
     ln -s $DOTFILES_ROOT/nushell $HOME/.config/nushell
   fi
+  # If doesn't exist, create .config/sops/age folder
+  if [ ! -d $HOME/.config/sops/age ]; then
+    mkdir -p $HOME/.config/sops/age
+  fi
 }
 
 setup_atuin () {
