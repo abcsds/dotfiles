@@ -34,7 +34,8 @@ alias serve = python -m http.server
 alias openPorts = sudo lsof -i -P -n | from ssv | find LISTEN
 alias openTCP = sudo lsof -i -P -n | from ssv | find TCP
 alias openUDP = sudo lsof -i -P -n | from ssv | find UDP
-alias sshHosts = open ~/.ssh/config | lines | find -r "^Host" | replace "Host " "" 
+alias sshHosts = open ~/.ssh/config | lines | find -r "^Host" | replace "Host " ""
+alias gateway = ip -o -4 route show to default
 
 # Git
 alias g = git
@@ -56,6 +57,14 @@ def gexport [name] {
 # Display my github repos
 # alias ghrepos = gh repo list --json nameWithOwner,defaultBranchRef
 # alias ghrepos = gh repo list --json nameWithOwner,defaultBranchRef --limit 100 | from json | get nameWithOwner | each { str split "/" $it | get 1 }
+
+# Docker
+# Kill all running containers
+alias dockerkill = docker ps -q | each { docker kill $it }
+# Remove all containers
+alias dockerrm = docker ps -a -q | each { docker rm $it }
+# Remove all images
+alias dockerrmi = docker images -q | each { docker rmi $it }
 
 # Pandoc
 alias panmd = pandoc --from markdown --template eisvogel --listings

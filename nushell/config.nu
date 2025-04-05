@@ -18,21 +18,6 @@ def 2d6 [] {
     random dice -d 2 | math sum
 }
 
-# install nix profile to work with nu
-def nix-comfyshell [] {
-    nix profile install 'nixpkgs#nushell'
-    nix profile install 'nixpkgs#starship'
-    nix profile install 'nixpkgs#carapace'
-    nix profile install 'nixpkgs#atuin'
-    nix profile install 'nixpkgs#broot'
-    nix profile install 'nixpkgs#btop'
-    nix profile install 'nixpkgs#fzf'
-    nix profile install 'nixpkgs#ranger'
-    nix profile install 'nixpkgs#starship'
-    nix profile install 'nixpkgs#vivid'
-    nix profile install 'nixpkgs#zoxide'
-}
-
 # list user's processes
 def myps [] {
     ps -l | where user_id == (id -u $env.USER | into int)
