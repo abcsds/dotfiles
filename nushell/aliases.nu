@@ -5,7 +5,7 @@ alias top = htop
 
 alias mv = mv -iv # Confirm, verbose
 alias cp = cp -iv # Confirm before overwriting
-alias rm = rm -t # Use trash
+# alias rm = rm -t # Use trash
 
 alias _ = sudo
 alias c = clear
