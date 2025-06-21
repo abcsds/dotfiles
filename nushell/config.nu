@@ -10,6 +10,36 @@ def "xtk firefox history" [] {
 # Extract Firefox open tabs
 # def  firefox-tabs [] {
 
+# # In NuShell, define a custom command
+# def import-firefox-passwords [file: string] {
+#   # Read the CSV file (NuShell will parse column headers automatically)
+#   open $file
+#   | each row {
+#       # Construct an entry name (e.g., "https://example.com_user@example.com")
+#       let entry_name = $"($row.url)_($row.username)"
+
+#       # Build the content to store in pass.
+#       # The first line will be the password itself, and the remaining lines
+#       # will store any extra fields for reference.
+#       let pass_content = $'($row.password)
+# url: ($row.url)
+# username: ($row.username)
+# httpRealm: ($row.httpRealm)
+# formActionOrigin: ($row.formActionOrigin)
+# guid: ($row.guid)
+# timeCreated: ($row.timeCreated)
+# timeLastUsed: ($row.timeLastUsed)
+# timePasswordChanged: ($row.timePasswordChanged)'
+
+#       # Pipe the multi-line string into pass insert.
+#       # -m: read the secret from stdin
+#       # This will overwrite if an entry with the same name exists. If you want
+#       # to avoid overwriting, remove "-f" if you're adding that later.
+#       echo $pass_content | pass insert -m $entry_name
+#   }
+# }
+
+
 
 # Alias
 source $"/home/beto/.config/nushell/aliases.nu"

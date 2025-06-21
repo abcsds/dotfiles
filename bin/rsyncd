@@ -1,0 +1,59 @@
+#!/bin/bash
+
+set -e
+
+SOURCE="$1"
+DEST="$2"
+INTERVAL="${3:-1h}"
+
+if [[ -z "$SOURCE" || -z "$DEST" ]]; then
+  echo "Usage: $0 <source_folder> <destination_folder> [interval]"
+  exit 1
+fi
+
+# Generate a safe name based on hash
+UNIT_NAME="rsync-$(echo "${SOURCE}_${DEST}" | md5sum | cut -d' ' -f1)"
+
+SCRIPT_PATH="/opt/rsync-jobs/${UNIT_NAME}.sh"
+SERVICE_FILE="/etc/systemd/system/${UNIT_NAME}.service"
+TIMER_FILE="/etc/systemd/system/${UNIT_NAME}.timer"
+
+# Ensure script directory exists
+sudo mkdir -p /opt/rsync-jobs
+
+# Write the rsync script
+sudo tee "$SCRIPT_PATH" > /dev/null <<EOF
+#!/bin/bash
+rsync -azP --delete "${SOURCE}" "${DEST}"
+EOF
+sudo chmod +x "$SCRIPT_PATH"
+
+# Write the systemd service file
+sudo tee "$SERVICE_FILE" > /dev/null <<EOF
+[Unit]
+Description=Rsync ${SOURCE} to ${DEST}
+
+[Service]
+Type=oneshot
+ExecStart=${SCRIPT_PATH}
+EOF
+
+# Write the systemd timer file
+sudo tee "$TIMER_FILE" > /dev/null <<EOF
+[Unit]
+Description=Timer for ${UNIT_NAME}
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=${INTERVAL}
+Unit=${UNIT_NAME}.service
+
+[Install]
+WantedBy=timers.target
+EOF
+
+# Reload and start
+sudo systemctl daemon-reload
+sudo systemctl enable --now "${UNIT_NAME}.timer"
+
+echo "✅ Timer '${UNIT_NAME}.timer' set up and running every ${INTERVAL}"
