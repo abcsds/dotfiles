@@ -43,17 +43,10 @@ $env.XKB_DEFAULT_VARIANT = "dvorak-alt-intl"
 $env.XKB_DEFAULT_MODEL = "pc101"
 
 # HF TODO
-$env.HF_DATASETS_CACHE = "/home/beto/Everything/data/HF/"
-
-# Load Starship
-$env.STARSHIP_CONFIG = $"/home/beto/.config/starship/starship.toml"
-$env.STARSHIP_CACHE = $"/home/beto/.starship/cache"
-mkdir ($nu.data-dir | path join "vendor/autoload")
-^starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+$env.HF_DATASETS_CACHE = "~/Everything/data/HF/"
 
 # If OS is not NixOS
 if $env.OS != "NixOS" {
-
     # Load atuin
     # source ~/.local/share/atuin/init.nu
 
@@ -62,8 +55,29 @@ if $env.OS != "NixOS" {
     $env.CARAPACE_BRIDGES = 'zsh,bash' # Optional
     mkdir ~/.cache/carapace
     ^carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+
+    #~/.config/nushell/config.nu
+    source ~/.cache/carapace/init.nu
+
+    # Load Starship
+    $env.STARSHIP_CONFIG = $"~/.config/starship/starship.toml"
+    $env.STARSHIP_CACHE = $"~/.starship/cache"
+    mkdir ($nu.data-dir | path join "vendor/autoload")
+    ^starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+} else {
+    # Atuin
+    if (not ('~/.local/share/atuin/init.nu' | path exists)) {
+    $"(atuin init nu)" | save --force ~/.local/share/atuin/init.nu
+    }
+    source ~/.local/share/atuin/init.nu
+
+    # Carapace
+    $env.CARAPACE_BRIDGES = 'zsh,bash' # optional
+    mkdir ~/.cache/carapace
+    carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+    source ~/.cache/carapace/init.nu
+
+    # Starship # TODO: will change in the future
+    mkdir ($nu.data-dir | path join "vendor/autoload")
+    starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 }
-
-
-#~/.config/nushell/config.nu
-source ~/.cache/carapace/init.nu
